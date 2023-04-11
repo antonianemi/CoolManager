@@ -13,35 +13,36 @@ class ViewController: UIViewController {
     let view_7 = Bundle.main.loadNibNamed("view7", owner: nil)
     
     @IBAction func btn_1() {
-        content = view_1
+        let view:view1 = view1.fromNib()
+        content = view
     }
     
     @IBAction func btn_2() {
-        content = view_2
+        let view:view2 = view2.fromNib()
+        content = view
     }
     
     @IBAction func btn_3() {
-        content = view_3
+        
     }
     
     @IBAction func btn_4() {
-        content = view_4
+        
     }
     
     @IBAction func btn_5() {
-        content = view_5
+        
     }
     
     @IBAction func btn_6() {
-        content = view_6
+        
     }
     
     @IBAction func btn_7() {
-        content = view_7
+        
     }
     
     @IBAction func btn_8() {
-        //content = view_8
     }
     
     
