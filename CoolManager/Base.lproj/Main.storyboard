@@ -44,7 +44,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="btn_3:" destination="BYZ-38-t0r" eventType="touchUpInside" id="E4x-co-Mto"/>
+                                            <action selector="btn_3" destination="BYZ-38-t0r" eventType="touchUpInside" id="PVO-Ad-Z5l"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CQ9-Be-KGy">
@@ -53,7 +53,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="btn_4:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3uU-Xh-Tae"/>
+                                            <action selector="btn_4" destination="BYZ-38-t0r" eventType="touchUpInside" id="V0j-Dy-l1L"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4mx-4b-Hqh">
@@ -71,7 +71,7 @@
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
-                                            <action selector="btn_6:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Mxr-y9-30D"/>
+                                            <action selector="btn_6" destination="BYZ-38-t0r" eventType="touchUpInside" id="s4D-Kj-Cg7"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uhu-Sq-Zzo">
@@ -81,15 +81,6 @@
                                         <buttonConfiguration key="configuration" style="plain" title="Button"/>
                                         <connections>
                                             <action selector="btn_7" destination="BYZ-38-t0r" eventType="touchUpInside" id="GvU-cm-IxZ"/>
-                                        </connections>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="s7K-eF-U30">
-                                        <rect key="frame" x="8" y="901" width="125" height="117"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" title="Button"/>
-                                        <buttonConfiguration key="configuration" style="plain" title="Button"/>
-                                        <connections>
-                                            <action selector="btn_8" destination="BYZ-38-t0r" eventType="touchUpInside" id="RrM-G8-vYo"/>
                                         </connections>
                                     </button>
                                 </subviews>
