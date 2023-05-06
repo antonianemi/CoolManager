@@ -4,88 +4,21 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var content: UIView!
     
-    lazy var vc1: UIViewController = {
-            let vc = View1ViewController()
-            addChild(vc)
-            vc.didMove(toParent: self)
-            return vc
+    lazy var viewControllers: [UIViewController] = {
+            let viewControllers: [UIViewController] = [View1ViewController(), View2ViewController(), View3ViewController(), View4ViewController(), View5ViewController(), View6ViewController(), View7ViewController()]
+            viewControllers.forEach { addChild($0) }
+            return viewControllers
         }()
         
-        lazy var vc2: UIViewController = {
-            let vc = View2ViewController()
-            addChild(vc)
-            vc.didMove(toParent: self)
-            return vc
-        }()
-        
-        lazy var vc3: UIViewController = {
-            let vc = View3ViewController()
-            addChild(vc)
-            vc.didMove(toParent: self)
-            return vc
-        }()
-        
-        lazy var vc4: UIViewController = {
-            let vc = View4ViewController()
-            addChild(vc)
-            vc.didMove(toParent: self)
-            return vc
-        }()
-        
-        lazy var vc5: UIViewController = {
-            let vc = View5ViewController()
-            addChild(vc)
-            vc.didMove(toParent: self)
-            return vc
-        }()
-        
-        lazy var vc6: UIViewController = {
-            let vc = View6ViewController()
-            addChild(vc)
-            vc.didMove(toParent: self)
-            return vc
-        }()
-        
-        lazy var vc7: UIViewController = {
-            let vc = View7ViewController()
-            addChild(vc)
-            vc.didMove(toParent: self)
-            return vc
-        }()
-        
-        @IBAction func btn_1() {
+        @IBAction func buttonPressed(_ sender: UIButton) {
+            let index = sender.tag - 1
+            guard index >= 0 && index < viewControllers.count else {
+                return
+            }
+            
             content.subviews.forEach { $0.removeFromSuperview() }
-            content.addSubview(vc1.view)
-        }
-        
-        @IBAction func btn_2() {
-            content.subviews.forEach { $0.removeFromSuperview() }
-            content.addSubview(vc2.view)
-        }
-        
-        @IBAction func btn_3() {
-            content.subviews.forEach { $0.removeFromSuperview() }
-            content.addSubview(vc3.view)
-        }
-        
-        @IBAction func btn_4() {
-            content.subviews.forEach { $0.removeFromSuperview() }
-            content.addSubview(vc4.view)
-        }
-        
-        @IBAction func btn_5() {
-            content.subviews.forEach { $0.removeFromSuperview() }
-            content.addSubview(vc5.view)
-        }
-        
-        @IBAction func btn_6() {
-            content.subviews.forEach { $0.removeFromSuperview() }
-            content.addSubview(vc6.view)
-        }
-        
-        @IBAction func btn_7() {
-            content.subviews.forEach { $0.removeFromSuperview() }
-            content.addSubview(vc7.view)
+            let selectedViewController = viewControllers[index]
+            content.addSubview(selectedViewController.view)
         }
 }
 
