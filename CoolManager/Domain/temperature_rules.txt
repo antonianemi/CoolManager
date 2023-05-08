@@ -1,0 +1,5 @@
+Temperatura: 0C
+- Compressor: false
+- Light: false
+- Resistance: true
+- Fan: false

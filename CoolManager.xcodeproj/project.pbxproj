@@ -7,20 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		FA157CE529E17CDB00A04E02 /* view1.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA157CE429E17CDB00A04E02 /* view1.xib */; };
-		FA157CE729E17E8E00A04E02 /* view2.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA157CE629E17E8E00A04E02 /* view2.xib */; };
-		FA157CE929E1873D00A04E02 /* view3.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA157CE829E1873D00A04E02 /* view3.xib */; };
-		FA157CEB29E1875800A04E02 /* view4.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA157CEA29E1875800A04E02 /* view4.xib */; };
-		FA157CED29E1876100A04E02 /* view5.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA157CEC29E1876100A04E02 /* view5.xib */; };
-		FA157CEF29E1876C00A04E02 /* view6.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA157CEE29E1876C00A04E02 /* view6.xib */; };
-		FA157CF129E1877600A04E02 /* view7.xib in Resources */ = {isa = PBXBuildFile; fileRef = FA157CF029E1877600A04E02 /* view7.xib */; };
-		FA157CF529E213B900A04E02 /* view1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA157CF429E213B900A04E02 /* view1.swift */; };
-		FA157CF729E213CE00A04E02 /* view2.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA157CF629E213CE00A04E02 /* view2.swift */; };
-		FA157CF929E4DDEC00A04E02 /* view3.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA157CF829E4DDEC00A04E02 /* view3.swift */; };
-		FA157CFB29E4DE1800A04E02 /* view4.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA157CFA29E4DE1800A04E02 /* view4.swift */; };
-		FA157CFD29E4DE2200A04E02 /* view5.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA157CFC29E4DE2200A04E02 /* view5.swift */; };
-		FA157CFF29E4DE2C00A04E02 /* view6.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA157CFE29E4DE2C00A04E02 /* view6.swift */; };
-		FA157D0129E4DE3700A04E02 /* view7.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA157D0029E4DE3700A04E02 /* view7.swift */; };
 		FA38FFE829FE669800BC21FA /* View3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFDA29FE669800BC21FA /* View3ViewController.swift */; };
 		FA38FFE929FE669800BC21FA /* View2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFDB29FE669800BC21FA /* View2ViewController.swift */; };
 		FA38FFEA29FE669800BC21FA /* View4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFDC29FE669800BC21FA /* View4ViewController.swift */; };
@@ -35,23 +21,28 @@
 		FA6C7A2929D8F6CD002267A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6C7A2729D8F6CD002267A5 /* Main.storyboard */; };
 		FA6C7A2B29D8F6D0002267A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA6C7A2A29D8F6D0002267A5 /* Assets.xcassets */; };
 		FA6C7A2E29D8F6D0002267A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA6C7A2C29D8F6D0002267A5 /* LaunchScreen.storyboard */; };
+		FA714C202A086C0D003E2CA4 /* Refrigerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C1F2A086C0D003E2CA4 /* Refrigerator.swift */; };
+		FA714C222A0870A2003E2CA4 /* Temperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C212A0870A2003E2CA4 /* Temperature.swift */; };
+		FA714C242A087882003E2CA4 /* TemperatureRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C232A087882003E2CA4 /* TemperatureRule.swift */; };
+		FA714C272A088089003E2CA4 /* TemperatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C262A088089003E2CA4 /* TemperatureStatus.swift */; };
+		FA714C292A088369003E2CA4 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C282A088369003E2CA4 /* TemperatureUnit.swift */; };
+		FA714C382A088BFF003E2CA4 /* CoolManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C372A088BFF003E2CA4 /* CoolManagerTests.swift */; };
+		FA714C3E2A088C11003E2CA4 /* TemperatureRulesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C2F2A088BD9003E2CA4 /* TemperatureRulesTests.swift */; };
+		FA714C412A088CC8003E2CA4 /* temperature_rules.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA714C402A088CC8003E2CA4 /* temperature_rules.txt */; };
+		FA714C432A089028003E2CA4 /* RefrigeratorBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C422A089028003E2CA4 /* RefrigeratorBuilder.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		FA714C392A088BFF003E2CA4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = FA6C7A1629D8F6CD002267A5 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = FA6C7A1D29D8F6CD002267A5;
+			remoteInfo = CoolManager;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		FA157CE429E17CDB00A04E02 /* view1.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = view1.xib; sourceTree = "<group>"; };
-		FA157CE629E17E8E00A04E02 /* view2.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = view2.xib; sourceTree = "<group>"; };
-		FA157CE829E1873D00A04E02 /* view3.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = view3.xib; sourceTree = "<group>"; };
-		FA157CEA29E1875800A04E02 /* view4.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = view4.xib; sourceTree = "<group>"; };
-		FA157CEC29E1876100A04E02 /* view5.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = view5.xib; sourceTree = "<group>"; };
-		FA157CEE29E1876C00A04E02 /* view6.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = view6.xib; sourceTree = "<group>"; };
-		FA157CF029E1877600A04E02 /* view7.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = view7.xib; sourceTree = "<group>"; };
-		FA157CF429E213B900A04E02 /* view1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view1.swift; sourceTree = "<group>"; };
-		FA157CF629E213CE00A04E02 /* view2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view2.swift; sourceTree = "<group>"; };
-		FA157CF829E4DDEC00A04E02 /* view3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view3.swift; sourceTree = "<group>"; };
-		FA157CFA29E4DE1800A04E02 /* view4.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view4.swift; sourceTree = "<group>"; };
-		FA157CFC29E4DE2200A04E02 /* view5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view5.swift; sourceTree = "<group>"; };
-		FA157CFE29E4DE2C00A04E02 /* view6.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view6.swift; sourceTree = "<group>"; };
-		FA157D0029E4DE3700A04E02 /* view7.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = view7.swift; sourceTree = "<group>"; };
 		FA38FFDA29FE669800BC21FA /* View3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View3ViewController.swift; sourceTree = "<group>"; };
 		FA38FFDB29FE669800BC21FA /* View2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View2ViewController.swift; sourceTree = "<group>"; };
 		FA38FFDC29FE669800BC21FA /* View4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View4ViewController.swift; sourceTree = "<group>"; };
@@ -68,6 +59,17 @@
 		FA6C7A2A29D8F6D0002267A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA6C7A2D29D8F6D0002267A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FA6C7A2F29D8F6D0002267A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FA714C1F2A086C0D003E2CA4 /* Refrigerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Refrigerator.swift; sourceTree = "<group>"; };
+		FA714C212A0870A2003E2CA4 /* Temperature.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Temperature.swift; sourceTree = "<group>"; };
+		FA714C232A087882003E2CA4 /* TemperatureRule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureRule.swift; sourceTree = "<group>"; };
+		FA714C252A087F06003E2CA4 /* temperature_rules_test.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = temperature_rules_test.txt; sourceTree = "<group>"; };
+		FA714C262A088089003E2CA4 /* TemperatureStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureStatus.swift; sourceTree = "<group>"; };
+		FA714C282A088369003E2CA4 /* TemperatureUnit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureUnit.swift; sourceTree = "<group>"; };
+		FA714C2F2A088BD9003E2CA4 /* TemperatureRulesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureRulesTests.swift; sourceTree = "<group>"; };
+		FA714C352A088BFF003E2CA4 /* CoolManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		FA714C372A088BFF003E2CA4 /* CoolManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolManagerTests.swift; sourceTree = "<group>"; };
+		FA714C402A088CC8003E2CA4 /* temperature_rules.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = temperature_rules.txt; sourceTree = "<group>"; };
+		FA714C422A089028003E2CA4 /* RefrigeratorBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorBuilder.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,30 +81,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA714C322A088BFF003E2CA4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		FA157CE329E17C8E00A04E02 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				FA157CE429E17CDB00A04E02 /* view1.xib */,
-				FA157CE629E17E8E00A04E02 /* view2.xib */,
-				FA157CE829E1873D00A04E02 /* view3.xib */,
-				FA157CEA29E1875800A04E02 /* view4.xib */,
-				FA157CEC29E1876100A04E02 /* view5.xib */,
-				FA157CEE29E1876C00A04E02 /* view6.xib */,
-				FA157CF029E1877600A04E02 /* view7.xib */,
-				FA157CF429E213B900A04E02 /* view1.swift */,
-				FA157CF629E213CE00A04E02 /* view2.swift */,
-				FA157CF829E4DDEC00A04E02 /* view3.swift */,
-				FA157CFA29E4DE1800A04E02 /* view4.swift */,
-				FA157CFC29E4DE2200A04E02 /* view5.swift */,
-				FA157CFE29E4DE2C00A04E02 /* view6.swift */,
-				FA157D0029E4DE3700A04E02 /* view7.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
 		FA38FFCC29FE5DE500BC21FA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				FA6C7A2029D8F6CD002267A5 /* CoolManager */,
+				FA714C362A088BFF003E2CA4 /* CoolManagerTests */,
 				FA6C7A1F29D8F6CD002267A5 /* Products */,
 				FA38FFF629FE670900BC21FA /* Frameworks */,
 			);
@@ -138,6 +127,7 @@
 			isa = PBXGroup;
 			children = (
 				FA6C7A1E29D8F6CD002267A5 /* CoolManager.app */,
+				FA714C352A088BFF003E2CA4 /* CoolManagerTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -145,8 +135,8 @@
 		FA6C7A2029D8F6CD002267A5 /* CoolManager */ = {
 			isa = PBXGroup;
 			children = (
+				FA714C1E2A086BF4003E2CA4 /* Domain */,
 				FA38FFCC29FE5DE500BC21FA /* ViewControllers */,
-				FA157CE329E17C8E00A04E02 /* Views */,
 				FA6C7A2129D8F6CD002267A5 /* AppDelegate.swift */,
 				FA6C7A2329D8F6CD002267A5 /* SceneDelegate.swift */,
 				FA6C7A2529D8F6CD002267A5 /* ViewController.swift */,
@@ -156,6 +146,30 @@
 				FA6C7A2F29D8F6D0002267A5 /* Info.plist */,
 			);
 			path = CoolManager;
+			sourceTree = "<group>";
+		};
+		FA714C1E2A086BF4003E2CA4 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				FA714C402A088CC8003E2CA4 /* temperature_rules.txt */,
+				FA714C1F2A086C0D003E2CA4 /* Refrigerator.swift */,
+				FA714C212A0870A2003E2CA4 /* Temperature.swift */,
+				FA714C232A087882003E2CA4 /* TemperatureRule.swift */,
+				FA714C262A088089003E2CA4 /* TemperatureStatus.swift */,
+				FA714C282A088369003E2CA4 /* TemperatureUnit.swift */,
+				FA714C422A089028003E2CA4 /* RefrigeratorBuilder.swift */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		FA714C362A088BFF003E2CA4 /* CoolManagerTests */ = {
+			isa = PBXGroup;
+			children = (
+				FA714C252A087F06003E2CA4 /* temperature_rules_test.txt */,
+				FA714C2F2A088BD9003E2CA4 /* TemperatureRulesTests.swift */,
+				FA714C372A088BFF003E2CA4 /* CoolManagerTests.swift */,
+			);
+			path = CoolManagerTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -179,6 +193,24 @@
 			productReference = FA6C7A1E29D8F6CD002267A5 /* CoolManager.app */;
 			productType = "com.apple.product-type.application";
 		};
+		FA714C342A088BFF003E2CA4 /* CoolManagerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FA714C3B2A088BFF003E2CA4 /* Build configuration list for PBXNativeTarget "CoolManagerTests" */;
+			buildPhases = (
+				FA714C312A088BFF003E2CA4 /* Sources */,
+				FA714C322A088BFF003E2CA4 /* Frameworks */,
+				FA714C332A088BFF003E2CA4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA714C3A2A088BFF003E2CA4 /* PBXTargetDependency */,
+			);
+			name = CoolManagerTests;
+			productName = CoolManagerTests;
+			productReference = FA714C352A088BFF003E2CA4 /* CoolManagerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -191,6 +223,10 @@
 				TargetAttributes = {
 					FA6C7A1D29D8F6CD002267A5 = {
 						CreatedOnToolsVersion = 14.2;
+					};
+					FA714C342A088BFF003E2CA4 = {
+						CreatedOnToolsVersion = 14.2;
+						TestTargetID = FA6C7A1D29D8F6CD002267A5;
 					};
 				};
 			};
@@ -208,6 +244,7 @@
 			projectRoot = "";
 			targets = (
 				FA6C7A1D29D8F6CD002267A5 /* CoolManager */,
+				FA714C342A088BFF003E2CA4 /* CoolManagerTests */,
 			);
 		};
 /* End PBXProject section */
@@ -218,15 +255,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA6C7A2E29D8F6D0002267A5 /* LaunchScreen.storyboard in Resources */,
-				FA157CE729E17E8E00A04E02 /* view2.xib in Resources */,
-				FA157CED29E1876100A04E02 /* view5.xib in Resources */,
+				FA714C412A088CC8003E2CA4 /* temperature_rules.txt in Resources */,
 				FA6C7A2B29D8F6D0002267A5 /* Assets.xcassets in Resources */,
-				FA157CEF29E1876C00A04E02 /* view6.xib in Resources */,
-				FA157CE529E17CDB00A04E02 /* view1.xib in Resources */,
-				FA157CF129E1877600A04E02 /* view7.xib in Resources */,
-				FA157CE929E1873D00A04E02 /* view3.xib in Resources */,
 				FA6C7A2929D8F6CD002267A5 /* Main.storyboard in Resources */,
-				FA157CEB29E1875800A04E02 /* view4.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		FA714C332A088BFF003E2CA4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -257,27 +295,43 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA157CF729E213CE00A04E02 /* view2.swift in Sources */,
+				FA714C202A086C0D003E2CA4 /* Refrigerator.swift in Sources */,
 				FA38FFEE29FE669800BC21FA /* View7ViewController.swift in Sources */,
 				FA6C7A2629D8F6CD002267A5 /* ViewController.swift in Sources */,
 				FA38FFEB29FE669800BC21FA /* View6ViewController.swift in Sources */,
-				FA157CF929E4DDEC00A04E02 /* view3.swift in Sources */,
 				FA6C7A2229D8F6CD002267A5 /* AppDelegate.swift in Sources */,
+				FA714C272A088089003E2CA4 /* TemperatureStatus.swift in Sources */,
 				FA38FFE929FE669800BC21FA /* View2ViewController.swift in Sources */,
-				FA157D0129E4DE3700A04E02 /* view7.swift in Sources */,
-				FA157CF529E213B900A04E02 /* view1.swift in Sources */,
-				FA157CFB29E4DE1800A04E02 /* view4.swift in Sources */,
-				FA157CFD29E4DE2200A04E02 /* view5.swift in Sources */,
-				FA157CFF29E4DE2C00A04E02 /* view6.swift in Sources */,
+				FA714C292A088369003E2CA4 /* TemperatureUnit.swift in Sources */,
 				FA38FFF129FE669800BC21FA /* View5ViewController.swift in Sources */,
 				FA38FFE829FE669800BC21FA /* View3ViewController.swift in Sources */,
+				FA714C222A0870A2003E2CA4 /* Temperature.swift in Sources */,
 				FA6C7A2429D8F6CD002267A5 /* SceneDelegate.swift in Sources */,
 				FA38FFEA29FE669800BC21FA /* View4ViewController.swift in Sources */,
+				FA714C432A089028003E2CA4 /* RefrigeratorBuilder.swift in Sources */,
+				FA714C242A087882003E2CA4 /* TemperatureRule.swift in Sources */,
 				FA38FFEF29FE669800BC21FA /* View1ViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		FA714C312A088BFF003E2CA4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				FA714C3E2A088C11003E2CA4 /* TemperatureRulesTests.swift in Sources */,
+				FA714C382A088BFF003E2CA4 /* CoolManagerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA714C3A2A088BFF003E2CA4 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = FA6C7A1D29D8F6CD002267A5 /* CoolManager */;
+			targetProxy = FA714C392A088BFF003E2CA4 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		FA6C7A2729D8F6CD002267A5 /* Main.storyboard */ = {
@@ -469,6 +523,42 @@
 			};
 			name = Release;
 		};
+		FA714C3C2A088BFF003E2CA4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66759VY892;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = example.CoolManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoolManager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CoolManager";
+			};
+			name = Debug;
+		};
+		FA714C3D2A088BFF003E2CA4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 66759VY892;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = example.CoolManagerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CoolManager.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/CoolManager";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -486,6 +576,15 @@
 			buildConfigurations = (
 				FA6C7A3329D8F6D0002267A5 /* Debug */,
 				FA6C7A3429D8F6D0002267A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		FA714C3B2A088BFF003E2CA4 /* Build configuration list for PBXNativeTarget "CoolManagerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				FA714C3C2A088BFF003E2CA4 /* Debug */,
+				FA714C3D2A088BFF003E2CA4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
