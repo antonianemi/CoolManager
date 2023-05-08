@@ -29,13 +29,13 @@ func readTemperatureRulesFromFile(filePath: String) -> [Temperature: Temperature
                 } else {
                     let statusComponents = value.components(separatedBy: ",").map { $0.trimmingCharacters(in: .whitespaces) }
                     
-                    if statusComponents.count == 4 {
+                    if statusComponents.count == 5 {
                         if let compressor = Bool(statusComponents[0]),
                            let light = Bool(statusComponents[1]),
                            let resistance = Bool(statusComponents[2]),
-                           let fan = Bool(statusComponents[3]) {
-                            let status = TemperatureStatus(compressor: compressor, light: light, resistance: resistance, fan: fan)
-                            currentStatus = status
+                           let fan = Bool(statusComponents[3]),
+                           let door = Bool(statusComponents[4]){
+                            currentStatus = TemperatureStatus(compressor: compressor, light: light, resistance: resistance, fan: fan, door: door)
                         }
                     }
                 }
@@ -51,5 +51,3 @@ func readTemperatureRulesFromFile(filePath: String) -> [Temperature: Temperature
     
     return rules
 }
-
-

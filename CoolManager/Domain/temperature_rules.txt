@@ -1,5 +1,2 @@
-Temperatura: 0C
-- Compressor: false
-- Light: false
-- Resistance: true
-- Fan: false
+Temperatura: 50
+Components: true,true,true,true,true

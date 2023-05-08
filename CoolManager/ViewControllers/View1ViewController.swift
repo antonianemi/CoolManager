@@ -6,8 +6,10 @@ class View1ViewController: UIViewController {
         print("ViewController: \(identifier)")
         let refrigerator = RefrigeratorBuilder().build()
             
-        
+        print("")
         print("Estado actual del refrigerador:")
+        
+        print("")
         print("Temperatura: \(refrigerator.currentTemperatureState.stringValue)")
         print("Compressor: \(refrigerator.compresorState)")
         print("Light: \(refrigerator.luzState)")

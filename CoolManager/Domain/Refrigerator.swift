@@ -8,17 +8,23 @@ class Refrigerator {
     private var door: Bool = false
 
     func processTemperature() {
-        guard let temperature = currentTemperature else {
-            return
-        }
         
         let temperatureRules = readTemperatureRulesFromFile(filePath: "temperature_rules")
         
-        if let status = temperatureRules[temperature] {
-            compressor = status.compressor
-            light = status.light
-            resistance = status.resistance
-            fan = status.fan
+        if let firstTemperature = temperatureRules.first?.key,
+           let firstStatus = temperatureRules[firstTemperature] {
+            
+            currentTemperature = firstTemperature
+            
+            if let status = temperatureRules[firstTemperature] {
+                compressor = status.compressor
+                light = status.light
+                resistance = status.resistance
+                fan = status.fan
+                door = status.door
+            }
+        } else {
+            print("No temperature rules found.")
         }
     }
     
