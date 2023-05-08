@@ -1,8 +1,3 @@
-enum TemperatureUnit {
-    case celsius
-    case fahrenheit
-}
-
 struct Temperature: Hashable {
     let value: Double
     let unit: TemperatureUnit
