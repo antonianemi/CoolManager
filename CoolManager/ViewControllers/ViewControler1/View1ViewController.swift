@@ -7,23 +7,14 @@ class View1ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         print("ViewController: \(identifier)")
-        
+        view = Vista1(frame: view.frame)
         presenter = View1Presenter()
         presenter.viewDidLoad()
     }
 }
-
-
 
 extension View1ViewController: View1View {
     func displayRefrigeratorStatus(_ status: String) {
         print(status)
     }
 }
-
-
-
-
-
-
-

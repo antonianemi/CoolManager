@@ -25,7 +25,7 @@ public class Refrigerator {
     
     var currentTemperatureState: Temperature {
         get {
-            return currentTemperature ?? Temperature(value: 0, unit: .celsius)
+            return currentTemperature
         }
     }
 

@@ -61,6 +61,30 @@
 		FAB54C3E2A0E118A00E14E1E /* RefrigeratorBuilderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C3D2A0E118A00E14E1E /* RefrigeratorBuilderViewModel.swift */; };
 		FAB54C3F2A0E118A00E14E1E /* RefrigeratorBuilderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C3D2A0E118A00E14E1E /* RefrigeratorBuilderViewModel.swift */; };
 		FAB54C442A0E152300E14E1E /* RefrigeratorBuilderViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C432A0E152300E14E1E /* RefrigeratorBuilderViewModelTests.swift */; };
+		FAB54C512A0E82E300E14E1E /* ViewHome.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C462A0E82E200E14E1E /* ViewHome.xib */; };
+		FAB54C522A0E82E300E14E1E /* ViewHome.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C462A0E82E200E14E1E /* ViewHome.xib */; };
+		FAB54C532A0E82E300E14E1E /* VISTA6.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C472A0E82E200E14E1E /* VISTA6.xib */; };
+		FAB54C542A0E82E300E14E1E /* VISTA6.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C472A0E82E200E14E1E /* VISTA6.xib */; };
+		FAB54C552A0E82E300E14E1E /* VISTA1.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C482A0E82E200E14E1E /* VISTA1.xib */; };
+		FAB54C562A0E82E300E14E1E /* VISTA1.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C482A0E82E200E14E1E /* VISTA1.xib */; };
+		FAB54C572A0E82E300E14E1E /* VISTA7.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C492A0E82E200E14E1E /* VISTA7.xib */; };
+		FAB54C582A0E82E300E14E1E /* VISTA7.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C492A0E82E200E14E1E /* VISTA7.xib */; };
+		FAB54C592A0E82E300E14E1E /* VISTA3.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C4A2A0E82E200E14E1E /* VISTA3.xib */; };
+		FAB54C5A2A0E82E300E14E1E /* VISTA3.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C4A2A0E82E200E14E1E /* VISTA3.xib */; };
+		FAB54C5B2A0E82E300E14E1E /* VISTA8.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C4B2A0E82E200E14E1E /* VISTA8.xib */; };
+		FAB54C5C2A0E82E300E14E1E /* VISTA8.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C4B2A0E82E200E14E1E /* VISTA8.xib */; };
+		FAB54C5D2A0E82E300E14E1E /* VISTA4.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C4C2A0E82E300E14E1E /* VISTA4.xib */; };
+		FAB54C5E2A0E82E300E14E1E /* VISTA4.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C4C2A0E82E300E14E1E /* VISTA4.xib */; };
+		FAB54C5F2A0E82E300E14E1E /* VISTA2.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C4D2A0E82E300E14E1E /* VISTA2.xib */; };
+		FAB54C602A0E82E300E14E1E /* VISTA2.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C4D2A0E82E300E14E1E /* VISTA2.xib */; };
+		FAB54C612A0E82E300E14E1E /* VISTA9.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C4E2A0E82E300E14E1E /* VISTA9.xib */; };
+		FAB54C622A0E82E300E14E1E /* VISTA9.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C4E2A0E82E300E14E1E /* VISTA9.xib */; };
+		FAB54C632A0E82E300E14E1E /* VISTA10.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C4F2A0E82E300E14E1E /* VISTA10.xib */; };
+		FAB54C642A0E82E300E14E1E /* VISTA10.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C4F2A0E82E300E14E1E /* VISTA10.xib */; };
+		FAB54C652A0E82E300E14E1E /* VISTA5.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C502A0E82E300E14E1E /* VISTA5.xib */; };
+		FAB54C662A0E82E300E14E1E /* VISTA5.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C502A0E82E300E14E1E /* VISTA5.xib */; };
+		FAB54C682A0EB93900E14E1E /* Vista1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C672A0EB93900E14E1E /* Vista1.swift */; };
+		FAB54C692A0EB93900E14E1E /* Vista1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C672A0EB93900E14E1E /* Vista1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -129,6 +153,18 @@
 		FAB54C3A2A0E116600E14E1E /* View1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1View.swift; sourceTree = "<group>"; };
 		FAB54C3D2A0E118A00E14E1E /* RefrigeratorBuilderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorBuilderViewModel.swift; sourceTree = "<group>"; };
 		FAB54C432A0E152300E14E1E /* RefrigeratorBuilderViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorBuilderViewModelTests.swift; sourceTree = "<group>"; };
+		FAB54C462A0E82E200E14E1E /* ViewHome.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewHome.xib; sourceTree = "<group>"; };
+		FAB54C472A0E82E200E14E1E /* VISTA6.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VISTA6.xib; sourceTree = "<group>"; };
+		FAB54C482A0E82E200E14E1E /* VISTA1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VISTA1.xib; sourceTree = "<group>"; };
+		FAB54C492A0E82E200E14E1E /* VISTA7.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VISTA7.xib; sourceTree = "<group>"; };
+		FAB54C4A2A0E82E200E14E1E /* VISTA3.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VISTA3.xib; sourceTree = "<group>"; };
+		FAB54C4B2A0E82E200E14E1E /* VISTA8.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VISTA8.xib; sourceTree = "<group>"; };
+		FAB54C4C2A0E82E300E14E1E /* VISTA4.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VISTA4.xib; sourceTree = "<group>"; };
+		FAB54C4D2A0E82E300E14E1E /* VISTA2.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VISTA2.xib; sourceTree = "<group>"; };
+		FAB54C4E2A0E82E300E14E1E /* VISTA9.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VISTA9.xib; sourceTree = "<group>"; };
+		FAB54C4F2A0E82E300E14E1E /* VISTA10.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VISTA10.xib; sourceTree = "<group>"; };
+		FAB54C502A0E82E300E14E1E /* VISTA5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VISTA5.xib; sourceTree = "<group>"; };
+		FAB54C672A0EB93900E14E1E /* Vista1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vista1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -194,6 +230,7 @@
 		FA6C7A2029D8F6CD002267A5 /* CoolManager */ = {
 			isa = PBXGroup;
 			children = (
+				FAB54C452A0E82A400E14E1E /* xib */,
 				FA714C1E2A086BF4003E2CA4 /* Domain */,
 				FA38FFCC29FE5DE500BC21FA /* ViewControllers */,
 				FA6C7A2129D8F6CD002267A5 /* AppDelegate.swift */,
@@ -271,8 +308,27 @@
 				FAB54C372A0E113C00E14E1E /* View1Presenter.swift */,
 				FAB54C3A2A0E116600E14E1E /* View1View.swift */,
 				FAB54C3D2A0E118A00E14E1E /* RefrigeratorBuilderViewModel.swift */,
+				FAB54C672A0EB93900E14E1E /* Vista1.swift */,
 			);
 			path = ViewControler1;
+			sourceTree = "<group>";
+		};
+		FAB54C452A0E82A400E14E1E /* xib */ = {
+			isa = PBXGroup;
+			children = (
+				FAB54C462A0E82E200E14E1E /* ViewHome.xib */,
+				FAB54C482A0E82E200E14E1E /* VISTA1.xib */,
+				FAB54C4D2A0E82E300E14E1E /* VISTA2.xib */,
+				FAB54C4A2A0E82E200E14E1E /* VISTA3.xib */,
+				FAB54C4C2A0E82E300E14E1E /* VISTA4.xib */,
+				FAB54C502A0E82E300E14E1E /* VISTA5.xib */,
+				FAB54C472A0E82E200E14E1E /* VISTA6.xib */,
+				FAB54C492A0E82E200E14E1E /* VISTA7.xib */,
+				FAB54C4B2A0E82E200E14E1E /* VISTA8.xib */,
+				FAB54C4E2A0E82E300E14E1E /* VISTA9.xib */,
+				FAB54C4F2A0E82E300E14E1E /* VISTA10.xib */,
+			);
+			path = xib;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -285,7 +341,6 @@
 				FA6C7A1A29D8F6CD002267A5 /* Sources */,
 				FA6C7A1B29D8F6CD002267A5 /* Frameworks */,
 				FA6C7A1C29D8F6CD002267A5 /* Resources */,
-				FA38FFD929FE602900BC21FA /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -357,10 +412,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB54C5F2A0E82E300E14E1E /* VISTA2.xib in Resources */,
 				FA6C7A2E29D8F6D0002267A5 /* LaunchScreen.storyboard in Resources */,
+				FAB54C572A0E82E300E14E1E /* VISTA7.xib in Resources */,
 				FA714C412A088CC8003E2CA4 /* temperature_rules.txt in Resources */,
+				FAB54C532A0E82E300E14E1E /* VISTA6.xib in Resources */,
+				FAB54C612A0E82E300E14E1E /* VISTA9.xib in Resources */,
+				FAB54C652A0E82E300E14E1E /* VISTA5.xib in Resources */,
+				FAB54C552A0E82E300E14E1E /* VISTA1.xib in Resources */,
+				FAB54C512A0E82E300E14E1E /* ViewHome.xib in Resources */,
+				FAB54C5B2A0E82E300E14E1E /* VISTA8.xib in Resources */,
 				FA6C7A2B29D8F6D0002267A5 /* Assets.xcassets in Resources */,
 				FA6C7A2929D8F6CD002267A5 /* Main.storyboard in Resources */,
+				FAB54C592A0E82E300E14E1E /* VISTA3.xib in Resources */,
+				FAB54C632A0E82E300E14E1E /* VISTA10.xib in Resources */,
+				FAB54C5D2A0E82E300E14E1E /* VISTA4.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,30 +434,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FAB54C5E2A0E82E300E14E1E /* VISTA4.xib in Resources */,
+				FAB54C5C2A0E82E300E14E1E /* VISTA8.xib in Resources */,
+				FAB54C622A0E82E300E14E1E /* VISTA9.xib in Resources */,
+				FAB54C542A0E82E300E14E1E /* VISTA6.xib in Resources */,
+				FAB54C5A2A0E82E300E14E1E /* VISTA3.xib in Resources */,
+				FAB54C662A0E82E300E14E1E /* VISTA5.xib in Resources */,
+				FAB54C602A0E82E300E14E1E /* VISTA2.xib in Resources */,
+				FAB54C642A0E82E300E14E1E /* VISTA10.xib in Resources */,
+				FAB54C582A0E82E300E14E1E /* VISTA7.xib in Resources */,
+				FAB54C562A0E82E300E14E1E /* VISTA1.xib in Resources */,
+				FAB54C522A0E82E300E14E1E /* ViewHome.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		FA38FFD929FE602900BC21FA /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-			);
-			outputFileListPaths = (
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\n";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		FA6C7A1A29D8F6CD002267A5 /* Sources */ = {
@@ -413,6 +470,7 @@
 				FA6C7A2229D8F6CD002267A5 /* AppDelegate.swift in Sources */,
 				FAB54C232A0DBFDD00E14E1E /* QuickCoolingState.swift in Sources */,
 				FAB54C1C2A0DBFDD00E14E1E /* TurboState.swift in Sources */,
+				FAB54C682A0EB93900E14E1E /* Vista1.swift in Sources */,
 				FA714C272A088089003E2CA4 /* TemperatureStatus.swift in Sources */,
 				FAB54C302A0DC03200E14E1E /* Door.swift in Sources */,
 				FA38FFE929FE669800BC21FA /* View2ViewController.swift in Sources */,
@@ -454,6 +512,7 @@
 				FAB54C392A0E113C00E14E1E /* View1Presenter.swift in Sources */,
 				FAB54C3C2A0E116600E14E1E /* View1View.swift in Sources */,
 				FAB54C442A0E152300E14E1E /* RefrigeratorBuilderViewModelTests.swift in Sources */,
+				FAB54C692A0EB93900E14E1E /* Vista1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,9 +682,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = example.CoolManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -651,9 +713,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = example.CoolManager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};

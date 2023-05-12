@@ -1,0 +1,515 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner">
+            <connections/>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="1" customClass="VISTA4">
+            <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="14" image="Imagenes/fondo.jpg" semanticContentAttribute="forceLeftToRight" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                    <rect key="frame" x="-105" y="-7" width="1061" height="806"/>
+                </imageView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="37" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                    <rect key="frame" x="-54" y="406" width="152" height="34"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <state key="normal" backgroundImage="Imagenes/tituos-grafica.png" title="RELAYS">
+                        <color key="titleShadowColor" colorSpace="calibratedRGB" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1"/>
+                        <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                    </state>
+                    <connections>
+                        <action selector="BTN_RELAYS_TouchUpInside:" destination="1" id="38" eventType="touchUpInside"/>
+                    </connections>
+                </button>
+                <imageView contentMode="scaleToFill" id="17" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Imagenes/marco-grafica.png">
+                    <rect key="frame" x="-54" y="58" width="858" height="306"/>
+                </imageView>
+                <imageView contentMode="scaleToFill" id="18" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" image="Imagenes/marco-grafica.png">
+                    <rect key="frame" x="-54" y="436" width="858" height="219"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" id="19" translatesAutoresizingMaskIntoConstraints="NO" image="Imagenes/tituos-grafica.png" fixedFrame="YES">
+                    <rect key="frame" x="-54" y="29" width="345" height="34"/>
+                </imageView>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" lineBreakMode="tailTruncation" minimumFontSize="10" id="22" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES" textAlignment="center" text="CDT- Control Digital de Temperature">
+                    <rect key="frame" x="-54" y="36" width="326" height="21"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" colorSpace="calibratedWhite" white="1" alpha="1"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="31" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                    <rect key="frame" x="633" y="26" width="171" height="36"/>
+                    <state key="normal" backgroundImage="Imagenes/boton-fecha.png" title="1 DAY">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                    </state>
+                    <connections>
+                        <action selector="UIButton31_TouchUpInside:" destination="1" id="34" eventType="touchUpInside"/>
+                    </connections>
+                </button>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="41" translatesAutoresizingMaskIntoConstraints="NO" fixedFrame="YES">
+                    <rect key="frame" x="361" y="26" width="264" height="37"/>
+                    <state key="normal" backgroundImage="Imagenes/boton-fecha.png" title="SAMPLE TIME">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="titleColor" colorSpace="calibratedRGB" red="1" green="1" blue="1" alpha="1"/>
+                    </state>
+                    <connections>
+                        <action selector="UIButton31_TouchUpInside:" destination="43" id="42" eventType="touchUpInside"/>
+                        <action selector="BTN_SAMPLE_TIME_TouchUpInside:" destination="1" id="44" eventType="touchUpInside"/>
+                    </connections>
+                </button>
+            </subviews>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="iPad"/>
+            <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+            <connections>
+                <outlet property="BTN_LOGS" destination="31" id="name-outlet-31"/>
+                <outlet property="GRAFICA_PRINCIPAL" destination="17" id="name-outlet-17"/>
+                <outlet property="GRAFICA_SECUNDARIA" destination="18" id="name-outlet-18"/>
+                <outlet property="BTN_RELAYS" destination="37" id="name-outlet-37"/>
+                <outlet property="BTN_SAMPLE_TIME" destination="41" id="name-outlet-41"/>
+            </connections>
+        </view>
+    </objects>
+    <resources>
+        <image name="Imagenes/App-Refrigerador-fase4-4-efecto_03.jpg" width="91" height="79"/>
+        <image name="Imagenes/App-Refrigerador-fase4-4-efecto_06.jpg" width="91" height="79"/>
+        <image name="Imagenes/App-Refrigerador-fase4-4-efecto_08.jpg" width="91" height="79"/>
+        <image name="Imagenes/App-Refrigerador-fase4-4-efecto_10.jpg" width="91" height="79"/>
+        <image name="Imagenes/App-Refrigerador-fase4-4-efecto_12.jpg" width="91" height="79"/>
+        <image name="Imagenes/App-Refrigerador-fase4-4_03.jpg" width="91" height="79"/>
+        <image name="Imagenes/App-Refrigerador-fase4-4_06.jpg" width="91" height="79"/>
+        <image name="Imagenes/App-Refrigerador-fase4-4_08.jpg" width="91" height="79"/>
+        <image name="Imagenes/App-Refrigerador-fase4-4_10.jpg" width="91" height="79"/>
+        <image name="Imagenes/App-Refrigerador-fase4-4_12.jpg" width="91" height="79"/>
+        <image name="Imagenes/App-Refrigerador-fondo.jpg" width="876" height="640"/>
+        <image name="Imagenes/Barra_Segundo_Menu.png" width="166" height="775"/>
+        <image name="Imagenes/boton-chef.png" width="73" height="24"/>
+        <image name="Imagenes/boton-fecha.png" width="145" height="30"/>
+        <image name="Imagenes/boton-grafica.png" width="129" height="32"/>
+        <image name="Imagenes/boton-setpoint-activo.png" width="89" height="27"/>
+        <image name="Imagenes/boton-setpoint-inactivo.png" width="89" height="27"/>
+        <image name="Imagenes/boton-siguiente-efecto.png" width="72" height="72"/>
+        <image name="Imagenes/boton-siguiente.png" width="72" height="72"/>
+        <image name="Imagenes/bullet-activo.png" width="200" height="200"/>
+        <image name="Imagenes/bullet-inactivo.png" width="200" height="200"/>
+        <image name="Imagenes/campo-texto-efecto.png" width="302" height="48"/>
+        <image name="Imagenes/campo-texto.png" width="302" height="48"/>
+        <image name="Imagenes/CompressorOff.png" width="300" height="300"/>
+        <image name="Imagenes/DefrostOff.png" width="300" height="300"/>
+        <image name="Imagenes/doorOff.png" width="300" height="300"/>
+        <image name="Imagenes/flecha izq.png" width="11" height="29"/>
+        <image name="Imagenes/flecha_arriba.png" width="22" height="20"/>
+        <image name="Imagenes/FocoOff.png" width="300" height="300"/>
+        <image name="Imagenes/fondo-current.jpg" width="160" height="288"/>
+        <image name="Imagenes/fondo-indicadores2.png" width="161" height="288"/>
+        <image name="Imagenes/fondo-indicators.jpg" width="160" height="288"/>
+        <image name="Imagenes/fondo-mitad.jpg" width="443" height="640"/>
+        <image name="Imagenes/fondo-settings2.png" width="161" height="288"/>
+        <image name="Imagenes/fondo.jpg" width="876" height="640"/>
+        <image name="Imagenes/GRADOS-C.png" width="103" height="56"/>
+        <image name="Imagenes/GRADOS-F.png" width="103" height="56"/>
+        <image name="Imagenes/help-efecto.jpg" width="76" height="71"/>
+        <image name="Imagenes/help-normal.jpg" width="76" height="71"/>
+        <image name="Imagenes/home-efecto.jpg" width="76" height="71"/>
+        <image name="Imagenes/home-normal.jpg" width="76" height="71"/>
+        <image name="Imagenes/Icon-1024.png" width="1024" height="1024"/>
+        <image name="Imagenes/Icon-120.png" width="120" height="120"/>
+        <image name="Imagenes/Icon-120x2.png" width="240" height="240"/>
+        <image name="Imagenes/Icon-120x3.png" width="360" height="360"/>
+        <image name="Imagenes/Icon-29.png" width="29" height="29"/>
+        <image name="Imagenes/Icon-40.png" width="40" height="40"/>
+        <image name="Imagenes/Icon-50.png" width="50" height="50"/>
+        <image name="Imagenes/Icon-57x57.png" width="57" height="57"/>
+        <image name="Imagenes/Icon-72.png" width="72" height="72"/>
+        <image name="Imagenes/Icon-76.png" width="76" height="76"/>
+        <image name="Imagenes/icon-chef.png" width="56" height="56"/>
+        <image name="Imagenes/icon-logg.png" width="90" height="70"/>
+        <image name="Imagenes/icon-sett.png" width="90" height="70"/>
+        <image name="Imagenes/iconn-help.png" width="90" height="70"/>
+        <image name="Imagenes/iconn-home.png" width="90" height="70"/>
+        <image name="Imagenes/iconn-quick.png" width="90" height="70"/>
+        <image name="Imagenes/icono-compressorOff.png" width="300" height="300"/>
+        <image name="Imagenes/icono-compressorOn.png" width="300" height="300"/>
+        <image name="Imagenes/icono-defrostOff.png" width="300" height="300"/>
+        <image name="Imagenes/icono-defrostOn.png" width="300" height="300"/>
+        <image name="Imagenes/icono-doorClose.png" width="300" height="300"/>
+        <image name="Imagenes/icono-doorOpen.png" width="300" height="300"/>
+        <image name="Imagenes/icono-focoOff.png" width="300" height="300"/>
+        <image name="Imagenes/icono-focoOn.png" width="300" height="300"/>
+        <image name="Imagenes/icono-location.png" width="172" height="99"/>
+        <image name="Imagenes/icono-log.png" width="189" height="119"/>
+        <image name="Imagenes/icono-password.png" width="196" height="98"/>
+        <image name="Imagenes/icono-wifi-.png" width="67" height="53"/>
+        <image name="Imagenes/Icono_Barra_barraChef.png" width="91" height="76"/>
+        <image name="Imagenes/Icono_Barra_BarraCustom.png" width="91" height="76"/>
+        <image name="Imagenes/Icono_Barra_BarraGrocery.png" width="91" height="76"/>
+        <image name="Imagenes/Icono_Barra_BarraMedical.png" width="91" height="76"/>
+        <image name="Imagenes/Icono_Barra_Beberages.png" width="91" height="76"/>
+        <image name="Imagenes/Icono_Secundo_Menu_settings connect.png" width="90" height="70"/>
+        <image name="Imagenes/Icono_Segundo_menu_settings connect-1.png" width="90" height="70"/>
+        <image name="Imagenes/Icono_Segundo_Menu_settings keyboard.png" width="90" height="70"/>
+        <image name="Imagenes/icono_segundo_menu_settings pass.png" width="90" height="70"/>
+        <image name="Imagenes/Icono_Segundo_Menu_settings units-1.png" width="90" height="70"/>
+        <image name="Imagenes/Icono_Segundo_Menu_settings user switch-1.png" width="90" height="70"/>
+        <image name="Imagenes/Icono_Segundo_Menu_settings user switch.png" width="90" height="70"/>
+        <image name="Imagenes/Icono_Segundo_Menusettings keyboard-1.png" width="90" height="70"/>
+        <image name="Imagenes/Icono_SegundoMenu_settings_service.png" width="90" height="70"/>
+        <image name="Imagenes/iconos-grados.png" width="357" height="98"/>
+        <image name="Imagenes/iconos-iniciales_Help.png" width="76" height="71"/>
+        <image name="Imagenes/iconos-iniciales_Home.png" width="76" height="70"/>
+        <image name="Imagenes/iconos-iniciales_Logs.png" width="76" height="69"/>
+        <image name="Imagenes/iconos-iniciales_QuickSetup.png" width="76" height="70"/>
+        <image name="Imagenes/iconos-iniciales_Settings.png" width="76" height="69"/>
+        <image name="Imagenes/iconoShortcut.png" width="205" height="204"/>
+        <image name="Imagenes/iconoShortcut144x144.png" width="144" height="144"/>
+        <image name="Imagenes/iconoShortcut29x29.png" width="29" height="29"/>
+        <image name="Imagenes/iconoShortcut40x40.png" width="40" height="40"/>
+        <image name="Imagenes/iconoShortcut50x50.png" width="50" height="50"/>
+        <image name="Imagenes/iconoShortcut72x72.png" width="72" height="72"/>
+        <image name="Imagenes/iconoShortcut76x76.png" width="76" height="76"/>
+        <image name="Imagenes/image001.png" width="1600" height="1000"/>
+        <image name="Imagenes/ImagenScenarioChickenClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImagenScenarioChickenOscuro.jpg" width="90" height="79"/>
+        <image name="Imagenes/ImagenScenarioZanahoriaClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImagenScenarioZanahoriaOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioAppleClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioAppleOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioAvocadoClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioAvocadoOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioBeansClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioBeansOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioBeerClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioBeerOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioBubleWineClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioBubleWineOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioCarneClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioCarneOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioCarrotClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioCarrotOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioCheesClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioCheesOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioCheffClaro.jpg" width="92" height="79"/>
+        <image name="Imagenes/ImageScenarioCheffOscuro.jpg" width="92" height="79"/>
+        <image name="Imagenes/ImageScenarioCornClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioCornOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioCupcakeClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioCupCakeOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioDrinksClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioDrinksOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioEggsClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioEggsOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioFishClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioFishOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioFreshMilkClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioFreshMilkOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioFruitClaro.jpg" width="92" height="79"/>
+        <image name="Imagenes/ImageScenarioFruitOscuro.jpg" width="92" height="79"/>
+        <image name="Imagenes/ImageScenarioHelpOscuro.jpg" width="76" height="71"/>
+        <image name="Imagenes/ImageScenarioHomeOscuro.jpg" width="76" height="71"/>
+        <image name="Imagenes/ImageScenarioJuiceClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioLogsOscuro.jpg" width="76" height="71"/>
+        <image name="Imagenes/ImageScenarioMilkClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioMilkOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioOnionClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioOnionOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioOtherClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioOtherOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioPastMilkClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioPastMilOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioPearClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioPearOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioPinkWineClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioPinkWineOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioPumpkinClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioPumpkinOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioQuickSetupOscuro.jpg" width="76" height="71"/>
+        <image name="Imagenes/ImageScenarioRedWineClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioRedWinOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioSettingsOscuro.jpg" width="76" height="71"/>
+        <image name="Imagenes/ImageScenarioSodaClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioSodaOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioVacunasClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioVacunasOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioWitheWineClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioWitheWineOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioYogurtClaro.jpg" width="91" height="79"/>
+        <image name="Imagenes/ImageScenarioYogurtOscuro.jpg" width="91" height="79"/>
+        <image name="Imagenes/imgFondoHome.png" width="2048" height="1536"/>
+        <image name="Imagenes/imgHomePress.png" width="104" height="155"/>
+        <image name="Imagenes/imgIconHelpPress.png" width="208" height="306"/>
+        <image name="Imagenes/imgIconHomePress.png" width="208" height="307"/>
+        <image name="Imagenes/imgIconLogPress.png" width="208" height="307"/>
+        <image name="Imagenes/imgIconQuickPress.png" width="208" height="307"/>
+        <image name="Imagenes/imgIconSetupPress.png" width="208" height="306"/>
+        <image name="Imagenes/imgMenuPrincipal.png" width="208" height="1536"/>
+        <image name="Imagenes/launcher.jpg" width="876" height="640"/>
+        <image name="Imagenes/log-efecto.jpg" width="76" height="71"/>
+        <image name="Imagenes/log-normal.jpg" width="76" height="71"/>
+        <image name="Imagenes/logs-EFECTO.jpg" width="76" height="71"/>
+        <image name="Imagenes/logs-normal.jpg" width="76" height="71"/>
+        <image name="Imagenes/marco-grafica.png" width="700" height="188"/>
+        <image name="Imagenes/menu-fondo.jpg" width="76" height="640"/>
+        <image name="Imagenes/menu-principal.jpg" width="76" height="640"/>
+        <image name="Imagenes/quick-efecto.jpg" width="76" height="71"/>
+        <image name="Imagenes/quick-normal.jpg" width="76" height="71"/>
+        <image name="Imagenes/QUICKSETUP-EFECTO.jpg" width="76" height="71"/>
+        <image name="Imagenes/QUICKSETUP-NORMAL.jpg" width="76" height="71"/>
+        <image name="Imagenes/SetPoint-0.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-1.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-10.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-11.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-12.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-13.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-14.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-15.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-16.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-17.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-18.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-19.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-2.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-20.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-21.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-22.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-23.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-24.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-25.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-26.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-27.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-28.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-29.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-3.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-30.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-31.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-32.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-33.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-34.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-35.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-36.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-37.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-38.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-39.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-4.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-40.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-41.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-42.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-5.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-6.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-7.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-8.png" width="163" height="134"/>
+        <image name="Imagenes/SetPoint-9.png" width="163" height="134"/>
+        <image name="Imagenes/setpoint-flecha-abajo-efecto.png" width="37" height="29"/>
+        <image name="Imagenes/setpoint-flecha-abajo-normal.png" width="37" height="29"/>
+        <image name="Imagenes/setpoint-flecha-arriba-efecto.png" width="37" height="29"/>
+        <image name="Imagenes/setpoint-flecha-arriba-normal.png" width="37" height="29"/>
+        <image name="Imagenes/settings-efecto.jpg" width="76" height="71"/>
+        <image name="Imagenes/settings-normal.jpg" width="76" height="71"/>
+        <image name="Imagenes/Sombra-Inicio.png" width="160" height="288"/>
+        <image name="Imagenes/switch_off.png" width="100" height="181"/>
+        <image name="Imagenes/switch_on.png" width="100" height="181"/>
+        <image name="Imagenes/titulo-centro.png" width="184" height="31"/>
+        <image name="Imagenes/titulo-der.png" width="145" height="31"/>
+        <image name="Imagenes/TITULO-HOME.png" width="312" height="31"/>
+        <image name="Imagenes/titulo-izq.png" width="145" height="31"/>
+        <image name="Imagenes/tituos-grafica.png" width="295" height="31"/>
+        <image name="Icon-72.png" width="72" height="72"/>
+        <image name="Icon-76.png" width="76" height="76"/>
+        <image name="Icon-Small-40.png" width="40" height="40"/>
+        <image name="Icon-Small-50.png" width="50" height="50"/>
+        <image name="Icon-Small.png" width="29" height="29"/>
+        <image name="Imagenes/disconnect.png" width="104" height="90"/>
+        <image name="Imagenes/imgMenuPrincipalMax.png" width="208" height="1536"/>
+        <image name="Imagenes/imgMenuSetup.png" width="208" height="1536"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--1.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--10.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--11.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--12.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--13.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--14.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--15.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--16.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--17.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--18.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--19.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--2.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--20.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--21.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--22.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--23.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--24.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--25.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--26.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--27.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--28.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--29.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--3.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--30.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--31.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--32.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--33.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--34.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--35.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--36.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--37.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--38.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--39.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--4.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--40.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--41.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--42.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--5.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--6.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--7.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--8.png" width="205" height="170"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--9.png" width="205" height="170"/>
+        <image name="Imagenes/submenu-quicksetuo con flecha.png" width="101" height="640"/>
+        <image name="Imagenes/100x100/icon-bebida.png" width="155" height="155"/>
+        <image name="Imagenes/100x100/icon-carne.png" width="155" height="155"/>
+        <image name="Imagenes/100x100/icon-cerveza.png" width="155" height="155"/>
+        <image name="Imagenes/100x100/icon-chef.png" width="155" height="155"/>
+        <image name="Imagenes/100x100/icon-fruta.png" width="155" height="155"/>
+        <image name="Imagenes/100x100/icon-medical.png" width="155" height="155"/>
+        <image name="Imagenes/100x100/icon-otro.png" width="155" height="155"/>
+        <image name="Imagenes/100x100/icon-pescado.png" width="155" height="155"/>
+        <image name="Imagenes/100x100/icon-pollo.png" width="155" height="155"/>
+        <image name="Imagenes/100x100/icon-queso.png" width="155" height="155"/>
+        <image name="Imagenes/100x100/icon-vino-blanco.png" width="140" height="140"/>
+        <image name="Imagenes/100x100/icon-vino-rosado.png" width="140" height="140"/>
+        <image name="Imagenes/100x100/icon-vino-tinto.png" width="140" height="140"/>
+        <image name="Imagenes/100x100/icon-vino.png" width="140" height="140"/>
+        <image name="Imagenes/botonera.png" width="100" height="100"/>
+        <image name="Imagenes/cambio-de-usuario.png" width="100" height="100"/>
+        <image name="Imagenes/connect.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/icono-chef.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/icono-frutas.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/icono_chef.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/icono_fruits.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/iconos-carne.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/iconos-cerveza.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/iconos-cheese.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/iconos-drinks.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/iconos-otros.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/iconos-pescado.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/iconos-pollo.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/iconos-teclado.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/iconos-vacuna.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/iconos-vino-.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/iconos-vino-blanco.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/iconos-vino-rosado.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/iconos-vino-tinto.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/iconos_beberages.png" width="100" height="100"/>
+        <image name="Imagenes/Img_Escenarios/iconos_medical.png" width="100" height="100"/>
+        <image name="Imagenes/password.png" width="100" height="100"/>
+        <image name="Imagenes/servicio.png" width="100" height="100"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42--0.png" width="205" height="170"/>
+        <image name="Imagenes/units.png" width="100" height="100"/>
+        <image name="Imagenes/aguacates.png" width="155" height="155"/>
+        <image name="Imagenes/carne.png" width="155" height="155"/>
+        <image name="Imagenes/carne2.png" width="155" height="155"/>
+        <image name="Imagenes/cerveza.png" width="155" height="155"/>
+        <image name="Imagenes/espinaca.png" width="155" height="155"/>
+        <image name="Imagenes/icon-off.png" width="103" height="56"/>
+        <image name="Imagenes/icon-on.png" width="103" height="56"/>
+        <image name="Imagenes/jamon.png" width="155" height="155"/>
+        <image name="Imagenes/leche-fresca.png" width="155" height="155"/>
+        <image name="Imagenes/leche-pasteurizada.png" width="155" height="155"/>
+        <image name="Imagenes/manzana.png" width="155" height="155"/>
+        <image name="Imagenes/melon.png" width="155" height="155"/>
+        <image name="Imagenes/pescado.png" width="155" height="155"/>
+        <image name="Imagenes/platano.png" width="155" height="155"/>
+        <image name="Imagenes/pollo.png" width="155" height="155"/>
+        <image name="Imagenes/queso-fresco.png" width="155" height="155"/>
+        <image name="Imagenes/queso.png" width="155" height="155"/>
+        <image name="Imagenes/queso2.png" width="155" height="155"/>
+        <image name="Imagenes/queso3.png" width="155" height="155"/>
+        <image name="Imagenes/queso4.png" width="155" height="155"/>
+        <image name="Imagenes/reposteria.png" width="155" height="155"/>
+        <image name="Imagenes/salchicha.png" width="155" height="155"/>
+        <image name="Imagenes/tocino.png" width="155" height="155"/>
+        <image name="Imagenes/toxoide.png" width="155" height="155"/>
+        <image name="Imagenes/uvas.png" width="155" height="155"/>
+        <image name="Imagenes/vacuna-1.png" width="155" height="155"/>
+        <image name="Imagenes/vacuna-2.png" width="155" height="155"/>
+        <image name="Imagenes/vacuna-3.png" width="155" height="155"/>
+        <image name="Imagenes/vacuna-4.png" width="155" height="155"/>
+        <image name="Imagenes/vino-blanco.png" width="155" height="155"/>
+        <image name="Imagenes/vino-espumoso.png" width="155" height="155"/>
+        <image name="Imagenes/vino-tinto.png" width="155" height="155"/>
+        <image name="Imagenes/vino1.png" width="155" height="155"/>
+        <image name="Imagenes/vino2.png" width="155" height="155"/>
+        <image name="Imagenes/vino3.png" width="155" height="155"/>
+        <image name="Imagenes/vino4-1.png" width="155" height="155"/>
+        <image name="Imagenes/vino4.png" width="155" height="155"/>
+        <image name="Imagenes/vino5-1.png" width="155" height="155"/>
+        <image name="Imagenes/vino5.png" width="155" height="155"/>
+        <image name="Imagenes/vino6-1.png" width="155" height="155"/>
+        <image name="Imagenes/vino6.png" width="155" height="155"/>
+        <image name="Imagenes/vino7-1.png" width="155" height="155"/>
+        <image name="Imagenes/vino7.png" width="155" height="155"/>
+        <image name="Imagenes/vino8-1.png" width="155" height="155"/>
+        <image name="Imagenes/vino8.png" width="155" height="155"/>
+        <image name="Imagenes/yogurt.png" width="155" height="155"/>
+        <image name="Imagenes/zanahoria.png" width="155" height="155"/>
+        <image name="Imagenes/200x200-connect.png" width="200" height="200"/>
+        <image name="Imagenes/200x200-exit.png" width="200" height="200"/>
+        <image name="Imagenes/200x200-keyboard.png" width="200" height="200"/>
+        <image name="Imagenes/200x200-name.png" width="200" height="200"/>
+        <image name="Imagenes/200x200-password.png" width="200" height="200"/>
+        <image name="Imagenes/200x200-service.png" width="200" height="200"/>
+        <image name="Imagenes/200x200-unit.png" width="200" height="200"/>
+        <image name="Imagenes/arrow1.png" width="200" height="200"/>
+        <image name="Imagenes/arrow2.png" width="200" height="200"/>
+        <image name="Imagenes/btn-aceptar-normal.png" width="126" height="46"/>
+        <image name="Imagenes/btn-aceptar-presionado.png" width="126" height="46"/>
+        <image name="Imagenes/btn-cancel-normal.png" width="126" height="46"/>
+        <image name="Imagenes/btn-cancel-presionado.png" width="126" height="46"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-0.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-1.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-10.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-11.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-12.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-13.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-14.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-15.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-16.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-17.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-18.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-19.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-2.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-20.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-21.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-22.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-23.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-24.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-25.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-26.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-27.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-28.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-29.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-3.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-30.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-31.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-32.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-33.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-34.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-35.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-36.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-37.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-38.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-39.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-4.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-40.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-41.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-42.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-5.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-6.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-7.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-8.png" width="400" height="332"/>
+        <image name="Imagenes/SetPoint/SETPOINT-42-400x400-9.png" width="400" height="332"/>
+    </resources>
+</document>
