@@ -1,10 +1,14 @@
 import UIKit
 class Vista1: UIView {
+    
+    var offsetX: CGFloat = 200
+    var offsetY: CGFloat = 100
+    
     lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
         imageView.semanticContentAttribute = .forceLeftToRight
-        imageView.frame = CGRect(x: -105, y: -7, width: 1061, height: 806)
+        imageView.frame = frame
         imageView.image = UIImage(named: "fondo.jpg")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -13,10 +17,11 @@ class Vista1: UIView {
         return imageView
     }()
     
+    
+    
     lazy var settingsImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
-        imageView.frame = CGRect(x: -49, y: 43, width: 225, height: 402)
         imageView.image = UIImage(named: "fondo-settings2.png")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -25,10 +30,11 @@ class Vista1: UIView {
         return imageView
     }()
     
+    
+    
     lazy var indicatorsImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
-        imageView.frame = CGRect(x: 542, y: 44, width: 222, height: 400)
         imageView.image = UIImage(named: "fondo-indicadores2.png")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -36,11 +42,13 @@ class Vista1: UIView {
         imageView.tag = 8
         return imageView
     }()
+    
+    
+    
 
     lazy var graphFrameImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
-        imageView.frame = CGRect(x: -44, y: 475, width: 808, height: 250)
         imageView.image = UIImage(named: "marco-grafica.png")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -49,10 +57,12 @@ class Vista1: UIView {
         return imageView
     }()
     
+    
+    
+    
     lazy var setPointImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
-        imageView.frame = CGRect(x: 225, y: 200, width: 244, height: 193)
         imageView.image = UIImage(named: "SetPoint-0.png")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -61,12 +71,13 @@ class Vista1: UIView {
         return imageView
     }()
     
+    
+    
     lazy var textLabel: UILabel = {
         let label = UILabel()
         label.isOpaque = false
         label.clipsToBounds = true
         label.contentMode = .left
-        label.frame = CGRect(x: 176, y: 90, width: 364, height: 99)
         label.textAlignment = .center
         label.lineBreakMode = .byTruncatingTail
         label.minimumScaleFactor = 10
@@ -79,11 +90,12 @@ class Vista1: UIView {
         label.tag = 37
         return label
     }()
+    
+    
 
     lazy var focusOffImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
-        imageView.frame = CGRect(x: 627, y: 100, width: 65, height: 57)
         imageView.image = UIImage(named: "icono-focoOff.png")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -92,10 +104,11 @@ class Vista1: UIView {
         return imageView
     }()
     
+    
+    
     lazy var defrostOffImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
-        imageView.frame = CGRect(x: 627, y: 185, width: 65, height: 57)
         imageView.image = UIImage(named: "icono-defrostOff.png")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -104,10 +117,10 @@ class Vista1: UIView {
         return imageView
     }()
     
+    
     lazy var doorCloseImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
-        imageView.frame = CGRect(x: 627, y: 273, width: 65, height: 57)
         imageView.image = UIImage(named: "icono-doorClose.png")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -119,7 +132,6 @@ class Vista1: UIView {
     lazy var compressorOffImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
-        imageView.frame = CGRect(x: 634, y: 358, width: 65, height: 57)
         imageView.image = UIImage(named: "icono-compressorOff.png")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -128,7 +140,10 @@ class Vista1: UIView {
         imageView.tag = 41
         return imageView
     }()
+    
+    
 
+    
     lazy var ligthLabel: UILabel = {
         let label = UILabel()
         label.isOpaque = false
@@ -145,6 +160,8 @@ class Vista1: UIView {
         label.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
         return label
     }()
+    
+    
 
     // Etiqueta DEFROST
     lazy var defrostLabel: UILabel = {
@@ -164,6 +181,8 @@ class Vista1: UIView {
         return label
     }()
 
+    
+    
     // Etiqueta DOOR OPEN
     lazy var doorOpenLabel: UILabel = {
         let label = UILabel()
@@ -223,13 +242,11 @@ class Vista1: UIView {
         label.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         label.font = UIFont.systemFont(ofSize: 47)
         label.backgroundColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0)
-        
         return label
     }()
 
     private let button219: UIButton = {
         let button = UIButton(type: .system)
-        button.frame = CGRect(x: 264, y: 409, width: 164, height: 42)
         button.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         button.isHidden = true
         button.isOpaque = false
@@ -254,8 +271,9 @@ class Vista1: UIView {
         return button
     }()
     
+    
     // Botón
-    lazy var button: UIButton = {
+    lazy var btn_setPoint_up: UIButton = {
         let button = UIButton(type: .system)
         button.isOpaque = false
         button.contentMode = .scaleToFill
@@ -274,9 +292,8 @@ class Vista1: UIView {
     }()
 
 
-    private let button61: UIButton = {
+    private let btn_set_point_down: UIButton = {
         let button = UIButton(type: .system)
-        button.frame = CGRect(x: 470, y: 333, width: 58, height: 56)
         button.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         button.contentMode = .scaleToFill
         button.contentHorizontalAlignment = .center
@@ -292,11 +309,11 @@ class Vista1: UIView {
         return button
     }()
 
+    
 
     // Componente: Label
-    private let label82: UILabel = {
+    private let lbl_temperature: UILabel = {
         let label = UILabel()
-        label.frame = CGRect(x: 249, y: 49, width: 200, height: 21)
         label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         label.isOpaque = false
         label.clipsToBounds = true
@@ -312,11 +329,11 @@ class Vista1: UIView {
         label.text = "TEMPERATURE"
         return label
     }()
+    
 
     // Componente: ImageView
     private let imageView83: UIImageView = {
         let imageView = UIImageView()
-        imageView.frame = CGRect(x: -46, y: 44, width: 173, height: 31)
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         imageView.isUserInteractionEnabled = false
         imageView.contentMode = .scaleToFill
@@ -324,11 +341,11 @@ class Vista1: UIView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    
 
     // Componente: ImageView
     private let imageView84: UIImageView = {
         let imageView = UIImageView()
-        imageView.frame = CGRect(x: 586, y: 44, width: 178, height: 31)
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         imageView.isUserInteractionEnabled = false
         imageView.contentMode = .scaleToFill
@@ -336,10 +353,10 @@ class Vista1: UIView {
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    
 
     private let imageView159: UIImageView = {
         let imageView = UIImageView()
-        imageView.frame = CGRect(x: 0.0, y: 268, width: 113, height: 91)
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         imageView.isUserInteractionEnabled = false
         imageView.contentMode = .scaleToFill
@@ -347,10 +364,10 @@ class Vista1: UIView {
         return imageView
     }()
 
+    
     // Componente: Label
-    private let label160: UILabel = {
+    private let lbl_log: UILabel = {
         let label = UILabel()
-        label.frame = CGRect(x: -23, y: 139, width: 86, height: 21)
         label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         label.isOpaque = false
         label.clipsToBounds = true
@@ -366,11 +383,11 @@ class Vista1: UIView {
         label.text = "LOG :"
         return label
     }()
+    
 
     // Componente: Label
     private let label161: UILabel = {
         let label = UILabel()
-        label.frame = CGRect(x: 41, y: 140, width: 86, height: 21)
         label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         label.isOpaque = false
         label.clipsToBounds = true
@@ -385,21 +402,22 @@ class Vista1: UIView {
         label.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         return label
     }()
+    
+    
 
     // Componente: ImageView
-    private let imageView162: UIImageView = {
+    private let img_title_home: UIImageView = {
         let imageView = UIImageView()
-        imageView.frame = CGRect(x: 177, y: 459, width: 364, height: 34)
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         imageView.contentMode = .scaleToFill
         imageView.image = UIImage(named: "Imagenes/TITULO-HOME.png")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
+    
 
-    private let label163: UILabel = {
+    private let lbl_digital_temperature_indicator: UILabel = {
         let label = UILabel()
-        label.frame = CGRect(x: 198, y: 466, width: 322, height: 21)
         label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         label.isOpaque = false
         label.clipsToBounds = true
@@ -414,11 +432,11 @@ class Vista1: UIView {
         label.text = "CDT - Digital Temperature Control"
         return label
     }()
+    
 
     // Componente: Label
-    private let label164: UILabel = {
+    private let lbl_chef: UILabel = {
         let label = UILabel()
-        label.frame = CGRect(x: -54, y: 374, width: 230, height: 21)
         label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         label.isOpaque = false
         label.clipsToBounds = true
@@ -436,9 +454,8 @@ class Vista1: UIView {
     }()
 
     // Componente: Label
-    private let label165: UILabel = {
+    private let lbl_mode: UILabel = {
         let label = UILabel()
-        label.frame = CGRect(x: 12, y: 222, width: 86, height: 21)
         label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         label.isOpaque = false
         label.clipsToBounds = true
@@ -454,10 +471,10 @@ class Vista1: UIView {
         label.text = "MODE"
         return label
     }()
+    
 
-    private let label210: UILabel = {
+    private let lbl_settings: UILabel = {
         let label = UILabel()
-        label.frame = CGRect(x: -73, y: 49, width: 186, height: 21)
         label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         label.isOpaque = false
         label.clipsToBounds = true
@@ -473,11 +490,11 @@ class Vista1: UIView {
         label.text = "SETTINGS"
         return label
     }()
+    
 
     // Componente: Label
-    private let label211: UILabel = {
+    private let lbl_indicators: UILabel = {
         let label = UILabel()
-        label.frame = CGRect(x: 586, y: 49, width: 200, height: 21)
         label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         label.isOpaque = false
         label.clipsToBounds = true
@@ -495,9 +512,8 @@ class Vista1: UIView {
     }()
 
     // Componente: Label
-    private let label214: UILabel = {
+    private let lbl_set_point: UILabel = {
         let label = UILabel()
-        label.frame = CGRect(x: 282, y: 374, width: 127, height: 21)
         label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         label.isOpaque = false
         label.clipsToBounds = true
@@ -514,8 +530,6 @@ class Vista1: UIView {
         return label
     }()
     
-    
-    
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -527,10 +541,8 @@ class Vista1: UIView {
     }
     
     
+    
     func setupView(){
-        // Agregar como subvistas
-
-        // backgroundImageView
         addSubview(backgroundImageView)
 
         // settingsImageView
@@ -582,13 +594,13 @@ class Vista1: UIView {
         addSubview(button219)
 
         // button
-        addSubview(button)
+        addSubview(btn_setPoint_up)
 
         // button61
-        addSubview(button61)
+        addSubview(btn_set_point_down)
 
         // label82
-        addSubview(label82)
+        addSubview(lbl_temperature)
 
         // imageView83
         addSubview(imageView83)
@@ -600,31 +612,175 @@ class Vista1: UIView {
         addSubview(imageView159)
 
         // label160
-        addSubview(label160)
+        addSubview(lbl_log)
 
         // label161
         addSubview(label161)
 
         // imageView162
-        addSubview(imageView162)
+        addSubview(img_title_home)
 
         // label163
-        addSubview(label163)
+        addSubview(lbl_digital_temperature_indicator)
 
         // label164
-        addSubview(label164)
+        addSubview(lbl_chef)
 
         // label165
-        addSubview(label165)
+        addSubview(lbl_mode)
 
         // label210
-        addSubview(label210)
+        addSubview(lbl_settings)
 
         // label211
-        addSubview(label211)
+        addSubview(lbl_indicators)
 
         // label214
-        addSubview(label214)
+        addSubview(lbl_set_point)
+        
+        
+        doorCloseImageView.frame = CGRect(x: 627, y: 273, width: 65, height: 57)
+        defrostOffImageView.frame = CGRect(x: 627, y: 185, width: 65, height: 57)
+        focusOffImageView.frame = CGRect(x: 627, y: 100, width: 65, height: 57)
+        lbl_set_point.frame = CGRect(x: 282, y: 374, width: 127, height: 21)
+        lbl_indicators.frame = CGRect(x: 500, y: 49, width: 200, height: 21)
+        lbl_indicators.center.x = doorCloseImageView.center.x
+        
+        
+        lbl_chef.frame = CGRect(x: -54, y: 374, width: 230, height: 21)
+        lbl_mode.frame = CGRect(x: 12, y: 222, width: 86, height: 21)
+        lbl_mode.center.x = lbl_chef.center.x
+        lbl_log.frame = CGRect(x: -23, y: 139, width: 86, height: 21)
+        lbl_log.center.x = lbl_chef.center.x
+        lbl_settings.frame = CGRect(x: -73, y: 49, width: 186, height: 21)
+        lbl_settings.center.x = lbl_chef.center.x
+        lbl_digital_temperature_indicator.frame = CGRect(x: 198, y: 466, width: 322, height: 21)
+        img_title_home.frame = CGRect(x: 177, y: 459, width: 364, height: 34)
+        label161.frame = CGRect(x: 41, y: 140, width: 86, height: 21)
+        imageView159.frame = CGRect(x: 0.0, y: 268, width: 113, height: 91)
+        imageView84.frame = CGRect(x: 586, y: 44, width: 178, height: 31)
+        imageView83.frame = CGRect(x: -46, y: 44, width: 173, height: 31)
+        lbl_temperature.frame = CGRect(x: 249, y: 49, width: 200, height: 21)
+        btn_set_point_down.frame = CGRect(x: 470, y: 333, width: 58, height: 56)
+        button219.frame = CGRect(x: 264, y: 409, width: 164, height: 42)
+        textLabel.frame = CGRect(x: 176, y: 90, width: 364, height: 99)
+        setPointImageView.frame = CGRect(x: 225, y: 200, width: 244, height: 193)
+        graphFrameImageView.frame = CGRect(x: -44, y: 485, width: 808, height: 250)
+        indicatorsImageView.frame = CGRect(x: 542, y: 44, width: 222, height: 400)
+        settingsImageView.frame = CGRect(x: -49, y: 43, width: 225, height: 402)
+        compressorOffImageView.frame = CGRect(x: 634, y: 358, width: 65, height: 57)
+        modifyCenterY()
+        modifyCenterX()
     }
     
+    
+    
+    @objc func textFieldXValueChanged(_ sender: UITextField) {
+        if let value = Double(sender.text ?? "0") {
+            offsetX = 100
+            resetFrames()
+            modifyCenterX()
+        }
+    }
+
+    @objc func textFieldYValueChanged(_ sender: UITextField) {
+        if let value = Double(sender.text ?? "0") {
+            offsetY = 100
+            resetFrames()
+            modifyCenterY()
+        }
+    }
+    
+    
+    func modifyCenterX(){
+        lbl_set_point.frame.origin.x = lbl_set_point.frame.origin.x + offsetX
+        lbl_indicators.frame.origin.x = lbl_indicators.frame.origin.x + offsetX
+        lbl_settings.frame.origin.x = lbl_settings.frame.origin.x + offsetX
+        lbl_mode.frame.origin.x = lbl_mode.frame.origin.x + offsetX
+        lbl_chef.frame.origin.x = lbl_chef.frame.origin.x + offsetX
+        lbl_digital_temperature_indicator.frame.origin.x = lbl_digital_temperature_indicator.frame.origin.x + offsetX
+        img_title_home.frame.origin.x = img_title_home.frame.origin.x + offsetX
+        label161.frame.origin.x = label161.frame.origin.x + offsetX
+        lbl_log.frame.origin.x = lbl_log.frame.origin.x + offsetX
+        imageView159.frame.origin.x = imageView159.frame.origin.x + offsetX
+        imageView84.frame.origin.x = imageView84.frame.origin.x + offsetX
+        imageView83.frame.origin.x = imageView83.frame.origin.x + offsetX
+        lbl_temperature.frame.origin.x = lbl_temperature.frame.origin.x + offsetX
+        btn_set_point_down.frame.origin.x = btn_set_point_down.frame.origin.x + offsetX
+        button219.frame.origin.x = button219.frame.origin.x + offsetX
+        doorCloseImageView.frame.origin.x = doorCloseImageView.frame.origin.x + offsetX
+        defrostOffImageView.frame.origin.x = defrostOffImageView.frame.origin.x + offsetX
+        focusOffImageView.frame.origin.x = focusOffImageView.frame.origin.x + offsetX
+        textLabel.frame.origin.x = textLabel.frame.origin.x + offsetX
+        setPointImageView.frame.origin.x = setPointImageView.frame.origin.x + offsetX
+        graphFrameImageView.frame.origin.x = graphFrameImageView.frame.origin.x + offsetX
+        indicatorsImageView.frame.origin.x = indicatorsImageView.frame.origin.x + offsetX
+        settingsImageView.frame.origin.x = settingsImageView.frame.origin.x + offsetX
+        compressorOffImageView.frame.origin.x = compressorOffImageView.frame.origin.x + offsetX
+    }
+    
+    func modifyCenterY(){
+        lbl_set_point.frame.origin.y = lbl_set_point.frame.origin.y + offsetY
+        lbl_indicators.frame.origin.y = lbl_indicators.frame.origin.y + offsetY
+        lbl_settings.frame.origin.y = lbl_settings.frame.origin.y + offsetY
+        lbl_mode.frame.origin.y = lbl_mode.frame.origin.y + offsetY
+        lbl_chef.frame.origin.y = lbl_chef.frame.origin.y + offsetY
+        lbl_digital_temperature_indicator.frame.origin.y = lbl_digital_temperature_indicator.frame.origin.y + offsetY
+        img_title_home.frame.origin.y = img_title_home.frame.origin.y + offsetY
+        label161.frame.origin.y = label161.frame.origin.y + offsetY
+        lbl_log.frame.origin.y = lbl_log.frame.origin.y + offsetY
+        imageView159.frame.origin.y = imageView159.frame.origin.y + offsetY
+        imageView84.frame.origin.y = imageView84.frame.origin.y + offsetY
+        imageView83.frame.origin.y = imageView83.frame.origin.y + offsetY
+        lbl_temperature.frame.origin.y = lbl_temperature.frame.origin.y + offsetY
+        btn_set_point_down.frame.origin.y = btn_set_point_down.frame.origin.y + offsetY
+        button219.frame.origin.y = button219.frame.origin.y + offsetY
+        doorCloseImageView.frame.origin.y = doorCloseImageView.frame.origin.y + offsetY
+        defrostOffImageView.frame.origin.y = defrostOffImageView.frame.origin.y + offsetY
+        focusOffImageView.frame.origin.y = focusOffImageView.frame.origin.y + offsetY
+        textLabel.frame.origin.y = textLabel.frame.origin.y + offsetY
+        setPointImageView.frame.origin.y = setPointImageView.frame.origin.y + offsetY
+        graphFrameImageView.frame.origin.y = graphFrameImageView.frame.origin.y + offsetY
+        indicatorsImageView.frame.origin.y = indicatorsImageView.frame.origin.y + offsetY
+        settingsImageView.frame.origin.y = settingsImageView.frame.origin.y + offsetY
+        compressorOffImageView.frame.origin.y = compressorOffImageView.frame.origin.y + offsetY
+    }
+    
+    
+    var originalFrames: [UIView: CGRect] = [:]
+
+    func saveOriginalFrames() {
+        originalFrames[lbl_set_point] = lbl_set_point.frame
+        originalFrames[lbl_indicators] = lbl_indicators.frame
+        originalFrames[lbl_settings] = lbl_settings.frame
+        originalFrames[lbl_mode] = lbl_mode.frame
+        originalFrames[lbl_chef] = lbl_chef.frame
+        originalFrames[lbl_digital_temperature_indicator] = lbl_digital_temperature_indicator.frame
+        originalFrames[img_title_home] = img_title_home.frame
+        originalFrames[label161] = label161.frame
+        originalFrames[lbl_log] = lbl_log.frame
+        originalFrames[imageView159] = imageView159.frame
+        originalFrames[imageView84] = imageView84.frame
+        originalFrames[imageView83] = imageView83.frame
+        originalFrames[lbl_temperature] = lbl_temperature.frame
+        originalFrames[btn_set_point_down] = btn_set_point_down.frame
+        originalFrames[button219] = button219.frame
+        originalFrames[doorCloseImageView] = doorCloseImageView.frame
+        originalFrames[defrostOffImageView] = defrostOffImageView.frame
+        originalFrames[focusOffImageView] = focusOffImageView.frame
+        originalFrames[textLabel] = textLabel.frame
+        originalFrames[setPointImageView] = setPointImageView.frame
+        originalFrames[graphFrameImageView] = graphFrameImageView.frame
+        originalFrames[indicatorsImageView] = indicatorsImageView.frame
+        originalFrames[settingsImageView] = settingsImageView.frame
+        originalFrames[compressorOffImageView] = compressorOffImageView.frame
+    }
+
+
+    // Función para restaurar las posiciones originales
+    func resetFrames() {
+        for (view, frame) in originalFrames {
+            view.frame = frame
+        }
+    }
 }
