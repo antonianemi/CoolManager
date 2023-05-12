@@ -19,6 +19,10 @@ public class Refrigerator {
         
     }
     
+    func setTemperature(_ temperature: Temperature) {
+            currentTemperature = temperature
+    }
+    
     var currentTemperatureState: Temperature {
         get {
             return currentTemperature ?? Temperature(value: 0, unit: .celsius)
