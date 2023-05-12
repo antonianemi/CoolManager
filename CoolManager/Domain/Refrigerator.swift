@@ -1,31 +1,22 @@
-class Refrigerator {
-    private var currentTemperature: Temperature?
-    
-    private var compressor: Bool = false
-    private var light: Bool = false
-    private var resistance: Bool = false
-    private var fan: Bool = false
-    private var door: Bool = false
+public protocol RefrigeratorComponent {
+    func printStatus()
+}
 
-    func processTemperature() {
+public class Refrigerator {
+    private var currentTemperature: Temperature = Temperature(value: 0, unit: .celsius)
+    private var state: RefrigeratorState?
+    var components: [RefrigeratorComponent]
+    
+    init(){
+        components = [Door(), Compressor(), Light(), Resistance(), Fan()]
+    }
+    
+    func setState(_ state: RefrigeratorState) {
+        self.state = state
+    }
+    
+    func processTemperature(){
         
-        let temperatureRules = readTemperatureRulesFromFile(filePath: "temperature_rules")
-        
-        if let firstTemperature = temperatureRules.first?.key,
-           let firstStatus = temperatureRules[firstTemperature] {
-            
-            currentTemperature = firstTemperature
-            
-            if let status = temperatureRules[firstTemperature] {
-                compressor = status.compressor
-                light = status.light
-                resistance = status.resistance
-                fan = status.fan
-                door = status.door
-            }
-        } else {
-            print("No temperature rules found.")
-        }
     }
     
     var currentTemperatureState: Temperature {
@@ -33,49 +24,44 @@ class Refrigerator {
             return currentTemperature ?? Temperature(value: 0, unit: .celsius)
         }
     }
-    
-    var compresorState: Bool {
-        get {
-            return compressor
-        }
-        set {
-            compressor = newValue
-        }
+
+    var door: Door? {
+        return components.first(where: { $0 is Door }) as? Door
     }
     
-    var luzState: Bool {
-        get {
-            return light
-        }
-        set {
-            light = newValue
-        }
+    var compressor: Compressor? {
+        return components.first(where: { $0 is Compressor }) as? Compressor
     }
     
-    var resistenciaState: Bool {
-        get {
-            return fan
-        }
-        set {
-            fan = newValue
-        }
+    var light: Light? {
+        return components.first(where: { $0 is Light }) as? Light
     }
     
-    var ventiladorState: Bool {
-        get {
-            return fan
-        }
-        set {
-            fan = newValue
-        }
+    var resistance: Resistance? {
+        return components.first(where: { $0 is Resistance }) as? Resistance
     }
     
-    var puertaState: Bool {
-        get {
-            return door
+    var fan: Fan? {
+        return components.first(where: { $0 is Fan }) as? Fan
+    }
+    
+    func currentStateName() -> String {
+            guard let currentState = state else {
+                return "No state"
+            }
+            return currentState.name
         }
-        set {
-            door = newValue
+    
+    func printStatus(){
+        print("")
+        print("")
+        print("Estado actual del refrigerador: \(currentStateName())")
+        print("")
+        print("Temperatura: \(currentTemperatureState.stringValue)")
+        print("")
+        for component in components {
+            component.printStatus()
         }
     }
 }
+
