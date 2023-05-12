@@ -56,6 +56,7 @@ public class Refrigerator {
             return currentState.name
         }
     
+    
     func printStatus(){
         print("")
         print("")
