@@ -2,19 +2,13 @@ import UIKit
 
 class View1ViewController: UIViewController {
     let identifier = "View1ViewController"
-    var presenter: View1Presenter!
-    
+    var presenter = View1Presenter()
+    var _view:Vista1? = nil
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("ViewController: \(identifier)")
-        view = Vista1(frame: view.frame)
-        presenter = View1Presenter()
+        _view = Vista1(frame: view.frame)
+        view = _view
+        presenter.setView(_view!)
         presenter.viewDidLoad()
-    }
-}
-
-extension View1ViewController: View1View {
-    func displayRefrigeratorStatus(_ status: String) {
-        print(status)
     }
 }

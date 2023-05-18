@@ -7,8 +7,12 @@ class View1Presenter {
     }
     
     func viewDidLoad() {
-        let refrigerator = viewModel.buildRefrigerator()
-        view?.displayRefrigeratorStatus(refrigerator.currentStateName())
+        view?.setLightStatus(viewModel.lightStatus())
+        view?.setCompressorStatus(viewModel.compressorStatus())
+        view?.setFanStatus(viewModel.fanStatus())
+        view?.setResistenceStatus(viewModel.resistenceStatus())
     }
-
+    func setView(_ view:View1View){
+        self.view = view
+    }
 }

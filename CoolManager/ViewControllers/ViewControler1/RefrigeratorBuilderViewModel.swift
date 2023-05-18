@@ -1,20 +1,20 @@
 class RefrigeratorBuilderViewModel {
     private var builder: RefrigeratorBuilder
-    
+    private var refrigerator = Refrigerator()
     init() {
         builder = RefrigeratorBuilder()
+        refrigerator = builder.setNormalState().build()
     }
-    
-    func buildRefrigerator() -> Refrigerator {
-        let refrigerator = builder.build()
-        return refrigerator
+    func lightStatus()->Bool{
+        ((refrigerator.light?.isActive) != nil)
     }
-    
-    func setNormalState() {
-        builder.setNormalState()
+    func compressorStatus()->Bool{
+        ((refrigerator.compressor?.isActive) != nil)
     }
-    
-    func setEcoState() {
-        builder.setEcoState()
+    func fanStatus()->Bool{
+        ((refrigerator.fan?.isActive) != nil)
+    }
+    func resistenceStatus()->Bool{
+        ((refrigerator.resistance?.isActive) != nil)
     }
 }

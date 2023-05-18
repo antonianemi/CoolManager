@@ -1,7 +1,24 @@
 import UIKit
-class Vista1: UIView {
+class Vista1: UIView, View1View {
     
-    var offsetX: CGFloat = 200
+    func setLightStatus(_ status: Bool) {
+        img_Light.image = UIImage(named: status ? "icono-focoON.png" : "icono-focoOFF.png")
+    }
+    
+    func setFanStatus(_ status: Bool) {
+       
+    }
+    
+    func setResistenceStatus(_ status: Bool) {
+        img_Light.image = UIImage(named: status ? "icono-defrostOn.png" : "icono-defrostOff.png")
+    }
+    
+    func setCompressorStatus(_ status: Bool) {
+        img_Light.image = UIImage(named: status ? "icono-compressorOn.png" : "icono-compressorOff.png")
+    }
+
+    
+    var offsetX: CGFloat = 250
     var offsetY: CGFloat = 100
     
     lazy var backgroundImageView: UIImageView = {
@@ -93,7 +110,7 @@ class Vista1: UIView {
     
     
 
-    lazy var focusOffImageView: UIImageView = {
+    lazy var img_Light: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
         imageView.image = UIImage(named: "icono-focoOff.png")
@@ -106,7 +123,7 @@ class Vista1: UIView {
     
     
     
-    lazy var defrostOffImageView: UIImageView = {
+    lazy var img_resistence: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
         imageView.image = UIImage(named: "icono-defrostOff.png")
@@ -118,7 +135,7 @@ class Vista1: UIView {
     }()
     
     
-    lazy var doorCloseImageView: UIImageView = {
+    lazy var img_door: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
         imageView.image = UIImage(named: "icono-doorClose.png")
@@ -129,7 +146,7 @@ class Vista1: UIView {
         return imageView
     }()
     
-    lazy var compressorOffImageView: UIImageView = {
+    lazy var img_compressor: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
         imageView.image = UIImage(named: "icono-compressorOff.png")
@@ -561,16 +578,16 @@ class Vista1: UIView {
         addSubview(textLabel)
 
         // focusOffImageView
-        addSubview(focusOffImageView)
+        addSubview(img_Light)
 
         // defrostOffImageView
-        addSubview(defrostOffImageView)
+        addSubview(img_resistence)
 
         // doorCloseImageView
-        addSubview(doorCloseImageView)
+        addSubview(img_door)
 
         // compressorOffImageView
-        addSubview(compressorOffImageView)
+        addSubview(img_compressor)
 
         // ligthLabel
         addSubview(ligthLabel)
@@ -639,12 +656,12 @@ class Vista1: UIView {
         addSubview(lbl_set_point)
         
         
-        doorCloseImageView.frame = CGRect(x: 627, y: 273, width: 65, height: 57)
-        defrostOffImageView.frame = CGRect(x: 627, y: 185, width: 65, height: 57)
-        focusOffImageView.frame = CGRect(x: 627, y: 100, width: 65, height: 57)
+        img_door.frame = CGRect(x: 627, y: 273, width: 65, height: 57)
+        img_resistence.frame = CGRect(x: 627, y: 185, width: 65, height: 57)
+        img_Light.frame = CGRect(x: 627, y: 100, width: 65, height: 57)
         lbl_set_point.frame = CGRect(x: 282, y: 374, width: 127, height: 21)
         lbl_indicators.frame = CGRect(x: 500, y: 49, width: 200, height: 21)
-        lbl_indicators.center.x = doorCloseImageView.center.x
+        lbl_indicators.center.x = img_door.center.x
         
         
         lbl_chef.frame = CGRect(x: -54, y: 374, width: 230, height: 21)
@@ -668,7 +685,7 @@ class Vista1: UIView {
         graphFrameImageView.frame = CGRect(x: -44, y: 485, width: 808, height: 250)
         indicatorsImageView.frame = CGRect(x: 542, y: 44, width: 222, height: 400)
         settingsImageView.frame = CGRect(x: -49, y: 43, width: 225, height: 402)
-        compressorOffImageView.frame = CGRect(x: 634, y: 358, width: 65, height: 57)
+        img_compressor.frame = CGRect(x: 634, y: 358, width: 65, height: 57)
         modifyCenterY()
         modifyCenterX()
     }
@@ -677,16 +694,14 @@ class Vista1: UIView {
     
     @objc func textFieldXValueChanged(_ sender: UITextField) {
         if let value = Double(sender.text ?? "0") {
-            offsetX = 100
-            resetFrames()
+            offsetX = 190
             modifyCenterX()
         }
     }
 
     @objc func textFieldYValueChanged(_ sender: UITextField) {
         if let value = Double(sender.text ?? "0") {
-            offsetY = 100
-            resetFrames()
+            offsetY = 120
             modifyCenterY()
         }
     }
@@ -708,15 +723,15 @@ class Vista1: UIView {
         lbl_temperature.frame.origin.x = lbl_temperature.frame.origin.x + offsetX
         btn_set_point_down.frame.origin.x = btn_set_point_down.frame.origin.x + offsetX
         button219.frame.origin.x = button219.frame.origin.x + offsetX
-        doorCloseImageView.frame.origin.x = doorCloseImageView.frame.origin.x + offsetX
-        defrostOffImageView.frame.origin.x = defrostOffImageView.frame.origin.x + offsetX
-        focusOffImageView.frame.origin.x = focusOffImageView.frame.origin.x + offsetX
+        img_door.frame.origin.x = img_door.frame.origin.x + offsetX
+        img_resistence.frame.origin.x = img_resistence.frame.origin.x + offsetX
+        img_Light.frame.origin.x = img_Light.frame.origin.x + offsetX
         textLabel.frame.origin.x = textLabel.frame.origin.x + offsetX
         setPointImageView.frame.origin.x = setPointImageView.frame.origin.x + offsetX
         graphFrameImageView.frame.origin.x = graphFrameImageView.frame.origin.x + offsetX
         indicatorsImageView.frame.origin.x = indicatorsImageView.frame.origin.x + offsetX
         settingsImageView.frame.origin.x = settingsImageView.frame.origin.x + offsetX
-        compressorOffImageView.frame.origin.x = compressorOffImageView.frame.origin.x + offsetX
+        img_compressor.frame.origin.x = img_compressor.frame.origin.x + offsetX
     }
     
     func modifyCenterY(){
@@ -735,15 +750,15 @@ class Vista1: UIView {
         lbl_temperature.frame.origin.y = lbl_temperature.frame.origin.y + offsetY
         btn_set_point_down.frame.origin.y = btn_set_point_down.frame.origin.y + offsetY
         button219.frame.origin.y = button219.frame.origin.y + offsetY
-        doorCloseImageView.frame.origin.y = doorCloseImageView.frame.origin.y + offsetY
-        defrostOffImageView.frame.origin.y = defrostOffImageView.frame.origin.y + offsetY
-        focusOffImageView.frame.origin.y = focusOffImageView.frame.origin.y + offsetY
+        img_door.frame.origin.y = img_door.frame.origin.y + offsetY
+        img_resistence.frame.origin.y = img_resistence.frame.origin.y + offsetY
+        img_Light.frame.origin.y = img_Light.frame.origin.y + offsetY
         textLabel.frame.origin.y = textLabel.frame.origin.y + offsetY
         setPointImageView.frame.origin.y = setPointImageView.frame.origin.y + offsetY
         graphFrameImageView.frame.origin.y = graphFrameImageView.frame.origin.y + offsetY
         indicatorsImageView.frame.origin.y = indicatorsImageView.frame.origin.y + offsetY
         settingsImageView.frame.origin.y = settingsImageView.frame.origin.y + offsetY
-        compressorOffImageView.frame.origin.y = compressorOffImageView.frame.origin.y + offsetY
+        img_compressor.frame.origin.y = img_compressor.frame.origin.y + offsetY
     }
     
     
@@ -765,15 +780,15 @@ class Vista1: UIView {
         originalFrames[lbl_temperature] = lbl_temperature.frame
         originalFrames[btn_set_point_down] = btn_set_point_down.frame
         originalFrames[button219] = button219.frame
-        originalFrames[doorCloseImageView] = doorCloseImageView.frame
-        originalFrames[defrostOffImageView] = defrostOffImageView.frame
-        originalFrames[focusOffImageView] = focusOffImageView.frame
+        originalFrames[img_door] = img_door.frame
+        originalFrames[img_resistence] = img_resistence.frame
+        originalFrames[img_Light] = img_Light.frame
         originalFrames[textLabel] = textLabel.frame
         originalFrames[setPointImageView] = setPointImageView.frame
         originalFrames[graphFrameImageView] = graphFrameImageView.frame
         originalFrames[indicatorsImageView] = indicatorsImageView.frame
         originalFrames[settingsImageView] = settingsImageView.frame
-        originalFrames[compressorOffImageView] = compressorOffImageView.frame
+        originalFrames[img_compressor] = img_compressor.frame
     }
 
 
