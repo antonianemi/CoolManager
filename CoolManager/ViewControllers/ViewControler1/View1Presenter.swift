@@ -9,7 +9,7 @@ class View1Presenter {
     func viewDidLoad() {
         view?.setLightStatus(viewModel.lightStatus())
         view?.setCompressorStatus(viewModel.compressorStatus())
-        view?.setFanStatus(viewModel.fanStatus())
+        view?.setDoorStatus(viewModel.isDoorOpen())
         view?.setResistenceStatus(viewModel.resistenceStatus())
     }
     func setView(_ view:View1View){

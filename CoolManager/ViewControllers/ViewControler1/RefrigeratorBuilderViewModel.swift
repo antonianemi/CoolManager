@@ -17,4 +17,7 @@ class RefrigeratorBuilderViewModel {
     func resistenceStatus()->Bool{
         ((refrigerator.resistance?.isActive) != nil)
     }
+    func isDoorOpen()->Bool{
+        ((refrigerator.door?.isOpen) != nil)
+    }
 }

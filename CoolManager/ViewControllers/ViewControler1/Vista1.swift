@@ -2,19 +2,19 @@ import UIKit
 class Vista1: UIView, View1View {
     
     func setLightStatus(_ status: Bool) {
-        img_Light.image = UIImage(named: status ? "icono-focoON.png" : "icono-focoOFF.png")
+        img_Light.image = UIImage(named: status ? "icono-focoOn.png" : "icono-focoOff.png")
     }
     
-    func setFanStatus(_ status: Bool) {
-       
+    func setDoorStatus(_ status: Bool) {
+        img_door.image = UIImage(named: status ? "icono-doorOpen.png" : "icono-doorClose.png")
     }
     
     func setResistenceStatus(_ status: Bool) {
-        img_Light.image = UIImage(named: status ? "icono-defrostOn.png" : "icono-defrostOff.png")
+        img_resistence.image = UIImage(named: status ? "icono-defrostOn.png" : "icono-defrostOff.png")
     }
     
     func setCompressorStatus(_ status: Bool) {
-        img_Light.image = UIImage(named: status ? "icono-compressorOn.png" : "icono-compressorOff.png")
+        img_compressor.image = UIImage(named: status ? "icono-compressorOn.png" : "icono-compressorOff.png")
     }
 
     
