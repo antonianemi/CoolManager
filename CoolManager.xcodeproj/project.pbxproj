@@ -36,6 +36,10 @@
 		FA382ED02A19A2930047D033 /* Door.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C2B2A0DC03200E14E1E /* Door.swift */; };
 		FA382ED12A19A2930047D033 /* Fan.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C2D2A0DC03200E14E1E /* Fan.swift */; };
 		FA382ED22A19A2930047D033 /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C2C2A0DC03200E14E1E /* Light.swift */; };
+		FA382ED52A19E1C30047D033 /* RefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382ED42A19E1C30047D033 /* RefrigeratorFactory.swift */; };
+		FA382ED62A19E1C30047D033 /* RefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382ED42A19E1C30047D033 /* RefrigeratorFactory.swift */; };
+		FA382ED82A19E2710047D033 /* NormalRefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382ED72A19E2710047D033 /* NormalRefrigeratorFactory.swift */; };
+		FA382ED92A19E2710047D033 /* NormalRefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382ED72A19E2710047D033 /* NormalRefrigeratorFactory.swift */; };
 		FA38FFE829FE669800BC21FA /* View3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFDA29FE669800BC21FA /* View3ViewController.swift */; };
 		FA38FFE929FE669800BC21FA /* View2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFDB29FE669800BC21FA /* View2ViewController.swift */; };
 		FA38FFEA29FE669800BC21FA /* View4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFDC29FE669800BC21FA /* View4ViewController.swift */; };
@@ -127,6 +131,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA382ED42A19E1C30047D033 /* RefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorFactory.swift; sourceTree = "<group>"; };
+		FA382ED72A19E2710047D033 /* NormalRefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalRefrigeratorFactory.swift; sourceTree = "<group>"; };
 		FA38FFDA29FE669800BC21FA /* View3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View3ViewController.swift; sourceTree = "<group>"; };
 		FA38FFDB29FE669800BC21FA /* View2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View2ViewController.swift; sourceTree = "<group>"; };
 		FA38FFDC29FE669800BC21FA /* View4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View4ViewController.swift; sourceTree = "<group>"; };
@@ -215,6 +221,27 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA382ED32A19E1920047D033 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				FA382ED42A19E1C30047D033 /* RefrigeratorFactory.swift */,
+				FA382ED72A19E2710047D033 /* NormalRefrigeratorFactory.swift */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		FA382EDA2A19E2990047D033 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FAB54C2A2A0DC03200E14E1E /* Compressor.swift */,
+				FAB54C2B2A0DC03200E14E1E /* Door.swift */,
+				FAB54C2D2A0DC03200E14E1E /* Fan.swift */,
+				FAB54C2C2A0DC03200E14E1E /* Light.swift */,
+				FAB54C2E2A0DC03200E14E1E /* Resistance.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
 		FA38FFCC29FE5DE500BC21FA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -276,13 +303,10 @@
 		FA714C1E2A086BF4003E2CA4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				FA382EDA2A19E2990047D033 /* Components */,
+				FA382ED32A19E1920047D033 /* Factory */,
 				FAB54C052A0DBFDD00E14E1E /* States */,
 				FA714C402A088CC8003E2CA4 /* temperature_rules.txt */,
-				FAB54C2A2A0DC03200E14E1E /* Compressor.swift */,
-				FAB54C2B2A0DC03200E14E1E /* Door.swift */,
-				FAB54C2D2A0DC03200E14E1E /* Fan.swift */,
-				FAB54C2C2A0DC03200E14E1E /* Light.swift */,
-				FAB54C2E2A0DC03200E14E1E /* Resistance.swift */,
 				FA714C1F2A086C0D003E2CA4 /* Refrigerator.swift */,
 				FA714C212A0870A2003E2CA4 /* Temperature.swift */,
 				FA714C232A087882003E2CA4 /* TemperatureRule.swift */,
@@ -500,6 +524,7 @@
 				FAB54C232A0DBFDD00E14E1E /* QuickCoolingState.swift in Sources */,
 				FAB54C1C2A0DBFDD00E14E1E /* TurboState.swift in Sources */,
 				FAB54C682A0EB93900E14E1E /* Vista1.swift in Sources */,
+				FA382ED52A19E1C30047D033 /* RefrigeratorFactory.swift in Sources */,
 				FA714C272A088089003E2CA4 /* TemperatureStatus.swift in Sources */,
 				FAB54C302A0DC03200E14E1E /* Door.swift in Sources */,
 				FA38FFE929FE669800BC21FA /* View2ViewController.swift in Sources */,
@@ -515,6 +540,7 @@
 				FAB54C182A0DBFDD00E14E1E /* NormalState.swift in Sources */,
 				FAB54C382A0E113C00E14E1E /* View1Presenter.swift in Sources */,
 				FA38FFEA29FE669800BC21FA /* View4ViewController.swift in Sources */,
+				FA382ED82A19E2710047D033 /* NormalRefrigeratorFactory.swift in Sources */,
 				FA714C432A089028003E2CA4 /* RefrigeratorBuilder.swift in Sources */,
 				FAB54C292A0DBFDD00E14E1E /* FreezingState.swift in Sources */,
 				FAB54C1A2A0DBFDD00E14E1E /* SmartModeState.swift in Sources */,
@@ -542,10 +568,12 @@
 				FA382EC12A19A2860047D033 /* SmartModeState.swift in Sources */,
 				FA382EC22A19A2860047D033 /* LowPowerState.swift in Sources */,
 				FA382EC32A19A2860047D033 /* TurboState.swift in Sources */,
+				FA382ED92A19E2710047D033 /* NormalRefrigeratorFactory.swift in Sources */,
 				FA382EC42A19A2860047D033 /* StandbyState.swift in Sources */,
 				FA382EC52A19A2860047D033 /* HolidayModeState.swift in Sources */,
 				FA382EC62A19A2860047D033 /* StorageState.swift in Sources */,
 				FA382EC72A19A2860047D033 /* ChildLockState.swift in Sources */,
+				FA382ED62A19E1C30047D033 /* RefrigeratorFactory.swift in Sources */,
 				FA382EC82A19A2860047D033 /* FreshProduceState.swift in Sources */,
 				FA382EC92A19A2860047D033 /* QuickCoolingState.swift in Sources */,
 				FA382ECA2A19A2860047D033 /* MaintenanceModeState.swift in Sources */,

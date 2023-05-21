@@ -2,10 +2,10 @@ class ChildLockState: RefrigeratorState {
     var name = "ChildLockState"
     private let refrigerator: Refrigerator
     func configure() {
-        /*self.refrigerator.components.startCompressor()
-        self.refrigerator.components.turnLightOn()
-        self.refrigerator.components.turnResistanceOn()
-        self.refrigerator.components.turnFanOn()*/
+        self.refrigerator.compressor.start()
+        self.refrigerator.light.turnOn()
+        self.refrigerator.resistance.turnOn()
+        self.refrigerator.fan.turnOn()
     }
     init(refrigerator: Refrigerator) {
         self.refrigerator = refrigerator

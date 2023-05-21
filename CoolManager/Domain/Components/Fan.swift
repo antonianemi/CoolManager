@@ -1,5 +1,5 @@
-class Light: RefrigeratorComponent  {
-    private var isOn: Bool = false
+class Fan:FanProtocol, RefrigeratorComponent  {
+    internal var isOn: Bool = false
     
     var isActive: Bool {
         return isOn
@@ -13,7 +13,7 @@ class Light: RefrigeratorComponent  {
         isOn = false
     }
     
-    func printStatus() {
-        print("Light: \(isActive)")
+    func printStatus(){
+        print("Fan:         \(isOn)")
     }
 }

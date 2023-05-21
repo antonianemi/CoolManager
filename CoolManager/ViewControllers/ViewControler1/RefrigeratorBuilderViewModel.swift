@@ -1,18 +1,21 @@
 import Foundation
 class RefrigeratorBuilderViewModel {
-    private var builder: RefrigeratorBuilder
-    public var delegate:view1Delegate?
+    private var builder = RefrigeratorBuilder()
     private var refrigerator = Refrigerator()
+    public var delegate:view1Delegate?
+    
     init() {
-        builder = RefrigeratorBuilder()
-        refrigerator = builder.setNormalState().build()
-       
+        refrigerator = builder.build()
+        setRamdomStatus()
+    }
+    
+    func setRamdomStatus(){
         do {
             DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [self] in
-                refrigerator = builder.setEcoState().build()
+                refrigerator.setState(.eco)
                 delegate?.update()
             }
-        }
+          }
     }
     
     func lightStatus()->Bool{
@@ -29,5 +32,8 @@ class RefrigeratorBuilderViewModel {
     }
     func isDoorOpen()->Bool{
         return refrigerator.door.isOpen
+    }
+    func nameState()->String{
+        return refrigerator.currentStateName()
     }
 }

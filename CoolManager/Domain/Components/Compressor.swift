@@ -1,5 +1,5 @@
-class Compressor: RefrigeratorComponent  {
-    private var isOn: Bool = false
+class Compressor:CompressorProtocol, RefrigeratorComponent  {
+    internal var isOn: Bool = false
     
     var isActive: Bool {
         return isOn

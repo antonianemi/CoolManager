@@ -1,4 +1,4 @@
-struct Temperature: Hashable {
+struct Temperature: Hashable,Equatable {
     let value: Double
     let unit: TemperatureUnit
     
@@ -35,6 +35,10 @@ struct Temperature: Hashable {
     func hash(into hasher: inout Hasher) {
         hasher.combine(value)
         hasher.combine(unit)
+    }
+    
+    static func == (lhs: Temperature, rhs: Temperature) -> Bool {
+            return lhs.value == rhs.value && lhs.unit == rhs.unit
     }
     
     var stringValue: String {

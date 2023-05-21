@@ -701,14 +701,14 @@ class Vista1: UIView, View1View {
     
     
     @objc func textFieldXValueChanged(_ sender: UITextField) {
-        if let value = Double(sender.text ?? "0") {
+        if Double(sender.text ?? "0") != nil {
             offsetX = 190
             modifyCenterX()
         }
     }
 
     @objc func textFieldYValueChanged(_ sender: UITextField) {
-        if let value = Double(sender.text ?? "0") {
+        if Double(sender.text ?? "0") != nil {
             offsetY = 120
             modifyCenterY()
         }
