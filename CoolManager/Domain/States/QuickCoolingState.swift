@@ -1,7 +1,6 @@
 class QuickCoolingState: RefrigeratorState {
-    var name = "QuickCoolingState"
-    
     private let refrigerator: Refrigerator
+    var name = "QuickCoolingState"
     func configure() {
         
     }

@@ -40,6 +40,8 @@
 		FA382ED62A19E1C30047D033 /* RefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382ED42A19E1C30047D033 /* RefrigeratorFactory.swift */; };
 		FA382ED82A19E2710047D033 /* NormalRefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382ED72A19E2710047D033 /* NormalRefrigeratorFactory.swift */; };
 		FA382ED92A19E2710047D033 /* NormalRefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382ED72A19E2710047D033 /* NormalRefrigeratorFactory.swift */; };
+		FA382EDC2A1A79060047D033 /* DefrostingRefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382EDB2A1A79060047D033 /* DefrostingRefrigeratorFactory.swift */; };
+		FA382EDD2A1A79060047D033 /* DefrostingRefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382EDB2A1A79060047D033 /* DefrostingRefrigeratorFactory.swift */; };
 		FA38FFE829FE669800BC21FA /* View3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFDA29FE669800BC21FA /* View3ViewController.swift */; };
 		FA38FFE929FE669800BC21FA /* View2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFDB29FE669800BC21FA /* View2ViewController.swift */; };
 		FA38FFEA29FE669800BC21FA /* View4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFDC29FE669800BC21FA /* View4ViewController.swift */; };
@@ -133,6 +135,7 @@
 /* Begin PBXFileReference section */
 		FA382ED42A19E1C30047D033 /* RefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorFactory.swift; sourceTree = "<group>"; };
 		FA382ED72A19E2710047D033 /* NormalRefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalRefrigeratorFactory.swift; sourceTree = "<group>"; };
+		FA382EDB2A1A79060047D033 /* DefrostingRefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefrostingRefrigeratorFactory.swift; sourceTree = "<group>"; };
 		FA38FFDA29FE669800BC21FA /* View3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View3ViewController.swift; sourceTree = "<group>"; };
 		FA38FFDB29FE669800BC21FA /* View2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View2ViewController.swift; sourceTree = "<group>"; };
 		FA38FFDC29FE669800BC21FA /* View4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View4ViewController.swift; sourceTree = "<group>"; };
@@ -226,6 +229,7 @@
 			children = (
 				FA382ED42A19E1C30047D033 /* RefrigeratorFactory.swift */,
 				FA382ED72A19E2710047D033 /* NormalRefrigeratorFactory.swift */,
+				FA382EDB2A1A79060047D033 /* DefrostingRefrigeratorFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -511,6 +515,7 @@
 				FAB54C3E2A0E118A00E14E1E /* RefrigeratorBuilderViewModel.swift in Sources */,
 				FA714C202A086C0D003E2CA4 /* Refrigerator.swift in Sources */,
 				FAB54C1F2A0DBFDD00E14E1E /* HolidayModeState.swift in Sources */,
+				FA382EDC2A1A79060047D033 /* DefrostingRefrigeratorFactory.swift in Sources */,
 				FA38FFEE29FE669800BC21FA /* View7ViewController.swift in Sources */,
 				FAB54C1B2A0DBFDD00E14E1E /* LowPowerState.swift in Sources */,
 				FA6C7A2629D8F6CD002267A5 /* ViewController.swift in Sources */,
@@ -575,6 +580,7 @@
 				FA382EC72A19A2860047D033 /* ChildLockState.swift in Sources */,
 				FA382ED62A19E1C30047D033 /* RefrigeratorFactory.swift in Sources */,
 				FA382EC82A19A2860047D033 /* FreshProduceState.swift in Sources */,
+				FA382EDD2A1A79060047D033 /* DefrostingRefrigeratorFactory.swift in Sources */,
 				FA382EC92A19A2860047D033 /* QuickCoolingState.swift in Sources */,
 				FA382ECA2A19A2860047D033 /* MaintenanceModeState.swift in Sources */,
 				FA382ECB2A19A2860047D033 /* EnergySaverState.swift in Sources */,

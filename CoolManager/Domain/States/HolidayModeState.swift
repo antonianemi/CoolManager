@@ -1,6 +1,6 @@
 class HolidayModeState: RefrigeratorState {
-    var name = "HolidayModeState"
     private let refrigerator: Refrigerator
+    var name = "HolidayModeState"
     func configure() {
         
     }

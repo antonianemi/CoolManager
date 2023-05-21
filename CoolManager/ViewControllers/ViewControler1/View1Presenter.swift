@@ -12,6 +12,7 @@ class View1Presenter: view1Delegate {
         view?.setCompressorStatus(viewModel.compressorStatus())
         view?.setDoorStatus(viewModel.isDoorOpen())
         view?.setResistenceStatus(viewModel.resistenceStatus())
+        view?.setTemperature(viewModel.getTemperarute())
     }
     func setView(_ view:View1View){
         self.view = view
@@ -22,6 +23,7 @@ class View1Presenter: view1Delegate {
         view?.setCompressorStatus(viewModel.compressorStatus())
         view?.setDoorStatus(viewModel.isDoorOpen())
         view?.setResistenceStatus(viewModel.resistenceStatus())
+        view?.setTemperature(viewModel.getTemperarute())
     }
     
 }

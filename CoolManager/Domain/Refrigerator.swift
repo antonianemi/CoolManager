@@ -60,12 +60,18 @@ public protocol FanProtocol: RefrigeratorComponent  {
 
 
 public class Refrigerator {
-    private var currentTemperature: Temperature = Temperature(value: 0, unit: .celsius)
+    private var currentTemperature: Temperature = Temperature.defaultTemperature()
+    private var setPoint: Temperature = Temperature.defaultTemperature()
     private var state: RefrigeratorState?
-    var components: [RefrigeratorComponent]
+    var components = [RefrigeratorComponent]()
     
-    init(){
-        components = [Door(), Compressor(), Light(), Resistance(), Fan()]
+    var targetTemperature: Temperature {
+        get {
+            return setPoint
+        }
+        set {
+            setPoint = newValue
+        }
     }
     
     func setFan(_ value:FanProtocol){
@@ -89,14 +95,54 @@ public class Refrigerator {
     }
     
     func processTemperature(){
+        /*
+        let temperatureThreshold: Double = 0.5 // Umbral de temperatura para detener el ciclo
+        let temperatureStep: Double = 0.1 // Incremento/decremento de temperatura en cada ciclo
         
+        while abs(currentTemperature - setPoint) > temperatureThreshold {
+            if currentTemperature < setPoint {
+                // Encender los componentes para aumentar la temperatura
+                compressor.start()
+                resistance.start()
+            } else {
+                // Apagar los componentes para disminuir la temperatura
+                compressor.stop()
+                resistance.stop()
+            }
+            
+            // Esperar un tiempo para que la temperatura se ajuste
+            // Puedes usar un temporizador o sleep() para simular la espera
+            
+            // Actualizar la temperatura actual según los componentes encendidos
+            processTemperature()
+            
+            // Imprimir el estado actual del refrigerador
+            printStatus()
+            
+            // Realizar otros cálculos o acciones necesarias
+            
+            // Incrementar o decrementar la temperatura actual
+            if currentTemperature < setPoint {
+                currentTemperature += temperatureStep
+            } else {
+                currentTemperature -= temperatureStep
+            }
+        }
+        
+        // Detener los componentes una vez que se alcanza la temperatura objetivo
+        compressor.stop()
+        resistance.stop()
+        
+        // Imprimir el estado final del refrigerador
+        printStatus()
+         */
     }
     
     func setTemperature(_ temperature: Temperature) {
         currentTemperature = temperature
     }
     
-    var currentTemperature: Temperature {
+    var currentTemperatureStatus: Temperature {
         get {
             return currentTemperature
         }

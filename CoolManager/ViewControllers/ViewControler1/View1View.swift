@@ -3,4 +3,5 @@ protocol View1View: AnyObject {
     func setDoorStatus(_ status:Bool)
     func setResistenceStatus(_ status:Bool)
     func setCompressorStatus(_ status:Bool)
+    func setTemperature(_ value:String)
 }

@@ -14,7 +14,6 @@ class NightModeState: RefrigeratorState {
     init(refrigerator: Refrigerator) {
         self.refrigerator = refrigerator
         self.configure()
-        name = "NightModeState"
     }
 }
 

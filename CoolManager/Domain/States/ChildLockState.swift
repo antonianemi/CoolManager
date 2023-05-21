@@ -1,6 +1,6 @@
 class ChildLockState: RefrigeratorState {
-    var name = "ChildLockState"
     private let refrigerator: Refrigerator
+    var name = "ChildLockState"
     func configure() {
         self.refrigerator.compressor.start()
         self.refrigerator.light.turnOn()

@@ -1,6 +1,6 @@
 class StorageState: RefrigeratorState {
-    var name = "StorageState"
     private let refrigerator: Refrigerator
+    var name = "StorageState"
     func configure() {
         
     }

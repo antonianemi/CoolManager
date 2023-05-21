@@ -1,6 +1,14 @@
 import UIKit
 class Vista1: UIView, View1View {
     
+    func setTemperature(_ value: String) {
+        lbl_Temperature.text = value
+    }
+    
+    
+    var offsetX: CGFloat = 250
+    var offsetY: CGFloat = 100
+    
     func setLightStatus(_ status: Bool) {
         let imageName = status ? "icono-focoOn.png" : "icono-focoOff.png"
         img_Light.image = UIImage(named: imageName)
@@ -24,10 +32,6 @@ class Vista1: UIView, View1View {
         img_compressor.image = UIImage(named: imageName)
         print("Compressor image name: \(imageName)") // Imprime el valor del imageName para depurar
     }
-
-    
-    var offsetX: CGFloat = 250
-    var offsetY: CGFloat = 100
     
     lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView()
@@ -88,7 +92,7 @@ class Vista1: UIView, View1View {
     lazy var setPointImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
-        imageView.image = UIImage(named: "SetPoint-0.png")
+        imageView.image = UIImage(named: "SETPOINT-42--0.png")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         imageView.isUserInteractionEnabled = false
@@ -98,7 +102,7 @@ class Vista1: UIView, View1View {
     
     
     
-    lazy var textLabel: UILabel = {
+    lazy var lbl_Temperature: UILabel = {
         let label = UILabel()
         label.isOpaque = false
         label.clipsToBounds = true
@@ -249,7 +253,7 @@ class Vista1: UIView, View1View {
         imageView.isUserInteractionEnabled = false
         imageView.contentMode = .scaleToFill
         imageView.translatesAutoresizingMaskIntoConstraints = false
-        imageView.image = UIImage(named: "Imagenes/titulo-centro.png")
+        imageView.image = UIImage(named: "titulo-centro.png")
         return imageView
     }()
 
@@ -279,7 +283,7 @@ class Vista1: UIView, View1View {
         button.contentHorizontalAlignment = .center
         button.contentVerticalAlignment = .center
         button.translatesAutoresizingMaskIntoConstraints = false
-        button.setBackgroundImage(UIImage(named: "Imagenes/boton-setpoint-activo.png"), for: .normal)
+        button.setBackgroundImage(UIImage(named: "boton-setpoint-activo.png"), for: .normal)
         button.setTitleColor(UIColor(red: 1, green: 1, blue: 1, alpha: 1), for: .normal)
         button.setTitleShadowColor(UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1), for: .normal)
         let titleAttributes: [NSAttributedString.Key: Any] = [
@@ -298,7 +302,7 @@ class Vista1: UIView, View1View {
     
     
     // Botón
-    lazy var btn_setPoint_up: UIButton = {
+    lazy var btn_set_point_up: UIButton = {
         let button = UIButton(type: .system)
         button.isOpaque = false
         button.contentMode = .scaleToFill
@@ -311,7 +315,7 @@ class Vista1: UIView, View1View {
             .paragraphStyle: paragraphStyle
         ]
         button.setAttributedTitle(NSAttributedString(string: "", attributes: attributes), for: .normal)
-        button.setBackgroundImage(UIImage(named: "Imagenes/setpoint-flecha-arriba-normal.png"), for: .normal)
+        button.setBackgroundImage(UIImage(named: "setpoint-flecha-arriba-normal.png"), for: .normal)
         button.setTitleShadowColor(UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1), for: .normal)
         return button
     }()
@@ -329,7 +333,7 @@ class Vista1: UIView, View1View {
             .paragraphStyle: paragraphStyle
         ]
         button.setAttributedTitle(NSAttributedString(string: "", attributes: attributes), for: .normal)
-        button.setBackgroundImage(UIImage(named: "Imagenes/setpoint-flecha-abajo-normal.png"), for: .normal)
+        button.setBackgroundImage(UIImage(named: "setpoint-flecha-abajo-normal.png"), for: .normal)
         button.setTitleShadowColor(UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1), for: .normal)
         return button
     }()
@@ -362,7 +366,7 @@ class Vista1: UIView, View1View {
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         imageView.isUserInteractionEnabled = false
         imageView.contentMode = .scaleToFill
-        imageView.image = UIImage(named: "Imagenes/titulo-izq.png")
+        imageView.image = UIImage(named: "titulo-izq.png")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -374,7 +378,7 @@ class Vista1: UIView, View1View {
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         imageView.isUserInteractionEnabled = false
         imageView.contentMode = .scaleToFill
-        imageView.image = UIImage(named: "Imagenes/titulo-der.png")
+        imageView.image = UIImage(named: "titulo-der.png")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -435,7 +439,7 @@ class Vista1: UIView, View1View {
         let imageView = UIImageView()
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         imageView.contentMode = .scaleToFill
-        imageView.image = UIImage(named: "Imagenes/TITULO-HOME.png")
+        imageView.image = UIImage(named: "TITULO-HOME.png")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         return imageView
     }()
@@ -583,7 +587,7 @@ class Vista1: UIView, View1View {
         addSubview(setPointImageView)
 
         // textLabel
-        addSubview(textLabel)
+        addSubview(lbl_Temperature)
 
         // focusOffImageView
         addSubview(img_Light)
@@ -619,7 +623,7 @@ class Vista1: UIView, View1View {
         addSubview(button219)
 
         // button
-        addSubview(btn_setPoint_up)
+        addSubview(btn_set_point_up)
 
         // button61
         addSubview(btn_set_point_down)
@@ -686,9 +690,10 @@ class Vista1: UIView, View1View {
         imageView84.frame = CGRect(x: 586, y: 44, width: 178, height: 31)
         imageView83.frame = CGRect(x: -46, y: 44, width: 173, height: 31)
         lbl_temperature.frame = CGRect(x: 249, y: 49, width: 200, height: 21)
-        btn_set_point_down.frame = CGRect(x: 470, y: 333, width: 58, height: 56)
+        btn_set_point_down.frame = CGRect(x: 470, y: 233, width: 58, height: 56)
+        btn_set_point_up.frame = CGRect(x: 470, y: 133, width: 58, height: 56)
         button219.frame = CGRect(x: 264, y: 409, width: 164, height: 42)
-        textLabel.frame = CGRect(x: 176, y: 90, width: 364, height: 99)
+        lbl_Temperature.frame = CGRect(x: 176, y: 90, width: 364, height: 99)
         setPointImageView.frame = CGRect(x: 225, y: 200, width: 244, height: 193)
         graphFrameImageView.frame = CGRect(x: -44, y: 485, width: 808, height: 250)
         indicatorsImageView.frame = CGRect(x: 542, y: 44, width: 222, height: 400)
@@ -699,23 +704,7 @@ class Vista1: UIView, View1View {
     }
     
     
-    
-    @objc func textFieldXValueChanged(_ sender: UITextField) {
-        if Double(sender.text ?? "0") != nil {
-            offsetX = 190
-            modifyCenterX()
-        }
-    }
-
-    @objc func textFieldYValueChanged(_ sender: UITextField) {
-        if Double(sender.text ?? "0") != nil {
-            offsetY = 120
-            modifyCenterY()
-        }
-    }
-    
-    
-    func modifyCenterX(){
+  func modifyCenterX(){
         lbl_set_point.frame.origin.x = lbl_set_point.frame.origin.x + offsetX
         lbl_indicators.frame.origin.x = lbl_indicators.frame.origin.x + offsetX
         lbl_settings.frame.origin.x = lbl_settings.frame.origin.x + offsetX
@@ -730,11 +719,12 @@ class Vista1: UIView, View1View {
         imageView83.frame.origin.x = imageView83.frame.origin.x + offsetX
         lbl_temperature.frame.origin.x = lbl_temperature.frame.origin.x + offsetX
         btn_set_point_down.frame.origin.x = btn_set_point_down.frame.origin.x + offsetX
+        btn_set_point_up.frame.origin.x = btn_set_point_up.frame.origin.x + offsetX
         button219.frame.origin.x = button219.frame.origin.x + offsetX
         img_door.frame.origin.x = img_door.frame.origin.x + offsetX
         img_resistence.frame.origin.x = img_resistence.frame.origin.x + offsetX
         img_Light.frame.origin.x = img_Light.frame.origin.x + offsetX
-        textLabel.frame.origin.x = textLabel.frame.origin.x + offsetX
+        lbl_Temperature.frame.origin.x = lbl_Temperature.frame.origin.x + offsetX
         setPointImageView.frame.origin.x = setPointImageView.frame.origin.x + offsetX
         graphFrameImageView.frame.origin.x = graphFrameImageView.frame.origin.x + offsetX
         indicatorsImageView.frame.origin.x = indicatorsImageView.frame.origin.x + offsetX
@@ -757,11 +747,12 @@ class Vista1: UIView, View1View {
         imageView83.frame.origin.y = imageView83.frame.origin.y + offsetY
         lbl_temperature.frame.origin.y = lbl_temperature.frame.origin.y + offsetY
         btn_set_point_down.frame.origin.y = btn_set_point_down.frame.origin.y + offsetY
+        btn_set_point_up.frame.origin.y = btn_set_point_up.frame.origin.y + offsetY
         button219.frame.origin.y = button219.frame.origin.y + offsetY
         img_door.frame.origin.y = img_door.frame.origin.y + offsetY
         img_resistence.frame.origin.y = img_resistence.frame.origin.y + offsetY
         img_Light.frame.origin.y = img_Light.frame.origin.y + offsetY
-        textLabel.frame.origin.y = textLabel.frame.origin.y + offsetY
+        lbl_Temperature.frame.origin.y = lbl_Temperature.frame.origin.y + offsetY
         setPointImageView.frame.origin.y = setPointImageView.frame.origin.y + offsetY
         graphFrameImageView.frame.origin.y = graphFrameImageView.frame.origin.y + offsetY
         indicatorsImageView.frame.origin.y = indicatorsImageView.frame.origin.y + offsetY
@@ -791,7 +782,7 @@ class Vista1: UIView, View1View {
         originalFrames[img_door] = img_door.frame
         originalFrames[img_resistence] = img_resistence.frame
         originalFrames[img_Light] = img_Light.frame
-        originalFrames[textLabel] = textLabel.frame
+        originalFrames[lbl_Temperature] = lbl_Temperature.frame
         originalFrames[setPointImageView] = setPointImageView.frame
         originalFrames[graphFrameImageView] = graphFrameImageView.frame
         originalFrames[indicatorsImageView] = indicatorsImageView.frame

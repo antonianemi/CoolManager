@@ -5,7 +5,7 @@ final class RefrigeratorBuilderViewModelTests: XCTestCase {
     func testBuildRefrigerator_DefaultState_ShouldReturnRefrigerator() {
         let viewModel = RefrigeratorBuilderViewModel()
         
-        var expectedCompressorState = true
+        let expectedCompressorState = true
         let expectedLightState = true
         let expectedResistanceState = true
         let expectedDoorOpenState = false

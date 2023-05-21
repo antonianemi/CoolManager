@@ -1,6 +1,6 @@
 class MaintenanceModeState: RefrigeratorState {
-    var name = "MaintenanceModeState"
     private let refrigerator: Refrigerator
+    var name = "MaintenanceModeState"
     func configure() {
         
     }

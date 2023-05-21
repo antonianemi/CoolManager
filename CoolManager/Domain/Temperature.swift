@@ -53,4 +53,8 @@ struct Temperature: Hashable,Equatable {
         
         return "\(value) \(unitString)"
     }
+    
+    static func defaultTemperature()->Temperature{
+        return Temperature(value: 0, unit: .celsius)
+    }
 }

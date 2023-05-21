@@ -1,4 +1,4 @@
-class NormalRefrigeratorFactory: RefrigeratorFactory {
+class DefrostingRefrigeratorFactory: RefrigeratorFactory {
     func create() -> Refrigerator {
         let value = Refrigerator()
         value.setFan(Fan())

@@ -1,8 +1,6 @@
 class StandbyState: RefrigeratorState {
-    var name = "StandbyState"
-    
     private let refrigerator: Refrigerator
-    
+    var name = "StandbyState"
     func configure() {
         self.refrigerator.compressor.stop()
         self.refrigerator.light.turnOff()

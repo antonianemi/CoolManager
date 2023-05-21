@@ -1,7 +1,6 @@
 class FreshProduceState: RefrigeratorState {
-    var name = "FreshProduceState"
-    
     private let refrigerator: Refrigerator
+    var name = "FreshProduceState"
     func configure() {
     }
     init(refrigerator: Refrigerator) {

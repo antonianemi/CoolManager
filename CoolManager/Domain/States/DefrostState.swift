@@ -1,6 +1,6 @@
 class DefrostState: RefrigeratorState {
-    var name = "DefrostState"
     private let refrigerator: Refrigerator
+    var name = "DefrostState"
     func configure() {
         
     }
