@@ -13,10 +13,10 @@ final class CoolManagerTests: XCTestCase {
         let expectedResistanceState = true
         let expectedFanState = true
         
-        XCTAssertEqual(refrigerator.compressor?.isActive, expectedCompressorState)
-        XCTAssertEqual(refrigerator.light?.isActive, expectedLightState)
-        XCTAssertEqual(refrigerator.resistance?.isActive, expectedResistanceState)
-        XCTAssertEqual(refrigerator.fan?.isActive, expectedFanState)
+        XCTAssertEqual(refrigerator.compressor.isActive, expectedCompressorState)
+        XCTAssertEqual(refrigerator.light.isActive, expectedLightState)
+        XCTAssertEqual(refrigerator.resistance.isActive, expectedResistanceState)
+        XCTAssertEqual(refrigerator.fan.isActive, expectedFanState)
     }
     
     func testProcessTemperature_comingFromNormalToEcoState_ShouldUpdateStates() {
@@ -30,10 +30,10 @@ final class CoolManagerTests: XCTestCase {
         var expectedResistanceState = true
         var expectedDoorOpenState = false
         
-        XCTAssertEqual(refrigerator.compressor?.isActive, expectedCompressorState)
-        XCTAssertEqual(refrigerator.light?.isActive, expectedLightState)
-        XCTAssertEqual(refrigerator.resistance?.isActive, expectedResistanceState)
-        XCTAssertEqual(refrigerator.door?.isOpen, expectedDoorOpenState)
+        XCTAssertEqual(refrigerator.compressor.isActive, expectedCompressorState)
+        XCTAssertEqual(refrigerator.light.isActive, expectedLightState)
+        XCTAssertEqual(refrigerator.resistance.isActive, expectedResistanceState)
+        XCTAssertEqual(refrigerator.door.isOpen, expectedDoorOpenState)
         
         refrigerator = RefrigeratorBuilder()
             .setEcoState()
@@ -44,11 +44,10 @@ final class CoolManagerTests: XCTestCase {
          expectedResistanceState = false
          expectedDoorOpenState = false
         
-        XCTAssertEqual(refrigerator.compressor?.isActive, expectedCompressorState)
-        XCTAssertEqual(refrigerator.light?.isActive, expectedLightState)
-        XCTAssertEqual(refrigerator.resistance?.isActive, expectedResistanceState)
-        XCTAssertEqual(refrigerator.door?.isOpen, expectedDoorOpenState)
-        
+        XCTAssertEqual(refrigerator.compressor.isActive, expectedCompressorState)
+        XCTAssertEqual(refrigerator.light.isActive, expectedLightState)
+        XCTAssertEqual(refrigerator.resistance.isActive, expectedResistanceState)
+        XCTAssertEqual(refrigerator.door.isOpen, expectedDoorOpenState)
     }
     
     

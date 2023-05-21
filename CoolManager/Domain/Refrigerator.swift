@@ -30,24 +30,24 @@ public class Refrigerator {
         }
     }
 
-    var door: Door? {
-        return components.first(where: { $0 is Door }) as? Door
+    var door: Door {
+        return components.first(where: { $0 is Door })! as! Door
     }
     
-    var compressor: Compressor? {
-        return components.first(where: { $0 is Compressor }) as? Compressor
+    var compressor: Compressor {
+        return components.first(where: { $0 is Compressor })! as! Compressor
     }
     
-    var light: Light? {
-        return components.first(where: { $0 is Light }) as? Light
+    var light: Light {
+        return components.first(where: { $0 is Light })! as! Light
     }
     
-    var resistance: Resistance? {
-        return components.first(where: { $0 is Resistance }) as? Resistance
+    var resistance: Resistance {
+        return components.first(where: { $0 is Resistance })! as! Resistance
     }
     
-    var fan: Fan? {
-        return components.first(where: { $0 is Fan }) as? Fan
+    var fan: Fan {
+        return components.first(where: { $0 is Fan })! as! Fan
     }
     
     func currentStateName() -> String {

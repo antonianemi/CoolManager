@@ -3,15 +3,18 @@ import XCTest
 final class RefrigeratorBuilderViewModelTests: XCTestCase {
     
     func testBuildRefrigerator_DefaultState_ShouldReturnRefrigeratorWithNormalState() {
-        /*// Arrange
+        // Arrange
         let viewModel = RefrigeratorBuilderViewModel()
         
-        // Act
-        let refrigerator = viewModel.buildRefrigerator()
+        var expectedCompressorState = true
+        var expectedLightState = true
+        var expectedResistanceState = true
+        var expectedDoorOpenState = false
         
-        // Assert
-        XCTAssertEqual(refrigerator.currentStateName(), "Normal State")
-         */
+        XCTAssertEqual(viewModel.compressorStatus(), expectedCompressorState)
+        XCTAssertEqual(viewModel.lightStatus(), expectedLightState)
+        XCTAssertEqual(viewModel.resistenceStatus(), expectedResistanceState)
+        XCTAssertEqual(viewModel.isDoorOpen(), expectedDoorOpenState)
     }
     
     func testSetNormalState_ShouldSetRefrigeratorStateToNormalState() {

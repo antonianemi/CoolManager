@@ -2,19 +2,27 @@ import UIKit
 class Vista1: UIView, View1View {
     
     func setLightStatus(_ status: Bool) {
-        img_Light.image = UIImage(named: status ? "icono-focoOn.png" : "icono-focoOff.png")
+        let imageName = status ? "icono-focoOn.png" : "icono-focoOff.png"
+        img_Light.image = UIImage(named: imageName)
+        print("Light image name: \(imageName)") // Imprime el valor del imageName para depurar
     }
-    
+
     func setDoorStatus(_ status: Bool) {
-        img_door.image = UIImage(named: status ? "icono-doorOpen.png" : "icono-doorClose.png")
+        let imageName = status ? "icono-doorOpen.png" : "icono-doorClose.png"
+        img_door.image = UIImage(named: imageName)
+        print("Door image name: \(imageName)") // Imprime el valor del imageName para depurar
     }
-    
+
     func setResistenceStatus(_ status: Bool) {
-        img_resistence.image = UIImage(named: status ? "icono-defrostOn.png" : "icono-defrostOff.png")
+        let imageName = status ? "icono-defrostOn.png" : "icono-defrostOff.png"
+        img_resistence.image = UIImage(named: imageName)
+        print("Resistence image name: \(imageName)") // Imprime el valor del imageName para depurar
     }
-    
+
     func setCompressorStatus(_ status: Bool) {
-        img_compressor.image = UIImage(named: status ? "icono-compressorOn.png" : "icono-compressorOff.png")
+        let imageName = status ? "icono-compressorOn.png" : "icono-compressorOff.png"
+        img_compressor.image = UIImage(named: imageName)
+        print("Compressor image name: \(imageName)") // Imprime el valor del imageName para depurar
     }
 
     

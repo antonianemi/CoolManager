@@ -5,28 +5,29 @@ class RefrigeratorBuilderViewModel {
     private var refrigerator = Refrigerator()
     init() {
         builder = RefrigeratorBuilder()
-        refrigerator = builder.setEcoState().build()
-        
+        refrigerator = builder.setNormalState().build()
+       
         do {
-            DispatchQueue.main.asyncAfter(deadline: .now() + 1) { [self] in
+            DispatchQueue.main.asyncAfter(deadline: .now() + 5) { [self] in
                 refrigerator = builder.setEcoState().build()
                 delegate?.update()
             }
         }
     }
+    
     func lightStatus()->Bool{
-        ((refrigerator.light?.isActive) != nil)
+        return refrigerator.light.isActive
     }
     func compressorStatus()->Bool{
-        ((refrigerator.compressor?.isActive) != nil)
+        return refrigerator.compressor.isActive
     }
     func fanStatus()->Bool{
-        ((refrigerator.fan?.isActive) != nil)
+        return refrigerator.fan.isActive
     }
     func resistenceStatus()->Bool{
-        ((refrigerator.resistance?.isActive) != nil)
+        return refrigerator.resistance.isActive
     }
     func isDoorOpen()->Bool{
-        ((refrigerator.door?.isOpen) != nil)
+        return refrigerator.door.isOpen
     }
 }
