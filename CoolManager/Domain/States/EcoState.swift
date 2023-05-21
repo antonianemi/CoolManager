@@ -2,10 +2,10 @@ class EcoState: RefrigeratorState {
     private let refrigerator: Refrigerator
     var name = "EcoState"
     func configure() {
-        /*self.refrigerator.components.stopCompressor()
-        self.refrigerator.components.turnLightOff()
-        self.refrigerator.components.turnResistanceOff()
-        self.refrigerator.components.turnFanOff()*/
+        self.refrigerator.compressor?.stop()
+        self.refrigerator.light?.turnOff()
+        self.refrigerator.resistance?.turnOff()
+        self.refrigerator.door?.close()
     }
     
     init(refrigerator: Refrigerator) {

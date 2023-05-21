@@ -19,6 +19,40 @@ final class CoolManagerTests: XCTestCase {
         XCTAssertEqual(refrigerator.fan?.isActive, expectedFanState)
     }
     
+    func testProcessTemperature_comingFromNormalToEcoState_ShouldUpdateStates() {
+        // Arrange
+        var refrigerator = RefrigeratorBuilder()
+            .setNormalState()
+            .build()
+        
+        var expectedCompressorState = true
+        var expectedLightState = true
+        var expectedResistanceState = true
+        var expectedDoorOpenState = false
+        
+        XCTAssertEqual(refrigerator.compressor?.isActive, expectedCompressorState)
+        XCTAssertEqual(refrigerator.light?.isActive, expectedLightState)
+        XCTAssertEqual(refrigerator.resistance?.isActive, expectedResistanceState)
+        XCTAssertEqual(refrigerator.door?.isOpen, expectedDoorOpenState)
+        
+        refrigerator = RefrigeratorBuilder()
+            .setEcoState()
+            .build()
+        
+         expectedCompressorState = false
+         expectedLightState = false
+         expectedResistanceState = false
+         expectedDoorOpenState = false
+        
+        XCTAssertEqual(refrigerator.compressor?.isActive, expectedCompressorState)
+        XCTAssertEqual(refrigerator.light?.isActive, expectedLightState)
+        XCTAssertEqual(refrigerator.resistance?.isActive, expectedResistanceState)
+        XCTAssertEqual(refrigerator.door?.isOpen, expectedDoorOpenState)
+        
+    }
+    
+    
+    
     func testCurrentTemperatureState_WithoutTemperatureSet_ShouldReturnDefaultTemperature() {
         // Arrange
         let refrigerator = RefrigeratorBuilder().build()
