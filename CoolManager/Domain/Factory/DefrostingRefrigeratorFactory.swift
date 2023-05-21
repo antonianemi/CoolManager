@@ -1,6 +1,7 @@
 class DefrostingRefrigeratorFactory: RefrigeratorFactory {
     func create() -> Refrigerator {
-        let value = Refrigerator()
+        let value = Refrigerator(maxTemperature: Temperature(value: 35, unit: .celsius),
+                                 minTemperature: Temperature(value: -10, unit: .celsius))
         value.setFan(Fan())
         value.setDoor(Door())
         value.setLight(Light())

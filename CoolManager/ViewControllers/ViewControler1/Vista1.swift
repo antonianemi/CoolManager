@@ -1,13 +1,20 @@
 import UIKit
 class Vista1: UIView, View1View {
     
+    lazy var presenter: View1Presenter = {
+        let presenter = View1Presenter()
+        presenter.setView(self)
+        return presenter
+    }()
+    
+    
     func setTemperature(_ value: String) {
         lbl_Temperature.text = value
     }
     
     
-    var offsetX: CGFloat = 250
-    var offsetY: CGFloat = 100
+    var offsetX: CGFloat = 130
+    var offsetY: CGFloat = 0
     
     func setLightStatus(_ status: Bool) {
         let imageName = status ? "icono-focoOn.png" : "icono-focoOff.png"
@@ -31,6 +38,11 @@ class Vista1: UIView, View1View {
         let imageName = status ? "icono-compressorOn.png" : "icono-compressorOff.png"
         img_compressor.image = UIImage(named: imageName)
         print("Compressor image name: \(imageName)") // Imprime el valor del imageName para depurar
+    }
+    
+    
+    func updateImageSetPoint(_ value:String){
+        setPointImageView.image = UIImage(named: value)
     }
     
     lazy var backgroundImageView: UIImageView = {
@@ -274,10 +286,9 @@ class Vista1: UIView, View1View {
         return label
     }()
 
-    private let button219: UIButton = {
+    lazy var btn_send: UIButton = {
         let button = UIButton(type: .system)
         button.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        button.isHidden = true
         button.isOpaque = false
         button.contentMode = .scaleToFill
         button.contentHorizontalAlignment = .center
@@ -317,10 +328,19 @@ class Vista1: UIView, View1View {
         button.setAttributedTitle(NSAttributedString(string: "", attributes: attributes), for: .normal)
         button.setBackgroundImage(UIImage(named: "setpoint-flecha-arriba-normal.png"), for: .normal)
         button.setTitleShadowColor(UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1), for: .normal)
+        button.addTarget(self, action: #selector(clickedDown), for: .touchUpInside)
         return button
     }()
 
 
+    @objc func clickedDown(){
+        presenter.downScaleSetPoint()
+    }
+    
+    @objc func clickedUp(){
+        presenter.upScaleSetPoint()
+    }
+    
     private let btn_set_point_down: UIButton = {
         let button = UIButton(type: .system)
         button.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -335,6 +355,7 @@ class Vista1: UIView, View1View {
         button.setAttributedTitle(NSAttributedString(string: "", attributes: attributes), for: .normal)
         button.setBackgroundImage(UIImage(named: "setpoint-flecha-abajo-normal.png"), for: .normal)
         button.setTitleShadowColor(UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1), for: .normal)
+        button.addTarget(self, action: #selector(clickedUp), for: .touchUpInside)
         return button
     }()
 
@@ -620,7 +641,7 @@ class Vista1: UIView, View1View {
         addSubview(additionalLabel)
 
         // button219
-        addSubview(button219)
+        addSubview(btn_send)
 
         // button
         addSubview(btn_set_point_up)
@@ -671,7 +692,7 @@ class Vista1: UIView, View1View {
         img_door.frame = CGRect(x: 627, y: 273, width: 65, height: 57)
         img_resistence.frame = CGRect(x: 627, y: 185, width: 65, height: 57)
         img_Light.frame = CGRect(x: 627, y: 100, width: 65, height: 57)
-        lbl_set_point.frame = CGRect(x: 282, y: 374, width: 127, height: 21)
+        lbl_set_point.frame = CGRect(x: 286, y: 374, width: 127, height: 21)
         lbl_indicators.frame = CGRect(x: 500, y: 49, width: 200, height: 21)
         lbl_indicators.center.x = img_door.center.x
         
@@ -690,9 +711,9 @@ class Vista1: UIView, View1View {
         imageView84.frame = CGRect(x: 586, y: 44, width: 178, height: 31)
         imageView83.frame = CGRect(x: -46, y: 44, width: 173, height: 31)
         lbl_temperature.frame = CGRect(x: 249, y: 49, width: 200, height: 21)
-        btn_set_point_down.frame = CGRect(x: 470, y: 233, width: 58, height: 56)
-        btn_set_point_up.frame = CGRect(x: 470, y: 133, width: 58, height: 56)
-        button219.frame = CGRect(x: 264, y: 409, width: 164, height: 42)
+        btn_set_point_down.frame = CGRect(x: 470, y: 333, width: 58, height: 56)
+        btn_set_point_up.frame = CGRect(x: 470, y: 233, width: 58, height: 56)
+        btn_send.frame = CGRect(x: 264, y: 409, width: 164, height: 42)
         lbl_Temperature.frame = CGRect(x: 176, y: 90, width: 364, height: 99)
         setPointImageView.frame = CGRect(x: 225, y: 200, width: 244, height: 193)
         graphFrameImageView.frame = CGRect(x: -44, y: 485, width: 808, height: 250)
@@ -720,7 +741,7 @@ class Vista1: UIView, View1View {
         lbl_temperature.frame.origin.x = lbl_temperature.frame.origin.x + offsetX
         btn_set_point_down.frame.origin.x = btn_set_point_down.frame.origin.x + offsetX
         btn_set_point_up.frame.origin.x = btn_set_point_up.frame.origin.x + offsetX
-        button219.frame.origin.x = button219.frame.origin.x + offsetX
+        btn_send.frame.origin.x = btn_send.frame.origin.x + offsetX
         img_door.frame.origin.x = img_door.frame.origin.x + offsetX
         img_resistence.frame.origin.x = img_resistence.frame.origin.x + offsetX
         img_Light.frame.origin.x = img_Light.frame.origin.x + offsetX
@@ -748,7 +769,7 @@ class Vista1: UIView, View1View {
         lbl_temperature.frame.origin.y = lbl_temperature.frame.origin.y + offsetY
         btn_set_point_down.frame.origin.y = btn_set_point_down.frame.origin.y + offsetY
         btn_set_point_up.frame.origin.y = btn_set_point_up.frame.origin.y + offsetY
-        button219.frame.origin.y = button219.frame.origin.y + offsetY
+        btn_send.frame.origin.y = btn_send.frame.origin.y + offsetY
         img_door.frame.origin.y = img_door.frame.origin.y + offsetY
         img_resistence.frame.origin.y = img_resistence.frame.origin.y + offsetY
         img_Light.frame.origin.y = img_Light.frame.origin.y + offsetY
@@ -778,7 +799,7 @@ class Vista1: UIView, View1View {
         originalFrames[imageView83] = imageView83.frame
         originalFrames[lbl_temperature] = lbl_temperature.frame
         originalFrames[btn_set_point_down] = btn_set_point_down.frame
-        originalFrames[button219] = button219.frame
+        originalFrames[btn_send] = btn_send.frame
         originalFrames[img_door] = img_door.frame
         originalFrames[img_resistence] = img_resistence.frame
         originalFrames[img_Light] = img_Light.frame

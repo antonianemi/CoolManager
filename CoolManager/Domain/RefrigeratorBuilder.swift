@@ -3,7 +3,7 @@ class RefrigeratorBuilder {
     private var refrigerator: Refrigerator
     
     init() {
-        refrigerator = Refrigerator()
+        refrigerator = NormalRefrigeratorFactory().create()
     }
     
     func build() -> Refrigerator {

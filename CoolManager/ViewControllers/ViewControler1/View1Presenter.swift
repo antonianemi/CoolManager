@@ -25,9 +25,20 @@ class View1Presenter: view1Delegate {
         view?.setResistenceStatus(viewModel.resistenceStatus())
         view?.setTemperature(viewModel.getTemperarute())
     }
+    func updateSetPointIcon() {
+        view?.updateImageSetPoint(viewModel.getIconNumber())
+    }
     
+    func upScaleSetPoint(){
+        viewModel.upScaleSetPoint()
+    }
+    
+    func downScaleSetPoint(){
+        viewModel.downScaleSetPoint()
+    }
 }
 
 protocol view1Delegate{
     func update()
+    func updateSetPointIcon()
 }

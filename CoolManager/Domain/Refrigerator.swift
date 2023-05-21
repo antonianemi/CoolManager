@@ -63,8 +63,28 @@ public class Refrigerator {
     private var currentTemperature: Temperature = Temperature.defaultTemperature()
     private var setPoint: Temperature = Temperature.defaultTemperature()
     private var state: RefrigeratorState?
+    private(set) var maxTemperature: Temperature
+    private(set) var minTemperature: Temperature
     var components = [RefrigeratorComponent]()
     
+    func upScaleSetPoint(){
+        setPoint = Temperature(value: setPoint.value + 5, unit: .celsius)
+    }
+    
+    func downScaleSetPoint(){
+        setPoint = Temperature(value: setPoint.value - 5, unit: .celsius)
+    }
+    
+    init(maxTemperature: Temperature, minTemperature: Temperature) {
+            self.maxTemperature = maxTemperature
+            self.minTemperature = minTemperature
+    }
+    public var maxTemperatureProperty: Double {
+        return maxTemperature.value
+    }
+    public var minTemperatureProperty: Double {
+        return minTemperature.value
+    }
     var targetTemperature: Temperature {
         get {
             return setPoint
