@@ -1,5 +1,9 @@
 class Resistance:ResistanceProtocol, RefrigeratorComponent  {
-    internal var isOn: Bool = false
+    internal var isOn: Bool
+    
+    init(isOn: Bool) {
+        self.isOn = isOn
+    }
     
     var isActive: Bool {
         return isOn

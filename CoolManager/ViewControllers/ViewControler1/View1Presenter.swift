@@ -1,9 +1,9 @@
 class View1Presenter: view1Delegate {
-    private let viewModel: RefrigeratorBuilderViewModel
+    private(set) var viewModel: RefrigeratorBuilderViewModel
     private weak var view: View1View?
     
-    init() {
-        viewModel = RefrigeratorBuilderViewModel()
+    init(_ refrigerator:Refrigerator) {
+        viewModel = RefrigeratorBuilderViewModel(refrigerator)
         viewModel.delegate = self
     }
     

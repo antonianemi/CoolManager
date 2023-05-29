@@ -1,7 +1,11 @@
 class Door: DoorProtocol, RefrigeratorComponent {
-    internal var _locked: Bool = false
-    internal var _open: Bool = false
+    internal var _locked:Bool
+    internal var _open:Bool
 
+    init(_locked: Bool, _open: Bool) {
+        self._locked = _locked
+        self._open = _open
+    }
     var isLocked: Bool {
         return _locked
     }

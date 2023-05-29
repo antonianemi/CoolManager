@@ -1,3 +1,4 @@
 protocol RefrigeratorFactory {
-    func create() -> Refrigerator
+    init(_ unit:TemperatureUnit)
+    func create() throws -> Refrigerator 
 }

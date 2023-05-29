@@ -1,170 +1,28 @@
 import Foundation
-public protocol RefrigeratorComponent {
-    func printStatus()
-}
-
-public protocol DoorProtocol: RefrigeratorComponent {
-    var _locked: Bool { get set }
-    var _open: Bool { get set }
-
-    func lock()
-
-    func unlock()
-
-    func open()
-
-    func close()
-    
-    func printStatus()
-}
-
-public protocol CompressorProtocol: RefrigeratorComponent  {
-    var isOn: Bool { get set }
-    
-    func start()
-    
-    func stop()
-    
-    func printStatus()
-}
-
-public protocol LightProtocol: RefrigeratorComponent  {
-    var isOn: Bool { get set }
-    
-    func turnOn()
-    
-    func turnOff()
-    
-    func printStatus()
-}
-
-public protocol ResistanceProtocol: RefrigeratorComponent  {
-    var isOn: Bool { get set }
-    
-    func turnOn()
-    
-    func turnOff()
-    
-    func printStatus()
-}
-
-public protocol FanProtocol: RefrigeratorComponent  {
-    var isOn: Bool { get set }
-    
-    func turnOn()
-    
-    func turnOff()
-    
-    func printStatus()
-}
-
-
 public class Refrigerator {
-    private var currentTemperature: Temperature = Temperature.defaultTemperature()
-    private var setPoint: Temperature = Temperature.defaultTemperature()
+    private(set) var setPoint: SetPoint
     private var state: RefrigeratorState?
-    private(set) var maxTemperature: Temperature
-    private(set) var minTemperature: Temperature
-    var components = [RefrigeratorComponent]()
+    private(set) var components = [RefrigeratorComponent]()
     
-    func upScaleSetPoint(){
-        setPoint = Temperature(value: setPoint.value + 5, unit: .celsius)
+    init(setPoint:SetPoint,
+         fan:FanProtocol,
+         door:DoorProtocol,
+         compressor:CompressorProtocol,
+         light:LightProtocol,
+         resistance:ResistanceProtocol) {
+        self.setPoint = setPoint
+        self.components.append(fan)
+        self.components.append(compressor)
+        self.components.append(door)
+        self.components.append(light)
+        self.components.append(resistance)
     }
-    
-    func downScaleSetPoint(){
-        setPoint = Temperature(value: setPoint.value - 5, unit: .celsius)
-    }
-    
-    init(maxTemperature: Temperature, minTemperature: Temperature) {
-            self.maxTemperature = maxTemperature
-            self.minTemperature = minTemperature
-    }
-    public var maxTemperatureProperty: Double {
-        return maxTemperature.value
-    }
-    public var minTemperatureProperty: Double {
-        return minTemperature.value
-    }
-    var targetTemperature: Temperature {
-        get {
-            return setPoint
-        }
-        set {
-            setPoint = newValue
-        }
-    }
-    
-    func setFan(_ value:FanProtocol){
-        components.append(value)
-    }
-    
-    func setDoor(_ value:DoorProtocol){
-        components.append(value)
-    }
-    
-    func setCompressor(_ value:CompressorProtocol){
-        components.append(value)
-    }
-    
-    func setLight(_ value:LightProtocol){
-        components.append(value)
-    }
-    
-    func setResistance(_ value:ResistanceProtocol){
-        components.append(value)
-    }
-    
     func processTemperature(){
-        /*
-        let temperatureThreshold: Double = 0.5 // Umbral de temperatura para detener el ciclo
-        let temperatureStep: Double = 0.1 // Incremento/decremento de temperatura en cada ciclo
-        
-        while abs(currentTemperature - setPoint) > temperatureThreshold {
-            if currentTemperature < setPoint {
-                // Encender los componentes para aumentar la temperatura
-                compressor.start()
-                resistance.start()
-            } else {
-                // Apagar los componentes para disminuir la temperatura
-                compressor.stop()
-                resistance.stop()
-            }
-            
-            // Esperar un tiempo para que la temperatura se ajuste
-            // Puedes usar un temporizador o sleep() para simular la espera
-            
-            // Actualizar la temperatura actual según los componentes encendidos
-            processTemperature()
-            
-            // Imprimir el estado actual del refrigerador
-            printStatus()
-            
-            // Realizar otros cálculos o acciones necesarias
-            
-            // Incrementar o decrementar la temperatura actual
-            if currentTemperature < setPoint {
-                currentTemperature += temperatureStep
-            } else {
-                currentTemperature -= temperatureStep
-            }
-        }
-        
-        // Detener los componentes una vez que se alcanza la temperatura objetivo
-        compressor.stop()
-        resistance.stop()
-        
-        // Imprimir el estado final del refrigerador
-        printStatus()
-         */
     }
-    
-    func setTemperature(_ temperature: Temperature) {
-        currentTemperature = temperature
-    }
-    
+
     var currentTemperatureStatus: Temperature {
         get {
-            return currentTemperature
+            return setPoint.temperature
         }
     }
 
@@ -212,12 +70,8 @@ public class Refrigerator {
     
     
     func printStatus(){
-        print("")
-        print("")
         print("Estado actual del refrigerador: \(currentStateName())")
-        print("")
-        print("Temperatura: \(currentTemperature.stringValue)")
-        print("")
+        print("Temperatura: \(currentTemperatureStatus.stringValue)")
         for component in components {
             component.printStatus()
         }

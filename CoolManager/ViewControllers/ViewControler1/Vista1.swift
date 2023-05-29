@@ -1,8 +1,14 @@
 import UIKit
 class Vista1: UIView, View1View {
     
+    private var refrigerator:Refrigerator?
+    
+    func setRefrigerator(_ refrigerator:Refrigerator){
+        self.refrigerator = refrigerator
+    }
+    
     lazy var presenter: View1Presenter = {
-        let presenter = View1Presenter()
+        let presenter = View1Presenter(refrigerator!)
         presenter.setView(self)
         return presenter
     }()
