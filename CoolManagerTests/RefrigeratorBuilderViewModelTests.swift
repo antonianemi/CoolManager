@@ -1,8 +1,5 @@
 import XCTest
 @testable import CoolManager
-
-
-
 final class RefrigeratorBuilderViewModelCelciusTests: XCTestCase {
     
     func strDouble(_ name:String,_ expected:Double,_ given:Double)->String{
@@ -26,8 +23,8 @@ final class RefrigeratorBuilderViewModelCelciusTests: XCTestCase {
     
     
     func test_Normal_Initialization_Refrigerator() {
-        let refrigerator = NormalRefrigeratorFactory().create()
-        let viewModel = RefrigeratorBuilderViewModel(refrigerator)
+        let refrigerator = try? NormalRefrigeratorFactory(.celsius).create()
+        let viewModel = RefrigeratorBuilderViewModel(refrigerator!)
         let expectedCompressorState = true
         let expectedLightState = true
         let expectedResistanceState = true
@@ -69,21 +66,28 @@ final class RefrigeratorBuilderViewModelCelciusTests: XCTestCase {
         XCTAssertEqual(viewModel.refrigerator.targetTemperature, expectedTemperature)*/
     }
     
-    func test_getNewStatus(){
-        /*let viewModel = RefrigeratorBuilderViewModel()
-        viewModel.downScaleSetPoint()
-        XCTAssertEqual("SETPOINT-42--4.png", viewModel.getIconNumber())
-        viewModel.downScaleSetPoint()
-        XCTAssertEqual("SETPOINT-42--9.png", viewModel.getIconNumber())
-        viewModel.downScaleSetPoint()
-        XCTAssertEqual("SETPOINT-42--14.png", viewModel.getIconNumber())
-        viewModel.downScaleSetPoint()
-        XCTAssertEqual("SETPOINT-42--18.png", viewModel.getIconNumber())
-        viewModel.downScaleSetPoint()
-        XCTAssertEqual("SETPOINT-42--23.png", viewModel.getIconNumber())
-        viewModel.downScaleSetPoint()
-        XCTAssertEqual("SETPOINT-42--28.png", viewModel.getIconNumber())
-         */
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    func test_WhenSetPointIsIncreasedToMaximum_ShouldDisplayCorrectIcon(){
+        let refrigerator = try? NormalRefrigeratorFactory(.celsius).create()
+        let viewModel = RefrigeratorBuilderViewModel(refrigerator!)
+        let initialStateExpected = "SETPOINT-42--26.png"
+        let finalStateExpected = "SETPOINT-42--42.png"
+        
+        XCTAssertEqual(viewModel.getIconName(), initialStateExpected)
+        repeat {
+            viewModel.upScaleSetPoint()
+        }
+        while (viewModel.getIconName() != finalStateExpected)
+        XCTAssertEqual(viewModel.getIconName(), finalStateExpected)
     }
     
 }

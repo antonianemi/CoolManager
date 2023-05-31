@@ -31,9 +31,13 @@ class SetPoint{
     }
     
     func upScaleSetPoint(){
-        if temperatureGoal.value <= temperature.value {
+        if canAddUp() {
             temperatureGoal = Temperature(value: temperatureGoal.value + 5, unit: .celsius)
         }
+    }
+    
+    func canAddUp()->Bool{
+        return temperatureGoal.value < maxTemperature.value
     }
     
     func downScaleSetPoint(){
@@ -44,8 +48,8 @@ class SetPoint{
     
     func getImageNumber()->Int{
         let currentSetPoint = temperatureGoal.value
-        let minTemp = maxTemperature.value
-        let maxTemp = minTemperature.value
+        let minTemp = minTemperature.value
+        let maxTemp = maxTemperature.value
         let totalImages: Int = 42
         var imageNumber = Int(((currentSetPoint - minTemp) / (maxTemp - minTemp)) * Double(totalImages))
         if imageNumber < 0 { imageNumber = imageNumber * -1 }

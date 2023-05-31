@@ -26,7 +26,7 @@ class View1Presenter: view1Delegate {
         view?.setTemperature(viewModel.getTemperarute())
     }
     func updateSetPointIcon() {
-        view?.updateImageSetPoint(viewModel.getIconNumber())
+        view?.updateImageSetPoint(viewModel.getIconName())
     }
     
     func upScaleSetPoint(){

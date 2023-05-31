@@ -3,16 +3,16 @@ import XCTest
 final class CoolManagerTests: XCTestCase {
     
     func testProcessTemperature_WithValidTemperature_ShouldUpdateStates() {
-        let refrigerator = NormalRefrigeratorFactory().create()
+        let refrigerator = try? NormalRefrigeratorFactory(.celsius).create()
         let expectedCompressorState = true
         let expectedLightState = true
         let expectedResistanceState = true
         let expectedFanState = true
         
-        XCTAssertEqual(refrigerator.compressor.isActive, expectedCompressorState)
-        XCTAssertEqual(refrigerator.light.isActive, expectedLightState)
-        XCTAssertEqual(refrigerator.resistance.isActive, expectedResistanceState)
-        XCTAssertEqual(refrigerator.fan.isActive, expectedFanState)
+        XCTAssertEqual(refrigerator!.compressor.isActive, expectedCompressorState)
+        XCTAssertEqual(refrigerator!.light.isActive, expectedLightState)
+        XCTAssertEqual(refrigerator!.resistance.isActive, expectedResistanceState)
+        XCTAssertEqual(refrigerator!.fan.isActive, expectedFanState)
     }
     
     func testProcessTemperature_comingFromNormalToEcoState_ShouldUpdateStates() {
@@ -54,14 +54,14 @@ final class CoolManagerTests: XCTestCase {
     }
         
     func testCurrentTemperature_ShouldReturnTemperature_Celsius() {
-        let refrigerator = NormalRefrigeratorFactory().create()
+        let refrigerator = try? NormalRefrigeratorFactory(.celsius).create()
         let temperature = Temperature(value: 10, unit: .celsius)
         let expectedTemperature = temperature
-        XCTAssertEqual(refrigerator.currentTemperatureStatus, expectedTemperature)
+        XCTAssertEqual(refrigerator!.currentTemperatureStatus, expectedTemperature)
     }
     
     func test_Normal_InitializeRefrigerator(){
-        let refrigerator = NormalRefrigeratorFactory().create()
+        let refrigerator = try? NormalRefrigeratorFactory(.celsius).create()
         
         let expectedTemperature = Temperature(value: 35, unit: .celsius)
         let expectedCompressorState = false
@@ -69,11 +69,11 @@ final class CoolManagerTests: XCTestCase {
         let expectedResistanceState = false
         let expectedDoorOpenState = false
         
-        XCTAssertEqual(refrigerator.compressor.isActive, expectedCompressorState)
-        XCTAssertEqual(refrigerator.light.isActive, expectedLightState)
-        XCTAssertEqual(refrigerator.resistance.isActive, expectedResistanceState)
-        XCTAssertEqual(refrigerator.door.isOpen, expectedDoorOpenState)
-        XCTAssertEqual(refrigerator.currentTemperatureStatus, expectedTemperature)
+        XCTAssertEqual(refrigerator!.compressor.isActive, expectedCompressorState)
+        XCTAssertEqual(refrigerator!.light.isActive, expectedLightState)
+        XCTAssertEqual(refrigerator!.resistance.isActive, expectedResistanceState)
+        XCTAssertEqual(refrigerator!.door.isOpen, expectedDoorOpenState)
+        XCTAssertEqual(refrigerator!.currentTemperatureStatus, expectedTemperature)
     }
     
 }

@@ -29,7 +29,7 @@ class RefrigeratorBuilderViewModel {
         return refrigerator.currentTemperatureStatus.stringValue
     }
     
-    func getIconNumber()->String{
+    func getIconName()->String{
         return "SETPOINT-42--\(refrigerator.setPoint.getImageNumber()).png"
     }
     

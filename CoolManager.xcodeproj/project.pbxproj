@@ -15,7 +15,6 @@
 		FA382EBB2A19A23E0047D033 /* TemperatureRule.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C232A087882003E2CA4 /* TemperatureRule.swift */; };
 		FA382EBC2A19A23E0047D033 /* TemperatureStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C262A088089003E2CA4 /* TemperatureStatus.swift */; };
 		FA382EBD2A19A23E0047D033 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C282A088369003E2CA4 /* TemperatureUnit.swift */; };
-		FA382EBE2A19A23E0047D033 /* RefrigeratorBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C422A089028003E2CA4 /* RefrigeratorBuilder.swift */; };
 		FA382EBF2A19A2850047D033 /* NormalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C062A0DBFDD00E14E1E /* NormalState.swift */; };
 		FA382EC02A19A2860047D033 /* NightModeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C072A0DBFDD00E14E1E /* NightModeState.swift */; };
 		FA382EC12A19A2860047D033 /* SmartModeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C082A0DBFDD00E14E1E /* SmartModeState.swift */; };
@@ -62,8 +61,10 @@
 		FA382EF92A20F20E0047D033 /* DoorOpenedRefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382EF72A20F20E0047D033 /* DoorOpenedRefrigeratorFactory.swift */; };
 		FA382EFB2A20FE060047D033 /* CorruptTemperaturesRefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382EFA2A20FE060047D033 /* CorruptTemperaturesRefrigeratorFactory.swift */; };
 		FA382EFC2A20FE060047D033 /* CorruptTemperaturesRefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382EFA2A20FE060047D033 /* CorruptTemperaturesRefrigeratorFactory.swift */; };
-		FA382EFF2A212A690047D033 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382EFE2A212A690047D033 /* XCTestCaseExtension.swift */; };
-		FA382F002A212A690047D033 /* XCTestCaseExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382EFE2A212A690047D033 /* XCTestCaseExtension.swift */; };
+		FA382F022A253F320047D033 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382F012A253F320047D033 /* User.swift */; };
+		FA382F032A253F320047D033 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382F012A253F320047D033 /* User.swift */; };
+		FA382F052A253F3E0047D033 /* CoolManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382F042A253F3E0047D033 /* CoolManager.swift */; };
+		FA382F062A253F3E0047D033 /* CoolManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA382F042A253F3E0047D033 /* CoolManager.swift */; };
 		FA38FFE829FE669800BC21FA /* View3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFDA29FE669800BC21FA /* View3ViewController.swift */; };
 		FA38FFE929FE669800BC21FA /* View2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFDB29FE669800BC21FA /* View2ViewController.swift */; };
 		FA38FFEA29FE669800BC21FA /* View4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFDC29FE669800BC21FA /* View4ViewController.swift */; };
@@ -86,7 +87,6 @@
 		FA714C382A088BFF003E2CA4 /* CoolManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C372A088BFF003E2CA4 /* CoolManagerTests.swift */; };
 		FA714C3E2A088C11003E2CA4 /* TemperatureRulesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C2F2A088BD9003E2CA4 /* TemperatureRulesTests.swift */; };
 		FA714C412A088CC8003E2CA4 /* temperature_rules.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA714C402A088CC8003E2CA4 /* temperature_rules.txt */; };
-		FA714C432A089028003E2CA4 /* RefrigeratorBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C422A089028003E2CA4 /* RefrigeratorBuilder.swift */; };
 		FAB54C182A0DBFDD00E14E1E /* NormalState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C062A0DBFDD00E14E1E /* NormalState.swift */; };
 		FAB54C192A0DBFDD00E14E1E /* NightModeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C072A0DBFDD00E14E1E /* NightModeState.swift */; };
 		FAB54C1A2A0DBFDD00E14E1E /* SmartModeState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C082A0DBFDD00E14E1E /* SmartModeState.swift */; };
@@ -168,7 +168,8 @@
 		FA382EF42A1FB3660047D033 /* SetPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPoint.swift; sourceTree = "<group>"; };
 		FA382EF72A20F20E0047D033 /* DoorOpenedRefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorOpenedRefrigeratorFactory.swift; sourceTree = "<group>"; };
 		FA382EFA2A20FE060047D033 /* CorruptTemperaturesRefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CorruptTemperaturesRefrigeratorFactory.swift; sourceTree = "<group>"; };
-		FA382EFE2A212A690047D033 /* XCTestCaseExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XCTestCaseExtension.swift; sourceTree = "<group>"; };
+		FA382F012A253F320047D033 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		FA382F042A253F3E0047D033 /* CoolManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolManager.swift; sourceTree = "<group>"; };
 		FA38FFDA29FE669800BC21FA /* View3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View3ViewController.swift; sourceTree = "<group>"; };
 		FA38FFDB29FE669800BC21FA /* View2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View2ViewController.swift; sourceTree = "<group>"; };
 		FA38FFDC29FE669800BC21FA /* View4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View4ViewController.swift; sourceTree = "<group>"; };
@@ -195,7 +196,6 @@
 		FA714C352A088BFF003E2CA4 /* CoolManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA714C372A088BFF003E2CA4 /* CoolManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolManagerTests.swift; sourceTree = "<group>"; };
 		FA714C402A088CC8003E2CA4 /* temperature_rules.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = temperature_rules.txt; sourceTree = "<group>"; };
-		FA714C422A089028003E2CA4 /* RefrigeratorBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorBuilder.swift; sourceTree = "<group>"; };
 		FAB54C062A0DBFDD00E14E1E /* NormalState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NormalState.swift; sourceTree = "<group>"; };
 		FAB54C072A0DBFDD00E14E1E /* NightModeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NightModeState.swift; sourceTree = "<group>"; };
 		FAB54C082A0DBFDD00E14E1E /* SmartModeState.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SmartModeState.swift; sourceTree = "<group>"; };
@@ -295,14 +295,6 @@
 			path = NormalComponents;
 			sourceTree = "<group>";
 		};
-		FA382EFD2A212A470047D033 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				FA382EFE2A212A690047D033 /* XCTestCaseExtension.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
 		FA38FFCC29FE5DE500BC21FA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -373,9 +365,10 @@
 				FA714C232A087882003E2CA4 /* TemperatureRule.swift */,
 				FA714C262A088089003E2CA4 /* TemperatureStatus.swift */,
 				FA714C282A088369003E2CA4 /* TemperatureUnit.swift */,
-				FA714C422A089028003E2CA4 /* RefrigeratorBuilder.swift */,
 				FA382EF12A1FB34B0047D033 /* Update.swift */,
 				FA382EF42A1FB3660047D033 /* SetPoint.swift */,
+				FA382F012A253F320047D033 /* User.swift */,
+				FA382F042A253F3E0047D033 /* CoolManager.swift */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -383,7 +376,6 @@
 		FA714C362A088BFF003E2CA4 /* CoolManagerTests */ = {
 			isa = PBXGroup;
 			children = (
-				FA382EFD2A212A470047D033 /* Extensions */,
 				FA714C252A087F06003E2CA4 /* temperature_rules_test.txt */,
 				FA714C2F2A088BD9003E2CA4 /* TemperatureRulesTests.swift */,
 				FA714C372A088BFF003E2CA4 /* CoolManagerTests.swift */,
@@ -597,7 +589,6 @@
 				FA38FFE929FE669800BC21FA /* View2ViewController.swift in Sources */,
 				FAB54C192A0DBFDD00E14E1E /* NightModeState.swift in Sources */,
 				FA382EF22A1FB34B0047D033 /* Update.swift in Sources */,
-				FA382EFF2A212A690047D033 /* XCTestCaseExtension.swift in Sources */,
 				FA714C292A088369003E2CA4 /* TemperatureUnit.swift in Sources */,
 				FAB54C222A0DBFDD00E14E1E /* FreshProduceState.swift in Sources */,
 				FA382EEE2A1F3D4E0047D033 /* RefrigeratorComponent.swift in Sources */,
@@ -613,7 +604,6 @@
 				FA38FFEA29FE669800BC21FA /* View4ViewController.swift in Sources */,
 				FA382EE82A1F3D160047D033 /* CompressorProtocol.swift in Sources */,
 				FA382ED82A19E2710047D033 /* NormalRefrigeratorFactory.swift in Sources */,
-				FA714C432A089028003E2CA4 /* RefrigeratorBuilder.swift in Sources */,
 				FAB54C292A0DBFDD00E14E1E /* FreezingState.swift in Sources */,
 				FAB54C1A2A0DBFDD00E14E1E /* SmartModeState.swift in Sources */,
 				FA382EE22A1F3CE20047D033 /* ResistanceProtocol.swift in Sources */,
@@ -621,6 +611,7 @@
 				FA382EE52A1F3CFC0047D033 /* LightProtocol.swift in Sources */,
 				FAB54C2F2A0DC03200E14E1E /* Compressor.swift in Sources */,
 				FA714C242A087882003E2CA4 /* TemperatureRule.swift in Sources */,
+				FA382F052A253F3E0047D033 /* CoolManager.swift in Sources */,
 				FA382EF82A20F20E0047D033 /* DoorOpenedRefrigeratorFactory.swift in Sources */,
 				FA38FFEF29FE669800BC21FA /* View1ViewController.swift in Sources */,
 				FAB54C272A0DBFDD00E14E1E /* PartyState.swift in Sources */,
@@ -629,6 +620,7 @@
 				FAB54C242A0DBFDD00E14E1E /* MaintenanceModeState.swift in Sources */,
 				FAB54C212A0DBFDD00E14E1E /* ChildLockState.swift in Sources */,
 				FAB54C3B2A0E116600E14E1E /* View1View.swift in Sources */,
+				FA382F022A253F320047D033 /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -636,6 +628,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA382F062A253F3E0047D033 /* CoolManager.swift in Sources */,
 				FA382ED02A19A2930047D033 /* Door.swift in Sources */,
 				FA382ED12A19A2930047D033 /* Fan.swift in Sources */,
 				FA382ED22A19A2930047D033 /* Light.swift in Sources */,
@@ -670,14 +663,13 @@
 				FA382EB92A19A23E0047D033 /* Refrigerator.swift in Sources */,
 				FA382EBA2A19A23E0047D033 /* Temperature.swift in Sources */,
 				FA382EBB2A19A23E0047D033 /* TemperatureRule.swift in Sources */,
-				FA382F002A212A690047D033 /* XCTestCaseExtension.swift in Sources */,
 				FA382EBC2A19A23E0047D033 /* TemperatureStatus.swift in Sources */,
 				FA382EBD2A19A23E0047D033 /* TemperatureUnit.swift in Sources */,
-				FA382EBE2A19A23E0047D033 /* RefrigeratorBuilder.swift in Sources */,
 				FA382EB62A19A2320047D033 /* EcoState.swift in Sources */,
 				FAB54C3F2A0E118A00E14E1E /* RefrigeratorBuilderViewModel.swift in Sources */,
 				FAB54C352A0DC8AE00E14E1E /* TemperatureTests.swift in Sources */,
 				FA714C3E2A088C11003E2CA4 /* TemperatureRulesTests.swift in Sources */,
+				FA382F032A253F320047D033 /* User.swift in Sources */,
 				FA714C382A088BFF003E2CA4 /* CoolManagerTests.swift in Sources */,
 				FA382EEC2A1F3D2D0047D033 /* DoorProtocol.swift in Sources */,
 				FA382EF32A1FB34B0047D033 /* Update.swift in Sources */,
