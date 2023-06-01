@@ -6,7 +6,7 @@ enum TemperatureError: Error {
 
 class SetPoint{
     private(set) var temperature: Temperature
-    private(set) var temperatureGoal: Temperature
+    private(set) var temperatureSetPoint: Temperature
     private(set) var maxTemperature: Temperature
     private(set) var minTemperature: Temperature
     init(temperature: Temperature, temperatureGoal: Temperature, maxTemperature: Temperature, minTemperature: Temperature) throws {
@@ -25,29 +25,33 @@ class SetPoint{
         
         
         self.temperature = temperature
-        self.temperatureGoal = temperatureGoal
+        self.temperatureSetPoint = temperatureGoal
         self.minTemperature = minTemperature
         self.maxTemperature = maxTemperature
     }
     
     func upScaleSetPoint(){
         if canAddUp() {
-            temperatureGoal = Temperature(value: temperatureGoal.value + 5, unit: .celsius)
+            temperatureSetPoint.pushUp()
         }
     }
     
     func canAddUp()->Bool{
-        return temperatureGoal.value < maxTemperature.value
+        return temperatureSetPoint.value < maxTemperature.value
     }
     
     func downScaleSetPoint(){
-        if temperatureGoal.value >= temperature.value {
-            temperatureGoal = Temperature(value: temperatureGoal.value - 5, unit: .celsius)
+        if canDropDown() {
+            temperatureSetPoint.pullDown()
         }
     }
     
+    func canDropDown()->Bool{
+        return temperatureSetPoint.value > minTemperature.value
+    }
+    
     func getImageNumber()->Int{
-        let currentSetPoint = temperatureGoal.value
+        let currentSetPoint = temperatureSetPoint.value
         let minTemp = minTemperature.value
         let maxTemp = maxTemperature.value
         let totalImages: Int = 42

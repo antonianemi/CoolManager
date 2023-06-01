@@ -23,7 +23,7 @@ func readTemperatureRulesFromFile(filePath: String) -> [Temperature: Temperature
                 
                 if key == "Temperatura" {
                     if let temperatureValue = Double(value) {
-                        let temperature = Temperature(value: temperatureValue, unit: .celsius)
+                        let temperature = Temperature(value: temperatureValue, unit: .celsius, interval: Double(components[0])!)
                         currentTemperature = temperature
                     }
                 } else {

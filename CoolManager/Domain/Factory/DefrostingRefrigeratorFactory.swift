@@ -1,14 +1,12 @@
 final class DefrostingRefrigeratorFactory: RefrigeratorFactory {
-    private(set) var unit:TemperatureUnit
+    private let unit = TemperatureUnit.celsius
+    private let interval = 0.5
     
-    init(_ unit: TemperatureUnit) {
-        self.unit = unit
-    }
     func create() throws -> Refrigerator {
-        let setPoint = Temperature(value: 20, unit: unit)
-        let maxTemperature = Temperature(value: 35, unit: unit)
-        let minTemperature = Temperature(value: -5, unit: unit)
-        let currentTemperature = Temperature(value: -5, unit: unit)
+        let setPoint =           Temperature(value: 20, unit: unit, interval: interval)
+        let maxTemperature =     Temperature(value: 35, unit: unit, interval: interval)
+        let minTemperature =     Temperature(value: -5, unit: unit, interval: interval)
+        let currentTemperature = Temperature(value: 10, unit: unit, interval: interval)
         let _setPoint = try SetPoint(temperature: currentTemperature, temperatureGoal: setPoint , maxTemperature: maxTemperature, minTemperature: minTemperature)
         let value = Refrigerator(setPoint: _setPoint,
                                  fan: Fan(isOn: true),

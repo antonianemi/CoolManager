@@ -1,0 +1,55 @@
+@startuml
+!theme spacelab
+!define PLANTUML_OUTPUT_DIR ./Snapshops
+
+object Refrigerator
+Refrigerator : name = "CoolManager 1"
+
+object SetPoint
+
+object TemperatureMax
+TemperatureMax : value = 35
+
+object TemperatureMin
+TemperatureMin : value = -5
+
+object TemperatureObjetive
+TemperatureObjetive : value = 0
+
+object currentTemperature
+currentTemperature : value = 20
+
+object Door
+Door : islocked = false
+Door : isOpen = true
+
+object Compressor
+Compressor : isOn = false
+
+object Light
+Light : isOn = true
+
+object Resistance
+Resistance : isOn = false
+
+object Fan
+Fan : isOn = false
+
+object TemperatureUnit
+TemperatureUnit : "celsius"
+
+SetPoint *-- "1" TemperatureMax: tiene
+SetPoint *-- "1" TemperatureMin: tiene
+SetPoint *-- "1" TemperatureObjetive: tiene
+SetPoint *-- "1" currentTemperature: tiene
+Refrigerator *-- "1" SetPoint : tiene un
+Refrigerator *-- "1" Door : tiene un
+Refrigerator *-- "1" Compressor : tiene un
+Refrigerator *-- "1" Light : tiene un
+Refrigerator *-- "1" Resistance : tiene un
+Refrigerator *-- "1" Fan : tiene un
+TemperatureMax *-- "1" TemperatureUnit
+TemperatureMin *-- "1" TemperatureUnit
+TemperatureObjetive *-- "1" TemperatureUnit
+currentTemperature *-- "1" TemperatureUnit
+@enduml

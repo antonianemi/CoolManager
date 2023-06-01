@@ -8,7 +8,7 @@ class View1ViewController: UIViewController {
         super.viewDidLoad()
         _view = Vista1(frame: view.frame)
         do{
-          try  _view?.setRefrigerator(NormalRefrigeratorFactory(.celsius).create())
+          try  _view?.setRefrigerator(NormalRefrigeratorFactory().create())
         }
         catch TemperatureError.inconsistentUnit{
             //TODO: implement popup to correct the lims

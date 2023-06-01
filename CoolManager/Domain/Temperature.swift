@@ -1,10 +1,20 @@
-struct Temperature: Hashable,Equatable {
-    let value: Double
-    let unit: TemperatureUnit
+class Temperature: Hashable,Equatable {
+    var value: Double
+    var unit: TemperatureUnit
+    private let interval: Double
     
-    init(value: Double, unit: TemperatureUnit) {
+    func pushUp(){
+        value = value + interval
+    }
+    
+    func pullDown(){
+        value = value - interval
+    }
+    
+    init(value: Double, unit: TemperatureUnit, interval:Double) {
         self.value = value
         self.unit = unit
+        self.interval = interval
     }
     
     func converted(to unit: TemperatureUnit) -> Temperature {
@@ -29,7 +39,7 @@ struct Temperature: Hashable,Equatable {
             }
         }
         
-        return Temperature(value: convertedValue, unit: unit)
+        return Temperature(value: convertedValue, unit: unit, interval: interval)
     }
     
     func hash(into hasher: inout Hasher) {
@@ -54,7 +64,7 @@ struct Temperature: Hashable,Equatable {
         return "\(value) \(unitString)"
     }
     
-    static func defaultTemperature()->Temperature{
-        return Temperature(value: -10, unit: .celsius)
+    func defaultTemperature()->Temperature{
+        return Temperature(value: -10, unit: unit, interval: interval)
     }
 }

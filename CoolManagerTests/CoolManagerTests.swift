@@ -3,7 +3,7 @@ import XCTest
 final class CoolManagerTests: XCTestCase {
     
     func testProcessTemperature_WithValidTemperature_ShouldUpdateStates() {
-        let refrigerator = try? NormalRefrigeratorFactory(.celsius).create()
+        let refrigerator = try? NormalRefrigeratorFactory().create()
         let expectedCompressorState = true
         let expectedLightState = true
         let expectedResistanceState = true
@@ -54,16 +54,16 @@ final class CoolManagerTests: XCTestCase {
     }
         
     func testCurrentTemperature_ShouldReturnTemperature_Celsius() {
-        let refrigerator = try? NormalRefrigeratorFactory(.celsius).create()
-        let temperature = Temperature(value: 10, unit: .celsius)
+        let refrigerator = try? NormalRefrigeratorFactory().create()
+        let temperature = Temperature(value: 10, unit: .celsius, interval: 0.5)
         let expectedTemperature = temperature
         XCTAssertEqual(refrigerator!.currentTemperatureStatus, expectedTemperature)
     }
     
     func test_Normal_InitializeRefrigerator(){
-        let refrigerator = try? NormalRefrigeratorFactory(.celsius).create()
+        let refrigerator = try? NormalRefrigeratorFactory().create()
         
-        let expectedTemperature = Temperature(value: 35, unit: .celsius)
+        let expectedTemperature = Temperature(value: 35, unit: .celsius, interval: 0.5)
         let expectedCompressorState = false
         let expectedLightState = false
         let expectedResistanceState = false

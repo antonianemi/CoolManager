@@ -1,0 +1,34 @@
+HolidayModeState: Este estado se activaría cuando el usuario establece el refrigerador en modo de vacaciones durante períodos más largos, como semanas o meses. El compresor estaría funcionando a baja potencia para mantener una temperatura estable, mientras que la luz, la resistencia y el ventilador estarían apagados para ahorrar energía.
+
+QuickCoolingState: Este estado se activaría cuando se necesita enfriar rápidamente los alimentos recién colocados en el refrigerador. El compresor funcionaría a máxima potencia para enfriar rápidamente el interior, mientras que la luz y el ventilador podrían estar encendidos para una mejor circulación del aire.
+
+ChildLockState: Este estado se activaría cuando se activa el bloqueo de seguridad para evitar que los niños accedan al interior del refrigerador. Todas las propiedades, como el compresor, la luz, la resistencia y el ventilador, seguirían funcionando normalmente, pero la apertura de la puerta estaría bloqueada.
+
+SmartModeState: Este estado se activaría cuando el refrigerador está conectado a un sistema de domótica o control inteligente. El comportamiento del refrigerador se ajustaría automáticamente según los patrones de uso, la carga de alimentos y las preferencias del usuario, optimizando la eficiencia energética y la gestión de la temperatura.
+
+FreshProduceState: Este estado se activaría cuando el refrigerador se configura específicamente para almacenar productos frescos como frutas y verduras. El compresor funcionaría a una potencia y temperatura ideales para mantener la frescura de los productos, mientras que la luz y el ventilador podrían estar optimizados para preservar la calidad de los alimentos.
+
+FreezingState: Este estado se activaría cuando se utiliza el congelador del refrigerador. El compresor funcionaría a una temperatura muy baja para mantener los alimentos congelados, mientras que la luz y el ventilador podrían estar apagados o en un modo de bajo consumo para el congelador.
+
+EnergySaverState: Este estado se activaría cuando se desea minimizar el consumo de energía del refrigerador. El compresor funcionaría a baja potencia, la luz estaría atenuada o apagada, y el ventilador estaría en un modo de bajo consumo. Este estado sería útil en momentos en los que no se necesita un enfriamiento intensivo, como durante la noche o cuando el refrigerador está parcialmente vacío.
+
+StorageState: Este estado se activaría cuando el refrigerador se utiliza principalmente para el almacenamiento a largo plazo de alimentos no perecederos. El compresor funcionaría a una potencia mínima para mantener una temperatura estable, mientras que la luz y el ventilador podrían estar apagados para ahorrar energía.
+
+MaintenanceModeState: Este estado se activaría durante los períodos de mantenimiento o limpieza del refrigerador. El compresor estaría apagado, mientras que la luz y el ventilador podrían estar encendidos para facilitar la visibilidad y el acceso al interior del refrigerador.
+
+LowPowerState: Este estado se activaría cuando el refrigerador está operando con una fuente de energía limitada, como una batería de respaldo o una fuente de alimentación de emergencia.
+
+
+DefrostState: Este estado se activaría durante el ciclo de descongelación del refrigerador. El compresor estaría apagado, mientras que la resistencia estaría activa para derretir cualquier acumulación de hielo o escarcha en el interior del refrigerador. La luz y el ventilador podrían estar encendidos para proporcionar visibilidad y circulación de aire durante el proceso de descongelación.
+
+PowerFailureState: Este estado se activaría cuando se produce un corte de energía eléctrica. Todas las propiedades, como el compresor, la luz, la resistencia y el ventilador, estarían apagadas. El refrigerador entraría en un estado de conservación de la temperatura, utilizando el aislamiento y los materiales internos para mantener los alimentos frescos durante el período de fallo de energía.
+
+VacationState: Este estado se seleccionaría cuando el usuario esté de vacaciones o ausente durante un período prolongado. El compresor estaría funcionando a baja potencia para mantener una temperatura estable, mientras que la luz, la resistencia y el ventilador estarían apagados para ahorrar energía. Este estado minimizaría el consumo de energía durante la ausencia del usuario.
+
+PartyState: Este estado se activaría cuando se organiza una fiesta o evento en el que se requiere un acceso frecuente al refrigerador. El compresor funcionaría a máxima potencia para mantener una temperatura baja y compensar la frecuente apertura de la puerta. La luz y el ventilador podrían estar encendidos para una mejor visibilidad y circulación del aire.
+
+NightModeState: Este estado se activaría durante las horas nocturnas, cuando se busca un funcionamiento silencioso y de bajo consumo de energía. El compresor funcionaría a baja potencia, la luz estaría atenuada o apagada, y el ventilador estaría en un modo de bajo ruido. Este estado proporcionaría un entorno tranquilo y ahorraría energía durante las horas de descanso.
+
+TurboState: En este estado, se maximizaría el rendimiento de enfriamiento del refrigerador. El compresor funcionaría a máxima potencia, la luz y el ventilador podrían estar encendidos para una mejor circulación del aire frío, y la resistencia podría utilizarse para acelerar la descongelación. Este estado sería útil cuando se requiere un enfriamiento rápido o cuando se carga una gran cantidad de alimentos en el refrigerador.
+
+StandbyState: Este estado representaría un modo de espera o inactividad del refrigerador. Todas las propiedades estarían apagadas para ahorrar energía, pero el refrigerador seguiría funcionando a un nivel mínimo para mantener la temperatura interna estable. Este estado sería útil durante períodos de baja utilización o cuando se desea minimizar el consumo de energía sin apagar por completo el refrigerador.

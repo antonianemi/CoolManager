@@ -4,7 +4,7 @@ class TemperatureTests: XCTestCase {
     
     func testTemperatureConversion() {
         // Arrange
-        let temperature = Temperature(value: 32.0, unit: .celsius)
+        let temperature = Temperature(value: 32.0, unit: .celsius, interval: 0.5)
         
         // Act
         let convertedTemperature = temperature.converted(to: .fahrenheit)
@@ -16,9 +16,9 @@ class TemperatureTests: XCTestCase {
     
     func testTemperatureHashing() {
         // Arrange
-        let temperature1 = Temperature(value: 25.0, unit: .celsius)
-        let temperature2 = Temperature(value: 25.0, unit: .celsius)
-        let temperature3 = Temperature(value: 32.0, unit: .fahrenheit)
+        let temperature1 = Temperature(value: 25.0, unit: .celsius, interval: 0.5)
+        let temperature2 = Temperature(value: 25.0, unit: .celsius, interval: 0.5)
+        let temperature3 = Temperature(value: 32.0, unit: .fahrenheit, interval: 0.5)
         
         // Act
         let hash1 = temperature1.hashValue
@@ -32,7 +32,7 @@ class TemperatureTests: XCTestCase {
     
     func testTemperatureStringValue() {
         // Arrange
-        let temperature = Temperature(value: 20.5, unit: .celsius)
+        let temperature = Temperature(value: 20.5, unit: .celsius, interval: 0.5)
         
         // Act
         let stringValue = temperature.stringValue

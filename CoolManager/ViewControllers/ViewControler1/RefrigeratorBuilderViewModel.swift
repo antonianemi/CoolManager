@@ -1,10 +1,14 @@
 import Foundation
 class RefrigeratorBuilderViewModel {
-    private(set) var refrigerator:Refrigerator
+    private var refrigerator:Refrigerator
     public var delegate:view1Delegate?
     
     init(_ refrigerator:Refrigerator) {
         self.refrigerator = refrigerator
+    }
+    
+    func setPoint()->SetPoint{
+        return refrigerator.setPoint
     }
     
     func lightStatus()->Bool{

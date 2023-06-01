@@ -1,0 +1,184 @@
+@startuml
+!theme spacelab
+!define PLANTUML_OUTPUT_DIR ./Snapshops
+
+class Refrigerator {
+    - setPoint: SetPoint
+    - state: RefrigeratorState
+    - components: RefrigeratorComponent[]
+    + currentTemperatureStatus: Temperature
+    + door: Door
+    + compressor: Compressor
+    + light: Light
+    + resistance: Resistance
+    + fan: Fan
+    + processTemperature()
+    + currentStateName(): String
+    + printStatus()
+
+    + Refrigerator(setPoint:SetPoint,
+         fan:FanProtocol,
+         door:DoorProtocol,
+         compressor:CompressorProtocol,
+         light:LightProtocol,
+         resistance:ResistanceProtocol)
+}
+
+class SetPoint {
+    - value: Temperature
+    - unit: TemperatureUnit
+    + SetPoint(value: Temperature, unit: TemperatureUnit)
+    + converted(to: TemperatureUnit): Temperature
+    + moveUp()
+    + moveDown()
+    + getUnit(): TemperatureUnit
+    + getValue(): Temperature
+}
+
+
+Refrigerator -- "1" SetPoint : tiene un
+Refrigerator -- "1" Door : tiene un
+Refrigerator -- "1" Compressor : tiene un
+Refrigerator -- "1" Light : tiene un
+Refrigerator -- "1" Resistance : tiene un
+Refrigerator -- "1" Fan : tiene un
+Refrigerator -- "1" Temperature : tiene un
+Temperature  -- "1" TemperatureUnit : tiene un
+
+class Temperature {
+    + value: Double
+    + unit: TemperatureUnit
+    + stringValue: String
+    + defaultTemperature(): Temperature
+}
+
+enum TemperatureUnit {
+    + celsius
+    + fahrenheit
+}
+
+interface FanProtocol
+interface DoorProtocol
+interface CompressorProtocol
+interface LightProtocol
+interface ResistanceProtocol
+
+class RefrigeratorState {
+    - name: String
+}
+
+class RefrigeratorComponent {
+    + printStatus()
+}
+
+class Door
+class Compressor
+class Light
+class Resistance
+class Fan
+
+
+
+interface RefrigeratorComponent {
+    + printStatus()
+}
+
+interface DoorProtocol {
+    - _locked: Bool
+    - _open: Bool
+
+    + lock()
+    + unlock()
+    + open()
+    + close()
+    + printStatus()
+}
+
+interface CompressorProtocol {
+    - isOn: Bool
+
+    + start()
+    + stop()
+    + printStatus()
+}
+
+interface LightProtocol {
+    - isOn: Bool
+
+    + turnOn()
+    + turnOff()
+    + printStatus()
+}
+
+interface ResistanceProtocol {
+    - isOn: Bool
+
+    + turnOn()
+    + turnOff()
+    + printStatus()
+}
+
+interface FanProtocol {
+    - isOn: Bool
+
+    + turnOn()
+    + turnOff()
+    + printStatus()
+}
+
+class Temperature {
+    - value: double
+    - unit: TemperatureUnit
+
+    + Temperature(value: double, unit: TemperatureUnit)
+    + converted(to unit: TemperatureUnit): Temperature
+    + hash(into hasher: inout Hasher)
+    + == (lhs: Temperature, rhs: Temperature): bool
+    + stringValue: string
+    + defaultTemperature(): Temperature
+}
+
+class TemperatureStatus {
+    - compressor: bool
+    - light: bool
+    - resistance: bool
+    - fan: bool
+    - door: bool
+
+    + TemperatureStatus(compressor: bool, light: bool, resistance: bool, fan: bool, door: bool)
+    + == (lhs: TemperatureStatus, rhs: TemperatureStatus): bool
+}
+
+enum TemperatureUnit {
+    celsius
+    fahrenheit
+}
+
+class RefrigeratorBuilder {
+    - refrigerator: Refrigerator
+    
+    + RefrigeratorBuilder()
+    + build(): Refrigerator
+}
+
+Note right of RefrigeratorBuilder: <<Singleton>>
+
+class NormalRefrigeratorFactory {
+    + create(): Refrigerator
+}
+
+class DefrostingRefrigeratorFactory {
+    + create(): Refrigerator
+}
+
+
+
+DefrostingRefrigeratorFactory ..|> RefrigeratorFactory
+NormalRefrigeratorFactory ..|> RefrigeratorFactory
+RefrigeratorComponent <|.. DoorProtocol
+RefrigeratorComponent <|.. CompressorProtocol
+RefrigeratorComponent <|.. LightProtocol
+RefrigeratorComponent <|.. ResistanceProtocol
+RefrigeratorComponent <|.. FanProtocol
+
+@enduml

@@ -1,0 +1,72 @@
+@startuml
+!theme spacelab
+!define PLANTUML_OUTPUT_DIR ./Snapshops
+package "Dominio" {
+    class Refrigerator
+    class SetPoint {
+    - maxTemperature: Temperature
+    - minTemperature: Temperature
+    - currentTemperature: Temperature
+    - setPointTemperature: Temperature
+    }
+    class Temperature
+    class Door
+    class Compressor
+    class Light
+    class Resistance
+    class Fan
+    class TemperatureUnit
+}
+
+package "Acciones" {
+    abstract class Action
+    class TurnOn
+    class TurnOff
+    class TurnUpSetPoint
+    class TurnDownSetPoint
+}
+
+
+class CoolManager {
+    - actions: List<Action>
+    - client: client
+    - refrigerator: Refrigerator
+}
+
+class client
+
+
+SetPoint *-- Temperature : maxTemperature
+SetPoint *-- Temperature : minTemperature
+SetPoint *-- Temperature : currentTemperature
+SetPoint *-- Temperature : setPointTemperature
+Refrigerator *-- SetPoint
+Refrigerator *-- Door
+Refrigerator *-- Compressor
+Refrigerator *-- Light
+Refrigerator *-- Resistance
+Refrigerator *-- Fan
+SetPoint *-- Temperature
+Temperature *-- TemperatureUnit
+
+Action <|-- TurnOn
+Action <|-- TurnOff
+Action <|-- TurnUpSetPoint
+Action <|-- TurnDownSetPoint
+
+TurnOff "1" -- "1" RefrigeratorComponent : usa
+TurnOn "1" -- "1" RefrigeratorComponent : usa
+TurnUpSetPoint "1" -- "1" SetPoint : usa
+TurnDownSetPoint "1" -- "1" SetPoint : usa
+
+RefrigeratorComponent <|-- Door
+RefrigeratorComponent <|-- Fan
+RefrigeratorComponent <|-- Compressor
+RefrigeratorComponent <|-- Light
+RefrigeratorComponent <|-- Resistance
+
+
+CoolManager "1" -- "0..*" Action
+CoolManager -- client
+@enduml
+
