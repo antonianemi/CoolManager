@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA2706832A2954D100EB2DAE /* RefrigeratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706822A2954D100EB2DAE /* RefrigeratorTests.swift */; };
 		FA382EB62A19A2320047D033 /* EcoState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C0B2A0DBFDD00E14E1E /* EcoState.swift */; };
 		FA382EB72A19A23E0047D033 /* Compressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C2A2A0DC03200E14E1E /* Compressor.swift */; };
 		FA382EB82A19A23E0047D033 /* Resistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C2E2A0DC03200E14E1E /* Resistance.swift */; };
@@ -155,6 +156,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA2706822A2954D100EB2DAE /* RefrigeratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefrigeratorTests.swift; sourceTree = "<group>"; };
 		FA382ED42A19E1C30047D033 /* RefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorFactory.swift; sourceTree = "<group>"; };
 		FA382ED72A19E2710047D033 /* NormalRefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalRefrigeratorFactory.swift; sourceTree = "<group>"; };
 		FA382EDB2A1A79060047D033 /* DefrostingRefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefrostingRefrigeratorFactory.swift; sourceTree = "<group>"; };
@@ -376,6 +378,7 @@
 		FA714C362A088BFF003E2CA4 /* CoolManagerTests */ = {
 			isa = PBXGroup;
 			children = (
+				FA2706822A2954D100EB2DAE /* RefrigeratorTests.swift */,
 				FA714C252A087F06003E2CA4 /* temperature_rules_test.txt */,
 				FA714C2F2A088BD9003E2CA4 /* TemperatureRulesTests.swift */,
 				FA714C372A088BFF003E2CA4 /* CoolManagerTests.swift */,
@@ -669,6 +672,7 @@
 				FAB54C3F2A0E118A00E14E1E /* RefrigeratorBuilderViewModel.swift in Sources */,
 				FAB54C352A0DC8AE00E14E1E /* TemperatureTests.swift in Sources */,
 				FA714C3E2A088C11003E2CA4 /* TemperatureRulesTests.swift in Sources */,
+				FA2706832A2954D100EB2DAE /* RefrigeratorTests.swift in Sources */,
 				FA382F032A253F320047D033 /* User.swift in Sources */,
 				FA714C382A088BFF003E2CA4 /* CoolManagerTests.swift in Sources */,
 				FA382EEC2A1F3D2D0047D033 /* DoorProtocol.swift in Sources */,

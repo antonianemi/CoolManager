@@ -1,6 +1,6 @@
 import XCTest
 @testable import CoolManager
-class TemperatureTests: XCTestCase {
+final class TemperatureTests: XCTestCase {
     
     func testTemperatureConversion() {
         // Arrange

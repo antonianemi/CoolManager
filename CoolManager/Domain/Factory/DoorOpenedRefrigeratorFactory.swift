@@ -14,7 +14,7 @@ final class DoorOpenedRefrigeratorFactory: RefrigeratorFactory {
         let fan = Fan(isOn: false)
         let door = Door(_locked: false, _open: true)
         let compressor = Compressor(isOn: false)
-        let light = Light(isOn: false)
+        let light = Light(isOn: true)
         let resistance = Resistance(isOn: false)
         
         let value = Refrigerator(setPoint: _setPoint,
