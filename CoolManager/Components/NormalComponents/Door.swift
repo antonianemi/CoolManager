@@ -15,7 +15,9 @@ final class Door: DoorProtocol {
     }
 
     func lock() {
-        _locked = true
+        if !_open {
+            _locked = true
+        }
     }
 
     func unlock() {
@@ -26,6 +28,8 @@ final class Door: DoorProtocol {
         if !_locked {
             _open = true
         }
+        //TODO: agregar este flujo alternativo de cuando se intente abrir y la puerta este cerrada es para que el usuario no se pierda mas que nada como orientacion.
+       // else{  }
     }
 
     func close() {
