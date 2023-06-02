@@ -30,6 +30,10 @@ class SetPoint{
         self.maxTemperature = maxTemperature
     }
     
+    func confirm(){
+        self.temperature = self.temperatureSetPoint
+    }
+    
     func upScaleSetPoint(){
         if canAddUp() {
             temperatureSetPoint.pushUp()

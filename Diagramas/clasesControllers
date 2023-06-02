@@ -7,14 +7,128 @@ skinparam shadowing false
 ' STYLE END
 
 
-class "TemperatureController" as TemperatureController << (C, DarkSeaGreen) >> { 
-  -temperature : Temperature
-  ~init(temperature:)
-  ~increase()
-  ~decrease()
-  ~convert(to:)
-  ~getTemperature() 
+class "RefrigeratorState" as RefrigeratorState << (P, GoldenRod) protocol >> { 
+  ~name : String
+  ~configure() 
 }
-
+class "NormalState" as NormalState << (C, DarkSeaGreen) >> { 
+  ~name
+  -refrigerator : Refrigerator
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "NightModeState" as NightModeState << (C, DarkSeaGreen) >> { 
+  ~name
+  -refrigerator : Refrigerator
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "SmartModeState" as SmartModeState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "LowPowerState" as LowPowerState << (C, DarkSeaGreen) >> { 
+  ~name
+  -refrigerator : Refrigerator
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "TurboState" as TurboState << (C, DarkSeaGreen) >> { 
+  ~name : String
+  -refrigerator : Refrigerator
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "EcoState" as EcoState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "StandbyState" as StandbyState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "HolidayModeState" as HolidayModeState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "StorageState" as StorageState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "ChildLockState" as ChildLockState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "FreshProduceState" as FreshProduceState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "QuickCoolingState" as QuickCoolingState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "MaintenanceModeState" as MaintenanceModeState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "EnergySaverState" as EnergySaverState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "DefrostState" as DefrostState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "PartyState" as PartyState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "FreezingState" as FreezingState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+RefrigeratorState <|.. NormalState : conforms to
+RefrigeratorState <|.. NightModeState : conforms to
+RefrigeratorState <|.. SmartModeState : conforms to
+RefrigeratorState <|.. LowPowerState : conforms to
+RefrigeratorState <|.. TurboState : conforms to
+RefrigeratorState <|.. EcoState : conforms to
+RefrigeratorState <|.. StandbyState : conforms to
+RefrigeratorState <|.. HolidayModeState : conforms to
+RefrigeratorState <|.. StorageState : conforms to
+RefrigeratorState <|.. ChildLockState : conforms to
+RefrigeratorState <|.. FreshProduceState : conforms to
+RefrigeratorState <|.. QuickCoolingState : conforms to
+RefrigeratorState <|.. MaintenanceModeState : conforms to
+RefrigeratorState <|.. EnergySaverState : conforms to
+RefrigeratorState <|.. DefrostState : conforms to
+RefrigeratorState <|.. PartyState : conforms to
+RefrigeratorState <|.. FreezingState : conforms to
 
 @enduml

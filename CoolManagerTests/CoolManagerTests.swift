@@ -90,4 +90,19 @@ final class CoolManagerTests: XCTestCase {
         XCTAssertEqual(door.isOpen, false)
         XCTAssertEqual(door.isLocked, true)
     }
+    
+    func test_InitializeNormal_ShouldHaveDefaultValues() {
+            let controller = DashBoardController(NormalCoolManagerMock())
+            let data:viewDashBoard = controller.pullData()
+            XCTAssertEqual(data.light, true)
+            XCTAssertEqual(data.fan, true)
+            XCTAssertEqual(data.door, false)
+            XCTAssertEqual(data.compressor, true)
+            XCTAssertEqual(data.resistance, true)
+            XCTAssertEqual(data.setPoint.temperatureSetPoint, 20)
+            XCTAssertEqual(data.setPoint.temperature, 10)
+    }
+    
+    
+    
 }

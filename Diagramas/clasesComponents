@@ -8,7 +8,7 @@ skinparam shadowing false
 
 
 class "LightProtocol" as LightProtocol << (P, GoldenRod) protocol >> { 
-  +isOn2 : Bool
+  +isOn : Bool
   +turnOn()
   +turnOff()
   +printStatus() 
@@ -60,7 +60,7 @@ class "Compressor" as Compressor << (C, DarkSeaGreen) >> {
   ~printStatus() 
 }
 class "Light" as Light << (C, DarkSeaGreen) >> { 
-  ~isOn2 : Bool
+  ~isOn : Bool
   ~init(isOn:)
   ~isActive : Bool
   ~turnOn()

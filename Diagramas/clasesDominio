@@ -1,72 +1,98 @@
 @startuml
 !theme spacelab
 !define PLANTUML_OUTPUT_DIR ./Snapshops
-package "Dominio" {
-    class Refrigerator
-    class SetPoint {
-    - maxTemperature: Temperature
-    - minTemperature: Temperature
-    - currentTemperature: Temperature
-    - setPointTemperature: Temperature
-    }
-    class Temperature
-    class Door
-    class Compressor
-    class Light
-    class Resistance
-    class Fan
-    class TemperatureUnit
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+
+class "User" as User << (C, DarkSeaGreen) >> {  
 }
-
-package "Acciones" {
-    abstract class Action
-    class TurnOn
-    class TurnOff
-    class TurnUpSetPoint
-    class TurnDownSetPoint
+class "TemperatureStatus" as TemperatureStatus << (S, SkyBlue) struct >> { 
+  ~compressor : Bool
+  ~light : Bool
+  ~resistance : Bool
+  ~fan : Bool
+  ~door : Bool
+  ~init(compressor:light:resistance:fan:door:)
+  ~{static} ==(_:_:) 
 }
-
-
-class CoolManager {
-    - actions: List<Action>
-    - client: client
-    - refrigerator: Refrigerator
+class "TemperatureError" as TemperatureError << (E, LightSteelBlue) enum >> { 
+  ~inconsistentUnit
+  ~outOfRangeSetPoint
+  ~sameMinMaxValue 
 }
-
-class client
-
-
-SetPoint *-- Temperature : maxTemperature
-SetPoint *-- Temperature : minTemperature
-SetPoint *-- Temperature : currentTemperature
-SetPoint *-- Temperature : setPointTemperature
-Refrigerator *-- SetPoint
-Refrigerator *-- Door
-Refrigerator *-- Compressor
-Refrigerator *-- Light
-Refrigerator *-- Resistance
-Refrigerator *-- Fan
-SetPoint *-- Temperature
-Temperature *-- TemperatureUnit
-
-Action <|-- TurnOn
-Action <|-- TurnOff
-Action <|-- TurnUpSetPoint
-Action <|-- TurnDownSetPoint
-
-TurnOff "1" -- "1" RefrigeratorComponent : usa
-TurnOn "1" -- "1" RefrigeratorComponent : usa
-TurnUpSetPoint "1" -- "1" SetPoint : usa
-TurnDownSetPoint "1" -- "1" SetPoint : usa
-
-RefrigeratorComponent <|-- Door
-RefrigeratorComponent <|-- Fan
-RefrigeratorComponent <|-- Compressor
-RefrigeratorComponent <|-- Light
-RefrigeratorComponent <|-- Resistance
-
-
-CoolManager "1" -- "0..*" Action
-CoolManager -- client
+class "SetPoint" as SetPoint << (C, DarkSeaGreen) >> { 
+  ~temperature : Temperature
+  ~temperatureSetPoint : Temperature
+  ~maxTemperature : Temperature
+  ~minTemperature : Temperature
+  ~init(temperature:temperatureGoal:maxTemperature:minTemperature:)
+  ~upScaleSetPoint()
+  ~canAddUp()
+  ~downScaleSetPoint()
+  ~canDropDown()
+  ~getImageNumber() 
+}
+class "Temperature" as Temperature << (C, DarkSeaGreen) >> { 
+  ~value : Double
+  ~unit : TemperatureUnit
+  -interval : Double
+  ~pushUp()
+  ~pullDown()
+  ~init(value:unit:interval:)
+  ~converted(to:)
+  ~hash(into:)
+  ~{static} ==(_:_:)
+  ~stringValue : String 
+}
+class "CoolManager" as CoolManager << (C, DarkSeaGreen) >> { 
+  ~user : User
+  ~refrigerator : Refrigerator
+  ~init(_:_:)
+  ~excecute(_:) 
+}
+class "DoorOpenedCoolManagerMock" as DoorOpenedCoolManagerMock << (C, DarkSeaGreen) >> { 
+  ~init()
+  ~excecute(_:) 
+}
+class "NormalCoolManagerMock" as NormalCoolManagerMock << (C, DarkSeaGreen) >> { 
+  ~init()
+  ~excecute(_:) 
+}
+class "DefrostingRefrigeratorMock" as DefrostingRefrigeratorMock << (C, DarkSeaGreen) >> { 
+  ~init()
+  ~excecute(_:) 
+}
+class "Refrigerator" as Refrigerator << (C, DarkSeaGreen) >> { 
+  ~setPoint : SetPoint
+  -state : RefrigeratorState?
+  ~components
+  ~init(setPoint:fan:door:compressor:light:resistance:)
+  ~processTemperature()
+  ~currentTemperatureStatus : Temperature
+  ~door : Door
+  ~compressor : Compressor
+  ~light : Light
+  ~resistance : Resistance
+  ~fan : Fan
+  ~currentStateName()
+  ~printStatus() 
+}
+class "TemperatureUnit" as TemperatureUnit << (E, LightSteelBlue) enum >> { 
+  ~celsius
+  ~fahrenheit 
+}
+class "Refrigerator" as Refrigerator0 << (X, Orchid) extension >> { 
+  ~setState(_:) 
+}
+Equatable <|-- TemperatureStatus : inherits
+Error -- TemperatureError : inherits
+Hashable <|-- Temperature : inherits
+Equatable <|-- Temperature : inherits
+CoolManager <|-- DoorOpenedCoolManagerMock : inherits
+CoolManager <|-- NormalCoolManagerMock : inherits
+CoolManager <|-- DefrostingRefrigeratorMock : inherits
+Refrigerator <.. Refrigerator0 : ext
 @enduml
 
