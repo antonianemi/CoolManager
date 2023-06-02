@@ -33,7 +33,7 @@ final class RefrigeratorNormalViewModelTests: XCTestCase {
         XCTAssertEqual(viewModel!.getIconName(), finalStateExpected)
     }
     
-    func test_WhenSetPointDecreasedToMinimum_ShouldDisplayCorrectIcon(){
+    func test_SetPointDecreasedToMinimum_ShouldDisplayCorrectIcon(){
         let finalStateExpected = "SETPOINT-42--0.png"
         XCTAssertEqual(viewModel!.getIconName(), initialStateExpected)
         for _ in 0..<5 {

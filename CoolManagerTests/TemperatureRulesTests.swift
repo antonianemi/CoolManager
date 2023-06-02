@@ -2,7 +2,7 @@ import XCTest
 @testable import CoolManager
 final class TemperatureRulesTests: XCTestCase {
 
-    func testReadTemperatureRulesFromFile() {
+    func test_ReadTemperatureRulesFromFile() {
             /*let filePath = "temperature_rules_test" // Reemplaza con la ruta correcta de tu archivo
             let temperatureRules = readTemperatureRulesFromFile(filePath: filePath)
             

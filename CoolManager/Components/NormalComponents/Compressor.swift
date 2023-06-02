@@ -1,4 +1,4 @@
-class Resistance:ResistanceProtocol, RefrigeratorComponent  {
+final class Compressor:CompressorProtocol  {
     internal var isOn: Bool
     
     init(isOn: Bool) {
@@ -9,15 +9,15 @@ class Resistance:ResistanceProtocol, RefrigeratorComponent  {
         return isOn
     }
     
-    func turnOn() {
+    func start() {
         isOn = true
     }
     
-    func turnOff() {
+    func stop() {
         isOn = false
     }
     
     func printStatus() {
-        print("Resistance: \(isActive)")
+        print("Compressor: \(isActive)")
     }
 }

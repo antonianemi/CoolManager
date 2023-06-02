@@ -1,0 +1,101 @@
+@startuml
+!theme spacelab
+!define PLANTUML_OUTPUT_DIR ./Snapshops
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+
+
+class "LightProtocol" as LightProtocol << (P, GoldenRod) protocol >> { 
+  +isOn2 : Bool
+  +turnOn()
+  +turnOff()
+  +printStatus() 
+}
+class "ResistanceProtocol" as ResistanceProtocol << (P, GoldenRod) protocol >> { 
+  +isOn : Bool
+  +turnOn()
+  +turnOff()
+  +printStatus() 
+}
+class "DoorProtocol" as DoorProtocol << (P, GoldenRod) protocol >> { 
+  +_locked : Bool
+  +_open : Bool
+  +lock()
+  +unlock()
+  +open()
+  +close()
+  +printStatus() 
+}
+class "RefrigeratorComponent" as RefrigeratorComponent << (P, GoldenRod) protocol >> { 
+  +printStatus() 
+}
+class "FanProtocol" as FanProtocol << (P, GoldenRod) protocol >> { 
+  +isOn : Bool
+  +turnOn()
+  +turnOff()
+  +printStatus() 
+}
+class "CompressorProtocol" as CompressorProtocol << (P, GoldenRod) protocol >> { 
+  +isOn : Bool
+  +start()
+  +stop()
+  +printStatus() 
+}
+class "Resistance" as Resistance << (C, DarkSeaGreen) >> { 
+  ~isOn : Bool
+  ~init(isOn:)
+  ~isActive : Bool
+  ~turnOn()
+  ~turnOff()
+  ~printStatus() 
+}
+class "Compressor" as Compressor << (C, DarkSeaGreen) >> { 
+  ~isOn : Bool
+  ~init(isOn:)
+  ~isActive : Bool
+  ~start()
+  ~stop()
+  ~printStatus() 
+}
+class "Light" as Light << (C, DarkSeaGreen) >> { 
+  ~isOn2 : Bool
+  ~init(isOn:)
+  ~isActive : Bool
+  ~turnOn()
+  ~turnOff()
+  ~printStatus() 
+}
+class "Fan" as Fan << (C, DarkSeaGreen) >> { 
+  ~isOn : Bool
+  ~init(isOn:)
+  ~isActive : Bool
+  ~turnOn()
+  ~turnOff()
+  ~printStatus() 
+}
+class "Door" as Door << (C, DarkSeaGreen) >> { 
+  ~_locked : Bool
+  ~_open : Bool
+  ~init(_locked:_open:)
+  ~isLocked : Bool
+  ~isOpen : Bool
+  ~lock()
+  ~unlock()
+  ~open()
+  ~close()
+  ~printStatus() 
+}
+RefrigeratorComponent <|.. LightProtocol : inherits
+RefrigeratorComponent <|.. ResistanceProtocol : inherits
+RefrigeratorComponent <|.. DoorProtocol : inherits
+RefrigeratorComponent <|.. FanProtocol : conforms to
+RefrigeratorComponent <|.. CompressorProtocol : conforms to
+ResistanceProtocol <|.. Resistance : conforms to
+CompressorProtocol <|.. Compressor : conforms to
+LightProtocol <|.. Light : conforms to
+FanProtocol <|.. Fan : conforms to
+DoorProtocol <|.. Door : conforms to
+
+@enduml

@@ -1,0 +1,44 @@
+@startuml
+!theme spacelab
+!define PLANTUML_OUTPUT_DIR ./Snapshops
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+
+
+class "RefrigeratorFactory" as RefrigeratorFactory << (P, GoldenRod) protocol >> { 
+  ~create() 
+}
+class "OffRefrigeratorFactory" as OffRefrigeratorFactory << (C, DarkSeaGreen) >> { 
+  -unit
+  -interval
+  ~create() 
+}
+class "DefrostingRefrigeratorFactory" as DefrostingRefrigeratorFactory << (C, DarkSeaGreen) >> { 
+  -unit
+  -interval
+  ~create() 
+}
+class "CorruptTemperaturesRefrigeratorFactory" as CorruptTemperaturesRefrigeratorFactory << (C, DarkSeaGreen) >> { 
+  -unit
+  -interval
+  ~create() 
+}
+class "DoorOpenedRefrigeratorFactory" as DoorOpenedRefrigeratorFactory << (C, DarkSeaGreen) >> { 
+  -unit
+  -interval
+  ~create() 
+}
+class "NormalRefrigeratorFactory" as NormalRefrigeratorFactory << (C, DarkSeaGreen) >> { 
+  -unit
+  -interval
+  ~create() 
+}
+RefrigeratorFactory <|.. OffRefrigeratorFactory : conforms to
+RefrigeratorFactory <|.. DefrostingRefrigeratorFactory : conforms to
+RefrigeratorFactory <|.. CorruptTemperaturesRefrigeratorFactory : conforms to
+RefrigeratorFactory <|.. DoorOpenedRefrigeratorFactory : conforms to
+RefrigeratorFactory <|.. NormalRefrigeratorFactory : conforms to
+
+@enduml

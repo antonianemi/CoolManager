@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		FA2706832A2954D100EB2DAE /* RefrigeratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706822A2954D100EB2DAE /* RefrigeratorTests.swift */; };
+		FA2706862A295B8200EB2DAE /* TemperatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706852A295B8200EB2DAE /* TemperatureController.swift */; };
+		FA2706872A295B8200EB2DAE /* TemperatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706852A295B8200EB2DAE /* TemperatureController.swift */; };
 		FA382EB62A19A2320047D033 /* EcoState.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C0B2A0DBFDD00E14E1E /* EcoState.swift */; };
 		FA382EB72A19A23E0047D033 /* Compressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C2A2A0DC03200E14E1E /* Compressor.swift */; };
 		FA382EB82A19A23E0047D033 /* Resistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C2E2A0DC03200E14E1E /* Resistance.swift */; };
@@ -157,6 +159,7 @@
 
 /* Begin PBXFileReference section */
 		FA2706822A2954D100EB2DAE /* RefrigeratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefrigeratorTests.swift; sourceTree = "<group>"; };
+		FA2706852A295B8200EB2DAE /* TemperatureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureController.swift; sourceTree = "<group>"; };
 		FA382ED42A19E1C30047D033 /* RefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorFactory.swift; sourceTree = "<group>"; };
 		FA382ED72A19E2710047D033 /* NormalRefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalRefrigeratorFactory.swift; sourceTree = "<group>"; };
 		FA382EDB2A1A79060047D033 /* DefrostingRefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefrostingRefrigeratorFactory.swift; sourceTree = "<group>"; };
@@ -259,6 +262,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA2706842A295B6800EB2DAE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FA2706852A295B8200EB2DAE /* TemperatureController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		FA382ED32A19E1920047D033 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,15 +352,17 @@
 		FA6C7A2029D8F6CD002267A5 /* CoolManager */ = {
 			isa = PBXGroup;
 			children = (
-				FAB54C452A0E82A400E14E1E /* xib */,
 				FA714C1E2A086BF4003E2CA4 /* Domain */,
+				FA382EDA2A19E2990047D033 /* Components */,
+				FA382ED32A19E1920047D033 /* Factory */,
+				FAB54C052A0DBFDD00E14E1E /* States */,
+				FA2706842A295B6800EB2DAE /* Controllers */,
+				FAB54C452A0E82A400E14E1E /* xib */,
 				FA38FFCC29FE5DE500BC21FA /* ViewControllers */,
 				FA6C7A2129D8F6CD002267A5 /* AppDelegate.swift */,
 				FA6C7A2329D8F6CD002267A5 /* SceneDelegate.swift */,
 				FA6C7A2529D8F6CD002267A5 /* ViewController.swift */,
-				FA6C7A2729D8F6CD002267A5 /* Main.storyboard */,
 				FA6C7A2A29D8F6D0002267A5 /* Assets.xcassets */,
-				FA6C7A2C29D8F6D0002267A5 /* LaunchScreen.storyboard */,
 				FA6C7A2F29D8F6D0002267A5 /* Info.plist */,
 			);
 			path = CoolManager;
@@ -358,9 +371,6 @@
 		FA714C1E2A086BF4003E2CA4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
-				FA382EDA2A19E2990047D033 /* Components */,
-				FA382ED32A19E1920047D033 /* Factory */,
-				FAB54C052A0DBFDD00E14E1E /* States */,
 				FA714C402A088CC8003E2CA4 /* temperature_rules.txt */,
 				FA714C1F2A086C0D003E2CA4 /* Refrigerator.swift */,
 				FA714C212A0870A2003E2CA4 /* Temperature.swift */,
@@ -428,6 +438,8 @@
 		FAB54C452A0E82A400E14E1E /* xib */ = {
 			isa = PBXGroup;
 			children = (
+				FA6C7A2C29D8F6D0002267A5 /* LaunchScreen.storyboard */,
+				FA6C7A2729D8F6CD002267A5 /* Main.storyboard */,
 				FAB54C462A0E82E200E14E1E /* ViewHome.xib */,
 				FAB54C482A0E82E200E14E1E /* VISTA1.xib */,
 				FAB54C4D2A0E82E300E14E1E /* VISTA2.xib */,
@@ -601,6 +613,7 @@
 				FA714C222A0870A2003E2CA4 /* Temperature.swift in Sources */,
 				FAB54C312A0DC03200E14E1E /* Light.swift in Sources */,
 				FA6C7A2429D8F6CD002267A5 /* SceneDelegate.swift in Sources */,
+				FA2706862A295B8200EB2DAE /* TemperatureController.swift in Sources */,
 				FAB54C182A0DBFDD00E14E1E /* NormalState.swift in Sources */,
 				FA382EDF2A1F3CC80047D033 /* FanProtocol.swift in Sources */,
 				FAB54C382A0E113C00E14E1E /* View1Presenter.swift in Sources */,
@@ -643,6 +656,7 @@
 				FA382ED92A19E2710047D033 /* NormalRefrigeratorFactory.swift in Sources */,
 				FA382EC42A19A2860047D033 /* StandbyState.swift in Sources */,
 				FA382EC52A19A2860047D033 /* HolidayModeState.swift in Sources */,
+				FA2706872A295B8200EB2DAE /* TemperatureController.swift in Sources */,
 				FA382EC62A19A2860047D033 /* StorageState.swift in Sources */,
 				FA382EC72A19A2860047D033 /* ChildLockState.swift in Sources */,
 				FA382ED62A19E1C30047D033 /* RefrigeratorFactory.swift in Sources */,

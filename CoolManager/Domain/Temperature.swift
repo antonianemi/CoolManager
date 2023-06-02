@@ -4,11 +4,11 @@ class Temperature: Hashable,Equatable {
     private let interval: Double
     
     func pushUp(){
-        value = value + interval
+        value += interval
     }
     
     func pullDown(){
-        value = value - interval
+        value -= interval
     }
     
     init(value: Double, unit: TemperatureUnit, interval:Double) {
@@ -24,19 +24,13 @@ class Temperature: Hashable,Equatable {
         
         var convertedValue: Double
         
-        switch unit {
-        case .celsius:
-            if self.unit == .fahrenheit {
-                convertedValue = (value - 32.0) * 5.0 / 9.0
-            } else {
-                convertedValue = value
-            }
-        case .fahrenheit:
-            if self.unit == .celsius {
-                convertedValue = (value * 9.0 / 5.0) + 32.0
-            } else {
-                convertedValue = value
-            }
+        switch (self.unit, unit) {
+        case (.celsius, .fahrenheit):
+            convertedValue = (value * 9.0 / 5.0) + 32.0
+        case (.fahrenheit, .celsius):
+            convertedValue = (value - 32.0) * 5.0 / 9.0
+        default:
+            convertedValue = value
         }
         
         return Temperature(value: convertedValue, unit: unit, interval: interval)
@@ -62,9 +56,5 @@ class Temperature: Hashable,Equatable {
         }
         
         return "\(value) \(unitString)"
-    }
-    
-    func defaultTemperature()->Temperature{
-        return Temperature(value: -10, unit: unit, interval: interval)
     }
 }

@@ -1,4 +1,4 @@
-class Light:LightProtocol, RefrigeratorComponent  {
+final class Light:LightProtocol  {
     internal var isOn: Bool
     
     init(isOn: Bool) {

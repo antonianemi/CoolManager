@@ -1,0 +1,332 @@
+@startuml
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+
+
+class "LightProtocol" as LightProtocol << (P, GoldenRod) protocol >> { 
+  +isOn : Bool
+  +turnOn()
+  +turnOff()
+  +printStatus() 
+}
+class "ResistanceProtocol" as ResistanceProtocol << (P, GoldenRod) protocol >> { 
+  +isOn : Bool
+  +turnOn()
+  +turnOff()
+  +printStatus() 
+}
+class "DoorProtocol" as DoorProtocol << (P, GoldenRod) protocol >> { 
+  +_locked : Bool
+  +_open : Bool
+  +lock()
+  +unlock()
+  +open()
+  +close()
+  +printStatus() 
+}
+class "RefrigeratorComponent" as RefrigeratorComponent << (P, GoldenRod) protocol >> { 
+  +printStatus() 
+}
+class "FanProtocol" as FanProtocol << (P, GoldenRod) protocol >> { 
+  +isOn : Bool
+  +turnOn()
+  +turnOff()
+  +printStatus() 
+}
+class "CompressorProtocol" as CompressorProtocol << (P, GoldenRod) protocol >> { 
+  +isOn : Bool
+  +start()
+  +stop()
+  +printStatus() 
+}
+class "RefrigeratorState" as RefrigeratorState << (P, GoldenRod) protocol >> { 
+  ~name : String
+  ~configure() 
+}
+class "RefrigeratorFactory" as RefrigeratorFactory << (P, GoldenRod) protocol >> { 
+  ~create() 
+}
+class "CoolManager" as CoolManager << (C, DarkSeaGreen) >> { 
+  ~user : User
+  ~refrigerator : Refrigerator
+  ~init(_:_:) 
+}
+class "User" as User << (C, DarkSeaGreen) >> {  
+}
+class "TemperatureStatus" as TemperatureStatus << (S, SkyBlue) struct >> { 
+  ~compressor : Bool
+  ~light : Bool
+  ~resistance : Bool
+  ~fan : Bool
+  ~door : Bool
+  ~init(compressor:light:resistance:fan:door:)
+  ~{static} ==(_:_:) 
+}
+class "TemperatureError" as TemperatureError << (E, LightSteelBlue) enum >> { 
+  ~inconsistentUnit
+  ~outOfRangeSetPoint
+  ~sameMinMaxValue 
+}
+class "SetPoint" as SetPoint << (C, DarkSeaGreen) >> { 
+  ~temperature : Temperature
+  ~temperatureSetPoint : Temperature
+  ~maxTemperature : Temperature
+  ~minTemperature : Temperature
+  ~init(temperature:temperatureGoal:maxTemperature:minTemperature:)
+  ~upScaleSetPoint()
+  ~canAddUp()
+  ~downScaleSetPoint()
+  ~canDropDown()
+  ~getImageNumber() 
+}
+class "Temperature" as Temperature << (C, DarkSeaGreen) >> { 
+  ~value : Double
+  ~unit : TemperatureUnit
+  -interval : Double
+  ~pushUp()
+  ~pullDown()
+  ~init(value:unit:interval:)
+  ~converted(to:)
+  ~hash(into:)
+  ~{static} ==(_:_:)
+  ~stringValue : String 
+}
+class "Resistance" as Resistance << (C, DarkSeaGreen) >> { 
+  ~isOn : Bool
+  ~init(isOn:)
+  ~isActive : Bool
+  ~turnOn()
+  ~turnOff()
+  ~printStatus() 
+}
+class "Compressor" as Compressor << (C, DarkSeaGreen) >> { 
+  ~isOn : Bool
+  ~init(isOn:)
+  ~isActive : Bool
+  ~start()
+  ~stop()
+  ~printStatus() 
+}
+class "Light" as Light << (C, DarkSeaGreen) >> { 
+  ~isOn : Bool
+  ~init(isOn:)
+  ~isActive : Bool
+  ~turnOn()
+  ~turnOff()
+  ~printStatus() 
+}
+class "Fan" as Fan << (C, DarkSeaGreen) >> { 
+  ~isOn : Bool
+  ~init(isOn:)
+  ~isActive : Bool
+  ~turnOn()
+  ~turnOff()
+  ~printStatus() 
+}
+class "Door" as Door << (C, DarkSeaGreen) >> { 
+  ~_locked : Bool
+  ~_open : Bool
+  ~init(_locked:_open:)
+  ~isLocked : Bool
+  ~isOpen : Bool
+  ~lock()
+  ~unlock()
+  ~open()
+  ~close()
+  ~printStatus() 
+}
+class "NormalState" as NormalState << (C, DarkSeaGreen) >> { 
+  ~name
+  -refrigerator : Refrigerator
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "NightModeState" as NightModeState << (C, DarkSeaGreen) >> { 
+  ~name
+  -refrigerator : Refrigerator
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "SmartModeState" as SmartModeState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "LowPowerState" as LowPowerState << (C, DarkSeaGreen) >> { 
+  ~name
+  -refrigerator : Refrigerator
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "TurboState" as TurboState << (C, DarkSeaGreen) >> { 
+  ~name : String
+  -refrigerator : Refrigerator
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "EcoState" as EcoState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "StandbyState" as StandbyState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "HolidayModeState" as HolidayModeState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "StorageState" as StorageState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "ChildLockState" as ChildLockState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "FreshProduceState" as FreshProduceState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "QuickCoolingState" as QuickCoolingState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "MaintenanceModeState" as MaintenanceModeState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "EnergySaverState" as EnergySaverState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "DefrostState" as DefrostState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "PartyState" as PartyState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "FreezingState" as FreezingState << (C, DarkSeaGreen) >> { 
+  -refrigerator : Refrigerator
+  ~name
+  ~configure()
+  ~init(refrigerator:) 
+}
+class "Refrigerator" as Refrigerator << (C, DarkSeaGreen) >> { 
+  ~setPoint : SetPoint
+  -state : RefrigeratorState?
+  ~components
+  ~init(setPoint:fan:door:compressor:light:resistance:)
+  ~processTemperature()
+  ~currentTemperatureStatus : Temperature
+  ~door : Door
+  ~compressor : Compressor
+  ~light : Light
+  ~resistance : Resistance
+  ~fan : Fan
+  ~currentStateName()
+  ~printStatus() 
+}
+class "OffRefrigeratorFactory" as OffRefrigeratorFactory << (C, DarkSeaGreen) >> { 
+  -unit
+  -interval
+  ~create() 
+}
+class "DefrostingRefrigeratorFactory" as DefrostingRefrigeratorFactory << (C, DarkSeaGreen) >> { 
+  -unit
+  -interval
+  ~create() 
+}
+class "CorruptTemperaturesRefrigeratorFactory" as CorruptTemperaturesRefrigeratorFactory << (C, DarkSeaGreen) >> { 
+  -unit
+  -interval
+  ~create() 
+}
+class "DoorOpenedRefrigeratorFactory" as DoorOpenedRefrigeratorFactory << (C, DarkSeaGreen) >> { 
+  -unit
+  -interval
+  ~create() 
+}
+class "NormalRefrigeratorFactory" as NormalRefrigeratorFactory << (C, DarkSeaGreen) >> { 
+  -unit
+  -interval
+  ~create() 
+}
+class "TemperatureUnit" as TemperatureUnit << (E, LightSteelBlue) enum >> { 
+  ~celsius
+  ~fahrenheit 
+}
+class "Refrigerator" as Refrigerator0 << (X, Orchid) extension >> { 
+  ~setState(_:) 
+}
+RefrigeratorComponent <|.. LightProtocol : inherits
+RefrigeratorComponent <|.. ResistanceProtocol : inherits
+RefrigeratorComponent <|.. DoorProtocol : inherits
+RefrigeratorComponent <|.. FanProtocol : conforms to
+RefrigeratorComponent <|.. CompressorProtocol : conforms to
+Equatable <|-- TemperatureStatus : inherits
+Error -- TemperatureError : inherits
+Hashable <|-- Temperature : inherits
+Equatable <|-- Temperature : inherits
+ResistanceProtocol <|.. Resistance : conforms to
+RefrigeratorComponent <|.. Resistance : conforms to
+CompressorProtocol <|.. Compressor : conforms to
+RefrigeratorComponent <|.. Compressor : conforms to
+LightProtocol <|.. Light : conforms to
+RefrigeratorComponent <|.. Light : conforms to
+FanProtocol <|.. Fan : conforms to
+RefrigeratorComponent <|.. Fan : conforms to
+DoorProtocol <|.. Door : conforms to
+RefrigeratorComponent <|.. Door : conforms to
+RefrigeratorState <|.. NormalState : conforms to
+RefrigeratorState <|.. NightModeState : conforms to
+RefrigeratorState <|.. SmartModeState : conforms to
+RefrigeratorState <|.. LowPowerState : conforms to
+RefrigeratorState <|.. TurboState : conforms to
+RefrigeratorState <|.. EcoState : conforms to
+RefrigeratorState <|.. StandbyState : conforms to
+RefrigeratorState <|.. HolidayModeState : conforms to
+RefrigeratorState <|.. StorageState : conforms to
+RefrigeratorState <|.. ChildLockState : conforms to
+RefrigeratorState <|.. FreshProduceState : conforms to
+RefrigeratorState <|.. QuickCoolingState : conforms to
+RefrigeratorState <|.. MaintenanceModeState : conforms to
+RefrigeratorState <|.. EnergySaverState : conforms to
+RefrigeratorState <|.. DefrostState : conforms to
+RefrigeratorState <|.. PartyState : conforms to
+RefrigeratorState <|.. FreezingState : conforms to
+RefrigeratorFactory <|.. OffRefrigeratorFactory : conforms to
+RefrigeratorFactory <|.. DefrostingRefrigeratorFactory : conforms to
+RefrigeratorFactory <|.. CorruptTemperaturesRefrigeratorFactory : conforms to
+RefrigeratorFactory <|.. DoorOpenedRefrigeratorFactory : conforms to
+RefrigeratorFactory <|.. NormalRefrigeratorFactory : conforms to
+Refrigerator <.. Refrigerator0 : ext
+Refrigerator <.. SetPoint : ext
+@enduml

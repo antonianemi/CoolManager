@@ -1,0 +1,20 @@
+@startuml
+!theme spacelab
+!define PLANTUML_OUTPUT_DIR ./Snapshops
+' STYLE START
+hide empty members
+skinparam shadowing false
+' STYLE END
+
+
+class "TemperatureController" as TemperatureController << (C, DarkSeaGreen) >> { 
+  -temperature : Temperature
+  ~init(temperature:)
+  ~increase()
+  ~decrease()
+  ~convert(to:)
+  ~getTemperature() 
+}
+
+
+@enduml

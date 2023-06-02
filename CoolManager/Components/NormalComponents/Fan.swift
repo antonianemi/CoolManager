@@ -1,4 +1,4 @@
-class Fan:FanProtocol, RefrigeratorComponent  {
+final class Fan:FanProtocol  {
     internal var isOn: Bool
     
     init(isOn: Bool) {

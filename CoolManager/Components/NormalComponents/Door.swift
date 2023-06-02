@@ -1,4 +1,4 @@
-class Door: DoorProtocol, RefrigeratorComponent {
+final class Door: DoorProtocol {
     internal var _locked:Bool
     internal var _open:Bool
 
