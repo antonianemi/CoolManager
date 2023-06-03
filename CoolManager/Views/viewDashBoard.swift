@@ -1,4 +1,4 @@
-struct viewDashBoard:ViewCoolManager{
+class viewDashBoard:ViewCoolManager{
     let resistance:Bool
     let compressor:Bool
     let fan:Bool
@@ -15,7 +15,7 @@ struct viewDashBoard:ViewCoolManager{
     }
 }
 
-struct viewSetPoint:ViewCoolManager{
+class viewSetPoint:ViewCoolManager{
     let temperature: Double
     let temperatureSetPoint: Double
     init(_ setPoint:SetPoint){

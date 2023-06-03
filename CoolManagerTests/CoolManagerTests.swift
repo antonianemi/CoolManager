@@ -2,6 +2,31 @@ import XCTest
 @testable import CoolManager
 final class CoolManagerTests: XCTestCase {
     
+    func test_InitializeNormal_ShouldHaveDefaultValues() {
+        let data:viewDashBoard = DashBoardController(NormalCoolManagerMock()).view as! viewDashBoard
+        XCTAssertEqual(data.light, true)
+        XCTAssertEqual(data.fan, true)
+        XCTAssertEqual(data.door, false)
+        XCTAssertEqual(data.compressor, true)
+        XCTAssertEqual(data.resistance, true)
+        XCTAssertEqual(data.setPoint.temperatureSetPoint, 20)
+        XCTAssertEqual(data.setPoint.temperature, 10)
+    }
+    
+    func test_ModifySetPointoneStepUp_SetPointShouldHaveCalculatedValue() {
+        let coolManager = NormalCoolManagerMock()
+        let controller = DashBoardController(coolManager)
+        controller.moveSetPointUp()
+        XCTAssertEqual(coolManager.refrigerator.setPoint.temperatureSetPoint.value, 25)
+    }
+    
+    func test_ModifySetPointoneStepDown_SetPointShouldHaveCalculatedValue() {
+        let coolManager = NormalCoolManagerMock()
+        let controller = DashBoardController(coolManager)
+        controller.moveSetPointDown()
+        XCTAssertEqual(coolManager.refrigerator.setPoint.temperatureSetPoint.value, 15)
+    }
+    
     func test_turnResistenciaOn_ShouldResistenciaOn(){
         let coolManager = DoorOpenedCoolManagerMock()
         let resistance = coolManager.refrigerator.resistance
@@ -79,30 +104,11 @@ final class CoolManagerTests: XCTestCase {
         let coolManager = DoorOpenedCoolManagerMock()
         let door = coolManager.refrigerator.door
         XCTAssertEqual(door.isOpen, true)
-        
-        
         coolManager.excecute(closeDoorAction(door))
         XCTAssertEqual(door.isOpen, false)
         XCTAssertEqual(door.isLocked, false)
-        
-        
         coolManager.excecute(lockDoorAction(door))
         XCTAssertEqual(door.isOpen, false)
         XCTAssertEqual(door.isLocked, true)
     }
-    
-    func test_InitializeNormal_ShouldHaveDefaultValues() {
-            let controller = DashBoardController(NormalCoolManagerMock())
-            let data:viewDashBoard = controller.pullData()
-            XCTAssertEqual(data.light, true)
-            XCTAssertEqual(data.fan, true)
-            XCTAssertEqual(data.door, false)
-            XCTAssertEqual(data.compressor, true)
-            XCTAssertEqual(data.resistance, true)
-            XCTAssertEqual(data.setPoint.temperatureSetPoint, 20)
-            XCTAssertEqual(data.setPoint.temperature, 10)
-    }
-    
-    
-    
 }

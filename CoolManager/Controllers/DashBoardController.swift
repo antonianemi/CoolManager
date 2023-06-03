@@ -14,17 +14,22 @@ class DashBoardController:ControllerCoolManager {
                                         viewSetPoint(refrigerator.setPoint)))
     }
     
-    func pullData()->viewDashBoard {
-        return self.view as! viewDashBoard
+    func reload(){
+        self.view = viewDashBoard(refrigerator.resistance,
+                                  refrigerator.compressor,
+                                  refrigerator.fan,
+                                  refrigerator.door,
+                                  refrigerator.light,
+                                  viewSetPoint(refrigerator.setPoint))
     }
     
     func commitSetPoint(){
         self.excecute(confirmSetPointSelectedAction(setPoint))
     }
-    func commitSetPointUp(){
+    func moveSetPointUp(){
         self.excecute(pushSetPointUpAction(setPoint))
     }
-    func commitSetPointDown(){
+    func moveSetPointDown(){
         self.excecute(pushSetPointDownAction(setPoint))
     }
     func excecute(_ action:Action){
