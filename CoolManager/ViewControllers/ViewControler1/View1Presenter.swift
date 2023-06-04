@@ -7,15 +7,22 @@ class View1Presenter: view1Delegate {
         viewModel.delegate = self
     }
     
-    func viewDidLoad() {
-        view?.setLightStatus(viewModel.lightStatus())
-        view?.setCompressorStatus(viewModel.compressorStatus())
-        view?.setDoorStatus(viewModel.isDoorOpen())
-        view?.setResistenceStatus(viewModel.resistenceStatus())
-        view?.setTemperature(viewModel.getTemperarute())
+    func upScaleSetPoint(){
+        viewModel.upScaleSetPoint()
     }
+    
+    func downScaleSetPoint(){
+        viewModel.downScaleSetPoint()
+    }
+    
+    
     func setView(_ view:View1View){
         self.view = view
+    }
+    
+    func viewDidLoad() {
+        update()
+        updateSetPointIcon()
     }
     
     func update() {
@@ -29,13 +36,6 @@ class View1Presenter: view1Delegate {
         view?.updateImageSetPoint(viewModel.getIconName())
     }
     
-    func upScaleSetPoint(){
-        viewModel.upScaleSetPoint()
-    }
-    
-    func downScaleSetPoint(){
-        viewModel.downScaleSetPoint()
-    }
 }
 
 protocol view1Delegate{
