@@ -6,6 +6,12 @@ hide empty members
 skinparam shadowing false
 ' STYLE END
 
+class "CoolManager" as CoolManager << (C, DarkSeaGreen) >> { 
+  ~user : User
+  ~refrigerator : Refrigerator
+  ~init(_:_:)
+  ~excecute(_:) 
+}
 class "User" as User << (C, DarkSeaGreen) >> {  
 }
 class "TemperatureStatus" as TemperatureStatus << (S, SkyBlue) struct >> { 
@@ -28,6 +34,7 @@ class "SetPoint" as SetPoint << (C, DarkSeaGreen) >> {
   ~maxTemperature : Temperature
   ~minTemperature : Temperature
   ~init(temperature:temperatureGoal:maxTemperature:minTemperature:)
+  ~confirm()
   ~upScaleSetPoint()
   ~canAddUp()
   ~downScaleSetPoint()
@@ -45,24 +52,6 @@ class "Temperature" as Temperature << (C, DarkSeaGreen) >> {
   ~hash(into:)
   ~{static} ==(_:_:)
   ~stringValue : String 
-}
-class "CoolManager" as CoolManager << (C, DarkSeaGreen) >> { 
-  ~user : User
-  ~refrigerator : Refrigerator
-  ~init(_:_:)
-  ~excecute(_:) 
-}
-class "DoorOpenedCoolManagerMock" as DoorOpenedCoolManagerMock << (C, DarkSeaGreen) >> { 
-  ~init()
-  ~excecute(_:) 
-}
-class "NormalCoolManagerMock" as NormalCoolManagerMock << (C, DarkSeaGreen) >> { 
-  ~init()
-  ~excecute(_:) 
-}
-class "DefrostingRefrigeratorMock" as DefrostingRefrigeratorMock << (C, DarkSeaGreen) >> { 
-  ~init()
-  ~excecute(_:) 
 }
 class "Refrigerator" as Refrigerator << (C, DarkSeaGreen) >> { 
   ~setPoint : SetPoint
@@ -90,9 +79,5 @@ Equatable <|-- TemperatureStatus : inherits
 Error -- TemperatureError : inherits
 Hashable <|-- Temperature : inherits
 Equatable <|-- Temperature : inherits
-CoolManager <|-- DoorOpenedCoolManagerMock : inherits
-CoolManager <|-- NormalCoolManagerMock : inherits
-CoolManager <|-- DefrostingRefrigeratorMock : inherits
 Refrigerator <.. Refrigerator0 : ext
 @enduml
-
