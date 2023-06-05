@@ -14,15 +14,6 @@ class DashBoardController:ControllerCoolManager {
                                         viewSetPoint(refrigerator.setPoint)))
     }
     
-    func reload(){
-        self.view = viewDashBoard(refrigerator.resistance,
-                                  refrigerator.compressor,
-                                  refrigerator.fan,
-                                  refrigerator.door,
-                                  refrigerator.light,
-                                  viewSetPoint(refrigerator.setPoint))
-    }
-    
     func commitSetPoint(){
         self.excecute(confirmSetPointSelectedAction(setPoint))
     }

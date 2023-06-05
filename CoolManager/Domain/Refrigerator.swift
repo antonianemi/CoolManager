@@ -3,8 +3,9 @@ public class Refrigerator {
     private(set) var setPoint: SetPoint
     private var state: RefrigeratorState?
     private(set) var components = [RefrigeratorComponent]()
-    
-    init(setPoint:SetPoint,
+    private var stateName:String
+    init(_ stateName:String="",
+         setPoint:SetPoint,
          fan:FanProtocol,
          door:DoorProtocol,
          compressor:CompressorProtocol,
@@ -16,6 +17,7 @@ public class Refrigerator {
         self.components.append(door)
         self.components.append(light)
         self.components.append(resistance)
+        self.stateName = stateName
     }
     func processTemperature(){
     }

@@ -334,7 +334,7 @@ class Vista1: UIView, View1View {
         button.setAttributedTitle(NSAttributedString(string: "", attributes: attributes), for: .normal)
         button.setBackgroundImage(UIImage(named: "setpoint-flecha-arriba-normal.png"), for: .normal)
         button.setTitleShadowColor(UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1), for: .normal)
-        button.addTarget(Vista1.self, action: #selector(clickedUp), for: .touchUpInside)
+        button.addTarget(self, action: #selector(clickedUp), for: .touchUpInside)
         return button
     }()
 
@@ -361,7 +361,7 @@ class Vista1: UIView, View1View {
         button.setAttributedTitle(NSAttributedString(string: "", attributes: attributes), for: .normal)
         button.setBackgroundImage(UIImage(named: "setpoint-flecha-abajo-normal.png"), for: .normal)
         button.setTitleShadowColor(UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1), for: .normal)
-        button.addTarget(Vista1.self, action: #selector(clickedDown), for: .touchUpInside)
+        button.addTarget(self, action: #selector(clickedDown), for: .touchUpInside)
         return button
     }()
 

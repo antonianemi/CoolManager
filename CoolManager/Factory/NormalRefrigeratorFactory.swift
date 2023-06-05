@@ -7,7 +7,7 @@ final class NormalRefrigeratorFactory: RefrigeratorFactory {
         let maxTemperature =     Temperature(value: 35, unit: unit, interval: interval)
         let minTemperature =     Temperature(value: -5, unit: unit, interval: interval)
         let currentTemperature = Temperature(value: 10, unit: unit, interval: interval)
-        let value = Refrigerator(setPoint: try SetPoint(temperature: currentTemperature,
+        let value = Refrigerator("NormalMode",setPoint: try SetPoint(temperature: currentTemperature,
                                                     temperatureGoal: setPoint,
                                                     maxTemperature: maxTemperature,
                                                     minTemperature: minTemperature),
