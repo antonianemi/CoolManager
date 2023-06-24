@@ -11,6 +11,10 @@ class RefrigeratorBuilderViewModel {
         return refrigerator.setPoint
     }
     
+    func setPointValue()->String{
+        return refrigerator.setPoint.temperatureSetPoint.stringValueOnlyNumber
+    }
+    
     func lightStatus()->Bool{
         return refrigerator.light.isActive
     }

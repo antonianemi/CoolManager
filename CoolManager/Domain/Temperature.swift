@@ -57,4 +57,8 @@ class Temperature: Hashable,Equatable {
         
         return "\(value) \(unitString)"
     }
+    
+    var stringValueOnlyNumber: String {
+       return "\(value)"
+    }
 }

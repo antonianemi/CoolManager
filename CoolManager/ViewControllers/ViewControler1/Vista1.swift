@@ -2,9 +2,51 @@ import UIKit
 class Vista1: UIView, View1View {
     
     private var refrigerator:Refrigerator?
+    var offsetX: CGFloat = 130
+    var offsetY: CGFloat = 0
     
     func setRefrigerator(_ refrigerator:Refrigerator){
         self.refrigerator = refrigerator
+    }
+    
+    func setTemperature(_ value: String) {
+        lbl_Temperature.text = value
+    }
+    
+    func setTemperatureSetPoint(_ value: String) {
+        lbl_Temperature_SetPoint.text = value
+    }
+    
+    func setLightStatus(_ status: Bool) {
+        let imageName = status ? "icono-focoOn.png" : "icono-focoOff.png"
+        img_Light.image = UIImage(named: imageName)
+    }
+
+    func setDoorStatus(_ status: Bool) {
+        let imageName = UIImage(named: status ? "icono-doorOpen.png" : "icono-doorClose.png")
+        img_door.image =  imageName
+    }
+
+    func setResistenceStatus(_ status: Bool) {
+        let imageName = status ? "icono-defrostOn.png" : "icono-defrostOff.png"
+        img_resistence.image = UIImage(named: imageName)
+    }
+
+    func setCompressorStatus(_ status: Bool) {
+        let imageName = status ? "icono-compressorOn.png" : "icono-compressorOff.png"
+        img_compressor.image = UIImage(named: imageName)
+    }
+    
+    func updateImageSetPoint(_ value:String){
+        setPointImageView.image = UIImage(named: value)
+    }
+    
+    @objc func clickedDown(){
+        presenter.downScaleSetPoint()
+    }
+    
+    @objc func clickedUp(){
+        presenter.upScaleSetPoint()
     }
     
     lazy var presenter: View1Presenter = {
@@ -12,44 +54,6 @@ class Vista1: UIView, View1View {
         presenter.setView(self)
         return presenter
     }()
-    
-    
-    func setTemperature(_ value: String) {
-        lbl_Temperature.text = value
-    }
-    
-    
-    var offsetX: CGFloat = 130
-    var offsetY: CGFloat = 0
-    
-    func setLightStatus(_ status: Bool) {
-        let imageName = status ? "icono-focoOn.png" : "icono-focoOff.png"
-        img_Light.image = UIImage(named: imageName)
-        print("Light image name: \(imageName)") // Imprime el valor del imageName para depurar
-    }
-
-    func setDoorStatus(_ status: Bool) {
-        let imageName = status ? "icono-doorOpen.png" : "icono-doorClose.png"
-        img_door.image = UIImage(named: imageName)
-        print("Door image name: \(imageName)") // Imprime el valor del imageName para depurar
-    }
-
-    func setResistenceStatus(_ status: Bool) {
-        let imageName = status ? "icono-defrostOn.png" : "icono-defrostOff.png"
-        img_resistence.image = UIImage(named: imageName)
-        print("Resistence image name: \(imageName)") // Imprime el valor del imageName para depurar
-    }
-
-    func setCompressorStatus(_ status: Bool) {
-        let imageName = status ? "icono-compressorOn.png" : "icono-compressorOff.png"
-        img_compressor.image = UIImage(named: imageName)
-        print("Compressor image name: \(imageName)") // Imprime el valor del imageName para depurar
-    }
-    
-    
-    func updateImageSetPoint(_ value:String){
-        setPointImageView.image = UIImage(named: value)
-    }
     
     lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView()
@@ -77,8 +81,6 @@ class Vista1: UIView, View1View {
         return imageView
     }()
     
-    
-    
     lazy var indicatorsImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
@@ -89,9 +91,6 @@ class Vista1: UIView, View1View {
         imageView.tag = 8
         return imageView
     }()
-    
-    
-    
 
     lazy var graphFrameImageView: UIImageView = {
         let imageView = UIImageView()
@@ -118,8 +117,6 @@ class Vista1: UIView, View1View {
         return imageView
     }()
     
-    
-    
     lazy var lbl_Temperature: UILabel = {
         let label = UILabel()
         label.isOpaque = false
@@ -137,9 +134,27 @@ class Vista1: UIView, View1View {
         label.tag = 37
         return label
     }()
-    
-    
 
+    lazy var lbl_Temperature_SetPoint: UILabel = {
+        let label = UILabel()
+        label.isOpaque = false
+        label.clipsToBounds = true
+        label.contentMode = .left
+        label.textAlignment = .center
+        label.lineBreakMode = .byTruncatingTail
+        label.minimumScaleFactor = 10
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
+        label.font = UIFont.systemFont(ofSize: 90)
+        label.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
+        label.highlightedTextColor = nil
+        label.isUserInteractionEnabled = false
+        label.tag = 37
+        label.text = ""
+        return label
+    }()
+    
+    
     lazy var img_Light: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
@@ -276,7 +291,7 @@ class Vista1: UIView, View1View {
     }()
 
     // Etiqueta adicional
-    lazy var additionalLabel: UILabel = {
+    lazy var lbl_setPointValue: UILabel = {
         let label = UILabel()
         label.isOpaque = false
         label.clipsToBounds = true
@@ -337,15 +352,6 @@ class Vista1: UIView, View1View {
         button.addTarget(self, action: #selector(clickedUp), for: .touchUpInside)
         return button
     }()
-
-
-    @objc func clickedDown(){
-        presenter.downScaleSetPoint()
-    }
-    
-    @objc func clickedUp(){
-        presenter.upScaleSetPoint()
-    }
     
     private let btn_set_point_down: UIButton = {
         let button = UIButton(type: .system)
@@ -437,25 +443,6 @@ class Vista1: UIView, View1View {
         label.font = UIFont.boldSystemFont(ofSize: 17)
         label.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         label.text = "LOG :"
-        return label
-    }()
-    
-
-    // Componente: Label
-    private let label161: UILabel = {
-        let label = UILabel()
-        label.autoresizingMask = [.flexibleWidth, .flexibleHeight]
-        label.isOpaque = false
-        label.clipsToBounds = true
-        label.isUserInteractionEnabled = false
-        label.contentMode = .left
-        label.textAlignment = .center
-        label.lineBreakMode = .byTruncatingTail
-        label.minimumScaleFactor = 0.5
-        label.translatesAutoresizingMaskIntoConstraints = false
-        label.backgroundColor = UIColor(red: 0.0, green: 0.0, blue: 0.0, alpha: 0.0)
-        label.font = UIFont.boldSystemFont(ofSize: 17)
-        label.textColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         return label
     }()
     
@@ -644,7 +631,7 @@ class Vista1: UIView, View1View {
         addSubview(tituloCentroImageView)
 
         // additionalLabel
-        addSubview(additionalLabel)
+        addSubview(lbl_setPointValue)
 
         // button219
         addSubview(btn_send)
@@ -670,8 +657,6 @@ class Vista1: UIView, View1View {
         // label160
         addSubview(lbl_log)
 
-        // label161
-        addSubview(label161)
 
         // imageView162
         addSubview(img_title_home)
@@ -694,6 +679,8 @@ class Vista1: UIView, View1View {
         // label214
         addSubview(lbl_set_point)
         
+        // lbl_Temperature_SetPoint
+        setPointImageView.addSubview(lbl_Temperature_SetPoint)
         
         img_door.frame = CGRect(x: 627, y: 273, width: 65, height: 57)
         img_resistence.frame = CGRect(x: 627, y: 185, width: 65, height: 57)
@@ -701,8 +688,6 @@ class Vista1: UIView, View1View {
         lbl_set_point.frame = CGRect(x: 286, y: 374, width: 127, height: 21)
         lbl_indicators.frame = CGRect(x: 500, y: 49, width: 200, height: 21)
         lbl_indicators.center.x = img_door.center.x
-        
-        
         lbl_chef.frame = CGRect(x: -54, y: 374, width: 230, height: 21)
         lbl_mode.frame = CGRect(x: 12, y: 222, width: 86, height: 21)
         lbl_mode.center.x = lbl_chef.center.x
@@ -712,7 +697,6 @@ class Vista1: UIView, View1View {
         lbl_settings.center.x = lbl_chef.center.x
         lbl_digital_temperature_indicator.frame = CGRect(x: 198, y: 466, width: 322, height: 21)
         img_title_home.frame = CGRect(x: 177, y: 459, width: 364, height: 34)
-        label161.frame = CGRect(x: 41, y: 140, width: 86, height: 21)
         imageView159.frame = CGRect(x: 0.0, y: 268, width: 113, height: 91)
         imageView84.frame = CGRect(x: 586, y: 44, width: 178, height: 31)
         imageView83.frame = CGRect(x: -46, y: 44, width: 173, height: 31)
@@ -726,12 +710,13 @@ class Vista1: UIView, View1View {
         indicatorsImageView.frame = CGRect(x: 542, y: 44, width: 222, height: 400)
         settingsImageView.frame = CGRect(x: -49, y: 43, width: 225, height: 402)
         img_compressor.frame = CGRect(x: 634, y: 358, width: 65, height: 57)
+        
         modifyCenterY()
         modifyCenterX()
     }
     
     
-  func modifyCenterX(){
+    func modifyCenterX(){
         lbl_set_point.frame.origin.x = lbl_set_point.frame.origin.x + offsetX
         lbl_indicators.frame.origin.x = lbl_indicators.frame.origin.x + offsetX
         lbl_settings.frame.origin.x = lbl_settings.frame.origin.x + offsetX
@@ -739,11 +724,11 @@ class Vista1: UIView, View1View {
         lbl_chef.frame.origin.x = lbl_chef.frame.origin.x + offsetX
         lbl_digital_temperature_indicator.frame.origin.x = lbl_digital_temperature_indicator.frame.origin.x + offsetX
         img_title_home.frame.origin.x = img_title_home.frame.origin.x + offsetX
-        label161.frame.origin.x = label161.frame.origin.x + offsetX
         lbl_log.frame.origin.x = lbl_log.frame.origin.x + offsetX
         imageView159.frame.origin.x = imageView159.frame.origin.x + offsetX
         imageView84.frame.origin.x = imageView84.frame.origin.x + offsetX
         imageView83.frame.origin.x = imageView83.frame.origin.x + offsetX
+        lbl_Temperature_SetPoint.frame.origin.x = lbl_Temperature_SetPoint.frame.origin.x + offsetX
         lbl_temperature.frame.origin.x = lbl_temperature.frame.origin.x + offsetX
         btn_set_point_down.frame.origin.x = btn_set_point_down.frame.origin.x + offsetX
         btn_set_point_up.frame.origin.x = btn_set_point_up.frame.origin.x + offsetX
@@ -757,6 +742,9 @@ class Vista1: UIView, View1View {
         indicatorsImageView.frame.origin.x = indicatorsImageView.frame.origin.x + offsetX
         settingsImageView.frame.origin.x = settingsImageView.frame.origin.x + offsetX
         img_compressor.frame.origin.x = img_compressor.frame.origin.x + offsetX
+    
+        lbl_Temperature_SetPoint.center.x = setPointImageView.frame.origin.x + offsetX
+        
     }
     
     func modifyCenterY(){
@@ -767,7 +755,6 @@ class Vista1: UIView, View1View {
         lbl_chef.frame.origin.y = lbl_chef.frame.origin.y + offsetY
         lbl_digital_temperature_indicator.frame.origin.y = lbl_digital_temperature_indicator.frame.origin.y + offsetY
         img_title_home.frame.origin.y = img_title_home.frame.origin.y + offsetY
-        label161.frame.origin.y = label161.frame.origin.y + offsetY
         lbl_log.frame.origin.y = lbl_log.frame.origin.y + offsetY
         imageView159.frame.origin.y = imageView159.frame.origin.y + offsetY
         imageView84.frame.origin.y = imageView84.frame.origin.y + offsetY
@@ -775,6 +762,7 @@ class Vista1: UIView, View1View {
         lbl_temperature.frame.origin.y = lbl_temperature.frame.origin.y + offsetY
         btn_set_point_down.frame.origin.y = btn_set_point_down.frame.origin.y + offsetY
         btn_set_point_up.frame.origin.y = btn_set_point_up.frame.origin.y + offsetY
+        lbl_Temperature_SetPoint.frame.origin.y = lbl_Temperature_SetPoint.frame.origin.y + offsetY
         btn_send.frame.origin.y = btn_send.frame.origin.y + offsetY
         img_door.frame.origin.y = img_door.frame.origin.y + offsetY
         img_resistence.frame.origin.y = img_resistence.frame.origin.y + offsetY
@@ -785,6 +773,7 @@ class Vista1: UIView, View1View {
         indicatorsImageView.frame.origin.y = indicatorsImageView.frame.origin.y + offsetY
         settingsImageView.frame.origin.y = settingsImageView.frame.origin.y + offsetY
         img_compressor.frame.origin.y = img_compressor.frame.origin.y + offsetY
+        lbl_Temperature_SetPoint.center.y = setPointImageView.frame.origin.y + offsetY
     }
     
     
@@ -798,7 +787,6 @@ class Vista1: UIView, View1View {
         originalFrames[lbl_chef] = lbl_chef.frame
         originalFrames[lbl_digital_temperature_indicator] = lbl_digital_temperature_indicator.frame
         originalFrames[img_title_home] = img_title_home.frame
-        originalFrames[label161] = label161.frame
         originalFrames[lbl_log] = lbl_log.frame
         originalFrames[imageView159] = imageView159.frame
         originalFrames[imageView84] = imageView84.frame

@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<VariablesViewState
+   version = "1.0">
+   <ContextStates>
+      <ContextState
+         contextName = "RefrigeratorBuilderViewModelCelciusTests.test_ShouldSetSetPointToTheTop():RefrigeratorBuilderViewModelTests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "viewModel.getIconName()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SetPoint.upScaleSetPoint():SetPoint.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "temperatureGoal.value">
+            </PersistentString>
+            <PersistentString
+               value = "Temperature(value: temperatureGoal.value + 5, unit: .celsius)">
+            </PersistentString>
+            <PersistentString
+               value = "temperature.value">
+            </PersistentString>
+            <PersistentString
+               value = "maxTemperature.value">
+            </PersistentString>
+            <PersistentString
+               value = "temperatureSetPoint.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SetPoint.canAddUp():SetPoint.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "temperatureGoal.value">
+            </PersistentString>
+            <PersistentString
+               value = "maxTemperature.value">
+            </PersistentString>
+            <PersistentString
+               value = "temperatureGoal.value &lt; maxTemperature.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "RefrigeratorBuilderViewModelCelciusTests.test_WhenSetPointIsIncreasedToMaximum_ShouldDisplayCorrectIcon():RefrigeratorBuilderViewModelTests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "viewModel.getIconName()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Temperature.pushUp():Temperature.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "value">
+            </PersistentString>
+            <PersistentString
+               value = "interval">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "CoolManagerTests.test_ModifySetPointoneStepUp_SetPointShouldHaveCalculatedValue():CoolManagerTests.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "view.setPoint.temperatureSetPoint">
+            </PersistentString>
+            <PersistentString
+               value = "view.setPoint.temperature">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+   </ContextStates>
+</VariablesViewState>

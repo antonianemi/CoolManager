@@ -31,8 +31,8 @@ class View1Presenter: view1Delegate {
         view?.setDoorStatus(viewModel.isDoorOpen())
         view?.setResistenceStatus(viewModel.resistenceStatus())
         view?.setTemperature(viewModel.getTemperarute())
+        view?.setTemperatureSetPoint(viewModel.setPointValue())
         //Modo [icon,name,configurations
-        //SetPoint Value
         
     }
     func updateSetPointIcon() {

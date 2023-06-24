@@ -19,7 +19,10 @@ public class Refrigerator {
         self.components.append(resistance)
         self.stateName = stateName
     }
+    
+    
     func processTemperature(){
+        
     }
 
     var currentTemperatureStatus: Temperature {

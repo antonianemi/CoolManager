@@ -1,29 +1,25 @@
 class DashBoardController:ControllerCoolManager {
     private let coolManager:CoolManager
-    private let refrigerator:Refrigerator
-    private let setPoint:SetPoint
     init(_ coolManager:CoolManager) {
         self.coolManager = coolManager
-        self.refrigerator = self.coolManager.refrigerator
-        self.setPoint = coolManager.refrigerator.setPoint
-        super.init(vista: viewDashBoard(refrigerator.resistance,
-                                        refrigerator.compressor,
-                                        refrigerator.fan,
-                                        refrigerator.door,
-                                        refrigerator.light,
-                                        viewSetPoint(refrigerator.setPoint)))
+        super.init(vista: viewDashBoard(self.coolManager.refrigerator.resistance,
+                                        self.coolManager.refrigerator.compressor,
+                                        self.coolManager.refrigerator.fan,
+                                        self.coolManager.refrigerator.door,
+                                        self.coolManager.refrigerator.light,
+                                        viewSetPoint(self.coolManager.refrigerator.setPoint)))
     }
     
     func commitSetPoint(){
-        self.excecute(confirmSetPointSelectedAction(setPoint))
+        self.excecute(confirmSetPointSelectedAction(coolManager.refrigerator.setPoint))
     }
     func moveSetPointUp(){
-        self.excecute(pushSetPointUpAction(setPoint))
+        self.excecute(pushSetPointUpAction(coolManager.refrigerator.setPoint))
     }
     func moveSetPointDown(){
-        self.excecute(pushSetPointDownAction(setPoint))
+        self.excecute(pushSetPointDownAction(coolManager.refrigerator.setPoint))
     }
-    func excecute(_ action:Action){
+    private func excecute(_ action:Action){
         coolManager.excecute(action)
     }
 }
