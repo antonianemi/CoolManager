@@ -11,10 +11,16 @@ class Temperature: Hashable,Equatable {
         value -= interval
     }
     
-    init(value: Double, unit: TemperatureUnit, interval:Double) {
+    init(_ value: Double,_ unit: TemperatureUnit,_ interval:Double) {
         self.value = value
         self.unit = unit
         self.interval = interval
+    }
+    
+    init(_ value: Double) {
+        self.value = value
+        self.unit = .celsius
+        self.interval = 0.5
     }
     
     func converted(to unit: TemperatureUnit) -> Temperature {
@@ -33,7 +39,7 @@ class Temperature: Hashable,Equatable {
             convertedValue = value
         }
         
-        return Temperature(value: convertedValue, unit: unit, interval: interval)
+        return Temperature(convertedValue,unit,interval)
     }
     
     func hash(into hasher: inout Hasher) {

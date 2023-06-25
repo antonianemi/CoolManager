@@ -1,7 +1,7 @@
 import XCTest
 @testable import CoolManager
 final class TemperatureTests: XCTestCase {
-    let temperature = Temperature(value: 32.0, unit: .celsius, interval: 0.5)
+    let temperature = Temperature(32.0, .celsius, 0.5)
     
     func test_TemperatureConversion() {
         let convertedTemperature = temperature.converted(to: .fahrenheit)
@@ -12,7 +12,7 @@ final class TemperatureTests: XCTestCase {
     func test_TemperatureHashing() {
         let temperature1 = temperature
         let temperature2 = temperature
-        let temperature3 = Temperature(value: 25.0, unit: .fahrenheit, interval: 0.5)
+        let temperature3 = Temperature(25.0, .fahrenheit, 0.5)
         
         let hash1 = temperature1.hashValue
         let hash2 = temperature2.hashValue

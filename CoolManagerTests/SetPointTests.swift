@@ -3,10 +3,10 @@ import CoolManager
 final class SetPointTests: XCTestCase {
 
    func testErrorOutOfRangeSetPoint_ShouldCatchError() throws {
-        let temperature     = Temperature(value: 20,  unit: .celsius, interval: 0.5)
-        let temperatureGoal = Temperature(value: 250, unit: .celsius, interval: 0.5)
-        let maxTemperature  = Temperature(value: 30,  unit: .celsius, interval: 0.5)
-        let minTemperature  = Temperature(value: 15,  unit: .celsius, interval: 0.5)
+       let temperature     = Temperature(20,  .celsius, 0.5)
+       let temperatureGoal = Temperature(250, .celsius, 0.5)
+       let maxTemperature  = Temperature(30,  .celsius, 0.5)
+       let minTemperature  = Temperature(15,  .celsius, 0.5)
         XCTAssertThrowsError(try SetPoint(temperature: temperature,
                                     temperatureGoal:   temperatureGoal,
                                     maxTemperature:    maxTemperature,
@@ -16,10 +16,10 @@ final class SetPointTests: XCTestCase {
     }
     
     func testErrorInconsistentUnit_ShouldCatchError() throws {
-        let temperature     = Temperature(value: 20, unit: .celsius, interval: 0.5)
-        let temperatureGoal = Temperature(value: 25, unit: .celsius, interval: 0.5)
-        let maxTemperature  = Temperature(value: 30, unit: .fahrenheit, interval: 0.5) // Inconsistent unit
-        let minTemperature  = Temperature(value: 15, unit: .celsius, interval: 0.5)
+        let temperature     = Temperature(20, .celsius, 0.5)
+        let temperatureGoal = Temperature(25, .celsius, 0.5)
+        let maxTemperature  = Temperature(30, .fahrenheit, 0.5) // Inconsistent unit
+        let minTemperature  = Temperature(15, .celsius, 0.5)
         XCTAssertThrowsError(try SetPoint(temperature: temperature,
                                     temperatureGoal:   temperatureGoal,
                                     maxTemperature:    maxTemperature,
@@ -29,10 +29,10 @@ final class SetPointTests: XCTestCase {
     }
     
     func testErrorSameMinMaxValue_ShouldCatchError() throws {
-        let temperature     = Temperature(value: 20,  unit: .celsius, interval: 0.5)
-        let temperatureGoal = Temperature(value: 25, unit: .celsius, interval: 0.5)
-        let maxTemperature  = Temperature(value: 30,  unit: .celsius, interval: 0.5)
-        let minTemperature  = Temperature(value: 30,  unit: .celsius, interval: 0.5)
+        let temperature     = Temperature(20,  .celsius, 0.5)
+        let temperatureGoal = Temperature(25, .celsius, 0.5)
+        let maxTemperature  = Temperature(30,  .celsius, 0.5)
+        let minTemperature  = Temperature(30,  .celsius, 0.5)
         XCTAssertThrowsError(try SetPoint(temperature: temperature,
                                     temperatureGoal:   temperatureGoal,
                                     maxTemperature:    maxTemperature,

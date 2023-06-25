@@ -2,10 +2,10 @@ final class InconsistentRefrigeratorFactory: RefrigeratorFactory {
     private let interval = Double(5)
     
     func create() throws -> Refrigerator {
-        let setPoint =           Temperature(value: 20, unit: .celsius, interval: interval)
-        let maxTemperature =     Temperature(value: 35, unit: .fahrenheit, interval: interval)
-        let minTemperature =     Temperature(value: -5, unit: .celsius, interval: interval)
-        let currentTemperature = Temperature(value: 10, unit: .celsius, interval: interval)
+        let setPoint =           Temperature(20, .celsius, interval)
+        let maxTemperature =     Temperature(35, .fahrenheit, interval)
+        let minTemperature =     Temperature(-5, .celsius, interval)
+        let currentTemperature = Temperature(10, .celsius, interval)
         
         let value = Refrigerator("InconsistentMode", setPoint: try SetPoint(temperature: currentTemperature,
                                                                           temperatureGoal: setPoint,

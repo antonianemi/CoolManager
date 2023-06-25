@@ -3,10 +3,10 @@ final class CorruptTemperaturesRefrigeratorFactory: RefrigeratorFactory {
     private let interval = 0.5
     
     func create() throws -> Refrigerator {
-        let setPoint =           Temperature(value: 40, unit: unit, interval: interval)
-        let maxTemperature =     Temperature(value: 35, unit: unit, interval: interval)
-        let minTemperature =     Temperature(value: -5, unit: unit, interval: interval)
-        let currentTemperature = Temperature(value: 10, unit: unit, interval: interval)
+        let setPoint =           Temperature(40, unit, interval)
+        let maxTemperature =     Temperature(35, unit, interval)
+        let minTemperature =     Temperature(-5, unit, interval)
+        let currentTemperature = Temperature(10, unit, interval)
         let _setPoint = try SetPoint(temperature: currentTemperature,
                                  temperatureGoal: setPoint,
                                  maxTemperature: maxTemperature,

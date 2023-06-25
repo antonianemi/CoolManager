@@ -3,10 +3,10 @@ import XCTest
 final class RefrigeratorTests: XCTestCase {
     let refrigerador            = try!NormalRefrigeratorFactory().create()
     let initialStateExpected    = "SETPOINT-42--26.png"
-    let setPointExpected        = Temperature(value: 20, unit: .celsius, interval: 0.5)
-    let TemperatureMaxExpected  = Temperature(value: 35, unit: .celsius, interval: 0.5)
-    let TemperatureMinExpected  = Temperature(value: -5, unit: .celsius, interval: 0.5)
-    let currentTemperature      = Temperature(value: 10, unit: .celsius, interval: 0.5)
+    let setPointExpected        = Temperature(20, .celsius, 0.5)
+    let TemperatureMaxExpected  = Temperature(35, .celsius, 0.5)
+    let TemperatureMinExpected  = Temperature(-5, .celsius, 0.5)
+    let currentTemperature      = Temperature(10, .celsius, 0.5)
     let expectedCompressorState = true
     let expectedLightState      = true
     let expectedResistanceState = true
