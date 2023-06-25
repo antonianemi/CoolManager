@@ -6,6 +6,9 @@ class View1Presenter: view1Delegate {
         viewModel = RefrigeratorBuilderViewModel(refrigerator)
         viewModel.delegate = self
     }
+    func getRefrigeratorBuilderViewModel()->RefrigeratorBuilderViewModel{
+        return viewModel
+    }
     
     func upScaleSetPoint(){
         viewModel.upScaleSetPoint()
@@ -32,8 +35,6 @@ class View1Presenter: view1Delegate {
         view?.setResistenceStatus(viewModel.resistenceStatus())
         view?.setTemperature(viewModel.getTemperarute())
         view?.setTemperatureSetPoint(viewModel.setPointValue())
-        //Modo [icon,name,configurations
-        
     }
     func updateSetPointIcon() {
         view?.updateImageSetPoint(viewModel.getIconName())

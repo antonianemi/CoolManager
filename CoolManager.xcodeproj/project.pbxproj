@@ -153,6 +153,7 @@
 		FAB54C662A0E82E300E14E1E /* VISTA5.xib in Resources */ = {isa = PBXBuildFile; fileRef = FAB54C502A0E82E300E14E1E /* VISTA5.xib */; };
 		FAB54C682A0EB93900E14E1E /* Vista1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C672A0EB93900E14E1E /* Vista1.swift */; };
 		FAB54C692A0EB93900E14E1E /* Vista1.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C672A0EB93900E14E1E /* Vista1.swift */; };
+		FACC4C832A48D7BE00246B2E /* View1PresenterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C822A48D7BE00246B2E /* View1PresenterTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -252,6 +253,7 @@
 		FAB54C4F2A0E82E300E14E1E /* VISTA10.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VISTA10.xib; sourceTree = "<group>"; };
 		FAB54C502A0E82E300E14E1E /* VISTA5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VISTA5.xib; sourceTree = "<group>"; };
 		FAB54C672A0EB93900E14E1E /* Vista1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vista1.swift; sourceTree = "<group>"; };
+		FACC4C822A48D7BE00246B2E /* View1PresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1PresenterTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -449,6 +451,7 @@
 				FA714C372A088BFF003E2CA4 /* CoolManagerTests.swift */,
 				FAB54C342A0DC8AE00E14E1E /* TemperatureTests.swift */,
 				FAB54C432A0E152300E14E1E /* RefrigeratorBuilderViewModelTests.swift */,
+				FACC4C822A48D7BE00246B2E /* View1PresenterTests.swift */,
 			);
 			path = CoolManagerTests;
 			sourceTree = "<group>";
@@ -734,6 +737,7 @@
 				FA2706FE2A2F868F00EB2DAE /* SetPointTests.swift in Sources */,
 				FA382EF92A20F20E0047D033 /* DoorOpenedRefrigeratorFactory.swift in Sources */,
 				FAB54C692A0EB93900E14E1E /* Vista1.swift in Sources */,
+				FACC4C832A48D7BE00246B2E /* View1PresenterTests.swift in Sources */,
 				FA382EF62A1FB3660047D033 /* SetPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
