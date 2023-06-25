@@ -1,5 +1,5 @@
 protocol View1View: AnyObject {
-    var presenter:View1Presenter { get set }
+    var presenter:View1Presenter! { get set }
     func setLightStatus(_ status:Bool)
     func setDoorStatus(_ status:Bool)
     func setResistenceStatus(_ status:Bool)

@@ -1,12 +1,15 @@
 import UIKit
-class Vista1: UIView, View1View {
-    
-    private var refrigerator:Refrigerator?
+
+class View1ViewController: UIViewController, View1View {
+    var identifier:String = ""
+    var presenter: View1Presenter!
     var offsetX: CGFloat = 130
     var offsetY: CGFloat = 0
-    
-    func setRefrigerator(_ refrigerator:Refrigerator){
-        self.refrigerator = refrigerator
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        presenter.setView(self)
+        setupView()
+        presenter.viewDidLoad()
     }
     
     func setTemperature(_ value: String) {
@@ -49,17 +52,13 @@ class Vista1: UIView, View1View {
         presenter.upScaleSetPoint()
     }
     
-    lazy var presenter: View1Presenter = {
-        let presenter = View1Presenter(refrigerator!)
-        presenter.setView(self)
-        return presenter
-    }()
     
+
     lazy var backgroundImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleToFill
         imageView.semanticContentAttribute = .forceLeftToRight
-        imageView.frame = frame
+        imageView.frame = view.frame
         imageView.image = UIImage(named: "fondo.jpg")
         imageView.translatesAutoresizingMaskIntoConstraints = false
         imageView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
@@ -573,111 +572,99 @@ class Vista1: UIView, View1View {
         return label
     }()
     
-
-    override init(frame: CGRect) {
-        super.init(frame: frame)
-        setupView()
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
-    
-    
     func setupView(){
-        addSubview(backgroundImageView)
+        view.addSubview(backgroundImageView)
 
         // settingsImageView
-        addSubview(settingsImageView)
+        view.addSubview(settingsImageView)
 
         // indicatorsImageView
-        addSubview(indicatorsImageView)
+        view.addSubview(indicatorsImageView)
 
         // graphFrameImageView
-        addSubview(graphFrameImageView)
+        view.addSubview(graphFrameImageView)
 
         // setPointImageView
-        addSubview(setPointImageView)
+        view.addSubview(setPointImageView)
 
         // textLabel
-        addSubview(lbl_Temperature)
+        view.addSubview(lbl_Temperature)
 
         // focusOffImageView
-        addSubview(img_Light)
+        view.addSubview(img_Light)
 
         // defrostOffImageView
-        addSubview(img_resistence)
+        view.addSubview(img_resistence)
 
         // doorCloseImageView
-        addSubview(img_door)
+        view.addSubview(img_door)
 
         // compressorOffImageView
-        addSubview(img_compressor)
+        view.addSubview(img_compressor)
 
         // ligthLabel
-        addSubview(ligthLabel)
+        view.addSubview(ligthLabel)
 
         // defrostLabel
-        addSubview(defrostLabel)
+        view.addSubview(defrostLabel)
 
         // doorOpenLabel
-        addSubview(doorOpenLabel)
+        view.addSubview(doorOpenLabel)
 
         // compressorLabel
-        addSubview(compressorLabel)
+        view.addSubview(compressorLabel)
 
         // tituloCentroImageView
-        addSubview(tituloCentroImageView)
+        view.addSubview(tituloCentroImageView)
 
         // additionalLabel
-        addSubview(lbl_setPointValue)
+        view.addSubview(lbl_setPointValue)
 
         // button219
-        addSubview(btn_send)
+        view.addSubview(btn_send)
 
         // button
-        addSubview(btn_set_point_up)
+        view.addSubview(btn_set_point_up)
 
         // button61
-        addSubview(btn_set_point_down)
+        view.addSubview(btn_set_point_down)
 
         // label82
-        addSubview(lbl_temperature)
+        view.addSubview(lbl_temperature)
 
         // imageView83
-        addSubview(imageView83)
+        view.addSubview(imageView83)
 
         // imageView84
-        addSubview(imageView84)
+        view.addSubview(imageView84)
 
         // imageView159
-        addSubview(imageView159)
+        view.addSubview(imageView159)
 
         // label160
-        addSubview(lbl_log)
+        view.addSubview(lbl_log)
 
 
         // imageView162
-        addSubview(img_title_home)
+        view.addSubview(img_title_home)
 
         // label163
-        addSubview(lbl_digital_temperature_indicator)
+        view.addSubview(lbl_digital_temperature_indicator)
 
         // label164
-        addSubview(lbl_chef)
+        view.addSubview(lbl_chef)
 
         // label165
-        addSubview(lbl_mode)
+        view.addSubview(lbl_mode)
 
         // label210
-        addSubview(lbl_settings)
+        view.addSubview(lbl_settings)
 
         // label211
-        addSubview(lbl_indicators)
+        view.addSubview(lbl_indicators)
 
         // label214
-        addSubview(lbl_set_point)
+        view.addSubview(lbl_set_point)
         
         // lbl_Temperature_SetPoint
         setPointImageView.addSubview(lbl_Temperature_SetPoint)
@@ -812,4 +799,5 @@ class Vista1: UIView, View1View {
             view.frame = frame
         }
     }
+    
 }
