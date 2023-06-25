@@ -366,7 +366,7 @@ class View1ViewController: UIViewController, View1View {
         button.setAttributedTitle(NSAttributedString(string: "", attributes: attributes), for: .normal)
         button.setBackgroundImage(UIImage(named: "setpoint-flecha-abajo-normal.png"), for: .normal)
         button.setTitleShadowColor(UIColor(red: 0.5, green: 0.5, blue: 0.5, alpha: 1), for: .normal)
-        button.addTarget(self, action: #selector(clickedDown), for: .touchUpInside)
+        button.addTarget(View1ViewController.self, action: #selector(clickedDown), for: .touchUpInside)
         return button
     }()
 
