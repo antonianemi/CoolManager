@@ -43,14 +43,14 @@ class SetPoint{
         timer.fire()
     }
     
-    func upScaleSetPoint(){
+    func up(){
         if canAddUp {
             temperatureSetPoint.pushUp()
             fireTimer()
         }
     }
     
-    func downScaleSetPoint(){
+    func down(){
         if canDropDown {
             temperatureSetPoint.pullDown()
             fireTimer()
