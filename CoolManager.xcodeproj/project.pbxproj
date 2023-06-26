@@ -252,11 +252,8 @@
 		FAB54C4E2A0E82E300E14E1E /* VISTA9.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VISTA9.xib; sourceTree = "<group>"; };
 		FAB54C4F2A0E82E300E14E1E /* VISTA10.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VISTA10.xib; sourceTree = "<group>"; };
 		FAB54C502A0E82E300E14E1E /* VISTA5.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VISTA5.xib; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		FAB54C672A0EB93900E14E1E /* Vista1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vista1.swift; sourceTree = "<group>"; };
 		FACC4C822A48D7BE00246B2E /* View1PresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1PresenterTests.swift; sourceTree = "<group>"; };
-=======
->>>>>>> development
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -737,11 +734,8 @@
 				FA2706A72A29A6C500EB2DAE /* NormalCoolManagerMock.swift in Sources */,
 				FA2706FE2A2F868F00EB2DAE /* SetPointTests.swift in Sources */,
 				FA382EF92A20F20E0047D033 /* DoorOpenedRefrigeratorFactory.swift in Sources */,
-<<<<<<< HEAD
 				FAB54C692A0EB93900E14E1E /* Vista1.swift in Sources */,
 				FACC4C832A48D7BE00246B2E /* View1PresenterTests.swift in Sources */,
-=======
->>>>>>> development
 				FA382EF62A1FB3660047D033 /* SetPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
