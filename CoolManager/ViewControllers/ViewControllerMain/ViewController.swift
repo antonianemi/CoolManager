@@ -25,8 +25,7 @@ class ViewController: UIViewController {
             let button = UIButton(type: .system)
             button.frame = CGRect(origin: .zero, size: presenter.buttonSize)
             button.frame.origin = CGPoint(x: 0, y: presenter.getYPosition(index))
-            button.setTitle("Button \(index + 1)", for: .normal)
-            button.backgroundColor = .blue
+            button.setImage(UIImage(named: presenter.buttons[index]), for: .normal)
             button.setTitleColor(.white, for: .normal)
             button.tag = index
             button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
