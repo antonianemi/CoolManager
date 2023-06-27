@@ -12,6 +12,7 @@ class ViewController: UIViewController {
         loadMenuButtons()
         setUpUI()
     }
+    
     func loadMenuButtons(){
         buttons.forEach{
             $0.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
@@ -23,13 +24,13 @@ class ViewController: UIViewController {
         view.addSubview(sv)
         view.addSubview(container)
         sv.translatesAutoresizingMaskIntoConstraints = false
+        container.translatesAutoresizingMaskIntoConstraints = false
         sv.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
         sv.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
         sv.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
         sv.widthAnchor.constraint(equalToConstant: 125).isActive = true
         sv.axis = .vertical
         sv.distribution = .fillEqually
-        container.translatesAutoresizingMaskIntoConstraints = false
         container.topAnchor.constraint(equalTo: sv.topAnchor, constant: 0).isActive = true
         container.bottomAnchor.constraint(equalTo: sv.bottomAnchor, constant: 0).isActive = true
         container.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
@@ -48,6 +49,8 @@ class ViewController: UIViewController {
     @objc func buttonPressed(_ sender: UIButton) {
         let index = sender.tag - 1
         assert(index >= 0 && index < viewControllers.count)
+        buttons.forEach { $0.isSelected = false }
+        sender.isSelected = true
         container.subviews.forEach { $0.removeFromSuperview() }
         container.addSubview(viewControllers[index].view)
     }
@@ -72,5 +75,7 @@ class ViewController: UIViewController {
         }
         return view
     }
+    
+    
 }
 

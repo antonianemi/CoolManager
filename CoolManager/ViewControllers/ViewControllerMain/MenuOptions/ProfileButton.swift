@@ -1,5 +1,4 @@
 import UIKit
-
 class ProfileButton: UIButton {
     init() {
         super.init(frame: .zero)

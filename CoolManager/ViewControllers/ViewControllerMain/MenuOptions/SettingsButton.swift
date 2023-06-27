@@ -1,5 +1,4 @@
 import UIKit
-
 class SettingsButton: UIButton {
     init() {
         super.init(frame: .zero)

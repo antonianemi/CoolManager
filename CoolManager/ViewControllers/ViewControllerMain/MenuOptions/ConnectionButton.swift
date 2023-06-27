@@ -1,5 +1,4 @@
 import UIKit
-
 class ConnectionButton: UIButton {
     init() {
         super.init(frame: .zero)
