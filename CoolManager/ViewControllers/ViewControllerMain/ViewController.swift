@@ -1,8 +1,40 @@
 import UIKit
 
 class ViewController: UIViewController {
+    let presenter = MainPresenter()
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpUI()
+    }
     
-    @IBOutlet weak var content: UIView!
+    func setUpUI(){
+        let sv = UIStackView(arrangedSubviews: buttons)
+        view.addSubview(sv)
+        sv.translatesAutoresizingMaskIntoConstraints = false
+        sv.topAnchor.constraint(equalTo: view.topAnchor).isActive = true
+        sv.leadingAnchor.constraint(equalTo: view.leadingAnchor).isActive = true
+        sv.bottomAnchor.constraint(equalTo: view.bottomAnchor).isActive = true
+        sv.widthAnchor.constraint(equalToConstant: 125).isActive = true
+        sv.axis = .vertical
+        sv.distribution = .fillEqually
+    }
+    
+    lazy var buttons:[UIButton] = {
+        var buttons = [UIButton]()
+        for index in 0..<presenter.buttonsCount(view.frame.width) {
+            let button = UIButton(type: .system)
+            button.frame = CGRect(origin: .zero, size: presenter.buttonSize)
+            button.frame.origin = CGPoint(x: 0, y: presenter.getYPosition(index))
+            button.setTitle("Button \(index + 1)", for: .normal)
+            button.backgroundColor = .blue
+            button.setTitleColor(.white, for: .normal)
+            button.tag = index
+            button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+            buttons.append(button)
+        }
+        return buttons
+    }()
+    
     
     lazy var viewControllers: [UIViewController] = {
             let viewControllers: [UIViewController] = [buildView1Controller(),
@@ -16,15 +48,15 @@ class ViewController: UIViewController {
             return viewControllers
         }()
         
-        @IBAction func buttonPressed(_ sender: UIButton) {
+    @objc func buttonPressed(_ sender: UIButton) {
             let index = sender.tag - 1
             guard index >= 0 && index < viewControllers.count else {
                 return
             }
             
-            content.subviews.forEach { $0.removeFromSuperview() }
+            view.subviews.forEach { $0.removeFromSuperview() }
             let selectedViewController = viewControllers[index]
-            content.addSubview(selectedViewController.view)
+            view.addSubview(selectedViewController.view)
         }
     
     func buildView1Controller()->View1ViewController{
