@@ -40,20 +40,14 @@ class ViewController: UIViewController {
             let viewControllers: [UIViewController] = [buildView1Controller(),
                                                        View2ViewController(),
                                                        View3ViewController(),
-                                                       View4ViewController(),
-                                                       View5ViewController(),
-                                                       View6ViewController(),
-                                                       View7ViewController()]
+                                                       View4ViewController()]
             viewControllers.forEach { addChild($0) }
             return viewControllers
     }()
         
     @objc func buttonPressed(_ sender: UIButton) {
         let index = sender.tag - 1
-        guard index >= 0 && index < viewControllers.count else {
-            return
-        }
-        
+        assert(index >= 0 && index < viewControllers.count)
         container.subviews.forEach { $0.removeFromSuperview() }
         container.addSubview(viewControllers[index].view)
     }

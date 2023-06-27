@@ -29,6 +29,7 @@ class View1Presenter: view1Delegate {
     }
     
     func update() {
+        assert(view != nil)
         view?.setLightStatus(viewModel.lightStatus())
         view?.setCompressorStatus(viewModel.compressorStatus())
         view?.setDoorStatus(viewModel.isDoorOpen())
@@ -37,6 +38,7 @@ class View1Presenter: view1Delegate {
         view?.setTemperatureSetPoint(viewModel.setPointValue())
     }
     func updateSetPointIcon() {
+        assert(view != nil)
         view?.updateImageSetPoint(viewModel.getIconName())
     }
     
