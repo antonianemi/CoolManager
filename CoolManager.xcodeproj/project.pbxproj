@@ -156,6 +156,7 @@
 		FACC4C892A4A60F400246B2E /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C872A4A60F400246B2E /* MainPresenter.swift */; };
 		FACC4C8B2A4A613600246B2E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C8A2A4A613600246B2E /* MainViewModel.swift */; };
 		FACC4C8C2A4A613600246B2E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C8A2A4A613600246B2E /* MainViewModel.swift */; };
+		FACC4C8E2A4A737800246B2E /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C8D2A4A737800246B2E /* MainPresenterTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -194,7 +195,7 @@
 		FA2706C72A29BD4F00EB2DAE /* viewCoolManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewCoolManager.swift; sourceTree = "<group>"; };
 		FA2706CA2A29BF5B00EB2DAE /* viewDashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewDashBoard.swift; sourceTree = "<group>"; };
 		FA2706EE2A2A3A1400EB2DAE /* confirmSetPointSelectedAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmSetPointSelectedAction.swift; sourceTree = "<group>"; };
-		FA2706FD2A2F868F00EB2DAE /* SetPointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SetPointTests.swift; path = CoolManagerTests/SetPointTests.swift; sourceTree = "<group>"; };
+		FA2706FD2A2F868F00EB2DAE /* SetPointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPointTests.swift; sourceTree = "<group>"; };
 		FA2707012A30DAD700EB2DAE /* InconsistentRefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InconsistentRefrigeratorFactory.swift; sourceTree = "<group>"; };
 		FA382ED42A19E1C30047D033 /* RefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorFactory.swift; sourceTree = "<group>"; };
 		FA382ED72A19E2710047D033 /* NormalRefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalRefrigeratorFactory.swift; sourceTree = "<group>"; };
@@ -258,6 +259,7 @@
 		FACC4C822A48D7BE00246B2E /* View1PresenterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View1PresenterTests.swift; sourceTree = "<group>"; };
 		FACC4C872A4A60F400246B2E /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		FACC4C8A2A4A613600246B2E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		FACC4C8D2A4A737800246B2E /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -396,7 +398,6 @@
 		FA6C7A1529D8F6CD002267A5 = {
 			isa = PBXGroup;
 			children = (
-				FA2706FD2A2F868F00EB2DAE /* SetPointTests.swift */,
 				FA6C7A2029D8F6CD002267A5 /* CoolManager */,
 				FA714C362A088BFF003E2CA4 /* CoolManagerTests */,
 				FA6C7A1F29D8F6CD002267A5 /* Products */,
@@ -451,12 +452,14 @@
 		FA714C362A088BFF003E2CA4 /* CoolManagerTests */ = {
 			isa = PBXGroup;
 			children = (
+				FA2706FD2A2F868F00EB2DAE /* SetPointTests.swift */,
 				FA2706822A2954D100EB2DAE /* RefrigeratorTests.swift */,
 				FA714C2F2A088BD9003E2CA4 /* TemperatureRulesTests.swift */,
 				FA714C372A088BFF003E2CA4 /* CoolManagerTests.swift */,
 				FAB54C342A0DC8AE00E14E1E /* TemperatureTests.swift */,
 				FAB54C432A0E152300E14E1E /* RefrigeratorBuilderViewModelTests.swift */,
 				FACC4C822A48D7BE00246B2E /* View1PresenterTests.swift */,
+				FACC4C8D2A4A737800246B2E /* MainPresenterTest.swift */,
 			);
 			path = CoolManagerTests;
 			sourceTree = "<group>";
@@ -707,6 +710,7 @@
 				FA2706C52A29BC8C00EB2DAE /* ControllerCoolManager.swift in Sources */,
 				FA2706872A295B8200EB2DAE /* TemperatureController.swift in Sources */,
 				FA2706C22A29BBDA00EB2DAE /* DashBoardController.swift in Sources */,
+				FACC4C8E2A4A737800246B2E /* MainPresenterTest.swift in Sources */,
 				FA382F062A253F3E0047D033 /* CoolManager.swift in Sources */,
 				FA382ED02A19A2930047D033 /* Door.swift in Sources */,
 				FA382ED12A19A2930047D033 /* Fan.swift in Sources */,
