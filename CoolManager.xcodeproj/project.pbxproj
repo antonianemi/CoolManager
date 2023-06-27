@@ -157,6 +157,22 @@
 		FACC4C8B2A4A613600246B2E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C8A2A4A613600246B2E /* MainViewModel.swift */; };
 		FACC4C8C2A4A613600246B2E /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C8A2A4A613600246B2E /* MainViewModel.swift */; };
 		FACC4C8E2A4A737800246B2E /* MainPresenterTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C8D2A4A737800246B2E /* MainPresenterTest.swift */; };
+		FACC4C902A4A8F9A00246B2E /* ButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C8F2A4A8F9A00246B2E /* ButtonFactory.swift */; };
+		FACC4C912A4A8F9A00246B2E /* ButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C8F2A4A8F9A00246B2E /* ButtonFactory.swift */; };
+		FACC4C942A4A906700246B2E /* HomeButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C932A4A906700246B2E /* HomeButtonFactory.swift */; };
+		FACC4C972A4A911900246B2E /* HomeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C962A4A911900246B2E /* HomeButton.swift */; };
+		FACC4C992A4A9CC100246B2E /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C982A4A9CC100246B2E /* SettingsButton.swift */; };
+		FACC4C9A2A4A9CC100246B2E /* SettingsButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C982A4A9CC100246B2E /* SettingsButton.swift */; };
+		FACC4C9C2A4A9CE300246B2E /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C9B2A4A9CE300246B2E /* ProfileButton.swift */; };
+		FACC4C9D2A4A9CE300246B2E /* ProfileButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C9B2A4A9CE300246B2E /* ProfileButton.swift */; };
+		FACC4C9F2A4A9CF900246B2E /* ConnectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C9E2A4A9CF900246B2E /* ConnectionButton.swift */; };
+		FACC4CA02A4A9CF900246B2E /* ConnectionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4C9E2A4A9CF900246B2E /* ConnectionButton.swift */; };
+		FACC4CA22A4A9D2D00246B2E /* SettingsButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4CA12A4A9D2D00246B2E /* SettingsButtonFactory.swift */; };
+		FACC4CA32A4A9D2D00246B2E /* SettingsButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4CA12A4A9D2D00246B2E /* SettingsButtonFactory.swift */; };
+		FACC4CA52A4A9D3A00246B2E /* ProfileButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4CA42A4A9D3A00246B2E /* ProfileButtonFactory.swift */; };
+		FACC4CA62A4A9D3A00246B2E /* ProfileButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4CA42A4A9D3A00246B2E /* ProfileButtonFactory.swift */; };
+		FACC4CA82A4A9D4D00246B2E /* ConnectionButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4CA72A4A9D4D00246B2E /* ConnectionButtonFactory.swift */; };
+		FACC4CA92A4A9D4D00246B2E /* ConnectionButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4CA72A4A9D4D00246B2E /* ConnectionButtonFactory.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -260,6 +276,15 @@
 		FACC4C872A4A60F400246B2E /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		FACC4C8A2A4A613600246B2E /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
 		FACC4C8D2A4A737800246B2E /* MainPresenterTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenterTest.swift; sourceTree = "<group>"; };
+		FACC4C8F2A4A8F9A00246B2E /* ButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonFactory.swift; sourceTree = "<group>"; };
+		FACC4C932A4A906700246B2E /* HomeButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButtonFactory.swift; sourceTree = "<group>"; };
+		FACC4C962A4A911900246B2E /* HomeButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeButton.swift; sourceTree = "<group>"; };
+		FACC4C982A4A9CC100246B2E /* SettingsButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButton.swift; sourceTree = "<group>"; };
+		FACC4C9B2A4A9CE300246B2E /* ProfileButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButton.swift; sourceTree = "<group>"; };
+		FACC4C9E2A4A9CF900246B2E /* ConnectionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionButton.swift; sourceTree = "<group>"; };
+		FACC4CA12A4A9D2D00246B2E /* SettingsButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsButtonFactory.swift; sourceTree = "<group>"; };
+		FACC4CA42A4A9D3A00246B2E /* ProfileButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButtonFactory.swift; sourceTree = "<group>"; };
+		FACC4CA72A4A9D4D00246B2E /* ConnectionButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionButtonFactory.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -375,6 +400,7 @@
 		FA38FFCC29FE5DE500BC21FA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FACC4C922A4A8FCF00246B2E /* FactoriesUI */,
 				FACC4C862A4A60AA00246B2E /* ViewControllerMain */,
 				FAB54C362A0E110F00E14E1E /* ViewControler1 */,
 				FA38FFDB29FE669800BC21FA /* View2ViewController.swift */,
@@ -506,11 +532,35 @@
 		FACC4C862A4A60AA00246B2E /* ViewControllerMain */ = {
 			isa = PBXGroup;
 			children = (
+				FACC4C952A4A90C300246B2E /* MenuOptions */,
 				FA6C7A2529D8F6CD002267A5 /* ViewController.swift */,
 				FACC4C872A4A60F400246B2E /* MainPresenter.swift */,
 				FACC4C8A2A4A613600246B2E /* MainViewModel.swift */,
 			);
 			path = ViewControllerMain;
+			sourceTree = "<group>";
+		};
+		FACC4C922A4A8FCF00246B2E /* FactoriesUI */ = {
+			isa = PBXGroup;
+			children = (
+				FACC4C8F2A4A8F9A00246B2E /* ButtonFactory.swift */,
+				FACC4C932A4A906700246B2E /* HomeButtonFactory.swift */,
+				FACC4CA12A4A9D2D00246B2E /* SettingsButtonFactory.swift */,
+				FACC4CA42A4A9D3A00246B2E /* ProfileButtonFactory.swift */,
+				FACC4CA72A4A9D4D00246B2E /* ConnectionButtonFactory.swift */,
+			);
+			path = FactoriesUI;
+			sourceTree = "<group>";
+		};
+		FACC4C952A4A90C300246B2E /* MenuOptions */ = {
+			isa = PBXGroup;
+			children = (
+				FACC4C962A4A911900246B2E /* HomeButton.swift */,
+				FACC4C982A4A9CC100246B2E /* SettingsButton.swift */,
+				FACC4C9B2A4A9CE300246B2E /* ProfileButton.swift */,
+				FACC4C9E2A4A9CF900246B2E /* ConnectionButton.swift */,
+			);
+			path = MenuOptions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -638,7 +688,9 @@
 			files = (
 				FA2706B52A29B21D00EB2DAE /* turnFanOnAction.swift in Sources */,
 				FAB54C3E2A0E118A00E14E1E /* RefrigeratorBuilderViewModel.swift in Sources */,
+				FACC4C902A4A8F9A00246B2E /* ButtonFactory.swift in Sources */,
 				FA714C202A086C0D003E2CA4 /* Refrigerator.swift in Sources */,
+				FACC4CA82A4A9D4D00246B2E /* ConnectionButtonFactory.swift in Sources */,
 				FA382EDC2A1A79060047D033 /* DefrostingRefrigeratorFactory.swift in Sources */,
 				FA38FFEE29FE669800BC21FA /* View7ViewController.swift in Sources */,
 				FA382EF52A1FB3660047D033 /* SetPoint.swift in Sources */,
@@ -662,11 +714,14 @@
 				FA27069C2A299A1500EB2DAE /* closeDoorAction.swift in Sources */,
 				FA714C292A088369003E2CA4 /* TemperatureUnit.swift in Sources */,
 				FA2706C42A29BC8C00EB2DAE /* ControllerCoolManager.swift in Sources */,
+				FACC4CA22A4A9D2D00246B2E /* SettingsButtonFactory.swift in Sources */,
 				FA2706B22A29B16300EB2DAE /* turnCompressorOffAction.swift in Sources */,
+				FACC4C992A4A9CC100246B2E /* SettingsButton.swift in Sources */,
 				FA382EEE2A1F3D4E0047D033 /* RefrigeratorComponent.swift in Sources */,
 				FA38FFF129FE669800BC21FA /* View5ViewController.swift in Sources */,
 				FA27069F2A299B1C00EB2DAE /* unlockDoorAction.swift in Sources */,
 				FA38FFE829FE669800BC21FA /* View3ViewController.swift in Sources */,
+				FACC4C942A4A906700246B2E /* HomeButtonFactory.swift in Sources */,
 				FA2706A22A29A0F000EB2DAE /* lockDoorAction.swift in Sources */,
 				FA714C222A0870A2003E2CA4 /* Temperature.swift in Sources */,
 				FAB54C312A0DC03200E14E1E /* Light.swift in Sources */,
@@ -675,6 +730,7 @@
 				FACC4C882A4A60F400246B2E /* MainPresenter.swift in Sources */,
 				FA2706862A295B8200EB2DAE /* TemperatureController.swift in Sources */,
 				FA382EDF2A1F3CC80047D033 /* FanProtocol.swift in Sources */,
+				FACC4C9F2A4A9CF900246B2E /* ConnectionButton.swift in Sources */,
 				FA2706AF2A29B14600EB2DAE /* turnCompressorOnAction.swift in Sources */,
 				FAB54C382A0E113C00E14E1E /* Presenter.swift in Sources */,
 				FA38FFEA29FE669800BC21FA /* View4ViewController.swift in Sources */,
@@ -684,8 +740,10 @@
 				FA382EE22A1F3CE20047D033 /* ResistanceProtocol.swift in Sources */,
 				FA382EE52A1F3CFC0047D033 /* LightProtocol.swift in Sources */,
 				FAB54C2F2A0DC03200E14E1E /* Compressor.swift in Sources */,
+				FACC4CA52A4A9D3A00246B2E /* ProfileButtonFactory.swift in Sources */,
 				FA2706EF2A2A3A1400EB2DAE /* confirmSetPointSelectedAction.swift in Sources */,
 				FA382F052A253F3E0047D033 /* CoolManager.swift in Sources */,
+				FACC4C972A4A911900246B2E /* HomeButton.swift in Sources */,
 				FA382EF82A20F20E0047D033 /* DoorOpenedRefrigeratorFactory.swift in Sources */,
 				FA38FFEF29FE669800BC21FA /* View.swift in Sources */,
 				FA2706AC2A29A74D00EB2DAE /* DefrostingRefrigeratorMock.swift in Sources */,
@@ -695,6 +753,7 @@
 				FA27068A2A29897900EB2DAE /* Action.swift in Sources */,
 				FAB54C3B2A0E116600E14E1E /* viewProtocol.swift in Sources */,
 				FA2706BB2A29B33200EB2DAE /* turnResistanceOnAction.swift in Sources */,
+				FACC4C9C2A4A9CE300246B2E /* ProfileButton.swift in Sources */,
 				FA2706932A298C8700EB2DAE /* pushSetPointUpAction.swift in Sources */,
 				FA382F022A253F320047D033 /* User.swift in Sources */,
 				FA2706BE2A29B35100EB2DAE /* turnResistanceOffAction.swift in Sources */,
@@ -707,6 +766,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				FA2707032A30F0ED00EB2DAE /* InconsistentRefrigeratorFactory.swift in Sources */,
+				FACC4C9A2A4A9CC100246B2E /* SettingsButton.swift in Sources */,
 				FA2706C52A29BC8C00EB2DAE /* ControllerCoolManager.swift in Sources */,
 				FA2706872A295B8200EB2DAE /* TemperatureController.swift in Sources */,
 				FA2706C22A29BBDA00EB2DAE /* DashBoardController.swift in Sources */,
@@ -717,6 +777,7 @@
 				FA382ED22A19A2930047D033 /* Light.swift in Sources */,
 				FA2706912A298B8A00EB2DAE /* turnLightOffAction.swift in Sources */,
 				FA2706CC2A29BF5B00EB2DAE /* viewDashBoard.swift in Sources */,
+				FACC4CA92A4A9D4D00246B2E /* ConnectionButtonFactory.swift in Sources */,
 				FA2706B32A29B16300EB2DAE /* turnCompressorOffAction.swift in Sources */,
 				FACC4C8C2A4A613600246B2E /* MainViewModel.swift in Sources */,
 				FA2706972A298D0E00EB2DAE /* pushSetPointDownAction.swift in Sources */,
@@ -737,7 +798,10 @@
 				FA382EB82A19A23E0047D033 /* Resistance.swift in Sources */,
 				FA382EEF2A1F3D4E0047D033 /* RefrigeratorComponent.swift in Sources */,
 				FA2706A02A299B1C00EB2DAE /* unlockDoorAction.swift in Sources */,
+				FACC4CA02A4A9CF900246B2E /* ConnectionButton.swift in Sources */,
 				FA382EB92A19A23E0047D033 /* Refrigerator.swift in Sources */,
+				FACC4CA62A4A9D3A00246B2E /* ProfileButtonFactory.swift in Sources */,
+				FACC4C912A4A8F9A00246B2E /* ButtonFactory.swift in Sources */,
 				FA382EBA2A19A23E0047D033 /* Temperature.swift in Sources */,
 				FA382EBC2A19A23E0047D033 /* TemperatureStatus.swift in Sources */,
 				FA27068B2A29897900EB2DAE /* Action.swift in Sources */,
@@ -748,6 +812,7 @@
 				FA2706AD2A29A74D00EB2DAE /* DefrostingRefrigeratorMock.swift in Sources */,
 				FA2706BF2A29B35100EB2DAE /* turnResistanceOffAction.swift in Sources */,
 				FAB54C352A0DC8AE00E14E1E /* TemperatureTests.swift in Sources */,
+				FACC4CA32A4A9D2D00246B2E /* SettingsButtonFactory.swift in Sources */,
 				FA714C3E2A088C11003E2CA4 /* TemperatureRulesTests.swift in Sources */,
 				FA2706B62A29B21D00EB2DAE /* turnFanOnAction.swift in Sources */,
 				FA2706832A2954D100EB2DAE /* RefrigeratorTests.swift in Sources */,
@@ -763,6 +828,7 @@
 				FA2706AA2A29A6FC00EB2DAE /* DoorOpenedCoolManagerMock.swift in Sources */,
 				FA2706A72A29A6C500EB2DAE /* NormalCoolManagerMock.swift in Sources */,
 				FA2706FE2A2F868F00EB2DAE /* SetPointTests.swift in Sources */,
+				FACC4C9D2A4A9CE300246B2E /* ProfileButton.swift in Sources */,
 				FACC4C892A4A60F400246B2E /* MainPresenter.swift in Sources */,
 				FA382EF92A20F20E0047D033 /* DoorOpenedRefrigeratorFactory.swift in Sources */,
 				FACC4C832A48D7BE00246B2E /* View1PresenterTests.swift in Sources */,

@@ -3,9 +3,19 @@ import UIKit
 class ViewController: UIViewController {
     let presenter = MainPresenter()
     let container = UIView()
+    let buttons:[UIButton] = [HomeButtonFactory().create(),
+                              SettingsButtonFactory().create(),
+                              ConnectionButtonFactory().create(),
+                              ProfileButtonFactory().create()]
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadMenuButtons()
         setUpUI()
+    }
+    func loadMenuButtons(){
+        buttons.forEach{
+            $0.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
+        }
     }
     
     func setUpUI(){
@@ -19,27 +29,12 @@ class ViewController: UIViewController {
         sv.widthAnchor.constraint(equalToConstant: 125).isActive = true
         sv.axis = .vertical
         sv.distribution = .fillEqually
-        
         container.translatesAutoresizingMaskIntoConstraints = false
         container.topAnchor.constraint(equalTo: sv.topAnchor, constant: 0).isActive = true
         container.bottomAnchor.constraint(equalTo: sv.bottomAnchor, constant: 0).isActive = true
         container.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         container.leadingAnchor.constraint(equalTo: sv.trailingAnchor, constant: 0).isActive = true
     }
-    
-    lazy var buttons:[UIButton] = {
-        var buttons = [UIButton]()
-        for index in 0..<presenter.buttonsCount() {
-            let button = UIButton(type: .system)
-            button.frame = CGRect(origin: .zero, size: presenter.buttonSize)
-            button.setImage(UIImage(named: presenter.buttons[index]), for: .normal)
-            button.tag = index
-            button.addTarget(self, action: #selector(buttonPressed), for: .touchUpInside)
-            buttons.append(button)
-        }
-        return buttons
-    }()
-    
     
     lazy var viewControllers: [UIViewController] = {
             let viewControllers: [UIViewController] = [buildView1Controller(),
@@ -66,7 +61,7 @@ class ViewController: UIViewController {
     func buildView1Controller()->View1ViewController{
         let view = View1ViewController()
         do {
-            view.presenter = try View1Presenter(NormalRefrigeratorFactory().create())
+            view.presenter = try View1Presenter(DoorOpenedRefrigeratorFactory().create())
             view.identifier = "View1ViewController"
         }
         catch TemperatureError.inconsistentUnit{
