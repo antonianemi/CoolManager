@@ -18,7 +18,6 @@ class View1Presenter: view1Delegate {
         viewModel.downScaleSetPoint()
     }
     
-    
     func setView(_ view:View1View){
         self.view = view
     }
@@ -38,7 +37,7 @@ class View1Presenter: view1Delegate {
         view?.setTemperatureSetPoint(viewModel.setPointValue())
     }
     func updateSetPointIcon() {
-        assert(view != nil)
+        assert(self.view != nil)
         view?.updateImageSetPoint(viewModel.getIconName())
     }
     

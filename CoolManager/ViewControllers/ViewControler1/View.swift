@@ -1,5 +1,4 @@
 import UIKit
-
 class View1ViewController: UIViewController, View1View {
     var identifier:String = ""
     var presenter: View1Presenter!
