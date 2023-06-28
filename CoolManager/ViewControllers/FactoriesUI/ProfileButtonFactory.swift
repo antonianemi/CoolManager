@@ -1,20 +1,13 @@
 import UIKit
 final class ProfileButtonFactory:ButtonFactory {
+    let icon = "person"
+    let button = ProfileButton()
     let buttonSize = CGSize(width: 125, height: 117)
-    func create() -> UIButton{
-        let button = ProfileButton()
+    let poinSize = UIImage.SymbolConfiguration(pointSize: 60)
+    func create() -> UIButton {
         button.frame = CGRect(origin: .zero, size: buttonSize)
-        let normalImage = UIImage(systemName: "person")
-        let selectedImage = UIImage(systemName: "person.fill")
-        let symbolConfiguration = UIImage.SymbolConfiguration(pointSize: 60)
-        let resizedNormalImage = normalImage!
-                .withConfiguration(symbolConfiguration)
-                .withRenderingMode(.automatic)
-        let resizedSelectedImage = selectedImage!
-                .withConfiguration(symbolConfiguration)
-                .withRenderingMode(.alwaysOriginal)
-        button.setImage(resizedNormalImage, for: .normal)
-        button.setImage(resizedSelectedImage, for: .selected)
+        button.setImage(UIImage(systemName: icon)!.withConfiguration(poinSize), for: .normal)
+        button.setImage(UIImage(systemName: "\(icon).fill")!.withConfiguration(poinSize), for: .selected)
         return button
     }
 }
