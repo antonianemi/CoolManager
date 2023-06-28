@@ -1,13 +1,13 @@
 class DashBoardController:ControllerCoolManager {
-    private let coolManager:CoolManager
     init(_ coolManager:CoolManager) {
-        self.coolManager = coolManager
-        super.init(vista: viewDashBoard(self.coolManager.refrigerator.resistance,
-                                        self.coolManager.refrigerator.compressor,
-                                        self.coolManager.refrigerator.fan,
-                                        self.coolManager.refrigerator.door,
-                                        self.coolManager.refrigerator.light,
-                                        viewSetPoint(self.coolManager.refrigerator.setPoint)))
+        let viewSetPoint = viewSetPoint(coolManager.refrigerator.setPoint)
+        let viewDashBoard = viewDashBoard(coolManager.refrigerator.resistance,
+                          coolManager.refrigerator.compressor,
+                          coolManager.refrigerator.fan,
+                          coolManager.refrigerator.door,
+                          coolManager.refrigerator.light,
+                          viewSetPoint)
+        super.init(vista: viewDashBoard,coolManager: coolManager)
     }
     
     func commitSetPoint(){
@@ -18,8 +18,5 @@ class DashBoardController:ControllerCoolManager {
     }
     func moveSetPointDown(){
         self.excecute(pushSetPointDownAction(coolManager.refrigerator.setPoint))
-    }
-    private func excecute(_ action:Action){
-        coolManager.excecute(action)
     }
 }
