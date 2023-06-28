@@ -1,7 +1,7 @@
 import XCTest
 @testable import CoolManager
 final class RefrigeratorNormalViewModelTests: XCTestCase {
-    var viewModel:RefrigeratorBuilderViewModel! = RefrigeratorBuilderViewModel(try! NormalRefrigeratorFactory().create())
+    var viewModel:RefrigeratorBuilderViewModel = RefrigeratorBuilderViewModel(NormalRefrigeratorFactory().create())
     let initialStateExpected    = "SETPOINT-42--26.png"
     let setPointExpected        = Temperature(20, .celsius, 0.5)
     let TemperatureMaxExpected  = Temperature(35, .celsius, 0.5)
@@ -13,11 +13,11 @@ final class RefrigeratorNormalViewModelTests: XCTestCase {
     let expectedDoorOpenState   = false
         
     func test_RefrigeratorInitialized_ShouldHaveDefaultValues() {
-        let setPoint = viewModel!.setPoint()
-        XCTAssertEqual(viewModel!.compressorStatus(), expectedCompressorState)
-        XCTAssertEqual(viewModel!.lightStatus(),      expectedLightState)
-        XCTAssertEqual(viewModel!.resistenceStatus(), expectedResistanceState)
-        XCTAssertEqual(viewModel!.isDoorOpen(),       expectedDoorOpenState)
+        let setPoint = viewModel.setPoint()
+        XCTAssertEqual(viewModel.compressorStatus(), expectedCompressorState)
+        XCTAssertEqual(viewModel.lightStatus(),      expectedLightState)
+        XCTAssertEqual(viewModel.resistenceStatus(), expectedResistanceState)
+        XCTAssertEqual(viewModel.isDoorOpen(),       expectedDoorOpenState)
         XCTAssertEqual(setPoint.temperatureSetPoint,  setPointExpected)
         XCTAssertEqual(setPoint.temperature,          currentTemperature)
         XCTAssertEqual(setPoint.maxTemperature,       TemperatureMaxExpected)
@@ -26,20 +26,20 @@ final class RefrigeratorNormalViewModelTests: XCTestCase {
     
     func test_SetPointIncreasedToMaximum_ShouldDisplayCorrectIcon(){
         let finalStateExpected = "SETPOINT-42--42.png"
-        XCTAssertEqual(viewModel!.getIconName(), initialStateExpected)
+        XCTAssertEqual(viewModel.getIconName(), initialStateExpected)
         for _ in 0..<5 {
-            viewModel!.upScaleSetPoint()
+            viewModel.upScaleSetPoint()
         }
-        XCTAssertEqual(viewModel!.getIconName(), finalStateExpected)
+        XCTAssertEqual(viewModel.getIconName(), finalStateExpected)
     }
     
     func test_SetPointDecreasedToMinimum_ShouldDisplayCorrectIcon(){
         let finalStateExpected = "SETPOINT-42--0.png"
-        XCTAssertEqual(viewModel!.getIconName(), initialStateExpected)
+        XCTAssertEqual(viewModel.getIconName(), initialStateExpected)
         for _ in 0..<5 {
-            viewModel!.downScaleSetPoint()
+            viewModel.downScaleSetPoint()
         }
-        XCTAssertEqual(viewModel!.getIconName(), finalStateExpected)
+        XCTAssertEqual(viewModel.getIconName(), finalStateExpected)
     }
     
 }

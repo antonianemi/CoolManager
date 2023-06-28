@@ -1,3 +1,3 @@
 protocol RefrigeratorFactory {
-    func create() throws -> Refrigerator 
+    func create()-> Refrigerator 
 }

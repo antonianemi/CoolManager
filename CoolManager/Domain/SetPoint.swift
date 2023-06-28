@@ -12,17 +12,21 @@ class SetPoint{
     private(set) var minTemperature: Temperature
     private var temp:Double = 0.0
     var timer:Timer = Timer()
-    init(temperature: Temperature, temperatureGoal: Temperature, maxTemperature: Temperature, minTemperature: Temperature) throws {
+    init(temperature: Temperature,
+         temperatureGoal: Temperature,
+         maxTemperature: Temperature,
+         minTemperature: Temperature){
         if temperatureGoal.unit != minTemperature.unit ||
             temperatureGoal.unit != maxTemperature.unit ||
             minTemperature.unit != maxTemperature.unit {
-            throw TemperatureError.inconsistentUnit
+            fatalError("inconsistentUnit")
         }
         if minTemperature.value == maxTemperature.value{
-            throw TemperatureError.sameMinMaxValue
+            fatalError("sameMinMaxValue")
         }
-        if temperatureGoal.value < minTemperature.value || temperatureGoal.value > maxTemperature.value{
-            throw TemperatureError.outOfRangeSetPoint
+        if temperatureGoal.value < minTemperature.value ||
+            temperatureGoal.value > maxTemperature.value {
+            fatalError("outOfRangeSetPoint")
         }
         self.temperature = temperature
         temperatureSetPoint = temperatureGoal
