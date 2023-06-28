@@ -1,9 +1,7 @@
 import Foundation
 class CoolManager {
-    private (set)var user:User
     private (set)var refrigerator:Refrigerator
-    internal init(_ user:User,_ refrigerator:Refrigerator){
-        self.user = user
+    internal init(_ refrigerator:Refrigerator){
         self.refrigerator = refrigerator
     }
     func excecute(_ action:Action){
