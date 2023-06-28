@@ -57,25 +57,9 @@ class ViewController: UIViewController {
     
     func buildView1Controller()->View1ViewController{
         let view = View1ViewController()
-        do {
-            view.presenter = try View1Presenter(DoorOpenedRefrigeratorFactory().create())
-            view.identifier = "View1ViewController"
-        }
-        catch TemperatureError.inconsistentUnit{
-            //TODO: notify your presenter so he can perform operations needed
-        }
-        catch TemperatureError.sameMinMaxValue{
-            //TODO: notify your presenter so he can perform operations needed
-        }
-        catch TemperatureError.outOfRangeSetPoint{
-            //TODO: notify your presenter so he can perform operations needed
-        }
-        catch{
-            //TODO: implement popup to correct the lims
-        }
+        view.presenter = View1Presenter(DoorOpenedRefrigeratorFactory().create())
+        view.identifier = "View1ViewController"
         return view
     }
-    
-    
 }
 

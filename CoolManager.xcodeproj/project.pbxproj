@@ -173,6 +173,8 @@
 		FACC4CA92A4A9D4D00246B2E /* ConnectionButtonFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4CA72A4A9D4D00246B2E /* ConnectionButtonFactory.swift */; };
 		FACC4CAB2A4CC58300246B2E /* viewSetPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4CAA2A4CC58300246B2E /* viewSetPoint.swift */; };
 		FACC4CAC2A4CC58300246B2E /* viewSetPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4CAA2A4CC58300246B2E /* viewSetPoint.swift */; };
+		FACC4CB12A4CDB3B00246B2E /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4CB02A4CDB3B00246B2E /* UIButton.swift */; };
+		FACC4CB22A4CDB3B00246B2E /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = FACC4CB02A4CDB3B00246B2E /* UIButton.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -285,6 +287,7 @@
 		FACC4CA42A4A9D3A00246B2E /* ProfileButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileButtonFactory.swift; sourceTree = "<group>"; };
 		FACC4CA72A4A9D4D00246B2E /* ConnectionButtonFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConnectionButtonFactory.swift; sourceTree = "<group>"; };
 		FACC4CAA2A4CC58300246B2E /* viewSetPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewSetPoint.swift; sourceTree = "<group>"; };
+		FACC4CB02A4CDB3B00246B2E /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -401,6 +404,7 @@
 		FA38FFCC29FE5DE500BC21FA /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				FACC4CB32A4CDB4100246B2E /* Extensions */,
 				FACC4C922A4A8FCF00246B2E /* FactoriesUI */,
 				FACC4C862A4A60AA00246B2E /* ViewControllerMain */,
 				FAB54C362A0E110F00E14E1E /* ViewControler1 */,
@@ -561,6 +565,14 @@
 				FACC4C9E2A4A9CF900246B2E /* ConnectionButton.swift */,
 			);
 			path = MenuOptions;
+			sourceTree = "<group>";
+		};
+		FACC4CB32A4CDB4100246B2E /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				FACC4CB02A4CDB3B00246B2E /* UIButton.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -755,6 +767,7 @@
 				FAB54C3B2A0E116600E14E1E /* viewProtocol.swift in Sources */,
 				FA2706BB2A29B33200EB2DAE /* turnResistanceOnAction.swift in Sources */,
 				FACC4C9C2A4A9CE300246B2E /* ProfileButton.swift in Sources */,
+				FACC4CB12A4CDB3B00246B2E /* UIButton.swift in Sources */,
 				FA2706932A298C8700EB2DAE /* pushSetPointUpAction.swift in Sources */,
 				FA2706BE2A29B35100EB2DAE /* turnResistanceOffAction.swift in Sources */,
 				FA2707022A30DAD700EB2DAE /* InconsistentRefrigeratorFactory.swift in Sources */,
@@ -803,6 +816,7 @@
 				FA382EB92A19A23E0047D033 /* Refrigerator.swift in Sources */,
 				FACC4CA62A4A9D3A00246B2E /* ProfileButtonFactory.swift in Sources */,
 				FACC4C912A4A8F9A00246B2E /* ButtonFactory.swift in Sources */,
+				FACC4CB22A4CDB3B00246B2E /* UIButton.swift in Sources */,
 				FA382EBA2A19A23E0047D033 /* Temperature.swift in Sources */,
 				FA382EBC2A19A23E0047D033 /* TemperatureStatus.swift in Sources */,
 				FA27068B2A29897900EB2DAE /* Action.swift in Sources */,
