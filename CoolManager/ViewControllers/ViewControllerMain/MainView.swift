@@ -7,6 +7,16 @@ class MainView: UIViewController {
                               SettingsButtonFactory().create(),
                               ConnectionButtonFactory().create(),
                               ProfileButtonFactory().create()]
+    
+    lazy var viewControllers: [UIViewController] = {
+            let viewControllers: [UIViewController] = [buildView1Controller(),
+                                                       View2ViewController(),
+                                                       View3ViewController(),
+                                                       View4ViewController()]
+            viewControllers.forEach { addChild($0) }
+            return viewControllers
+    }()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadMenuButtons()
@@ -36,15 +46,6 @@ class MainView: UIViewController {
         container.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 0).isActive = true
         container.leadingAnchor.constraint(equalTo: sv.trailingAnchor, constant: 0).isActive = true
     }
-    
-    lazy var viewControllers: [UIViewController] = {
-            let viewControllers: [UIViewController] = [buildView1Controller(),
-                                                       View2ViewController(),
-                                                       View3ViewController(),
-                                                       View4ViewController()]
-            viewControllers.forEach { addChild($0) }
-            return viewControllers
-    }()
         
     @objc func buttonPressed(_ sender: UIButton) {
         let index = sender.tag - 1
