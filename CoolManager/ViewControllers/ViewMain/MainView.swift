@@ -1,5 +1,13 @@
 import UIKit
 
+extension UIView {
+    func loadOnlyScreen(view:UIView){
+        self.subviews.forEach { $0.removeFromSuperview() }
+        self.addSubview(view)
+    }
+}
+
+
 class MainView: UIViewController {
     let presenter = MainPresenter()
     let container = UIView()
@@ -50,10 +58,17 @@ class MainView: UIViewController {
     @objc func buttonPressed(_ sender: UIButton) {
         let index = sender.tag - 1
         assert(index >= 0 && index < viewControllers.count)
+        setViewSelected(at: index)
+    }
+    
+    func selectHomeDefault(){
+        setViewSelected(at: 0)
+    }
+    
+    func setViewSelected(at index:Int){
         buttons.forEach { $0.isSelected = false }
-        sender.isSelected = true
-        container.subviews.forEach { $0.removeFromSuperview() }
-        container.addSubview(viewControllers[index].view)
+        buttons.first { $0.tag == index + 1 }!.isSelected = true
+        container.loadOnlyScreen(view: viewControllers[index].view)
     }
     
     func buildView1Controller()->HomeView{

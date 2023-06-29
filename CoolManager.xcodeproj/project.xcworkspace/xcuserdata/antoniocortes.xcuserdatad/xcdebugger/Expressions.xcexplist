@@ -3,10 +3,76 @@
    version = "1.0">
    <ContextStates>
       <ContextState
+         contextName = "MainView.activateConstraints():MainView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "stackView_topAnchor.isActive">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MainView.setViewSelected(at:):MainView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "buttons.first { $0.tag == index + 1 }">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
          contextName = "RefrigeratorBuilderViewModelCelciusTests.test_ShouldSetSetPointToTheTop():RefrigeratorBuilderViewModelTests.swift">
          <PersistentStrings>
             <PersistentString
                value = "viewModel.getIconName()">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MainView.viewDidLoad():MainView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "container.translatesAutoresizingMaskIntoConstraints">
+            </PersistentString>
+            <PersistentString
+               value = "stackView.arrangedSubviews">
+            </PersistentString>
+            <PersistentString
+               value = "stackView.translatesAutoresizingMaskIntoConstraints">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "SetPoint.canAddUp():SetPoint.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "temperatureGoal.value">
+            </PersistentString>
+            <PersistentString
+               value = "temperatureGoal.value &lt; maxTemperature.value">
+            </PersistentString>
+            <PersistentString
+               value = "maxTemperature.value">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "Temperature.pushUp():Temperature.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "value">
+            </PersistentString>
+            <PersistentString
+               value = "interval">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "MainView.loadUIComponents():MainView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "stackView.arrangedSubviews">
+            </PersistentString>
+            <PersistentString
+               value = "presenter.viewModel.items">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -31,16 +97,24 @@
          </PersistentStrings>
       </ContextState>
       <ContextState
-         contextName = "SetPoint.canAddUp():SetPoint.swift">
+         contextName = "CoolManagerTests.test_ModifySetPointoneStepUp_SetPointShouldHaveCalculatedValue():CoolManagerTests.swift">
          <PersistentStrings>
             <PersistentString
-               value = "temperatureGoal.value">
+               value = "view.setPoint.temperature">
             </PersistentString>
             <PersistentString
-               value = "maxTemperature.value">
+               value = "view.setPoint.temperatureSetPoint">
+            </PersistentString>
+         </PersistentStrings>
+      </ContextState>
+      <ContextState
+         contextName = "closure #1 in MainView.loadUIComponents():MainView.swift">
+         <PersistentStrings>
+            <PersistentString
+               value = "stackView">
             </PersistentString>
             <PersistentString
-               value = "temperatureGoal.value &lt; maxTemperature.value">
+               value = "stackView.arrangedSubviews">
             </PersistentString>
          </PersistentStrings>
       </ContextState>
@@ -49,28 +123,6 @@
          <PersistentStrings>
             <PersistentString
                value = "viewModel.getIconName()">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "Temperature.pushUp():Temperature.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "value">
-            </PersistentString>
-            <PersistentString
-               value = "interval">
-            </PersistentString>
-         </PersistentStrings>
-      </ContextState>
-      <ContextState
-         contextName = "CoolManagerTests.test_ModifySetPointoneStepUp_SetPointShouldHaveCalculatedValue():CoolManagerTests.swift">
-         <PersistentStrings>
-            <PersistentString
-               value = "view.setPoint.temperatureSetPoint">
-            </PersistentString>
-            <PersistentString
-               value = "view.setPoint.temperature">
             </PersistentString>
          </PersistentStrings>
       </ContextState>

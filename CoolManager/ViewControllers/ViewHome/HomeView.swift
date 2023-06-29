@@ -1,6 +1,6 @@
 import UIKit
 class HomeView: UIViewController, View1View {
-    var identifier:String = ""
+    var identifier:String = "HomeView"
     var presenter: HomePresenter!
     var offsetX: CGFloat = 130
     var offsetY: CGFloat = 0
