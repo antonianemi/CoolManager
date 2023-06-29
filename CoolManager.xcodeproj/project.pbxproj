@@ -99,7 +99,7 @@
 		FA38FFEA29FE669800BC21FA /* View4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFDC29FE669800BC21FA /* View4ViewController.swift */; };
 		FA38FFEB29FE669800BC21FA /* View6ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFDD29FE669800BC21FA /* View6ViewController.swift */; };
 		FA38FFEE29FE669800BC21FA /* View7ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFE029FE669800BC21FA /* View7ViewController.swift */; };
-		FA38FFEF29FE669800BC21FA /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFE129FE669800BC21FA /* View.swift */; };
+		FA38FFEF29FE669800BC21FA /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFE129FE669800BC21FA /* HomeView.swift */; };
 		FA38FFF129FE669800BC21FA /* View5ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA38FFE329FE669800BC21FA /* View5ViewController.swift */; };
 		FA38FFF829FE670900BC21FA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA38FFF729FE670900BC21FA /* UIKit.framework */; };
 		FA6C7A2229D8F6CD002267A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA6C7A2129D8F6CD002267A5 /* AppDelegate.swift */; };
@@ -120,8 +120,8 @@
 		FAB54C322A0DC03200E14E1E /* Fan.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C2D2A0DC03200E14E1E /* Fan.swift */; };
 		FAB54C332A0DC03200E14E1E /* Resistance.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C2E2A0DC03200E14E1E /* Resistance.swift */; };
 		FAB54C352A0DC8AE00E14E1E /* TemperatureTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C342A0DC8AE00E14E1E /* TemperatureTests.swift */; };
-		FAB54C382A0E113C00E14E1E /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C372A0E113C00E14E1E /* Presenter.swift */; };
-		FAB54C392A0E113C00E14E1E /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C372A0E113C00E14E1E /* Presenter.swift */; };
+		FAB54C382A0E113C00E14E1E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C372A0E113C00E14E1E /* HomePresenter.swift */; };
+		FAB54C392A0E113C00E14E1E /* HomePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C372A0E113C00E14E1E /* HomePresenter.swift */; };
 		FAB54C3B2A0E116600E14E1E /* viewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C3A2A0E116600E14E1E /* viewProtocol.swift */; };
 		FAB54C3C2A0E116600E14E1E /* viewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C3A2A0E116600E14E1E /* viewProtocol.swift */; };
 		FAB54C3E2A0E118A00E14E1E /* RefrigeratorBuilderViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C3D2A0E118A00E14E1E /* RefrigeratorBuilderViewModel.swift */; };
@@ -233,7 +233,7 @@
 		FA38FFDC29FE669800BC21FA /* View4ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View4ViewController.swift; sourceTree = "<group>"; };
 		FA38FFDD29FE669800BC21FA /* View6ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View6ViewController.swift; sourceTree = "<group>"; };
 		FA38FFE029FE669800BC21FA /* View7ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View7ViewController.swift; sourceTree = "<group>"; };
-		FA38FFE129FE669800BC21FA /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		FA38FFE129FE669800BC21FA /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		FA38FFE329FE669800BC21FA /* View5ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View5ViewController.swift; sourceTree = "<group>"; };
 		FA38FFF729FE670900BC21FA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		FA6C7A1E29D8F6CD002267A5 /* CoolManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CoolManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -257,7 +257,7 @@
 		FAB54C2D2A0DC03200E14E1E /* Fan.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Fan.swift; sourceTree = "<group>"; };
 		FAB54C2E2A0DC03200E14E1E /* Resistance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Resistance.swift; sourceTree = "<group>"; };
 		FAB54C342A0DC8AE00E14E1E /* TemperatureTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureTests.swift; sourceTree = "<group>"; };
-		FAB54C372A0E113C00E14E1E /* Presenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		FAB54C372A0E113C00E14E1E /* HomePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePresenter.swift; sourceTree = "<group>"; };
 		FAB54C3A2A0E116600E14E1E /* viewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewProtocol.swift; sourceTree = "<group>"; };
 		FAB54C3D2A0E118A00E14E1E /* RefrigeratorBuilderViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorBuilderViewModel.swift; sourceTree = "<group>"; };
 		FAB54C432A0E152300E14E1E /* RefrigeratorBuilderViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorBuilderViewModelTests.swift; sourceTree = "<group>"; };
@@ -497,8 +497,8 @@
 		FAB54C362A0E110F00E14E1E /* ViewControler1 */ = {
 			isa = PBXGroup;
 			children = (
-				FA38FFE129FE669800BC21FA /* View.swift */,
-				FAB54C372A0E113C00E14E1E /* Presenter.swift */,
+				FA38FFE129FE669800BC21FA /* HomeView.swift */,
+				FAB54C372A0E113C00E14E1E /* HomePresenter.swift */,
 				FAB54C3A2A0E116600E14E1E /* viewProtocol.swift */,
 				FAB54C3D2A0E118A00E14E1E /* RefrigeratorBuilderViewModel.swift */,
 			);
@@ -745,7 +745,7 @@
 				FA382EDF2A1F3CC80047D033 /* FanProtocol.swift in Sources */,
 				FACC4C9F2A4A9CF900246B2E /* ConnectionButton.swift in Sources */,
 				FA2706AF2A29B14600EB2DAE /* turnCompressorOnAction.swift in Sources */,
-				FAB54C382A0E113C00E14E1E /* Presenter.swift in Sources */,
+				FAB54C382A0E113C00E14E1E /* HomePresenter.swift in Sources */,
 				FA38FFEA29FE669800BC21FA /* View4ViewController.swift in Sources */,
 				FA382EE82A1F3D160047D033 /* CompressorProtocol.swift in Sources */,
 				FA382ED82A19E2710047D033 /* NormalRefrigeratorFactory.swift in Sources */,
@@ -758,7 +758,7 @@
 				FA382F052A253F3E0047D033 /* CoolManager.swift in Sources */,
 				FACC4C972A4A911900246B2E /* HomeButton.swift in Sources */,
 				FA382EF82A20F20E0047D033 /* DoorOpenedRefrigeratorFactory.swift in Sources */,
-				FA38FFEF29FE669800BC21FA /* View.swift in Sources */,
+				FA38FFEF29FE669800BC21FA /* HomeView.swift in Sources */,
 				FA2706AC2A29A74D00EB2DAE /* DefrostingRefrigeratorMock.swift in Sources */,
 				FA2706902A298B8A00EB2DAE /* turnLightOffAction.swift in Sources */,
 				FA382EFB2A20FE060047D033 /* CorruptTemperaturesRefrigeratorFactory.swift in Sources */,
@@ -834,7 +834,7 @@
 				FA2706B92A29B26B00EB2DAE /* turnFanOffAction.swift in Sources */,
 				FA714C382A088BFF003E2CA4 /* CoolManagerTests.swift in Sources */,
 				FA382EEC2A1F3D2D0047D033 /* DoorProtocol.swift in Sources */,
-				FAB54C392A0E113C00E14E1E /* Presenter.swift in Sources */,
+				FAB54C392A0E113C00E14E1E /* HomePresenter.swift in Sources */,
 				FAB54C3C2A0E116600E14E1E /* viewProtocol.swift in Sources */,
 				FA2706BC2A29B33200EB2DAE /* turnResistanceOnAction.swift in Sources */,
 				FA27069A2A2999C000EB2DAE /* openDoorAction.swift in Sources */,

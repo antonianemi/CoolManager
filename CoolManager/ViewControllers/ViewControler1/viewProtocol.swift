@@ -1,5 +1,5 @@
 protocol View1View: AnyObject {
-    var presenter:View1Presenter! { get set }
+    var presenter:HomePresenter! { get set }
     func setLightStatus(_ status:Bool)
     func setDoorStatus(_ status:Bool)
     func setResistenceStatus(_ status:Bool)
@@ -10,7 +10,7 @@ protocol View1View: AnyObject {
 }
 
 class MockView1View: View1View {
-    var presenter: View1Presenter!
+    var presenter: HomePresenter!
     var setLightStatusCalled = false
     var setDoorStatusCalled = false
     var setResistenceStatusCalled = false

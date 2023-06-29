@@ -55,9 +55,9 @@ class MainView: UIViewController {
         container.addSubview(viewControllers[index].view)
     }
     
-    func buildView1Controller()->View1ViewController{
-        let view = View1ViewController()
-        view.presenter = View1Presenter(DoorOpenedRefrigeratorFactory().create())
+    func buildView1Controller()->HomeView{
+        let view = HomeView()
+        view.presenter = HomePresenter(DoorOpenedRefrigeratorFactory().create())
         view.identifier = "View1ViewController"
         return view
     }

@@ -1,7 +1,7 @@
 import UIKit
-class View1ViewController: UIViewController, View1View {
+class HomeView: UIViewController, View1View {
     var identifier:String = ""
-    var presenter: View1Presenter!
+    var presenter: HomePresenter!
     var offsetX: CGFloat = 130
     var offsetY: CGFloat = 0
     

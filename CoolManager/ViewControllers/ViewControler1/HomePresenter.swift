@@ -1,4 +1,4 @@
-class View1Presenter: view1Delegate {
+class HomePresenter: view1Delegate {
     private(set) var viewModel: RefrigeratorBuilderViewModel
     private weak var view: View1View?
     
