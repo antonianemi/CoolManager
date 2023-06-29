@@ -1,6 +1,6 @@
 import UIKit
 
-class ViewController: UIViewController {
+class MainView: UIViewController {
     let presenter = MainPresenter()
     let container = UIView()
     let buttons:[UIButton] = [HomeButtonFactory().create(),
