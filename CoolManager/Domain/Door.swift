@@ -1,4 +1,4 @@
-final class Door: DoorProtocol {
+class Door: DoorProtocol {
     internal var _locked:Bool
     internal var _open:Bool
 

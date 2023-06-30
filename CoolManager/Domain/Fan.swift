@@ -1,4 +1,4 @@
-final class Resistance:ResistanceProtocol  {
+class Fan:FanProtocol  {
     internal var isOn: Bool
     
     init(isOn: Bool) {
@@ -17,7 +17,7 @@ final class Resistance:ResistanceProtocol  {
         isOn = false
     }
     
-    func printStatus() {
-        print("Resistance: \(isActive)")
+    func printStatus(){
+        print("Fan:         \(isOn)")
     }
 }
