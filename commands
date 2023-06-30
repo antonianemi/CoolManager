@@ -1,0 +1,4 @@
+
+Fire Unit Testing:
+
+xcodebuild test -project CoolManager.xcodeproj -scheme CoolManager -destination 'platform=iOS Simulator,name=iPad Pro (12.9-inch) (6th generation)'

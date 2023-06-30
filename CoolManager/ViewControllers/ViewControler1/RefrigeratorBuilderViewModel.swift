@@ -42,12 +42,12 @@ class RefrigeratorBuilderViewModel {
     }
     
     func upScaleSetPoint(){
-        refrigerator.setPoint.upScaleSetPoint()
+        refrigerator.setPoint.up()
         delegate?.updateSetPointIcon()
     }
     
     func downScaleSetPoint(){
-        refrigerator.setPoint.downScaleSetPoint()
+        refrigerator.setPoint.down()
         delegate?.updateSetPointIcon()
     }
 }
