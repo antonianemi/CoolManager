@@ -1,4 +1,4 @@
-final class Fan:FanProtocol  {
+class Compressor:CompressorProtocol  {
     internal var isOn: Bool
     
     init(isOn: Bool) {
@@ -9,15 +9,15 @@ final class Fan:FanProtocol  {
         return isOn
     }
     
-    func turnOn() {
+    func start() {
         isOn = true
     }
     
-    func turnOff() {
+    func stop() {
         isOn = false
     }
     
-    func printStatus(){
-        print("Fan:         \(isOn)")
+    func printStatus() {
+        print("Compressor: \(isActive)")
     }
 }

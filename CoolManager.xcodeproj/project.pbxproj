@@ -116,6 +116,12 @@
 		FA714C292A088369003E2CA4 /* TemperatureUnit.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C282A088369003E2CA4 /* TemperatureUnit.swift */; };
 		FA714C382A088BFF003E2CA4 /* CoolManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C372A088BFF003E2CA4 /* CoolManagerTests.swift */; };
 		FA714C3E2A088C11003E2CA4 /* TemperatureRulesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA714C2F2A088BD9003E2CA4 /* TemperatureRulesTests.swift */; };
+		FA8C4D632A4F5289008D8899 /* TonyRefrigerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C4D622A4F5289008D8899 /* TonyRefrigerator.swift */; };
+		FA8C4D642A4F5289008D8899 /* TonyRefrigerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C4D622A4F5289008D8899 /* TonyRefrigerator.swift */; };
+		FA8C4D662A4F5B91008D8899 /* ComponentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C4D652A4F5B91008D8899 /* ComponentFactory.swift */; };
+		FA8C4D672A4F5B91008D8899 /* ComponentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C4D652A4F5B91008D8899 /* ComponentFactory.swift */; };
+		FA8C4D692A4F5BE0008D8899 /* NormalLightFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C4D682A4F5BE0008D8899 /* NormalLightFactory.swift */; };
+		FA8C4D6A2A4F5BE0008D8899 /* NormalLightFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C4D682A4F5BE0008D8899 /* NormalLightFactory.swift */; };
 		FAB54C2F2A0DC03200E14E1E /* Compressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C2A2A0DC03200E14E1E /* Compressor.swift */; };
 		FAB54C302A0DC03200E14E1E /* Door.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C2B2A0DC03200E14E1E /* Door.swift */; };
 		FAB54C312A0DC03200E14E1E /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C2C2A0DC03200E14E1E /* Light.swift */; };
@@ -229,6 +235,9 @@
 		FA714C2F2A088BD9003E2CA4 /* TemperatureRulesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureRulesTests.swift; sourceTree = "<group>"; };
 		FA714C352A088BFF003E2CA4 /* CoolManagerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CoolManagerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA714C372A088BFF003E2CA4 /* CoolManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolManagerTests.swift; sourceTree = "<group>"; };
+		FA8C4D622A4F5289008D8899 /* TonyRefrigerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TonyRefrigerator.swift; sourceTree = "<group>"; };
+		FA8C4D652A4F5B91008D8899 /* ComponentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentFactory.swift; sourceTree = "<group>"; };
+		FA8C4D682A4F5BE0008D8899 /* NormalLightFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalLightFactory.swift; sourceTree = "<group>"; };
 		FAB54C2A2A0DC03200E14E1E /* Compressor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Compressor.swift; sourceTree = "<group>"; };
 		FAB54C2B2A0DC03200E14E1E /* Door.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Door.swift; sourceTree = "<group>"; };
 		FAB54C2C2A0DC03200E14E1E /* Light.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
@@ -334,6 +343,7 @@
 				FA382EF72A20F20E0047D033 /* DoorOpenedRefrigeratorFactory.swift */,
 				FA382EFA2A20FE060047D033 /* CorruptTemperaturesRefrigeratorFactory.swift */,
 				FA2707012A30DAD700EB2DAE /* InconsistentRefrigeratorFactory.swift */,
+				FA8C4D622A4F5289008D8899 /* TonyRefrigerator.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -348,6 +358,8 @@
 				FA382EE72A1F3D160047D033 /* CompressorProtocol.swift */,
 				FA382EEA2A1F3D2D0047D033 /* DoorProtocol.swift */,
 				FA382EED2A1F3D4E0047D033 /* RefrigeratorComponent.swift */,
+				FA8C4D652A4F5B91008D8899 /* ComponentFactory.swift */,
+				FA8C4D682A4F5BE0008D8899 /* NormalLightFactory.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -355,11 +367,6 @@
 		FA382EF02A1F3D660047D033 /* NormalMocks */ = {
 			isa = PBXGroup;
 			children = (
-				FAB54C2E2A0DC03200E14E1E /* Resistance.swift */,
-				FAB54C2A2A0DC03200E14E1E /* Compressor.swift */,
-				FAB54C2B2A0DC03200E14E1E /* Door.swift */,
-				FAB54C2D2A0DC03200E14E1E /* Fan.swift */,
-				FAB54C2C2A0DC03200E14E1E /* Light.swift */,
 			);
 			path = NormalMocks;
 			sourceTree = "<group>";
@@ -431,6 +438,11 @@
 		FA714C1E2A086BF4003E2CA4 /* Domain */ = {
 			isa = PBXGroup;
 			children = (
+				FAB54C2E2A0DC03200E14E1E /* Resistance.swift */,
+				FAB54C2A2A0DC03200E14E1E /* Compressor.swift */,
+				FAB54C2B2A0DC03200E14E1E /* Door.swift */,
+				FAB54C2D2A0DC03200E14E1E /* Fan.swift */,
+				FAB54C2C2A0DC03200E14E1E /* Light.swift */,
 				FA382F042A253F3E0047D033 /* CoolManager.swift */,
 				FA714C1F2A086C0D003E2CA4 /* Refrigerator.swift */,
 				FA714C212A0870A2003E2CA4 /* Temperature.swift */,
@@ -625,6 +637,7 @@
 				FA382EF52A1FB3660047D033 /* SetPoint.swift in Sources */,
 				FA6C7A2629D8F6CD002267A5 /* ViewController.swift in Sources */,
 				FA382EEB2A1F3D2D0047D033 /* DoorProtocol.swift in Sources */,
+				FA8C4D692A4F5BE0008D8899 /* NormalLightFactory.swift in Sources */,
 				FA2706962A298D0E00EB2DAE /* pushSetPointDownAction.swift in Sources */,
 				FA2706C12A29BBDA00EB2DAE /* DashBoardController.swift in Sources */,
 				FA38FFEB29FE669800BC21FA /* View6ViewController.swift in Sources */,
@@ -632,6 +645,7 @@
 				FA2706CB2A29BF5B00EB2DAE /* viewDashBoard.swift in Sources */,
 				FAB54C332A0DC03200E14E1E /* Resistance.swift in Sources */,
 				FA6C7A2229D8F6CD002267A5 /* AppDelegate.swift in Sources */,
+				FA8C4D632A4F5289008D8899 /* TonyRefrigerator.swift in Sources */,
 				FA2706B82A29B26B00EB2DAE /* turnFanOffAction.swift in Sources */,
 				FA2706992A2999C000EB2DAE /* openDoorAction.swift in Sources */,
 				FA382ED52A19E1C30047D033 /* RefrigeratorFactory.swift in Sources */,
@@ -650,6 +664,7 @@
 				FA38FFE829FE669800BC21FA /* View3ViewController.swift in Sources */,
 				FA2706A22A29A0F000EB2DAE /* lockDoorAction.swift in Sources */,
 				FA714C222A0870A2003E2CA4 /* Temperature.swift in Sources */,
+				FA8C4D662A4F5B91008D8899 /* ComponentFactory.swift in Sources */,
 				FAB54C312A0DC03200E14E1E /* Light.swift in Sources */,
 				FA6C7A2429D8F6CD002267A5 /* SceneDelegate.swift in Sources */,
 				FA2706862A295B8200EB2DAE /* TemperatureController.swift in Sources */,
@@ -688,6 +703,8 @@
 				FA2707032A30F0ED00EB2DAE /* InconsistentRefrigeratorFactory.swift in Sources */,
 				FA2706C52A29BC8C00EB2DAE /* ControllerCoolManager.swift in Sources */,
 				FA2706872A295B8200EB2DAE /* TemperatureController.swift in Sources */,
+				FA8C4D642A4F5289008D8899 /* TonyRefrigerator.swift in Sources */,
+				FA8C4D672A4F5B91008D8899 /* ComponentFactory.swift in Sources */,
 				FA2706C22A29BBDA00EB2DAE /* DashBoardController.swift in Sources */,
 				FA382F062A253F3E0047D033 /* CoolManager.swift in Sources */,
 				FA382ED02A19A2930047D033 /* Door.swift in Sources */,
@@ -716,6 +733,7 @@
 				FA2706A02A299B1C00EB2DAE /* unlockDoorAction.swift in Sources */,
 				FA382EB92A19A23E0047D033 /* Refrigerator.swift in Sources */,
 				FA382EBA2A19A23E0047D033 /* Temperature.swift in Sources */,
+				FA8C4D6A2A4F5BE0008D8899 /* NormalLightFactory.swift in Sources */,
 				FA382EBC2A19A23E0047D033 /* TemperatureStatus.swift in Sources */,
 				FA27068B2A29897900EB2DAE /* Action.swift in Sources */,
 				FA382EBD2A19A23E0047D033 /* TemperatureUnit.swift in Sources */,
