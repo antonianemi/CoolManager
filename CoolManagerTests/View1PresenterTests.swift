@@ -3,7 +3,7 @@ import XCTest
 class View1PresenterTests: XCTestCase {
     func testUpScaleSetPoint() {
         let refrigerator = try!NormalRefrigeratorFactory().create()
-        let presenter = View1Presenter(refrigerator)
+        let presenter = HomePresenter(refrigerator)
         let view = MockView1View()
         presenter.setView(view)
         presenter.upScaleSetPoint()
@@ -14,7 +14,7 @@ class View1PresenterTests: XCTestCase {
     
     func testDownScaleSetPoint() {
         let refrigerator = try!NormalRefrigeratorFactory().create()
-        let presenter = View1Presenter(refrigerator)
+        let presenter = HomePresenter(refrigerator)
         let view = MockView1View()
         presenter.setView(view)
         presenter.downScaleSetPoint()

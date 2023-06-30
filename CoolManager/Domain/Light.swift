@@ -1,4 +1,4 @@
-final class Light:LightProtocol  {
+class Light:LightProtocol  {
     internal var isOn: Bool
     
     init(isOn: Bool) {
