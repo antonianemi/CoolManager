@@ -1,1 +1,3 @@
 CoolManagerTests/StarUML.app/
+*.xcuserstate
+.DS_Store
