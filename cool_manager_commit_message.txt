@@ -1,0 +1,3 @@
+Add file-based configuration factory and related tests
+
+This commit introduces a factory that reads configurations from a file (`FileBasedRefrigeratorFactory.swift`). Additionally, a configuration file (`RefrigeratorConfiguration.swift`) and an example file (`configurations.txt`) have been added. Tests in `RefrigeratorTests.swift` have been updated to include scenarios based on this new functionality.
