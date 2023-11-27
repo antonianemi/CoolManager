@@ -7,6 +7,55 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		FA0E0E2C2B140A9400223C5F /* InitializationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E2B2B140A9400223C5F /* InitializationTests.swift */; };
+		FA0E0E2E2B140BAB00223C5F /* MoveUpSetPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E2D2B140BAB00223C5F /* MoveUpSetPointTests.swift */; };
+		FA0E0E322B1410FB00223C5F /* NormalCoolManagerOneIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E312B1410FB00223C5F /* NormalCoolManagerOneIntervalMock.swift */; };
+		FA0E0E332B1410FB00223C5F /* NormalCoolManagerOneIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E312B1410FB00223C5F /* NormalCoolManagerOneIntervalMock.swift */; };
+		FA0E0E352B1411E700223C5F /* OneUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E342B1411E700223C5F /* OneUnitIntervalConfiguration.txt */; };
+		FA0E0E362B1411E700223C5F /* OneUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E342B1411E700223C5F /* OneUnitIntervalConfiguration.txt */; };
+		FA0E0E382B1413A200223C5F /* RefrigeratorConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E372B1413A200223C5F /* RefrigeratorConfigurationManager.swift */; };
+		FA0E0E392B1413A200223C5F /* RefrigeratorConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E372B1413A200223C5F /* RefrigeratorConfigurationManager.swift */; };
+		FA0E0E3B2B1414A100223C5F /* ConfigurationFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E3A2B1414A100223C5F /* ConfigurationFiles.swift */; };
+		FA0E0E3C2B1414A100223C5F /* ConfigurationFiles.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E3A2B1414A100223C5F /* ConfigurationFiles.swift */; };
+		FA0E0E3E2B1416FF00223C5F /* TwoUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E3D2B1416FF00223C5F /* TwoUnitIntervalConfiguration.txt */; };
+		FA0E0E3F2B1416FF00223C5F /* TwoUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E3D2B1416FF00223C5F /* TwoUnitIntervalConfiguration.txt */; };
+		FA0E0E422B14179C00223C5F /* CoolManagerTwoIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E412B14179C00223C5F /* CoolManagerTwoIntervalMock.swift */; };
+		FA0E0E432B14179C00223C5F /* CoolManagerTwoIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E412B14179C00223C5F /* CoolManagerTwoIntervalMock.swift */; };
+		FA0E0E452B14181900223C5F /* ThreeUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E442B14181900223C5F /* ThreeUnitIntervalConfiguration.txt */; };
+		FA0E0E462B14181900223C5F /* ThreeUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E442B14181900223C5F /* ThreeUnitIntervalConfiguration.txt */; };
+		FA0E0E482B14183800223C5F /* FourUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E472B14183800223C5F /* FourUnitIntervalConfiguration.txt */; };
+		FA0E0E492B14183800223C5F /* FourUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E472B14183800223C5F /* FourUnitIntervalConfiguration.txt */; };
+		FA0E0E4B2B14192F00223C5F /* FiveUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E4A2B14192F00223C5F /* FiveUnitIntervalConfiguration.txt */; };
+		FA0E0E4C2B14192F00223C5F /* FiveUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E4A2B14192F00223C5F /* FiveUnitIntervalConfiguration.txt */; };
+		FA0E0E4E2B14193C00223C5F /* SixUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E4D2B14193C00223C5F /* SixUnitIntervalConfiguration.txt */; };
+		FA0E0E4F2B14193C00223C5F /* SixUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E4D2B14193C00223C5F /* SixUnitIntervalConfiguration.txt */; };
+		FA0E0E512B14194800223C5F /* SevenUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E502B14194800223C5F /* SevenUnitIntervalConfiguration.txt */; };
+		FA0E0E522B14194800223C5F /* SevenUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E502B14194800223C5F /* SevenUnitIntervalConfiguration.txt */; };
+		FA0E0E542B14195100223C5F /* EightUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E532B14195100223C5F /* EightUnitIntervalConfiguration.txt */; };
+		FA0E0E552B14195100223C5F /* EightUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E532B14195100223C5F /* EightUnitIntervalConfiguration.txt */; };
+		FA0E0E572B14195800223C5F /* NineUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E562B14195800223C5F /* NineUnitIntervalConfiguration.txt */; };
+		FA0E0E582B14195800223C5F /* NineUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E562B14195800223C5F /* NineUnitIntervalConfiguration.txt */; };
+		FA0E0E5A2B14196100223C5F /* TenUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E592B14196100223C5F /* TenUnitIntervalConfiguration.txt */; };
+		FA0E0E5B2B14196100223C5F /* TenUnitIntervalConfiguration.txt in Resources */ = {isa = PBXBuildFile; fileRef = FA0E0E592B14196100223C5F /* TenUnitIntervalConfiguration.txt */; };
+		FA0E0E5D2B141FAE00223C5F /* NormalCoolManagerTwoIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E5C2B141FAE00223C5F /* NormalCoolManagerTwoIntervalMock.swift */; };
+		FA0E0E5E2B141FAE00223C5F /* NormalCoolManagerTwoIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E5C2B141FAE00223C5F /* NormalCoolManagerTwoIntervalMock.swift */; };
+		FA0E0E602B141FC100223C5F /* NormalCoolManagerThreeIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E5F2B141FC100223C5F /* NormalCoolManagerThreeIntervalMock.swift */; };
+		FA0E0E612B141FC100223C5F /* NormalCoolManagerThreeIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E5F2B141FC100223C5F /* NormalCoolManagerThreeIntervalMock.swift */; };
+		FA0E0E632B141FD100223C5F /* NormalCoolManagerFourIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E622B141FD100223C5F /* NormalCoolManagerFourIntervalMock.swift */; };
+		FA0E0E642B141FD100223C5F /* NormalCoolManagerFourIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E622B141FD100223C5F /* NormalCoolManagerFourIntervalMock.swift */; };
+		FA0E0E662B141FE000223C5F /* NormalCoolManagerFiveIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E652B141FE000223C5F /* NormalCoolManagerFiveIntervalMock.swift */; };
+		FA0E0E672B141FE000223C5F /* NormalCoolManagerFiveIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E652B141FE000223C5F /* NormalCoolManagerFiveIntervalMock.swift */; };
+		FA0E0E692B141FF000223C5F /* NormalCoolManagerSixIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E682B141FF000223C5F /* NormalCoolManagerSixIntervalMock.swift */; };
+		FA0E0E6A2B141FF000223C5F /* NormalCoolManagerSixIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E682B141FF000223C5F /* NormalCoolManagerSixIntervalMock.swift */; };
+		FA0E0E6C2B141FFD00223C5F /* NormalCoolManagerSevenIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E6B2B141FFD00223C5F /* NormalCoolManagerSevenIntervalMock.swift */; };
+		FA0E0E6D2B141FFD00223C5F /* NormalCoolManagerSevenIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E6B2B141FFD00223C5F /* NormalCoolManagerSevenIntervalMock.swift */; };
+		FA0E0E6F2B14201100223C5F /* NormalCoolManagerEightIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E6E2B14201100223C5F /* NormalCoolManagerEightIntervalMock.swift */; };
+		FA0E0E702B14201100223C5F /* NormalCoolManagerEightIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E6E2B14201100223C5F /* NormalCoolManagerEightIntervalMock.swift */; };
+		FA0E0E722B14201D00223C5F /* NormalCoolManagerNineIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E712B14201D00223C5F /* NormalCoolManagerNineIntervalMock.swift */; };
+		FA0E0E732B14201D00223C5F /* NormalCoolManagerNineIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E712B14201D00223C5F /* NormalCoolManagerNineIntervalMock.swift */; };
+		FA0E0E752B14202700223C5F /* NormalCoolManagerTenIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E742B14202700223C5F /* NormalCoolManagerTenIntervalMock.swift */; };
+		FA0E0E762B14202700223C5F /* NormalCoolManagerTenIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E742B14202700223C5F /* NormalCoolManagerTenIntervalMock.swift */; };
+		FA0E0E782B15273C00223C5F /* MoveDownSetPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E772B15273C00223C5F /* MoveDownSetPointTests.swift */; };
 		FA2706832A2954D100EB2DAE /* RefrigeratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706822A2954D100EB2DAE /* RefrigeratorTests.swift */; };
 		FA2706862A295B8200EB2DAE /* TemperatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706852A295B8200EB2DAE /* TemperatureController.swift */; };
 		FA2706872A295B8200EB2DAE /* TemperatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706852A295B8200EB2DAE /* TemperatureController.swift */; };
@@ -200,6 +249,32 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		FA0E0E2B2B140A9400223C5F /* InitializationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InitializationTests.swift; sourceTree = "<group>"; };
+		FA0E0E2D2B140BAB00223C5F /* MoveUpSetPointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveUpSetPointTests.swift; sourceTree = "<group>"; };
+		FA0E0E312B1410FB00223C5F /* NormalCoolManagerOneIntervalMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCoolManagerOneIntervalMock.swift; sourceTree = "<group>"; };
+		FA0E0E342B1411E700223C5F /* OneUnitIntervalConfiguration.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = OneUnitIntervalConfiguration.txt; sourceTree = "<group>"; };
+		FA0E0E372B1413A200223C5F /* RefrigeratorConfigurationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorConfigurationManager.swift; sourceTree = "<group>"; };
+		FA0E0E3A2B1414A100223C5F /* ConfigurationFiles.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfigurationFiles.swift; sourceTree = "<group>"; };
+		FA0E0E3D2B1416FF00223C5F /* TwoUnitIntervalConfiguration.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = TwoUnitIntervalConfiguration.txt; sourceTree = "<group>"; };
+		FA0E0E412B14179C00223C5F /* CoolManagerTwoIntervalMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoolManagerTwoIntervalMock.swift; sourceTree = "<group>"; };
+		FA0E0E442B14181900223C5F /* ThreeUnitIntervalConfiguration.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = ThreeUnitIntervalConfiguration.txt; sourceTree = "<group>"; };
+		FA0E0E472B14183800223C5F /* FourUnitIntervalConfiguration.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = FourUnitIntervalConfiguration.txt; sourceTree = "<group>"; };
+		FA0E0E4A2B14192F00223C5F /* FiveUnitIntervalConfiguration.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = FiveUnitIntervalConfiguration.txt; sourceTree = "<group>"; };
+		FA0E0E4D2B14193C00223C5F /* SixUnitIntervalConfiguration.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SixUnitIntervalConfiguration.txt; sourceTree = "<group>"; };
+		FA0E0E502B14194800223C5F /* SevenUnitIntervalConfiguration.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = SevenUnitIntervalConfiguration.txt; sourceTree = "<group>"; };
+		FA0E0E532B14195100223C5F /* EightUnitIntervalConfiguration.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = EightUnitIntervalConfiguration.txt; sourceTree = "<group>"; };
+		FA0E0E562B14195800223C5F /* NineUnitIntervalConfiguration.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = NineUnitIntervalConfiguration.txt; sourceTree = "<group>"; };
+		FA0E0E592B14196100223C5F /* TenUnitIntervalConfiguration.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = TenUnitIntervalConfiguration.txt; sourceTree = "<group>"; };
+		FA0E0E5C2B141FAE00223C5F /* NormalCoolManagerTwoIntervalMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCoolManagerTwoIntervalMock.swift; sourceTree = "<group>"; };
+		FA0E0E5F2B141FC100223C5F /* NormalCoolManagerThreeIntervalMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCoolManagerThreeIntervalMock.swift; sourceTree = "<group>"; };
+		FA0E0E622B141FD100223C5F /* NormalCoolManagerFourIntervalMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCoolManagerFourIntervalMock.swift; sourceTree = "<group>"; };
+		FA0E0E652B141FE000223C5F /* NormalCoolManagerFiveIntervalMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCoolManagerFiveIntervalMock.swift; sourceTree = "<group>"; };
+		FA0E0E682B141FF000223C5F /* NormalCoolManagerSixIntervalMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCoolManagerSixIntervalMock.swift; sourceTree = "<group>"; };
+		FA0E0E6B2B141FFD00223C5F /* NormalCoolManagerSevenIntervalMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCoolManagerSevenIntervalMock.swift; sourceTree = "<group>"; };
+		FA0E0E6E2B14201100223C5F /* NormalCoolManagerEightIntervalMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCoolManagerEightIntervalMock.swift; sourceTree = "<group>"; };
+		FA0E0E712B14201D00223C5F /* NormalCoolManagerNineIntervalMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCoolManagerNineIntervalMock.swift; sourceTree = "<group>"; };
+		FA0E0E742B14202700223C5F /* NormalCoolManagerTenIntervalMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCoolManagerTenIntervalMock.swift; sourceTree = "<group>"; };
+		FA0E0E772B15273C00223C5F /* MoveDownSetPointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveDownSetPointTests.swift; sourceTree = "<group>"; };
 		FA2706822A2954D100EB2DAE /* RefrigeratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefrigeratorTests.swift; sourceTree = "<group>"; };
 		FA2706852A295B8200EB2DAE /* TemperatureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureController.swift; sourceTree = "<group>"; };
 		FA2706892A29897900EB2DAE /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
@@ -327,6 +402,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		FA0E0E2F2B140D9D00223C5F /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		FA0E0E302B1410C300223C5F /* NormalCoolManagerMock */ = {
+			isa = PBXGroup;
+			children = (
+				FA2706A52A29A6C500EB2DAE /* NormalCoolManagerMock.swift */,
+				FA0E0E312B1410FB00223C5F /* NormalCoolManagerOneIntervalMock.swift */,
+				FA0E0E412B14179C00223C5F /* CoolManagerTwoIntervalMock.swift */,
+				FA0E0E5C2B141FAE00223C5F /* NormalCoolManagerTwoIntervalMock.swift */,
+				FA0E0E5F2B141FC100223C5F /* NormalCoolManagerThreeIntervalMock.swift */,
+				FA0E0E622B141FD100223C5F /* NormalCoolManagerFourIntervalMock.swift */,
+				FA0E0E652B141FE000223C5F /* NormalCoolManagerFiveIntervalMock.swift */,
+				FA0E0E682B141FF000223C5F /* NormalCoolManagerSixIntervalMock.swift */,
+				FA0E0E6B2B141FFD00223C5F /* NormalCoolManagerSevenIntervalMock.swift */,
+				FA0E0E6E2B14201100223C5F /* NormalCoolManagerEightIntervalMock.swift */,
+				FA0E0E712B14201D00223C5F /* NormalCoolManagerNineIntervalMock.swift */,
+				FA0E0E742B14202700223C5F /* NormalCoolManagerTenIntervalMock.swift */,
+			);
+			path = NormalCoolManagerMock;
+			sourceTree = "<group>";
+		};
+		FA0E0E402B14171700223C5F /* Files */ = {
+			isa = PBXGroup;
+			children = (
+				FA0E0E3D2B1416FF00223C5F /* TwoUnitIntervalConfiguration.txt */,
+				FA0E0E342B1411E700223C5F /* OneUnitIntervalConfiguration.txt */,
+				FAC9DAD32B115BF2000602C3 /* configurations.txt */,
+				FA0E0E442B14181900223C5F /* ThreeUnitIntervalConfiguration.txt */,
+				FA0E0E472B14183800223C5F /* FourUnitIntervalConfiguration.txt */,
+				FA0E0E4A2B14192F00223C5F /* FiveUnitIntervalConfiguration.txt */,
+				FA0E0E4D2B14193C00223C5F /* SixUnitIntervalConfiguration.txt */,
+				FA0E0E502B14194800223C5F /* SevenUnitIntervalConfiguration.txt */,
+				FA0E0E532B14195100223C5F /* EightUnitIntervalConfiguration.txt */,
+				FA0E0E562B14195800223C5F /* NineUnitIntervalConfiguration.txt */,
+				FA0E0E592B14196100223C5F /* TenUnitIntervalConfiguration.txt */,
+			);
+			path = Files;
+			sourceTree = "<group>";
+		};
 		FA2706842A295B6800EB2DAE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
@@ -363,7 +482,7 @@
 		FA2706A42A29A67E00EB2DAE /* CoolManager */ = {
 			isa = PBXGroup;
 			children = (
-				FA2706A52A29A6C500EB2DAE /* NormalCoolManagerMock.swift */,
+				FA0E0E302B1410C300223C5F /* NormalCoolManagerMock */,
 				FA2706A82A29A6FC00EB2DAE /* DoorOpenedCoolManagerMock.swift */,
 				FA2706AB2A29A74D00EB2DAE /* DefrostingRefrigeratorMock.swift */,
 			);
@@ -383,6 +502,7 @@
 		FA382ED32A19E1920047D033 /* Factory */ = {
 			isa = PBXGroup;
 			children = (
+				FA0E0E2F2B140D9D00223C5F /* New Group */,
 				FAC9DACF2B115282000602C3 /* FileBaseRefrigeratorFactory */,
 				FA382ED42A19E1C30047D033 /* RefrigeratorFactory.swift */,
 				FA382ED72A19E2710047D033 /* NormalRefrigeratorFactory.swift */,
@@ -501,10 +621,13 @@
 				FA2706822A2954D100EB2DAE /* RefrigeratorTests.swift */,
 				FA714C2F2A088BD9003E2CA4 /* TemperatureRulesTests.swift */,
 				FA714C372A088BFF003E2CA4 /* CoolManagerTests.swift */,
+				FA0E0E2B2B140A9400223C5F /* InitializationTests.swift */,
 				FAB54C342A0DC8AE00E14E1E /* TemperatureTests.swift */,
 				FAB54C432A0E152300E14E1E /* RefrigeratorBuilderViewModelTests.swift */,
 				FACC4C822A48D7BE00246B2E /* View1PresenterTests.swift */,
 				FACC4C8D2A4A737800246B2E /* MainPresenterTest.swift */,
+				FA0E0E2D2B140BAB00223C5F /* MoveUpSetPointTests.swift */,
+				FA0E0E772B15273C00223C5F /* MoveDownSetPointTests.swift */,
 			);
 			path = CoolManagerTests;
 			sourceTree = "<group>";
@@ -551,9 +674,11 @@
 		FAC9DACF2B115282000602C3 /* FileBaseRefrigeratorFactory */ = {
 			isa = PBXGroup;
 			children = (
+				FA0E0E402B14171700223C5F /* Files */,
 				FAC9DACC2B1151BE000602C3 /* FileBasedRefrigeratorFactory.swift */,
 				FAC9DAC92B11516A000602C3 /* RefrigeratorConfiguration.swift */,
-				FAC9DAD32B115BF2000602C3 /* configurations.txt */,
+				FA0E0E372B1413A200223C5F /* RefrigeratorConfigurationManager.swift */,
+				FA0E0E3A2B1414A100223C5F /* ConfigurationFiles.swift */,
 			);
 			path = FileBaseRefrigeratorFactory;
 			sourceTree = "<group>";
@@ -688,19 +813,29 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FA0E0E4B2B14192F00223C5F /* FiveUnitIntervalConfiguration.txt in Resources */,
 				FAB54C5F2A0E82E300E14E1E /* VISTA2.xib in Resources */,
 				FA6C7A2E29D8F6D0002267A5 /* LaunchScreen.storyboard in Resources */,
 				FAB54C572A0E82E300E14E1E /* VISTA7.xib in Resources */,
+				FA0E0E572B14195800223C5F /* NineUnitIntervalConfiguration.txt in Resources */,
 				FAB54C532A0E82E300E14E1E /* VISTA6.xib in Resources */,
 				FAB54C612A0E82E300E14E1E /* VISTA9.xib in Resources */,
 				FAB54C652A0E82E300E14E1E /* VISTA5.xib in Resources */,
+				FA0E0E482B14183800223C5F /* FourUnitIntervalConfiguration.txt in Resources */,
 				FAB54C552A0E82E300E14E1E /* VISTA1.xib in Resources */,
 				FAB54C512A0E82E300E14E1E /* ViewHome.xib in Resources */,
+				FA0E0E512B14194800223C5F /* SevenUnitIntervalConfiguration.txt in Resources */,
 				FAB54C5B2A0E82E300E14E1E /* VISTA8.xib in Resources */,
+				FA0E0E4E2B14193C00223C5F /* SixUnitIntervalConfiguration.txt in Resources */,
 				FA6C7A2B29D8F6D0002267A5 /* Assets.xcassets in Resources */,
+				FA0E0E3E2B1416FF00223C5F /* TwoUnitIntervalConfiguration.txt in Resources */,
 				FAC9DAD42B115BF2000602C3 /* configurations.txt in Resources */,
+				FA0E0E352B1411E700223C5F /* OneUnitIntervalConfiguration.txt in Resources */,
 				FA6C7A2929D8F6CD002267A5 /* Main.storyboard in Resources */,
 				FAB54C592A0E82E300E14E1E /* VISTA3.xib in Resources */,
+				FA0E0E542B14195100223C5F /* EightUnitIntervalConfiguration.txt in Resources */,
+				FA0E0E5A2B14196100223C5F /* TenUnitIntervalConfiguration.txt in Resources */,
+				FA0E0E452B14181900223C5F /* ThreeUnitIntervalConfiguration.txt in Resources */,
 				FAB54C632A0E82E300E14E1E /* VISTA10.xib in Resources */,
 				FAB54C5D2A0E82E300E14E1E /* VISTA4.xib in Resources */,
 			);
@@ -713,13 +848,23 @@
 				FAB54C5E2A0E82E300E14E1E /* VISTA4.xib in Resources */,
 				FAC9DAD52B115BF2000602C3 /* configurations.txt in Resources */,
 				FAB54C5C2A0E82E300E14E1E /* VISTA8.xib in Resources */,
+				FA0E0E3F2B1416FF00223C5F /* TwoUnitIntervalConfiguration.txt in Resources */,
+				FA0E0E552B14195100223C5F /* EightUnitIntervalConfiguration.txt in Resources */,
+				FA0E0E4C2B14192F00223C5F /* FiveUnitIntervalConfiguration.txt in Resources */,
+				FA0E0E4F2B14193C00223C5F /* SixUnitIntervalConfiguration.txt in Resources */,
+				FA0E0E362B1411E700223C5F /* OneUnitIntervalConfiguration.txt in Resources */,
 				FAB54C622A0E82E300E14E1E /* VISTA9.xib in Resources */,
+				FA0E0E492B14183800223C5F /* FourUnitIntervalConfiguration.txt in Resources */,
+				FA0E0E582B14195800223C5F /* NineUnitIntervalConfiguration.txt in Resources */,
 				FAB54C542A0E82E300E14E1E /* VISTA6.xib in Resources */,
 				FAB54C5A2A0E82E300E14E1E /* VISTA3.xib in Resources */,
 				FAB54C662A0E82E300E14E1E /* VISTA5.xib in Resources */,
+				FA0E0E5B2B14196100223C5F /* TenUnitIntervalConfiguration.txt in Resources */,
 				FAB54C602A0E82E300E14E1E /* VISTA2.xib in Resources */,
+				FA0E0E522B14194800223C5F /* SevenUnitIntervalConfiguration.txt in Resources */,
 				FAB54C642A0E82E300E14E1E /* VISTA10.xib in Resources */,
 				FAB54C582A0E82E300E14E1E /* VISTA7.xib in Resources */,
+				FA0E0E462B14181900223C5F /* ThreeUnitIntervalConfiguration.txt in Resources */,
 				FAB54C562A0E82E300E14E1E /* VISTA1.xib in Resources */,
 				FAB54C522A0E82E300E14E1E /* ViewHome.xib in Resources */,
 			);
@@ -754,11 +899,13 @@
 				FA8C4D632A4F5289008D8899 /* TonyRefrigerator.swift in Sources */,
 				FA2706B82A29B26B00EB2DAE /* turnFanOffAction.swift in Sources */,
 				FA2706992A2999C000EB2DAE /* openDoorAction.swift in Sources */,
+				FA0E0E662B141FE000223C5F /* NormalCoolManagerFiveIntervalMock.swift in Sources */,
 				FA382ED52A19E1C30047D033 /* RefrigeratorFactory.swift in Sources */,
 				FA714C272A088089003E2CA4 /* TemperatureStatus.swift in Sources */,
 				FAB54C302A0DC03200E14E1E /* Door.swift in Sources */,
 				FA38FFE929FE669800BC21FA /* View2ViewController.swift in Sources */,
 				FA2706C82A29BD4F00EB2DAE /* viewCoolManager.swift in Sources */,
+				FA0E0E6C2B141FFD00223C5F /* NormalCoolManagerSevenIntervalMock.swift in Sources */,
 				FA2706A62A29A6C500EB2DAE /* NormalCoolManagerMock.swift in Sources */,
 				FA27069C2A299A1500EB2DAE /* closeDoorAction.swift in Sources */,
 				FA714C292A088369003E2CA4 /* TemperatureUnit.swift in Sources */,
@@ -766,20 +913,25 @@
 				FACC4CA22A4A9D2D00246B2E /* SettingsButtonFactory.swift in Sources */,
 				FA2706B22A29B16300EB2DAE /* turnCompressorOffAction.swift in Sources */,
 				FACC4CAB2A4CC58300246B2E /* viewSetPoint.swift in Sources */,
+				FA0E0E722B14201D00223C5F /* NormalCoolManagerNineIntervalMock.swift in Sources */,
 				FACC4C992A4A9CC100246B2E /* SettingsButton.swift in Sources */,
 				FA382EEE2A1F3D4E0047D033 /* RefrigeratorComponent.swift in Sources */,
+				FA0E0E422B14179C00223C5F /* CoolManagerTwoIntervalMock.swift in Sources */,
 				FA38FFF129FE669800BC21FA /* View5ViewController.swift in Sources */,
 				FA27069F2A299B1C00EB2DAE /* unlockDoorAction.swift in Sources */,
 				FA38FFE829FE669800BC21FA /* View3ViewController.swift in Sources */,
 				FACC4C942A4A906700246B2E /* HomeButtonFactory.swift in Sources */,
 				FA2706A22A29A0F000EB2DAE /* lockDoorAction.swift in Sources */,
 				FA714C222A0870A2003E2CA4 /* Temperature.swift in Sources */,
+				FA0E0E3B2B1414A100223C5F /* ConfigurationFiles.swift in Sources */,
 				FA8C4D662A4F5B91008D8899 /* ComponentFactory.swift in Sources */,
 				FAB54C312A0DC03200E14E1E /* Light.swift in Sources */,
 				FA6C7A2429D8F6CD002267A5 /* SceneDelegate.swift in Sources */,
 				FACC4C8B2A4A613600246B2E /* MainViewModel.swift in Sources */,
 				FACC4C882A4A60F400246B2E /* MainPresenter.swift in Sources */,
 				FA2706862A295B8200EB2DAE /* TemperatureController.swift in Sources */,
+				FA0E0E6F2B14201100223C5F /* NormalCoolManagerEightIntervalMock.swift in Sources */,
+				FA0E0E382B1413A200223C5F /* RefrigeratorConfigurationManager.swift in Sources */,
 				FA382EDF2A1F3CC80047D033 /* FanProtocol.swift in Sources */,
 				FACC4C9F2A4A9CF900246B2E /* ConnectionButton.swift in Sources */,
 				FA2706AF2A29B14600EB2DAE /* turnCompressorOnAction.swift in Sources */,
@@ -793,7 +945,11 @@
 				FAC9DACD2B1151BE000602C3 /* FileBasedRefrigeratorFactory.swift in Sources */,
 				FAB54C2F2A0DC03200E14E1E /* Compressor.swift in Sources */,
 				FACC4CA52A4A9D3A00246B2E /* ProfileButtonFactory.swift in Sources */,
+				FA0E0E752B14202700223C5F /* NormalCoolManagerTenIntervalMock.swift in Sources */,
+				FA0E0E322B1410FB00223C5F /* NormalCoolManagerOneIntervalMock.swift in Sources */,
+				FA0E0E5D2B141FAE00223C5F /* NormalCoolManagerTwoIntervalMock.swift in Sources */,
 				FA2706EF2A2A3A1400EB2DAE /* confirmSetPointSelectedAction.swift in Sources */,
+				FA0E0E602B141FC100223C5F /* NormalCoolManagerThreeIntervalMock.swift in Sources */,
 				FA382F052A253F3E0047D033 /* CoolManager.swift in Sources */,
 				FACC4C972A4A911900246B2E /* HomeButton.swift in Sources */,
 				FA382EF82A20F20E0047D033 /* DoorOpenedRefrigeratorFactory.swift in Sources */,
@@ -802,6 +958,8 @@
 				FA2706902A298B8A00EB2DAE /* turnLightOffAction.swift in Sources */,
 				FA382EFB2A20FE060047D033 /* CorruptTemperaturesRefrigeratorFactory.swift in Sources */,
 				FA2706A92A29A6FC00EB2DAE /* DoorOpenedCoolManagerMock.swift in Sources */,
+				FA0E0E632B141FD100223C5F /* NormalCoolManagerFourIntervalMock.swift in Sources */,
+				FA0E0E692B141FF000223C5F /* NormalCoolManagerSixIntervalMock.swift in Sources */,
 				FA27068A2A29897900EB2DAE /* Action.swift in Sources */,
 				FAB54C3B2A0E116600E14E1E /* viewProtocol.swift in Sources */,
 				FA2706BB2A29B33200EB2DAE /* turnResistanceOnAction.swift in Sources */,
@@ -820,9 +978,12 @@
 				FA2707032A30F0ED00EB2DAE /* InconsistentRefrigeratorFactory.swift in Sources */,
 				FACC4C9A2A4A9CC100246B2E /* SettingsButton.swift in Sources */,
 				FA2706C52A29BC8C00EB2DAE /* ControllerCoolManager.swift in Sources */,
+				FA0E0E642B141FD100223C5F /* NormalCoolManagerFourIntervalMock.swift in Sources */,
+				FA0E0E612B141FC100223C5F /* NormalCoolManagerThreeIntervalMock.swift in Sources */,
 				FA2706872A295B8200EB2DAE /* TemperatureController.swift in Sources */,
 				FA8C4D642A4F5289008D8899 /* TonyRefrigerator.swift in Sources */,
 				FA8C4D672A4F5B91008D8899 /* ComponentFactory.swift in Sources */,
+				FA0E0E782B15273C00223C5F /* MoveDownSetPointTests.swift in Sources */,
 				FA2706C22A29BBDA00EB2DAE /* DashBoardController.swift in Sources */,
 				FACC4C8E2A4A737800246B2E /* MainPresenterTest.swift in Sources */,
 				FA382F062A253F3E0047D033 /* CoolManager.swift in Sources */,
@@ -839,12 +1000,16 @@
 				FA382ED92A19E2710047D033 /* NormalRefrigeratorFactory.swift in Sources */,
 				FA2706A32A29A0F000EB2DAE /* lockDoorAction.swift in Sources */,
 				FA27069D2A299A1500EB2DAE /* closeDoorAction.swift in Sources */,
+				FA0E0E762B14202700223C5F /* NormalCoolManagerTenIntervalMock.swift in Sources */,
+				FA0E0E672B141FE000223C5F /* NormalCoolManagerFiveIntervalMock.swift in Sources */,
 				FA2706942A298C8700EB2DAE /* pushSetPointUpAction.swift in Sources */,
 				FA382ED62A19E1C30047D033 /* RefrigeratorFactory.swift in Sources */,
 				FA382EDD2A1A79060047D033 /* DefrostingRefrigeratorFactory.swift in Sources */,
 				FA382EFC2A20FE060047D033 /* CorruptTemperaturesRefrigeratorFactory.swift in Sources */,
 				FA382EE62A1F3CFC0047D033 /* LightProtocol.swift in Sources */,
+				FA0E0E6A2B141FF000223C5F /* NormalCoolManagerSixIntervalMock.swift in Sources */,
 				FA382EE32A1F3CE20047D033 /* ResistanceProtocol.swift in Sources */,
+				FA0E0E3C2B1414A100223C5F /* ConfigurationFiles.swift in Sources */,
 				FACC4CAC2A4CC58300246B2E /* viewSetPoint.swift in Sources */,
 				FA382EE02A1F3CC80047D033 /* FanProtocol.swift in Sources */,
 				FA382EE92A1F3D160047D033 /* CompressorProtocol.swift in Sources */,
@@ -857,10 +1022,14 @@
 				FA382EB92A19A23E0047D033 /* Refrigerator.swift in Sources */,
 				FACC4CA62A4A9D3A00246B2E /* ProfileButtonFactory.swift in Sources */,
 				FACC4C912A4A8F9A00246B2E /* ButtonFactory.swift in Sources */,
+				FA0E0E5E2B141FAE00223C5F /* NormalCoolManagerTwoIntervalMock.swift in Sources */,
+				FA0E0E392B1413A200223C5F /* RefrigeratorConfigurationManager.swift in Sources */,
 				FACC4CB22A4CDB3B00246B2E /* UIButton.swift in Sources */,
 				FA382EBA2A19A23E0047D033 /* Temperature.swift in Sources */,
+				FA0E0E702B14201100223C5F /* NormalCoolManagerEightIntervalMock.swift in Sources */,
 				FA8C4D6A2A4F5BE0008D8899 /* NormalLightFactory.swift in Sources */,
 				FA382EBC2A19A23E0047D033 /* TemperatureStatus.swift in Sources */,
+				FA0E0E732B14201D00223C5F /* NormalCoolManagerNineIntervalMock.swift in Sources */,
 				FA27068B2A29897900EB2DAE /* Action.swift in Sources */,
 				FA382EBD2A19A23E0047D033 /* TemperatureUnit.swift in Sources */,
 				FA2706B02A29B14600EB2DAE /* turnCompressorOnAction.swift in Sources */,
@@ -869,7 +1038,9 @@
 				FA2706AD2A29A74D00EB2DAE /* DefrostingRefrigeratorMock.swift in Sources */,
 				FA2706BF2A29B35100EB2DAE /* turnResistanceOffAction.swift in Sources */,
 				FAB54C352A0DC8AE00E14E1E /* TemperatureTests.swift in Sources */,
+				FA0E0E2C2B140A9400223C5F /* InitializationTests.swift in Sources */,
 				FAC9DACE2B1151BE000602C3 /* FileBasedRefrigeratorFactory.swift in Sources */,
+				FA0E0E432B14179C00223C5F /* CoolManagerTwoIntervalMock.swift in Sources */,
 				FACC4CA32A4A9D2D00246B2E /* SettingsButtonFactory.swift in Sources */,
 				FA714C3E2A088C11003E2CA4 /* TemperatureRulesTests.swift in Sources */,
 				FA2706B62A29B21D00EB2DAE /* turnFanOnAction.swift in Sources */,
@@ -881,6 +1052,8 @@
 				FAB54C3C2A0E116600E14E1E /* viewProtocol.swift in Sources */,
 				FA2706BC2A29B33200EB2DAE /* turnResistanceOnAction.swift in Sources */,
 				FA27069A2A2999C000EB2DAE /* openDoorAction.swift in Sources */,
+				FA0E0E2E2B140BAB00223C5F /* MoveUpSetPointTests.swift in Sources */,
+				FA0E0E6D2B141FFD00223C5F /* NormalCoolManagerSevenIntervalMock.swift in Sources */,
 				FAB54C442A0E152300E14E1E /* RefrigeratorBuilderViewModelTests.swift in Sources */,
 				FA2706AA2A29A6FC00EB2DAE /* DoorOpenedCoolManagerMock.swift in Sources */,
 				FA2706A72A29A6C500EB2DAE /* NormalCoolManagerMock.swift in Sources */,
@@ -890,6 +1063,7 @@
 				FACC4C892A4A60F400246B2E /* MainPresenter.swift in Sources */,
 				FA382EF92A20F20E0047D033 /* DoorOpenedRefrigeratorFactory.swift in Sources */,
 				FACC4C832A48D7BE00246B2E /* View1PresenterTests.swift in Sources */,
+				FA0E0E332B1410FB00223C5F /* NormalCoolManagerOneIntervalMock.swift in Sources */,
 				FA382EF62A1FB3660047D033 /* SetPoint.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

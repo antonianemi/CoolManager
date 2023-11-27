@@ -26,7 +26,9 @@ final class RefrigeratorTests: XCTestCase {
     }
     
     func test_RefrigeratorInitialized_ShouldHaveExpectedValues() {
-        let refrigerador            = FileBasedRefrigeratorFactory().create()
+        let configurationManager = RefrigeratorConfigurationManager(fileURL: ConfigurationFiles.normalRefrigerator)
+        let factory = FileBasedRefrigeratorFactory(configurationManager: configurationManager)
+        let refrigerador            = factory.create()
         let setPointExpected        = Temperature(20, .celsius, 0.5)
         let TemperatureMaxExpected  = Temperature(35, .celsius, 0.5)
         let TemperatureMinExpected  = Temperature(-5, .celsius, 0.5)

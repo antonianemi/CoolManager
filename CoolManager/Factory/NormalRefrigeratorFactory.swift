@@ -1,13 +1,13 @@
 final class NormalRefrigeratorFactory: RefrigeratorFactory {
+    let unit = TemperatureUnit.celsius
+    let interval = Double(5)
+    let stateName = "NormalMode"
     func create() -> Refrigerator {
-        let unit = TemperatureUnit.celsius
-        let interval = Double(5)
-        let stateName = "NormalMode"
         let temperatureGoal =    Temperature(20, unit, interval)
         let maxTemperature =     Temperature(35, unit, interval)
         let minTemperature =     Temperature(-5, unit, interval)
         let currentTemperature = Temperature(10, unit, interval)
-        let setPoint = try SetPoint(temperature: currentTemperature,
+        let setPoint = SetPoint(temperature: currentTemperature,
                                     temperatureGoal: temperatureGoal,
                                     maxTemperature: maxTemperature,
                                     minTemperature: minTemperature)
