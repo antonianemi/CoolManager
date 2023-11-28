@@ -6,7 +6,6 @@ final class TonyRefrigerator: RefrigeratorFactory {
     var maxTemperature: Temperature
     var minTemperature: Temperature
     var stateName:String=""
-    var setPoint:SetPoint
     var fan:Fan
     var door:Door
     var compressor:Compressor
@@ -20,7 +19,6 @@ final class TonyRefrigerator: RefrigeratorFactory {
          maxTemperature: Temperature,
          minTemperature: Temperature,
          stateName:String,
-         setPoint:SetPoint,
          fan:Fan,
          door:Door,
          compressor:Compressor,
@@ -34,7 +32,6 @@ final class TonyRefrigerator: RefrigeratorFactory {
         self.maxTemperature = maxTemperature
         self.minTemperature = minTemperature
         self.stateName = stateName
-        self.setPoint = setPoint
         self.fan = fan
         self.door = door
         self.compressor = compressor

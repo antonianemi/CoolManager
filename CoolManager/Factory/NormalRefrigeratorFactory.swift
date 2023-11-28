@@ -21,7 +21,6 @@ final class NormalRefrigeratorFactory: RefrigeratorFactory {
                                      maxTemperature: maxTemperature,
                                      minTemperature: minTemperature,
                                      stateName: stateName,
-                                     setPoint: setPoint,
                                      fan: fan,
                                      door: door,
                                      compressor: compressor,

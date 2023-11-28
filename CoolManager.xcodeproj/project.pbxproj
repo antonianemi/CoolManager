@@ -56,6 +56,12 @@
 		FA0E0E752B14202700223C5F /* NormalCoolManagerTenIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E742B14202700223C5F /* NormalCoolManagerTenIntervalMock.swift */; };
 		FA0E0E762B14202700223C5F /* NormalCoolManagerTenIntervalMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E742B14202700223C5F /* NormalCoolManagerTenIntervalMock.swift */; };
 		FA0E0E782B15273C00223C5F /* MoveDownSetPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E772B15273C00223C5F /* MoveDownSetPointTests.swift */; };
+		FA0E0E7A2B152B9A00223C5F /* SamsungRefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E792B152B9A00223C5F /* SamsungRefrigeratorFactory.swift */; };
+		FA0E0E7B2B152B9A00223C5F /* SamsungRefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E792B152B9A00223C5F /* SamsungRefrigeratorFactory.swift */; };
+		FA0E0E7D2B152BAC00223C5F /* LgRefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E7C2B152BAC00223C5F /* LgRefrigeratorFactory.swift */; };
+		FA0E0E7E2B152BAC00223C5F /* LgRefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E7C2B152BAC00223C5F /* LgRefrigeratorFactory.swift */; };
+		FA0E0E802B152BC500223C5F /* WhirlpoolRefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E7F2B152BC500223C5F /* WhirlpoolRefrigeratorFactory.swift */; };
+		FA0E0E812B152BC500223C5F /* WhirlpoolRefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA0E0E7F2B152BC500223C5F /* WhirlpoolRefrigeratorFactory.swift */; };
 		FA2706832A2954D100EB2DAE /* RefrigeratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706822A2954D100EB2DAE /* RefrigeratorTests.swift */; };
 		FA2706862A295B8200EB2DAE /* TemperatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706852A295B8200EB2DAE /* TemperatureController.swift */; };
 		FA2706872A295B8200EB2DAE /* TemperatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706852A295B8200EB2DAE /* TemperatureController.swift */; };
@@ -275,6 +281,9 @@
 		FA0E0E712B14201D00223C5F /* NormalCoolManagerNineIntervalMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCoolManagerNineIntervalMock.swift; sourceTree = "<group>"; };
 		FA0E0E742B14202700223C5F /* NormalCoolManagerTenIntervalMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCoolManagerTenIntervalMock.swift; sourceTree = "<group>"; };
 		FA0E0E772B15273C00223C5F /* MoveDownSetPointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoveDownSetPointTests.swift; sourceTree = "<group>"; };
+		FA0E0E792B152B9A00223C5F /* SamsungRefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SamsungRefrigeratorFactory.swift; sourceTree = "<group>"; };
+		FA0E0E7C2B152BAC00223C5F /* LgRefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LgRefrigeratorFactory.swift; sourceTree = "<group>"; };
+		FA0E0E7F2B152BC500223C5F /* WhirlpoolRefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhirlpoolRefrigeratorFactory.swift; sourceTree = "<group>"; };
 		FA2706822A2954D100EB2DAE /* RefrigeratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefrigeratorTests.swift; sourceTree = "<group>"; };
 		FA2706852A295B8200EB2DAE /* TemperatureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureController.swift; sourceTree = "<group>"; };
 		FA2706892A29897900EB2DAE /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
@@ -511,6 +520,9 @@
 				FA382EFA2A20FE060047D033 /* CorruptTemperaturesRefrigeratorFactory.swift */,
 				FA2707012A30DAD700EB2DAE /* InconsistentRefrigeratorFactory.swift */,
 				FA8C4D622A4F5289008D8899 /* TonyRefrigerator.swift */,
+				FA0E0E792B152B9A00223C5F /* SamsungRefrigeratorFactory.swift */,
+				FA0E0E7C2B152BAC00223C5F /* LgRefrigeratorFactory.swift */,
+				FA0E0E7F2B152BC500223C5F /* WhirlpoolRefrigeratorFactory.swift */,
 			);
 			path = Factory;
 			sourceTree = "<group>";
@@ -943,6 +955,7 @@
 				FA382EE22A1F3CE20047D033 /* ResistanceProtocol.swift in Sources */,
 				FA382EE52A1F3CFC0047D033 /* LightProtocol.swift in Sources */,
 				FAC9DACD2B1151BE000602C3 /* FileBasedRefrigeratorFactory.swift in Sources */,
+				FA0E0E7A2B152B9A00223C5F /* SamsungRefrigeratorFactory.swift in Sources */,
 				FAB54C2F2A0DC03200E14E1E /* Compressor.swift in Sources */,
 				FACC4CA52A4A9D3A00246B2E /* ProfileButtonFactory.swift in Sources */,
 				FA0E0E752B14202700223C5F /* NormalCoolManagerTenIntervalMock.swift in Sources */,
@@ -954,6 +967,7 @@
 				FACC4C972A4A911900246B2E /* HomeButton.swift in Sources */,
 				FA382EF82A20F20E0047D033 /* DoorOpenedRefrigeratorFactory.swift in Sources */,
 				FA38FFEF29FE669800BC21FA /* HomeView.swift in Sources */,
+				FA0E0E7D2B152BAC00223C5F /* LgRefrigeratorFactory.swift in Sources */,
 				FA2706AC2A29A74D00EB2DAE /* DefrostingRefrigeratorMock.swift in Sources */,
 				FA2706902A298B8A00EB2DAE /* turnLightOffAction.swift in Sources */,
 				FA382EFB2A20FE060047D033 /* CorruptTemperaturesRefrigeratorFactory.swift in Sources */,
@@ -964,6 +978,7 @@
 				FAB54C3B2A0E116600E14E1E /* viewProtocol.swift in Sources */,
 				FA2706BB2A29B33200EB2DAE /* turnResistanceOnAction.swift in Sources */,
 				FACC4C9C2A4A9CE300246B2E /* ProfileButton.swift in Sources */,
+				FA0E0E802B152BC500223C5F /* WhirlpoolRefrigeratorFactory.swift in Sources */,
 				FACC4CB12A4CDB3B00246B2E /* UIButton.swift in Sources */,
 				FA2706932A298C8700EB2DAE /* pushSetPointUpAction.swift in Sources */,
 				FA2706BE2A29B35100EB2DAE /* turnResistanceOffAction.swift in Sources */,
@@ -988,6 +1003,7 @@
 				FACC4C8E2A4A737800246B2E /* MainPresenterTest.swift in Sources */,
 				FA382F062A253F3E0047D033 /* CoolManager.swift in Sources */,
 				FA382ED02A19A2930047D033 /* Door.swift in Sources */,
+				FA0E0E812B152BC500223C5F /* WhirlpoolRefrigeratorFactory.swift in Sources */,
 				FA382ED12A19A2930047D033 /* Fan.swift in Sources */,
 				FA382ED22A19A2930047D033 /* Light.swift in Sources */,
 				FA2706912A298B8A00EB2DAE /* turnLightOffAction.swift in Sources */,
@@ -1028,8 +1044,10 @@
 				FA382EBA2A19A23E0047D033 /* Temperature.swift in Sources */,
 				FA0E0E702B14201100223C5F /* NormalCoolManagerEightIntervalMock.swift in Sources */,
 				FA8C4D6A2A4F5BE0008D8899 /* NormalLightFactory.swift in Sources */,
+				FA0E0E7E2B152BAC00223C5F /* LgRefrigeratorFactory.swift in Sources */,
 				FA382EBC2A19A23E0047D033 /* TemperatureStatus.swift in Sources */,
 				FA0E0E732B14201D00223C5F /* NormalCoolManagerNineIntervalMock.swift in Sources */,
+				FA0E0E7B2B152B9A00223C5F /* SamsungRefrigeratorFactory.swift in Sources */,
 				FA27068B2A29897900EB2DAE /* Action.swift in Sources */,
 				FA382EBD2A19A23E0047D033 /* TemperatureUnit.swift in Sources */,
 				FA2706B02A29B14600EB2DAE /* turnCompressorOnAction.swift in Sources */,
