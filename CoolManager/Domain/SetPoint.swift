@@ -5,13 +5,13 @@ enum TemperatureError: Error {
     case sameMinMaxValue
 }
 
-class SetPoint{
+class SetPoint {
     private(set) var temperature: Temperature
     private(set) var temperatureSetPoint: Temperature
     private(set) var maxTemperature: Temperature
     private(set) var minTemperature: Temperature
     private var temp:Double = 0.0
-    var timer:Timer = Timer()
+    
     init(temperature: Temperature,
          temperatureGoal: Temperature,
          maxTemperature: Temperature,
@@ -29,35 +29,20 @@ class SetPoint{
             fatalError("outOfRangeSetPoint")
         }
         self.temperature = temperature
-        temperatureSetPoint = temperatureGoal
+        self.temperatureSetPoint = temperatureGoal
         self.minTemperature = minTemperature
         self.maxTemperature = maxTemperature
-    }
-    
-    private func initializeTimer(){
-        timer = Timer.scheduledTimer(timeInterval: 3.0,
-                                         target: self,
-                                         selector: #selector(timerAction),
-                                         userInfo: nil,
-                                         repeats: false)
-    }
-    
-    private func fireTimer(){
-        initializeTimer()
-        timer.fire()
     }
     
     func up(){
         if canAddUp {
             temperatureSetPoint.pushUp()
-            fireTimer()
         }
     }
     
     func down(){
         if canDropDown {
             temperatureSetPoint.pullDown()
-            fireTimer()
         }
     }
     
@@ -80,12 +65,24 @@ class SetPoint{
         return imageNumber
     }
     
-    
-    @objc func timerAction() {
-        temp = temperatureSetPoint.value
-        self.timer.invalidate()
+    func updateTemperature(){
+        if temperature.value > temperatureSetPoint.value {
+            temperature.value = temperature.value - 0.1
+        }
+        else if temperature.value < temperatureSetPoint.value {
+            temperature.value = temperature.value + 0.1
+        }
     }
+    
     func confirm(){
         
     }
+    
+    func printStatus() {
+     print("Temperature: \(temperature.stringValueOnlyNumber)")
+     print("temperatureSetPoint: \(temperatureSetPoint.stringValueOnlyNumber)")
+     print("maxTemperature: \(maxTemperature.stringValueOnlyNumber)")
+     print("minTemperature: \(minTemperature.stringValueOnlyNumber)")
+    }
+    
 }

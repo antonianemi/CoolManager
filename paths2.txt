@@ -1,0 +1,3 @@
+./CoolManager
+/Users/antoniocortes/code/CoolManagerNew/CoolManager/CoolManager/AppDelegate.swift
+/Users/antoniocortes/code/CoolManagerNew/CoolManager/CoolManager/SceneDelegate.swift

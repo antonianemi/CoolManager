@@ -5,11 +5,11 @@ function search_swift_files() {
     local current_path=$1
     echo "$current_path"
     for file in "$current_path"/*; do
-        if [[ -d "$file" ]]; then
-            # Es un directorio, llamada recursiva para buscar en él
+        if [[ -d "$file" && ! "$file" =~ ^\.[^.].* ]]; then
+            # Es un directorio (que no es oculto), llamada recursiva para buscar en él
             search_swift_files "$file"
-        elif [[ "${file##*.}" == "swift" ]]; then
-            # Es un archivo .swift, imprimir la ruta absoluta
+        elif [[ "${file##*.}" == "swift" && ! -L "$file" ]]; then
+            # Es un archivo .swift que no es un symlink, imprimir la ruta absoluta
             echo "$(realpath "$file")"
         fi
     done

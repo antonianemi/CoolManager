@@ -65,6 +65,10 @@ class Temperature: Hashable,Equatable {
     }
     
     var stringValueOnlyNumber: String {
-       return "\(value)"
+       return "\(String(format: "%.1f", value))"
+    }
+    
+    func printStatus(){
+        
     }
 }

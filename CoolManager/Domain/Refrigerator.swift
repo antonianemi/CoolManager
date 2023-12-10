@@ -3,6 +3,8 @@ public class Refrigerator {
     private(set) var setPoint: SetPoint
     private(set) var components = [RefrigeratorComponent]()
     private var stateName:String
+    var timer:Timer = Timer()
+    var temperatureAdjustmentStrategy:any TemperatureAdjustmentStrategy = DefaultTemperatureAdjustmentStrategy()
     init(_ stateName:String="",
          setPoint:SetPoint,
          fan:FanProtocol,
@@ -17,11 +19,16 @@ public class Refrigerator {
         self.components.append(light)
         self.components.append(resistance)
         self.stateName = stateName
+        self.initializeTimer()
     }
     
-    
-    func processTemperature(){
-        
+    private func initializeTimer(){
+        timer = Timer.scheduledTimer(timeInterval: 3.0,
+                                         target: self,
+                                         selector: #selector(timerAction),
+                                         userInfo: nil,
+                                         repeats: true)
+        timer.fire()
     }
 
     var currentTemperatureStatus: Temperature {
@@ -66,16 +73,36 @@ public class Refrigerator {
     }
     
     func currentStateName() -> String {
-                return "No state"
-        }
+        return "No state"
+    }
     
+    private func updateComponentSettings(){
+        var newStrategy: any TemperatureAdjustmentStrategy
+        
+        if setPoint.temperature.value > setPoint.temperatureSetPoint.value {
+            newStrategy = HighTemperatureAdjustmentStrategy()
+        } else if setPoint.temperature.value < setPoint.temperatureSetPoint.value {
+            newStrategy = LowTemperatureAdjustmentStrategy()
+        } else {
+            newStrategy = DefaultTemperatureAdjustmentStrategy()
+        }
+        temperatureAdjustmentStrategy = newStrategy
+    }
+    
+    @objc func timerAction() {
+        self.setPoint.updateTemperature()
+        self.updateComponentSettings()
+        self.temperatureAdjustmentStrategy.adjustSettings(for: self)
+        self.printStatus()
+    }
     
     func printStatus(){
-        print("Estado actual del refrigerador: \(currentStateName())")
-        print("Temperatura: \(currentTemperatureStatus.stringValue)")
+        print("\nEstado actual del refrigerador: \(currentStateName())")
+        setPoint.printStatus()
         for component in components {
             component.printStatus()
         }
+        
     }
 }
 
