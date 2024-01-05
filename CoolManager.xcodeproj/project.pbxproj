@@ -65,42 +65,42 @@
 		FA2706832A2954D100EB2DAE /* RefrigeratorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706822A2954D100EB2DAE /* RefrigeratorTests.swift */; };
 		FA2706862A295B8200EB2DAE /* TemperatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706852A295B8200EB2DAE /* TemperatureController.swift */; };
 		FA2706872A295B8200EB2DAE /* TemperatureController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706852A295B8200EB2DAE /* TemperatureController.swift */; };
-		FA27068A2A29897900EB2DAE /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706892A29897900EB2DAE /* Action.swift */; };
-		FA27068B2A29897900EB2DAE /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706892A29897900EB2DAE /* Action.swift */; };
-		FA27068D2A298A0C00EB2DAE /* turnLightOnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27068C2A298A0C00EB2DAE /* turnLightOnAction.swift */; };
-		FA27068E2A298A0C00EB2DAE /* turnLightOnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27068C2A298A0C00EB2DAE /* turnLightOnAction.swift */; };
-		FA2706902A298B8A00EB2DAE /* turnLightOffAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27068F2A298B8A00EB2DAE /* turnLightOffAction.swift */; };
-		FA2706912A298B8A00EB2DAE /* turnLightOffAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27068F2A298B8A00EB2DAE /* turnLightOffAction.swift */; };
-		FA2706932A298C8700EB2DAE /* pushSetPointUpAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706922A298C8700EB2DAE /* pushSetPointUpAction.swift */; };
-		FA2706942A298C8700EB2DAE /* pushSetPointUpAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706922A298C8700EB2DAE /* pushSetPointUpAction.swift */; };
-		FA2706962A298D0E00EB2DAE /* pushSetPointDownAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706952A298D0E00EB2DAE /* pushSetPointDownAction.swift */; };
-		FA2706972A298D0E00EB2DAE /* pushSetPointDownAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706952A298D0E00EB2DAE /* pushSetPointDownAction.swift */; };
-		FA2706992A2999C000EB2DAE /* openDoorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706982A2999C000EB2DAE /* openDoorAction.swift */; };
-		FA27069A2A2999C000EB2DAE /* openDoorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706982A2999C000EB2DAE /* openDoorAction.swift */; };
-		FA27069C2A299A1500EB2DAE /* closeDoorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27069B2A299A1500EB2DAE /* closeDoorAction.swift */; };
-		FA27069D2A299A1500EB2DAE /* closeDoorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27069B2A299A1500EB2DAE /* closeDoorAction.swift */; };
-		FA27069F2A299B1C00EB2DAE /* unlockDoorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27069E2A299B1C00EB2DAE /* unlockDoorAction.swift */; };
-		FA2706A02A299B1C00EB2DAE /* unlockDoorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27069E2A299B1C00EB2DAE /* unlockDoorAction.swift */; };
-		FA2706A22A29A0F000EB2DAE /* lockDoorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706A12A29A0F000EB2DAE /* lockDoorAction.swift */; };
-		FA2706A32A29A0F000EB2DAE /* lockDoorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706A12A29A0F000EB2DAE /* lockDoorAction.swift */; };
+		FA27068A2A29897900EB2DAE /* Executable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706892A29897900EB2DAE /* Executable.swift */; };
+		FA27068B2A29897900EB2DAE /* Executable.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706892A29897900EB2DAE /* Executable.swift */; };
+		FA27068D2A298A0C00EB2DAE /* TurnLightOnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27068C2A298A0C00EB2DAE /* TurnLightOnAction.swift */; };
+		FA27068E2A298A0C00EB2DAE /* TurnLightOnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27068C2A298A0C00EB2DAE /* TurnLightOnAction.swift */; };
+		FA2706902A298B8A00EB2DAE /* TurnLightOffAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27068F2A298B8A00EB2DAE /* TurnLightOffAction.swift */; };
+		FA2706912A298B8A00EB2DAE /* TurnLightOffAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27068F2A298B8A00EB2DAE /* TurnLightOffAction.swift */; };
+		FA2706932A298C8700EB2DAE /* PushSetPointUpAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706922A298C8700EB2DAE /* PushSetPointUpAction.swift */; };
+		FA2706942A298C8700EB2DAE /* PushSetPointUpAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706922A298C8700EB2DAE /* PushSetPointUpAction.swift */; };
+		FA2706962A298D0E00EB2DAE /* PushSetPointDownAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706952A298D0E00EB2DAE /* PushSetPointDownAction.swift */; };
+		FA2706972A298D0E00EB2DAE /* PushSetPointDownAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706952A298D0E00EB2DAE /* PushSetPointDownAction.swift */; };
+		FA2706992A2999C000EB2DAE /* OpenDoorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706982A2999C000EB2DAE /* OpenDoorAction.swift */; };
+		FA27069A2A2999C000EB2DAE /* OpenDoorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706982A2999C000EB2DAE /* OpenDoorAction.swift */; };
+		FA27069C2A299A1500EB2DAE /* CloseDoorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27069B2A299A1500EB2DAE /* CloseDoorAction.swift */; };
+		FA27069D2A299A1500EB2DAE /* CloseDoorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27069B2A299A1500EB2DAE /* CloseDoorAction.swift */; };
+		FA27069F2A299B1C00EB2DAE /* UnlockDoorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27069E2A299B1C00EB2DAE /* UnlockDoorAction.swift */; };
+		FA2706A02A299B1C00EB2DAE /* UnlockDoorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA27069E2A299B1C00EB2DAE /* UnlockDoorAction.swift */; };
+		FA2706A22A29A0F000EB2DAE /* LockDoorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706A12A29A0F000EB2DAE /* LockDoorAction.swift */; };
+		FA2706A32A29A0F000EB2DAE /* LockDoorAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706A12A29A0F000EB2DAE /* LockDoorAction.swift */; };
 		FA2706A62A29A6C500EB2DAE /* NormalCoolManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706A52A29A6C500EB2DAE /* NormalCoolManagerMock.swift */; };
 		FA2706A72A29A6C500EB2DAE /* NormalCoolManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706A52A29A6C500EB2DAE /* NormalCoolManagerMock.swift */; };
 		FA2706A92A29A6FC00EB2DAE /* DoorOpenedCoolManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706A82A29A6FC00EB2DAE /* DoorOpenedCoolManagerMock.swift */; };
 		FA2706AA2A29A6FC00EB2DAE /* DoorOpenedCoolManagerMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706A82A29A6FC00EB2DAE /* DoorOpenedCoolManagerMock.swift */; };
 		FA2706AC2A29A74D00EB2DAE /* DefrostingRefrigeratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706AB2A29A74D00EB2DAE /* DefrostingRefrigeratorMock.swift */; };
 		FA2706AD2A29A74D00EB2DAE /* DefrostingRefrigeratorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706AB2A29A74D00EB2DAE /* DefrostingRefrigeratorMock.swift */; };
-		FA2706AF2A29B14600EB2DAE /* turnCompressorOnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706AE2A29B14600EB2DAE /* turnCompressorOnAction.swift */; };
-		FA2706B02A29B14600EB2DAE /* turnCompressorOnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706AE2A29B14600EB2DAE /* turnCompressorOnAction.swift */; };
-		FA2706B22A29B16300EB2DAE /* turnCompressorOffAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706B12A29B16300EB2DAE /* turnCompressorOffAction.swift */; };
-		FA2706B32A29B16300EB2DAE /* turnCompressorOffAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706B12A29B16300EB2DAE /* turnCompressorOffAction.swift */; };
-		FA2706B52A29B21D00EB2DAE /* turnFanOnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706B42A29B21D00EB2DAE /* turnFanOnAction.swift */; };
-		FA2706B62A29B21D00EB2DAE /* turnFanOnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706B42A29B21D00EB2DAE /* turnFanOnAction.swift */; };
-		FA2706B82A29B26B00EB2DAE /* turnFanOffAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706B72A29B26B00EB2DAE /* turnFanOffAction.swift */; };
-		FA2706B92A29B26B00EB2DAE /* turnFanOffAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706B72A29B26B00EB2DAE /* turnFanOffAction.swift */; };
-		FA2706BB2A29B33200EB2DAE /* turnResistanceOnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706BA2A29B33200EB2DAE /* turnResistanceOnAction.swift */; };
-		FA2706BC2A29B33200EB2DAE /* turnResistanceOnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706BA2A29B33200EB2DAE /* turnResistanceOnAction.swift */; };
-		FA2706BE2A29B35100EB2DAE /* turnResistanceOffAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706BD2A29B35100EB2DAE /* turnResistanceOffAction.swift */; };
-		FA2706BF2A29B35100EB2DAE /* turnResistanceOffAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706BD2A29B35100EB2DAE /* turnResistanceOffAction.swift */; };
+		FA2706AF2A29B14600EB2DAE /* TurnCompressorOnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706AE2A29B14600EB2DAE /* TurnCompressorOnAction.swift */; };
+		FA2706B02A29B14600EB2DAE /* TurnCompressorOnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706AE2A29B14600EB2DAE /* TurnCompressorOnAction.swift */; };
+		FA2706B22A29B16300EB2DAE /* TurnCompressorOffAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706B12A29B16300EB2DAE /* TurnCompressorOffAction.swift */; };
+		FA2706B32A29B16300EB2DAE /* TurnCompressorOffAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706B12A29B16300EB2DAE /* TurnCompressorOffAction.swift */; };
+		FA2706B52A29B21D00EB2DAE /* TurnFanOnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706B42A29B21D00EB2DAE /* TurnFanOnAction.swift */; };
+		FA2706B62A29B21D00EB2DAE /* TurnFanOnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706B42A29B21D00EB2DAE /* TurnFanOnAction.swift */; };
+		FA2706B82A29B26B00EB2DAE /* TurnFanOffAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706B72A29B26B00EB2DAE /* TurnFanOffAction.swift */; };
+		FA2706B92A29B26B00EB2DAE /* TurnFanOffAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706B72A29B26B00EB2DAE /* TurnFanOffAction.swift */; };
+		FA2706BB2A29B33200EB2DAE /* TurnResistanceOnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706BA2A29B33200EB2DAE /* TurnResistanceOnAction.swift */; };
+		FA2706BC2A29B33200EB2DAE /* TurnResistanceOnAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706BA2A29B33200EB2DAE /* TurnResistanceOnAction.swift */; };
+		FA2706BE2A29B35100EB2DAE /* TurnResistanceOffAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706BD2A29B35100EB2DAE /* TurnResistanceOffAction.swift */; };
+		FA2706BF2A29B35100EB2DAE /* TurnResistanceOffAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706BD2A29B35100EB2DAE /* TurnResistanceOffAction.swift */; };
 		FA2706C12A29BBDA00EB2DAE /* DashBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706C02A29BBDA00EB2DAE /* DashBoardController.swift */; };
 		FA2706C22A29BBDA00EB2DAE /* DashBoardController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706C02A29BBDA00EB2DAE /* DashBoardController.swift */; };
 		FA2706C42A29BC8C00EB2DAE /* ControllerCoolManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706C32A29BC8C00EB2DAE /* ControllerCoolManager.swift */; };
@@ -109,8 +109,8 @@
 		FA2706C92A29BD4F00EB2DAE /* viewCoolManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706C72A29BD4F00EB2DAE /* viewCoolManager.swift */; };
 		FA2706CB2A29BF5B00EB2DAE /* viewDashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706CA2A29BF5B00EB2DAE /* viewDashBoard.swift */; };
 		FA2706CC2A29BF5B00EB2DAE /* viewDashBoard.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706CA2A29BF5B00EB2DAE /* viewDashBoard.swift */; };
-		FA2706EF2A2A3A1400EB2DAE /* confirmSetPointSelectedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706EE2A2A3A1400EB2DAE /* confirmSetPointSelectedAction.swift */; };
-		FA2706F02A2A3A1400EB2DAE /* confirmSetPointSelectedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706EE2A2A3A1400EB2DAE /* confirmSetPointSelectedAction.swift */; };
+		FA2706EF2A2A3A1400EB2DAE /* ConfirmSetPointSelectedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706EE2A2A3A1400EB2DAE /* ConfirmSetPointSelectedAction.swift */; };
+		FA2706F02A2A3A1400EB2DAE /* ConfirmSetPointSelectedAction.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706EE2A2A3A1400EB2DAE /* ConfirmSetPointSelectedAction.swift */; };
 		FA2706FE2A2F868F00EB2DAE /* SetPointTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2706FD2A2F868F00EB2DAE /* SetPointTests.swift */; };
 		FA2707022A30DAD700EB2DAE /* InconsistentRefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2707012A30DAD700EB2DAE /* InconsistentRefrigeratorFactory.swift */; };
 		FA2707032A30F0ED00EB2DAE /* InconsistentRefrigeratorFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA2707012A30DAD700EB2DAE /* InconsistentRefrigeratorFactory.swift */; };
@@ -193,6 +193,8 @@
 		FA8C4D672A4F5B91008D8899 /* ComponentFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C4D652A4F5B91008D8899 /* ComponentFactory.swift */; };
 		FA8C4D692A4F5BE0008D8899 /* NormalLightFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C4D682A4F5BE0008D8899 /* NormalLightFactory.swift */; };
 		FA8C4D6A2A4F5BE0008D8899 /* NormalLightFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8C4D682A4F5BE0008D8899 /* NormalLightFactory.swift */; };
+		FA9A74BE2B2E3BCC0015001B /* RefrigeratorObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A74BD2B2E3BCC0015001B /* RefrigeratorObserver.swift */; };
+		FA9A74BF2B2E3BCC0015001B /* RefrigeratorObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA9A74BD2B2E3BCC0015001B /* RefrigeratorObserver.swift */; };
 		FAB54C2F2A0DC03200E14E1E /* Compressor.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C2A2A0DC03200E14E1E /* Compressor.swift */; };
 		FAB54C302A0DC03200E14E1E /* Door.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C2B2A0DC03200E14E1E /* Door.swift */; };
 		FAB54C312A0DC03200E14E1E /* Light.swift in Sources */ = {isa = PBXBuildFile; fileRef = FAB54C2C2A0DC03200E14E1E /* Light.swift */; };
@@ -312,29 +314,29 @@
 		FA0E0E7F2B152BC500223C5F /* WhirlpoolRefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhirlpoolRefrigeratorFactory.swift; sourceTree = "<group>"; };
 		FA2706822A2954D100EB2DAE /* RefrigeratorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RefrigeratorTests.swift; sourceTree = "<group>"; };
 		FA2706852A295B8200EB2DAE /* TemperatureController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TemperatureController.swift; sourceTree = "<group>"; };
-		FA2706892A29897900EB2DAE /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
-		FA27068C2A298A0C00EB2DAE /* turnLightOnAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turnLightOnAction.swift; sourceTree = "<group>"; };
-		FA27068F2A298B8A00EB2DAE /* turnLightOffAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turnLightOffAction.swift; sourceTree = "<group>"; };
-		FA2706922A298C8700EB2DAE /* pushSetPointUpAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pushSetPointUpAction.swift; sourceTree = "<group>"; };
-		FA2706952A298D0E00EB2DAE /* pushSetPointDownAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = pushSetPointDownAction.swift; sourceTree = "<group>"; };
-		FA2706982A2999C000EB2DAE /* openDoorAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = openDoorAction.swift; sourceTree = "<group>"; };
-		FA27069B2A299A1500EB2DAE /* closeDoorAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = closeDoorAction.swift; sourceTree = "<group>"; };
-		FA27069E2A299B1C00EB2DAE /* unlockDoorAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = unlockDoorAction.swift; sourceTree = "<group>"; };
-		FA2706A12A29A0F000EB2DAE /* lockDoorAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lockDoorAction.swift; sourceTree = "<group>"; };
+		FA2706892A29897900EB2DAE /* Executable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Executable.swift; sourceTree = "<group>"; };
+		FA27068C2A298A0C00EB2DAE /* TurnLightOnAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnLightOnAction.swift; sourceTree = "<group>"; };
+		FA27068F2A298B8A00EB2DAE /* TurnLightOffAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnLightOffAction.swift; sourceTree = "<group>"; };
+		FA2706922A298C8700EB2DAE /* PushSetPointUpAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSetPointUpAction.swift; sourceTree = "<group>"; };
+		FA2706952A298D0E00EB2DAE /* PushSetPointDownAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PushSetPointDownAction.swift; sourceTree = "<group>"; };
+		FA2706982A2999C000EB2DAE /* OpenDoorAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenDoorAction.swift; sourceTree = "<group>"; };
+		FA27069B2A299A1500EB2DAE /* CloseDoorAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CloseDoorAction.swift; sourceTree = "<group>"; };
+		FA27069E2A299B1C00EB2DAE /* UnlockDoorAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockDoorAction.swift; sourceTree = "<group>"; };
+		FA2706A12A29A0F000EB2DAE /* LockDoorAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LockDoorAction.swift; sourceTree = "<group>"; };
 		FA2706A52A29A6C500EB2DAE /* NormalCoolManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalCoolManagerMock.swift; sourceTree = "<group>"; };
 		FA2706A82A29A6FC00EB2DAE /* DoorOpenedCoolManagerMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoorOpenedCoolManagerMock.swift; sourceTree = "<group>"; };
 		FA2706AB2A29A74D00EB2DAE /* DefrostingRefrigeratorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefrostingRefrigeratorMock.swift; sourceTree = "<group>"; };
-		FA2706AE2A29B14600EB2DAE /* turnCompressorOnAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turnCompressorOnAction.swift; sourceTree = "<group>"; };
-		FA2706B12A29B16300EB2DAE /* turnCompressorOffAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turnCompressorOffAction.swift; sourceTree = "<group>"; };
-		FA2706B42A29B21D00EB2DAE /* turnFanOnAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turnFanOnAction.swift; sourceTree = "<group>"; };
-		FA2706B72A29B26B00EB2DAE /* turnFanOffAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turnFanOffAction.swift; sourceTree = "<group>"; };
-		FA2706BA2A29B33200EB2DAE /* turnResistanceOnAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turnResistanceOnAction.swift; sourceTree = "<group>"; };
-		FA2706BD2A29B35100EB2DAE /* turnResistanceOffAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = turnResistanceOffAction.swift; sourceTree = "<group>"; };
+		FA2706AE2A29B14600EB2DAE /* TurnCompressorOnAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnCompressorOnAction.swift; sourceTree = "<group>"; };
+		FA2706B12A29B16300EB2DAE /* TurnCompressorOffAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnCompressorOffAction.swift; sourceTree = "<group>"; };
+		FA2706B42A29B21D00EB2DAE /* TurnFanOnAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnFanOnAction.swift; sourceTree = "<group>"; };
+		FA2706B72A29B26B00EB2DAE /* TurnFanOffAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnFanOffAction.swift; sourceTree = "<group>"; };
+		FA2706BA2A29B33200EB2DAE /* TurnResistanceOnAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnResistanceOnAction.swift; sourceTree = "<group>"; };
+		FA2706BD2A29B35100EB2DAE /* TurnResistanceOffAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TurnResistanceOffAction.swift; sourceTree = "<group>"; };
 		FA2706C02A29BBDA00EB2DAE /* DashBoardController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashBoardController.swift; sourceTree = "<group>"; };
 		FA2706C32A29BC8C00EB2DAE /* ControllerCoolManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ControllerCoolManager.swift; sourceTree = "<group>"; };
 		FA2706C72A29BD4F00EB2DAE /* viewCoolManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewCoolManager.swift; sourceTree = "<group>"; };
 		FA2706CA2A29BF5B00EB2DAE /* viewDashBoard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = viewDashBoard.swift; sourceTree = "<group>"; };
-		FA2706EE2A2A3A1400EB2DAE /* confirmSetPointSelectedAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = confirmSetPointSelectedAction.swift; sourceTree = "<group>"; };
+		FA2706EE2A2A3A1400EB2DAE /* ConfirmSetPointSelectedAction.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmSetPointSelectedAction.swift; sourceTree = "<group>"; };
 		FA2706FD2A2F868F00EB2DAE /* SetPointTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetPointTests.swift; sourceTree = "<group>"; };
 		FA2707012A30DAD700EB2DAE /* InconsistentRefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InconsistentRefrigeratorFactory.swift; sourceTree = "<group>"; };
 		FA382ED42A19E1C30047D033 /* RefrigeratorFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorFactory.swift; sourceTree = "<group>"; };
@@ -385,6 +387,7 @@
 		FA8C4D622A4F5289008D8899 /* TonyRefrigerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TonyRefrigerator.swift; sourceTree = "<group>"; };
 		FA8C4D652A4F5B91008D8899 /* ComponentFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComponentFactory.swift; sourceTree = "<group>"; };
 		FA8C4D682A4F5BE0008D8899 /* NormalLightFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NormalLightFactory.swift; sourceTree = "<group>"; };
+		FA9A74BD2B2E3BCC0015001B /* RefrigeratorObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RefrigeratorObserver.swift; sourceTree = "<group>"; };
 		FAB54C2A2A0DC03200E14E1E /* Compressor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Compressor.swift; sourceTree = "<group>"; };
 		FAB54C2B2A0DC03200E14E1E /* Door.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Door.swift; sourceTree = "<group>"; };
 		FAB54C2C2A0DC03200E14E1E /* Light.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Light.swift; sourceTree = "<group>"; };
@@ -511,6 +514,7 @@
 				FA2706852A295B8200EB2DAE /* TemperatureController.swift */,
 				FA2706C02A29BBDA00EB2DAE /* DashBoardController.swift */,
 				FA2706C32A29BC8C00EB2DAE /* ControllerCoolManager.swift */,
+				FA9A74BD2B2E3BCC0015001B /* RefrigeratorObserver.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -518,22 +522,22 @@
 		FA2706882A29885000EB2DAE /* Actions */ = {
 			isa = PBXGroup;
 			children = (
-				FA2706892A29897900EB2DAE /* Action.swift */,
-				FA2706BA2A29B33200EB2DAE /* turnResistanceOnAction.swift */,
-				FA2706AE2A29B14600EB2DAE /* turnCompressorOnAction.swift */,
-				FA2706922A298C8700EB2DAE /* pushSetPointUpAction.swift */,
-				FA27068C2A298A0C00EB2DAE /* turnLightOnAction.swift */,
-				FA27068F2A298B8A00EB2DAE /* turnLightOffAction.swift */,
-				FA2706952A298D0E00EB2DAE /* pushSetPointDownAction.swift */,
-				FA2706982A2999C000EB2DAE /* openDoorAction.swift */,
-				FA27069B2A299A1500EB2DAE /* closeDoorAction.swift */,
-				FA27069E2A299B1C00EB2DAE /* unlockDoorAction.swift */,
-				FA2706A12A29A0F000EB2DAE /* lockDoorAction.swift */,
-				FA2706B12A29B16300EB2DAE /* turnCompressorOffAction.swift */,
-				FA2706B42A29B21D00EB2DAE /* turnFanOnAction.swift */,
-				FA2706B72A29B26B00EB2DAE /* turnFanOffAction.swift */,
-				FA2706BD2A29B35100EB2DAE /* turnResistanceOffAction.swift */,
-				FA2706EE2A2A3A1400EB2DAE /* confirmSetPointSelectedAction.swift */,
+				FA2706892A29897900EB2DAE /* Executable.swift */,
+				FA2706BA2A29B33200EB2DAE /* TurnResistanceOnAction.swift */,
+				FA2706AE2A29B14600EB2DAE /* TurnCompressorOnAction.swift */,
+				FA2706922A298C8700EB2DAE /* PushSetPointUpAction.swift */,
+				FA27068C2A298A0C00EB2DAE /* TurnLightOnAction.swift */,
+				FA27068F2A298B8A00EB2DAE /* TurnLightOffAction.swift */,
+				FA2706952A298D0E00EB2DAE /* PushSetPointDownAction.swift */,
+				FA2706982A2999C000EB2DAE /* OpenDoorAction.swift */,
+				FA27069B2A299A1500EB2DAE /* CloseDoorAction.swift */,
+				FA27069E2A299B1C00EB2DAE /* UnlockDoorAction.swift */,
+				FA2706A12A29A0F000EB2DAE /* LockDoorAction.swift */,
+				FA2706B12A29B16300EB2DAE /* TurnCompressorOffAction.swift */,
+				FA2706B42A29B21D00EB2DAE /* TurnFanOnAction.swift */,
+				FA2706B72A29B26B00EB2DAE /* TurnFanOffAction.swift */,
+				FA2706BD2A29B35100EB2DAE /* TurnResistanceOffAction.swift */,
+				FA2706EE2A2A3A1400EB2DAE /* ConfirmSetPointSelectedAction.swift */,
 			);
 			path = Actions;
 			sourceTree = "<group>";
@@ -973,7 +977,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA2706B52A29B21D00EB2DAE /* turnFanOnAction.swift in Sources */,
+				FA2706B52A29B21D00EB2DAE /* TurnFanOnAction.swift in Sources */,
 				FAB54C3E2A0E118A00E14E1E /* RefrigeratorBuilderViewModel.swift in Sources */,
 				FA7FC78B2B16A58900B0195C /* SamsumgFanFactory.swift in Sources */,
 				FACC4C902A4A8F9A00246B2E /* ButtonFactory.swift in Sources */,
@@ -986,9 +990,10 @@
 				FAC9DACA2B11516A000602C3 /* RefrigeratorConfiguration.swift in Sources */,
 				FA382EF52A1FB3660047D033 /* SetPoint.swift in Sources */,
 				FA6C7A2629D8F6CD002267A5 /* MainView.swift in Sources */,
+				FA9A74BE2B2E3BCC0015001B /* RefrigeratorObserver.swift in Sources */,
 				FA382EEB2A1F3D2D0047D033 /* DoorProtocol.swift in Sources */,
 				FA8C4D692A4F5BE0008D8899 /* NormalLightFactory.swift in Sources */,
-				FA2706962A298D0E00EB2DAE /* pushSetPointDownAction.swift in Sources */,
+				FA2706962A298D0E00EB2DAE /* PushSetPointDownAction.swift in Sources */,
 				FA2706C12A29BBDA00EB2DAE /* DashBoardController.swift in Sources */,
 				FA38FFEB29FE669800BC21FA /* View6ViewController.swift in Sources */,
 				FAB54C322A0DC03200E14E1E /* Fan.swift in Sources */,
@@ -996,8 +1001,8 @@
 				FAB54C332A0DC03200E14E1E /* Resistance.swift in Sources */,
 				FA6C7A2229D8F6CD002267A5 /* AppDelegate.swift in Sources */,
 				FA8C4D632A4F5289008D8899 /* TonyRefrigerator.swift in Sources */,
-				FA2706B82A29B26B00EB2DAE /* turnFanOffAction.swift in Sources */,
-				FA2706992A2999C000EB2DAE /* openDoorAction.swift in Sources */,
+				FA2706B82A29B26B00EB2DAE /* TurnFanOffAction.swift in Sources */,
+				FA2706992A2999C000EB2DAE /* OpenDoorAction.swift in Sources */,
 				FA0E0E662B141FE000223C5F /* NormalCoolManagerFiveIntervalMock.swift in Sources */,
 				FA382ED52A19E1C30047D033 /* RefrigeratorFactory.swift in Sources */,
 				FA7FC77F2B16A52400B0195C /* SamsumgLightFactory.swift in Sources */,
@@ -1007,12 +1012,12 @@
 				FA2706C82A29BD4F00EB2DAE /* viewCoolManager.swift in Sources */,
 				FA0E0E6C2B141FFD00223C5F /* NormalCoolManagerSevenIntervalMock.swift in Sources */,
 				FA2706A62A29A6C500EB2DAE /* NormalCoolManagerMock.swift in Sources */,
-				FA27069C2A299A1500EB2DAE /* closeDoorAction.swift in Sources */,
+				FA27069C2A299A1500EB2DAE /* CloseDoorAction.swift in Sources */,
 				FA714C292A088369003E2CA4 /* TemperatureUnit.swift in Sources */,
 				FAF332952B1818DC00A69162 /* LowTemperatureAdjustmentStrategy.swift in Sources */,
 				FA2706C42A29BC8C00EB2DAE /* ControllerCoolManager.swift in Sources */,
 				FACC4CA22A4A9D2D00246B2E /* SettingsButtonFactory.swift in Sources */,
-				FA2706B22A29B16300EB2DAE /* turnCompressorOffAction.swift in Sources */,
+				FA2706B22A29B16300EB2DAE /* TurnCompressorOffAction.swift in Sources */,
 				FA7FC7852B16A55100B0195C /* SamsumgCompressorFactory.swift in Sources */,
 				FACC4CAB2A4CC58300246B2E /* viewSetPoint.swift in Sources */,
 				FA0E0E722B14201D00223C5F /* NormalCoolManagerNineIntervalMock.swift in Sources */,
@@ -1020,11 +1025,11 @@
 				FA382EEE2A1F3D4E0047D033 /* RefrigeratorComponent.swift in Sources */,
 				FA0E0E422B14179C00223C5F /* CoolManagerTwoIntervalMock.swift in Sources */,
 				FA38FFF129FE669800BC21FA /* View5ViewController.swift in Sources */,
-				FA27069F2A299B1C00EB2DAE /* unlockDoorAction.swift in Sources */,
+				FA27069F2A299B1C00EB2DAE /* UnlockDoorAction.swift in Sources */,
 				FA38FFE829FE669800BC21FA /* View3ViewController.swift in Sources */,
 				FACC4C942A4A906700246B2E /* HomeButtonFactory.swift in Sources */,
 				FA7FC7722B169FFF00B0195C /* NormalDoorFactory.swift in Sources */,
-				FA2706A22A29A0F000EB2DAE /* lockDoorAction.swift in Sources */,
+				FA2706A22A29A0F000EB2DAE /* LockDoorAction.swift in Sources */,
 				FA714C222A0870A2003E2CA4 /* Temperature.swift in Sources */,
 				FA0E0E3B2B1414A100223C5F /* ConfigurationFiles.swift in Sources */,
 				FA8C4D662A4F5B91008D8899 /* ComponentFactory.swift in Sources */,
@@ -1039,12 +1044,12 @@
 				FA382EDF2A1F3CC80047D033 /* FanProtocol.swift in Sources */,
 				FA7FC7822B16A53C00B0195C /* SamsumgDoorFactory.swift in Sources */,
 				FACC4C9F2A4A9CF900246B2E /* ConnectionButton.swift in Sources */,
-				FA2706AF2A29B14600EB2DAE /* turnCompressorOnAction.swift in Sources */,
+				FA2706AF2A29B14600EB2DAE /* TurnCompressorOnAction.swift in Sources */,
 				FAB54C382A0E113C00E14E1E /* HomePresenter.swift in Sources */,
 				FA38FFEA29FE669800BC21FA /* View4ViewController.swift in Sources */,
 				FA382EE82A1F3D160047D033 /* CompressorProtocol.swift in Sources */,
 				FA382ED82A19E2710047D033 /* NormalRefrigeratorFactory.swift in Sources */,
-				FA27068D2A298A0C00EB2DAE /* turnLightOnAction.swift in Sources */,
+				FA27068D2A298A0C00EB2DAE /* TurnLightOnAction.swift in Sources */,
 				FA382EE22A1F3CE20047D033 /* ResistanceProtocol.swift in Sources */,
 				FA382EE52A1F3CFC0047D033 /* LightProtocol.swift in Sources */,
 				FAC9DACD2B1151BE000602C3 /* FileBasedRefrigeratorFactory.swift in Sources */,
@@ -1055,7 +1060,7 @@
 				FA0E0E322B1410FB00223C5F /* NormalCoolManagerOneIntervalMock.swift in Sources */,
 				FA0E0E5D2B141FAE00223C5F /* NormalCoolManagerTwoIntervalMock.swift in Sources */,
 				FAF3328F2B1818B900A69162 /* DefaultTemperatureAdjustmentStrategy.swift in Sources */,
-				FA2706EF2A2A3A1400EB2DAE /* confirmSetPointSelectedAction.swift in Sources */,
+				FA2706EF2A2A3A1400EB2DAE /* ConfirmSetPointSelectedAction.swift in Sources */,
 				FA0E0E602B141FC100223C5F /* NormalCoolManagerThreeIntervalMock.swift in Sources */,
 				FA382F052A253F3E0047D033 /* CoolManager.swift in Sources */,
 				FACC4C972A4A911900246B2E /* HomeButton.swift in Sources */,
@@ -1063,21 +1068,21 @@
 				FA38FFEF29FE669800BC21FA /* HomeView.swift in Sources */,
 				FA0E0E7D2B152BAC00223C5F /* LgRefrigeratorFactory.swift in Sources */,
 				FA2706AC2A29A74D00EB2DAE /* DefrostingRefrigeratorMock.swift in Sources */,
-				FA2706902A298B8A00EB2DAE /* turnLightOffAction.swift in Sources */,
+				FA2706902A298B8A00EB2DAE /* TurnLightOffAction.swift in Sources */,
 				FA382EFB2A20FE060047D033 /* CorruptTemperaturesRefrigeratorFactory.swift in Sources */,
 				FA2706A92A29A6FC00EB2DAE /* DoorOpenedCoolManagerMock.swift in Sources */,
 				FA0E0E632B141FD100223C5F /* NormalCoolManagerFourIntervalMock.swift in Sources */,
 				FA0E0E692B141FF000223C5F /* NormalCoolManagerSixIntervalMock.swift in Sources */,
-				FA27068A2A29897900EB2DAE /* Action.swift in Sources */,
+				FA27068A2A29897900EB2DAE /* Executable.swift in Sources */,
 				FA7FC7782B16A4CA00B0195C /* NormalResistanceFactory.swift in Sources */,
 				FAB54C3B2A0E116600E14E1E /* viewProtocol.swift in Sources */,
-				FA2706BB2A29B33200EB2DAE /* turnResistanceOnAction.swift in Sources */,
+				FA2706BB2A29B33200EB2DAE /* TurnResistanceOnAction.swift in Sources */,
 				FA7FC7882B16A57000B0195C /* SamsumgResistanceFactory.swift in Sources */,
 				FACC4C9C2A4A9CE300246B2E /* ProfileButton.swift in Sources */,
 				FA0E0E802B152BC500223C5F /* WhirlpoolRefrigeratorFactory.swift in Sources */,
 				FACC4CB12A4CDB3B00246B2E /* UIButton.swift in Sources */,
-				FA2706932A298C8700EB2DAE /* pushSetPointUpAction.swift in Sources */,
-				FA2706BE2A29B35100EB2DAE /* turnResistanceOffAction.swift in Sources */,
+				FA2706932A298C8700EB2DAE /* PushSetPointUpAction.swift in Sources */,
+				FA2706BE2A29B35100EB2DAE /* TurnResistanceOffAction.swift in Sources */,
 				FAF3328C2B18185400A69162 /* TemperatureAdjustmentStrategy.swift in Sources */,
 				FA2707022A30DAD700EB2DAE /* InconsistentRefrigeratorFactory.swift in Sources */,
 			);
@@ -1092,6 +1097,7 @@
 				FA7FC77C2B16A4FB00B0195C /* NormalFanFactory.swift in Sources */,
 				FA2707032A30F0ED00EB2DAE /* InconsistentRefrigeratorFactory.swift in Sources */,
 				FACC4C9A2A4A9CC100246B2E /* SettingsButton.swift in Sources */,
+				FA9A74BF2B2E3BCC0015001B /* RefrigeratorObserver.swift in Sources */,
 				FA2706C52A29BC8C00EB2DAE /* ControllerCoolManager.swift in Sources */,
 				FA0E0E642B141FD100223C5F /* NormalCoolManagerFourIntervalMock.swift in Sources */,
 				FA0E0E612B141FC100223C5F /* NormalCoolManagerThreeIntervalMock.swift in Sources */,
@@ -1108,20 +1114,20 @@
 				FA382ED12A19A2930047D033 /* Fan.swift in Sources */,
 				FAF3328D2B18185400A69162 /* TemperatureAdjustmentStrategy.swift in Sources */,
 				FA382ED22A19A2930047D033 /* Light.swift in Sources */,
-				FA2706912A298B8A00EB2DAE /* turnLightOffAction.swift in Sources */,
+				FA2706912A298B8A00EB2DAE /* TurnLightOffAction.swift in Sources */,
 				FA2706CC2A29BF5B00EB2DAE /* viewDashBoard.swift in Sources */,
 				FACC4CA92A4A9D4D00246B2E /* ConnectionButtonFactory.swift in Sources */,
-				FA2706B32A29B16300EB2DAE /* turnCompressorOffAction.swift in Sources */,
+				FA2706B32A29B16300EB2DAE /* TurnCompressorOffAction.swift in Sources */,
 				FAF332932B1818CA00A69162 /* HighTemperatureAdjustmentStrategy.swift in Sources */,
 				FACC4C8C2A4A613600246B2E /* MainViewModel.swift in Sources */,
-				FA2706972A298D0E00EB2DAE /* pushSetPointDownAction.swift in Sources */,
-				FA2706F02A2A3A1400EB2DAE /* confirmSetPointSelectedAction.swift in Sources */,
+				FA2706972A298D0E00EB2DAE /* PushSetPointDownAction.swift in Sources */,
+				FA2706F02A2A3A1400EB2DAE /* ConfirmSetPointSelectedAction.swift in Sources */,
 				FA382ED92A19E2710047D033 /* NormalRefrigeratorFactory.swift in Sources */,
-				FA2706A32A29A0F000EB2DAE /* lockDoorAction.swift in Sources */,
-				FA27069D2A299A1500EB2DAE /* closeDoorAction.swift in Sources */,
+				FA2706A32A29A0F000EB2DAE /* LockDoorAction.swift in Sources */,
+				FA27069D2A299A1500EB2DAE /* CloseDoorAction.swift in Sources */,
 				FA0E0E762B14202700223C5F /* NormalCoolManagerTenIntervalMock.swift in Sources */,
 				FA0E0E672B141FE000223C5F /* NormalCoolManagerFiveIntervalMock.swift in Sources */,
-				FA2706942A298C8700EB2DAE /* pushSetPointUpAction.swift in Sources */,
+				FA2706942A298C8700EB2DAE /* PushSetPointUpAction.swift in Sources */,
 				FA382ED62A19E1C30047D033 /* RefrigeratorFactory.swift in Sources */,
 				FA382EDD2A1A79060047D033 /* DefrostingRefrigeratorFactory.swift in Sources */,
 				FA382EFC2A20FE060047D033 /* CorruptTemperaturesRefrigeratorFactory.swift in Sources */,
@@ -1135,12 +1141,12 @@
 				FA382EB72A19A23E0047D033 /* Compressor.swift in Sources */,
 				FA7FC7832B16A53C00B0195C /* SamsumgDoorFactory.swift in Sources */,
 				FA7FC7892B16A57000B0195C /* SamsumgResistanceFactory.swift in Sources */,
-				FA27068E2A298A0C00EB2DAE /* turnLightOnAction.swift in Sources */,
+				FA27068E2A298A0C00EB2DAE /* TurnLightOnAction.swift in Sources */,
 				FA7FC7862B16A55100B0195C /* SamsumgCompressorFactory.swift in Sources */,
 				FA382EB82A19A23E0047D033 /* Resistance.swift in Sources */,
 				FA7FC7792B16A4CA00B0195C /* NormalResistanceFactory.swift in Sources */,
 				FA382EEF2A1F3D4E0047D033 /* RefrigeratorComponent.swift in Sources */,
-				FA2706A02A299B1C00EB2DAE /* unlockDoorAction.swift in Sources */,
+				FA2706A02A299B1C00EB2DAE /* UnlockDoorAction.swift in Sources */,
 				FACC4CA02A4A9CF900246B2E /* ConnectionButton.swift in Sources */,
 				FA382EB92A19A23E0047D033 /* Refrigerator.swift in Sources */,
 				FACC4CA62A4A9D3A00246B2E /* ProfileButtonFactory.swift in Sources */,
@@ -1155,15 +1161,15 @@
 				FA382EBC2A19A23E0047D033 /* TemperatureStatus.swift in Sources */,
 				FA0E0E732B14201D00223C5F /* NormalCoolManagerNineIntervalMock.swift in Sources */,
 				FA0E0E7B2B152B9A00223C5F /* SamsungRefrigeratorFactory.swift in Sources */,
-				FA27068B2A29897900EB2DAE /* Action.swift in Sources */,
+				FA27068B2A29897900EB2DAE /* Executable.swift in Sources */,
 				FA7FC7732B169FFF00B0195C /* NormalDoorFactory.swift in Sources */,
 				FA382EBD2A19A23E0047D033 /* TemperatureUnit.swift in Sources */,
-				FA2706B02A29B14600EB2DAE /* turnCompressorOnAction.swift in Sources */,
+				FA2706B02A29B14600EB2DAE /* TurnCompressorOnAction.swift in Sources */,
 				FAB54C3F2A0E118A00E14E1E /* RefrigeratorBuilderViewModel.swift in Sources */,
 				FA2706C92A29BD4F00EB2DAE /* viewCoolManager.swift in Sources */,
 				FA2706AD2A29A74D00EB2DAE /* DefrostingRefrigeratorMock.swift in Sources */,
 				FA7FC7762B16A4B000B0195C /* NormalCompressorFactory.swift in Sources */,
-				FA2706BF2A29B35100EB2DAE /* turnResistanceOffAction.swift in Sources */,
+				FA2706BF2A29B35100EB2DAE /* TurnResistanceOffAction.swift in Sources */,
 				FAB54C352A0DC8AE00E14E1E /* TemperatureTests.swift in Sources */,
 				FA0E0E2C2B140A9400223C5F /* InitializationTests.swift in Sources */,
 				FA7FC7802B16A52400B0195C /* SamsumgLightFactory.swift in Sources */,
@@ -1171,15 +1177,15 @@
 				FA0E0E432B14179C00223C5F /* CoolManagerTwoIntervalMock.swift in Sources */,
 				FACC4CA32A4A9D2D00246B2E /* SettingsButtonFactory.swift in Sources */,
 				FA714C3E2A088C11003E2CA4 /* TemperatureRulesTests.swift in Sources */,
-				FA2706B62A29B21D00EB2DAE /* turnFanOnAction.swift in Sources */,
+				FA2706B62A29B21D00EB2DAE /* TurnFanOnAction.swift in Sources */,
 				FA2706832A2954D100EB2DAE /* RefrigeratorTests.swift in Sources */,
-				FA2706B92A29B26B00EB2DAE /* turnFanOffAction.swift in Sources */,
+				FA2706B92A29B26B00EB2DAE /* TurnFanOffAction.swift in Sources */,
 				FA714C382A088BFF003E2CA4 /* CoolManagerTests.swift in Sources */,
 				FA382EEC2A1F3D2D0047D033 /* DoorProtocol.swift in Sources */,
 				FAB54C392A0E113C00E14E1E /* HomePresenter.swift in Sources */,
 				FAB54C3C2A0E116600E14E1E /* viewProtocol.swift in Sources */,
-				FA2706BC2A29B33200EB2DAE /* turnResistanceOnAction.swift in Sources */,
-				FA27069A2A2999C000EB2DAE /* openDoorAction.swift in Sources */,
+				FA2706BC2A29B33200EB2DAE /* TurnResistanceOnAction.swift in Sources */,
+				FA27069A2A2999C000EB2DAE /* OpenDoorAction.swift in Sources */,
 				FA0E0E2E2B140BAB00223C5F /* MoveUpSetPointTests.swift in Sources */,
 				FA0E0E6D2B141FFD00223C5F /* NormalCoolManagerSevenIntervalMock.swift in Sources */,
 				FAB54C442A0E152300E14E1E /* RefrigeratorBuilderViewModelTests.swift in Sources */,

@@ -3,8 +3,40 @@ public class Refrigerator {
     private(set) var setPoint: SetPoint
     private(set) var components = [RefrigeratorComponent]()
     private var stateName:String
-    var timer:Timer = Timer()
-    var temperatureAdjustmentStrategy:any TemperatureAdjustmentStrategy = DefaultTemperatureAdjustmentStrategy()
+    private var timer:Timer = Timer()
+    private var observers: [RefrigeratorObserver] = []
+    private var temperatureAdjustmentStrategy:any TemperatureAdjustmentStrategy = DefaultTemperatureAdjustmentStrategy()
+    
+    var door: Door {
+        didSet {
+            notifyObservers()
+        }
+    }
+    
+    var compressor: Compressor {
+        didSet {
+            notifyObservers()
+        }
+    }
+    
+    var light: Light {
+        didSet {
+            notifyObservers()
+        }
+    }
+    
+    var resistance: Resistance {
+        didSet {
+            notifyObservers()
+        }
+    }
+
+    var fan: Fan {
+        didSet {
+            notifyObservers()
+        }
+    }
+    
     init(_ stateName:String="",
          setPoint:SetPoint,
          fan:FanProtocol,
@@ -19,15 +51,43 @@ public class Refrigerator {
         self.components.append(light)
         self.components.append(resistance)
         self.stateName = stateName
+        self.door = door as! Door
+        self.fan = fan as! Fan
+        self.compressor = compressor as! Compressor
+        self.light = light as! Light
+        self.resistance = resistance as! Resistance
+        self.startStateChangeTimer()
+    }
+    
+    private func startStateChangeTimer() {
         self.initializeTimer()
     }
     
+    @objc private func handleStateChange() {
+        notifyObservers()
+    }
+    
+    private func notifyObservers() {
+        for observer in observers {
+            observer.refrigeratorStatusDidChange()
+        }
+    }
+    
+    func addObserver(_ observer: RefrigeratorObserver) {
+        observers.append(observer)
+    }
+    
+    func removeObserver(_ observer: RefrigeratorObserver) {
+        observers = observers.filter { $0 !== observer }
+    }
+    
+    
     private func initializeTimer(){
         timer = Timer.scheduledTimer(timeInterval: 3.0,
-                                         target: self,
-                                         selector: #selector(timerAction),
-                                         userInfo: nil,
-                                         repeats: true)
+                                     target: self,
+                                     selector: #selector(timerAction),
+                                     userInfo: nil,
+                                     repeats: true)
         timer.fire()
     }
 
@@ -37,41 +97,6 @@ public class Refrigerator {
         }
     }
 
-    var door: Door {
-        guard let doorComponent = components.first(where: { $0 is Door }) as? Door else {
-            fatalError("Door component not found")
-        }
-        return doorComponent
-    }
-
-    var compressor: Compressor {
-        guard let compressorComponent = components.first(where: { $0 is Compressor }) as? Compressor else {
-            fatalError("Compressor component not found")
-        }
-        return compressorComponent
-    }
-
-    var light: Light {
-        guard let lightComponent = components.first(where: { $0 is Light }) as? Light else {
-            fatalError("Light component not found")
-        }
-        return lightComponent
-    }
-
-    var resistance: Resistance {
-        guard let resistanceComponent = components.first(where: { $0 is Resistance }) as? Resistance else {
-            fatalError("Resistance component not found")
-        }
-        return resistanceComponent
-    }
-
-    var fan: Fan {
-        guard let fanComponent = components.first(where: { $0 is Fan }) as? Fan else {
-            fatalError("Fan component not found")
-        }
-        return fanComponent
-    }
-    
     func currentStateName() -> String {
         return "No state"
     }
@@ -102,7 +127,6 @@ public class Refrigerator {
         for component in components {
             component.printStatus()
         }
-        
     }
 }
 

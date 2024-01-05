@@ -6,7 +6,7 @@ class ControllerCoolManager {
         self.view = vista
     }
     
-    internal func excecute(_ action:Action){
+    internal func excecute(_ action:Executable){
         coolManager.excecute(action)
     }
 }

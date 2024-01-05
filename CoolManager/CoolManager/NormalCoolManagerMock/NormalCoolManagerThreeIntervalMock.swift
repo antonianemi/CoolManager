@@ -6,7 +6,7 @@ final class NormalCoolManagerThreeIntervalMock:CoolManager {
         let refrigerator = factory.create()
         super.init(refrigerator)
     }
-    override func excecute(_ action:Action){
+    override func excecute(_ action:Executable){
         action.excecute()
     }
 }

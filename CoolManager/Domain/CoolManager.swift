@@ -4,7 +4,7 @@ class CoolManager {
     internal init(_ refrigerator:Refrigerator){
         self.refrigerator = refrigerator
     }
-    func excecute(_ action:Action){
+    func excecute(_ action:Executable){
         action.excecute()
     }
 }

@@ -11,12 +11,12 @@ class DashBoardController:ControllerCoolManager {
     }
     
     func commitSetPoint(){
-        self.excecute(confirmSetPointSelectedAction(coolManager.refrigerator.setPoint))
+        self.excecute(ConfirmSetPointSelectedAction(coolManager.refrigerator.setPoint))
     }
     func moveSetPointUp(){
-        self.excecute(pushSetPointUpAction(coolManager.refrigerator.setPoint))
+        self.excecute(PushSetPointUpAction(coolManager.refrigerator.setPoint))
     }
     func moveSetPointDown(){
-        self.excecute(pushSetPointDownAction(coolManager.refrigerator.setPoint))
+        self.excecute(PushSetPointDownAction(coolManager.refrigerator.setPoint))
     }
 }

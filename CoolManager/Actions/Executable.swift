@@ -1,3 +1,3 @@
-protocol Action {
+protocol Executable {
     func excecute()
 }

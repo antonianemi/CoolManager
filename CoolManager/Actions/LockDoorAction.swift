@@ -1,9 +1,9 @@
-final class openDoorAction:Action {
+final class LockDoorAction:Executable {
     var door:Door
     init(_ door:Door){
         self.door = door
     }
     func excecute() {
-        door.open()
+        door.lock()
     }
 }

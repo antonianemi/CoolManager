@@ -1,4 +1,4 @@
-final class confirmSetPointSelectedAction:Action {
+final class ConfirmSetPointSelectedAction:Executable {
     var setPoint:SetPoint
     init(_ setPoint:SetPoint){ self.setPoint = setPoint }
     func excecute() { self.setPoint.confirm() }
