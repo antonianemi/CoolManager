@@ -1,4 +1,5 @@
 import Foundation
+
 public class Refrigerator {
     private(set) var setPoint: SetPoint
     private(set) var components = [RefrigeratorComponent]()
