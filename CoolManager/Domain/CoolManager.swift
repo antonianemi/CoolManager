@@ -1,10 +1,21 @@
 import Foundation
 class CoolManager {
-    private (set)var refrigerator:Refrigerator
-    internal init(_ refrigerator:Refrigerator){
-        self.refrigerator = refrigerator
+    static let shared = CoolManager()
+    private(set) var refrigerator: Refrigerator
+    private init() {
+        self.refrigerator = NormalRefrigeratorFactory().create()
     }
-    func excecute(_ action:Executable){
-        action.excecute()
+    func execute(_ action: Executable) {
+        action.execute()
+    }
+    
+    func commitSetPoint(){
+        self.execute(ConfirmSetPointSelectedAction(refrigerator.setPoint))
+    }
+    func moveSetPointUp(){
+        self.execute(PushSetPointUpAction(refrigerator.setPoint))
+    }
+    func moveSetPointDown(){
+        self.execute(PushSetPointDownAction(refrigerator.setPoint))
     }
 }

@@ -3,7 +3,7 @@ final class OpenDoorAction:Executable {
     init(_ door:Door){
         self.door = door
     }
-    func excecute() {
+    func execute() {
         door.open()
     }
 }

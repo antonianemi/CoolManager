@@ -7,6 +7,6 @@ final class NormalCoolManagerThreeIntervalMock:CoolManager {
         super.init(refrigerator)
     }
     override func excecute(_ action:Executable){
-        action.excecute()
+        action.execute()
     }
 }

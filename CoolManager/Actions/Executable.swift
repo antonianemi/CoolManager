@@ -1,3 +1,3 @@
 protocol Executable {
-    func excecute()
+    func execute()
 }

@@ -17,8 +17,6 @@ class TemperatureController {
         return temperature.converted(to: unit)
     }
     
-    // Otros métodos relacionados con el manejo de temperaturas
-    
     func getTemperature() -> Temperature {
         return temperature
     }

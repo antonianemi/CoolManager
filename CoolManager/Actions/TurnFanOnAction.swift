@@ -1,5 +1,5 @@
 final class TurnFanOnAction:Executable {
     var fan:Fan
     init(_ fan:Fan){ self.fan = fan }
-    func excecute() { self.fan.turnOn() }
+    func execute() { self.fan.turnOn() }
 }
