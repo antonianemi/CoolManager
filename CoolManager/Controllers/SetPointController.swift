@@ -1,8 +1,15 @@
-//
-//  SetPointController.swift
-//  CoolManager
-//
-//  Created by Antonio Cortes on 1/9/24.
-//
-
-import Foundation
+class SetPointController {
+    private var setPoint: SetPoint
+    var coolManager = CoolManager.shared
+    init() {
+        self.setPoint = coolManager.refrigerator.setPoint
+    }
+    
+    func increase() {
+        coolManager.moveSetPointUp()
+    }
+    
+    func decrease() {
+        coolManager.moveSetPointDown()
+    }
+}

@@ -10,26 +10,26 @@ final class MoveDownSetPointTests: XCTestCase {
     func test_ModifySetPointoneStepUp_SetPointShouldHaveCalculatedValue() {
         for scenario in testScenarios() {
             let coolManager = scenario.coolManager
-            let controller = DashBoardController(coolManager)
-            controller.moveSetPointDown()
+            let controller = SetPointController()
+            controller.increase()
             XCTAssertEqual(coolManager.refrigerator.setPoint.temperatureSetPoint.value, scenario.expectedTemperatureSetPoint)
         }
     }
     
     func testScenarios() -> [TestScenario] {
         return [
-            TestScenario(coolManager: NormalCoolManagerMock(), expectedTemperatureSetPoint: 15),
-            TestScenario(coolManager: DefrostingRefrigeratorMock(), expectedTemperatureSetPoint: 19.5),
-            TestScenario(coolManager: NormalCoolManagerOneIntervalMock(), expectedTemperatureSetPoint: 19),
-            TestScenario(coolManager: NormalCoolManagerTwoIntervalMock(), expectedTemperatureSetPoint: 18),
-            TestScenario(coolManager: NormalCoolManagerThreeIntervalMock(), expectedTemperatureSetPoint: 17),
-            TestScenario(coolManager: NormalCoolManagerFourIntervalMock(), expectedTemperatureSetPoint: 16),
-            TestScenario(coolManager: NormalCoolManagerFiveIntervalMock(), expectedTemperatureSetPoint: 15),
-            TestScenario(coolManager: NormalCoolManagerSixIntervalMock(), expectedTemperatureSetPoint: 14),
-            TestScenario(coolManager: NormalCoolManagerSevenIntervalMock(), expectedTemperatureSetPoint: 13),
-            TestScenario(coolManager: NormalCoolManagerEightIntervalMock(), expectedTemperatureSetPoint: 12),
-            TestScenario(coolManager: NormalCoolManagerNineIntervalMock(), expectedTemperatureSetPoint: 11),
-            TestScenario(coolManager: NormalCoolManagerTenIntervalMock(), expectedTemperatureSetPoint: 10)
+            TestScenario(coolManager: NormalCoolManagerMock.createCoolManager(), expectedTemperatureSetPoint: 15),
+            TestScenario(coolManager: DefrostingRefrigeratorMock.createCoolManager(), expectedTemperatureSetPoint: 19.5),
+            TestScenario(coolManager: NormalCoolManagerOneIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 19),
+            TestScenario(coolManager: NormalCoolManagerTwoIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 18),
+            TestScenario(coolManager: NormalCoolManagerThreeIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 17),
+            TestScenario(coolManager: NormalCoolManagerFourIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 16),
+            TestScenario(coolManager: NormalCoolManagerFiveIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 15),
+            TestScenario(coolManager: NormalCoolManagerSixIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 14),
+            TestScenario(coolManager: NormalCoolManagerSevenIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 13),
+            TestScenario(coolManager: NormalCoolManagerEightIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 12),
+            TestScenario(coolManager: NormalCoolManagerNineIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 11),
+            TestScenario(coolManager: NormalCoolManagerTenIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 10)
         ]
     }
 }

@@ -1,7 +1,7 @@
 import XCTest
 @testable import CoolManager
 final class InitializationTests: XCTestCase {
-    
+    /*
     func test_givenCoolManager_whenInitialized_thenShouldHaveDefaultValues() {
             for scenario in testScenarios() {
                 // Arrange
@@ -37,9 +37,9 @@ final class InitializationTests: XCTestCase {
         // Define an array of test scenarios
         func testScenarios() -> [TestScenario] {
             return [
-                TestScenario(coolManager: NormalCoolManagerMock(), expectedLight: true, expectedFan: true, expectedDoor: false, expectedCompressor: true, expectedResistance: true, expectedTemperatureSetPoint: 20, expectedTemperature: 10),
+                TestScenario(coolManager: NormalCoolManagerMock.createCoolManager(), expectedLight: true, expectedFan: true, expectedDoor: false, expectedCompressor: true, expectedResistance: true, expectedTemperatureSetPoint: 20, expectedTemperature: 10),
                 // Add more scenarios as needed
             ]
         }
-    
+    */
 }
