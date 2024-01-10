@@ -1,12 +1,10 @@
 import Foundation
 final class NormalCoolManagerFiveIntervalMock:CoolManager {
-    init(){
-        let configurationManager = RefrigeratorConfigurationManager(fileURL: ConfigurationFiles.FiveUnitIntervalConfiguration)
+    override class func createCoolManager() -> CoolManager {
+        let file = ConfigurationFiles.FiveUnitIntervalConfiguration
+        let configurationManager = RefrigeratorConfigurationManager(fileURL: file)
         let factory = FileBasedRefrigeratorFactory(configurationManager: configurationManager)
-        let refrigerator = factory.create()
-        super.init(refrigerator)
-    }
-    override func excecute(_ action:Executable){
-        action.execute()
+        let coolManager = CoolManager(factory: factory)
+        return coolManager
     }
 }

@@ -1,4 +1,9 @@
 final class DefrostingRefrigeratorMock:CoolManager {
-    init(){ super.init(DefrostingRefrigeratorFactory().create()) }
-    override func excecute(_ action:Executable){ action.execute() }
+    override class func createCoolManager() -> CoolManager {
+        let file = ConfigurationFiles.DefrostRefrigeratorConfiguration
+         let configurationManager = RefrigeratorConfigurationManager(fileURL: file)
+         let factory = FileBasedRefrigeratorFactory(configurationManager: configurationManager)
+         let coolManager = CoolManagerTwoIntervalMock(factory: factory)
+         return coolManager
+     }
 }

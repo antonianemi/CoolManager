@@ -1,4 +1,9 @@
 final class NormalCoolManagerMock:CoolManager {
-    init(){ super.init(NormalRefrigeratorFactory().create()) }
-    override func excecute(_ action:Executable){ action.execute() }
+    override class func createCoolManager() -> CoolManager {
+         let file = ConfigurationFiles.NormalRefrigeratorConfiguration
+         let configurationManager = RefrigeratorConfigurationManager(fileURL: file)
+         let factory = FileBasedRefrigeratorFactory(configurationManager: configurationManager)
+         let coolManager = CoolManager(factory: factory)
+         return coolManager
+     }
 }

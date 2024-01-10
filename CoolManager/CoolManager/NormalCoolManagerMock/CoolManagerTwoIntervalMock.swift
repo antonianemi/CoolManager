@@ -1,12 +1,10 @@
 import Foundation
 final class CoolManagerTwoIntervalMock:CoolManager {
-    init(){
-        let configurationManager = RefrigeratorConfigurationManager(fileURL: ConfigurationFiles.TwoUnitIntervalConfiguration)
+    override class func createCoolManager() -> CoolManager {
+        let file = ConfigurationFiles.TwoUnitIntervalConfiguration
+        let configurationManager = RefrigeratorConfigurationManager(fileURL: file)
         let factory = FileBasedRefrigeratorFactory(configurationManager: configurationManager)
-        let refrigerator = factory.create()
-        super.init(refrigerator)
-    }
-    override func excecute(_ action:Executable){
-        action.execute()
+        let coolManager = CoolManagerTwoIntervalMock(factory: factory)
+        return coolManager
     }
 }
