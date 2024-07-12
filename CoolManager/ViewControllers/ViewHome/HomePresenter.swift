@@ -6,6 +6,10 @@ class HomePresenter: view1Delegate {
         viewModel = RefrigeratorBuilderViewModel(refrigerator)
         viewModel.delegate = self
     }
+    init(){
+        viewModel = RefrigeratorBuilderViewModel(CoolManager.shared.refrigerator)
+        viewModel.delegate = self
+    }
     func getRefrigeratorBuilderViewModel()->RefrigeratorBuilderViewModel{
         return viewModel
     }
@@ -33,12 +37,12 @@ class HomePresenter: view1Delegate {
         view?.setCompressorStatus(viewModel.compressorStatus())
         view?.setDoorStatus(viewModel.isDoorOpen())
         view?.setResistenceStatus(viewModel.resistenceStatus())
-        view?.setTemperature(viewModel.getTemperarute())
-        view?.setTemperatureSetPoint(viewModel.setPointValue())
+        //view?.setTemperature(viewModel.getTemperarute())
+        //view?.setTemperatureSetPoint(viewModel.setPointValue())
     }
     func updateSetPointIcon() {
         assert(self.view != nil)
-        view?.updateImageSetPoint(viewModel.getIconName())
+       // view?.updateImageSetPoint(viewModel.getIconName())
     }
     
 }

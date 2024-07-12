@@ -1,0 +1,3 @@
+@startuml Temperature
+class Temperature{}
+@enduml

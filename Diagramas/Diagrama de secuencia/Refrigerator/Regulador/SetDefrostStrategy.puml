@@ -1,0 +1,19 @@
+@startuml SetDefrostStrategy
+activate Refrigerator
+activate CoolingStrategy
+activate Resistance
+activate Compressor
+activate light
+activate fan
+Refrigerator -> DefrostStrategy: execute()
+DefrostStrategy -> Resistance: On
+DefrostStrategy -> Compressor: Off
+DefrostStrategy -> light: Off
+DefrostStrategy -> fan: Off
+deactivate Resistance
+deactivate Compressor
+deactivate light
+deactivate fan
+deactivate Refrigerator
+deactivate DefrostStrategy
+@enduml

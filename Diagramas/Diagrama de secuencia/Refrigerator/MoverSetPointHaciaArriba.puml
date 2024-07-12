@@ -1,0 +1,15 @@
+@startuml
+actor User
+participant CoolManager
+participant Refrigerator
+participant SetPoint
+participant NormalState
+
+User -> CoolManager: Solicitar mover SetPoint hacia arriba
+activate CoolManager
+CoolManager -> CoolManager: moveSetPointUp()
+CoolManager -> Refrigerator: currentState.execute() (NormalState)
+Refrigerator -> SetPoint: PushSetPointUpAction
+SetPoint -> SetPoint: Incrementar valor del SetPoint
+deactivate CoolManager
+@enduml

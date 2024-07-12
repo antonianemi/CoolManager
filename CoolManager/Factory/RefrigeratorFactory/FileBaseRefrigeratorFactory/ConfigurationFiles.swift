@@ -1,6 +1,6 @@
 import Foundation
 struct ConfigurationFiles {
-    static let path = "/Users/antoniocortes/code/CoolManagerNew/CoolManager/CoolManager/Factory/FileBaseRefrigeratorFactory/Files/"
+    static let path = "/Users/antoniocortes/code/CoolManagerNew/CoolManager/CoolManager/Factory/RefrigeratorFactory/FileBaseRefrigeratorFactory/Files/"
     static let OneUnitIntervalConfiguration        = URL(fileURLWithPath: "\(path)OneUnitIntervalConfiguration.txt")
     static let TwoUnitIntervalConfiguration        = URL(fileURLWithPath: "\(path)TwoUnitIntervalConfiguration.txt")
     static let ThreeUnitIntervalConfiguration      = URL(fileURLWithPath: "\(path)ThreeUnitIntervalConfiguration.txt")
@@ -14,4 +14,5 @@ struct ConfigurationFiles {
     static let NormalRefrigeratorConfiguration     = URL(fileURLWithPath: "\(path)NormalConfiguration.txt")
     static let DefrostRefrigeratorConfiguration    = URL(fileURLWithPath: "\(path)DefrostConfiguration.txt")
     static let DoorOpenedRefrigeratorConfiguration = URL(fileURLWithPath: "\(path)DoorOpenedConfiguration.txt")
+    
 }

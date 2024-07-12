@@ -1,5 +1,5 @@
 final class CoolManagerOneIntervalMock:CoolManager {
-    override class func createCoolManager() -> CoolManager {
+    override class func create() -> CoolManager {
         let file = ConfigurationFiles.OneUnitIntervalConfiguration
         return createCoolManager(withConfigurationFile: file)
     }

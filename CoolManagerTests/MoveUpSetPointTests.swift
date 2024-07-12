@@ -19,18 +19,16 @@ final class MoveUpSetPointTests: XCTestCase {
     
     func testScenarios() -> [TestScenario] {
         return [
-            TestScenario(coolManager: NormalCoolManagerMock.createCoolManager(), expectedTemperatureSetPoint: 25),
-            TestScenario(coolManager: DefrostingRefrigeratorMock.createCoolManager(), expectedTemperatureSetPoint: 20.5),
-            TestScenario(coolManager: NormalCoolManagerOneIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 21),
-            TestScenario(coolManager: NormalCoolManagerTwoIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 22),
-            TestScenario(coolManager: NormalCoolManagerThreeIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 23),
-            TestScenario(coolManager: NormalCoolManagerFourIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 24),
-            TestScenario(coolManager: NormalCoolManagerFiveIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 25),
-            TestScenario(coolManager: NormalCoolManagerSixIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 26),
-            TestScenario(coolManager: NormalCoolManagerSevenIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 27),
-            TestScenario(coolManager: NormalCoolManagerEightIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 28),
-            TestScenario(coolManager: NormalCoolManagerNineIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 29),
-            TestScenario(coolManager: NormalCoolManagerTenIntervalMock.createCoolManager(), expectedTemperatureSetPoint: 30)
+            TestScenario(coolManager: CoolManagerOneIntervalMock.create(),   expectedTemperatureSetPoint: 21),
+            TestScenario(coolManager: CoolManagerTwoIntervalMock.create(),   expectedTemperatureSetPoint: 22),
+            TestScenario(coolManager: CoolManagerThreeIntervalMock.create(), expectedTemperatureSetPoint: 23),
+            TestScenario(coolManager: CoolManagerFourIntervalMock.create(),  expectedTemperatureSetPoint: 24),
+            TestScenario(coolManager: CoolManagerFiveIntervalMock.create(),  expectedTemperatureSetPoint: 25),
+            TestScenario(coolManager: CoolManagerSixIntervalMock.create(),   expectedTemperatureSetPoint: 26),
+            TestScenario(coolManager: CoolManagerSevenIntervalMock.create(), expectedTemperatureSetPoint: 27),
+            TestScenario(coolManager: CoolManagerEightIntervalMock.create(), expectedTemperatureSetPoint: 28),
+            TestScenario(coolManager: CoolManagerNineIntervalMock.create(),  expectedTemperatureSetPoint: 29),
+            TestScenario(coolManager: CoolManagerTenIntervalMock.create(),   expectedTemperatureSetPoint: 30)
         ]
     }
 }

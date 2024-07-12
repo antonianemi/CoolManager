@@ -1,12 +1,11 @@
 class LowTemperatureAdjustmentStrategy: TemperatureAdjustmentStrategy {
-    static func == (lhs: LowTemperatureAdjustmentStrategy, rhs: LowTemperatureAdjustmentStrategy) -> Bool {
-        return String(describing: lhs.self) == String(describing: rhs.self)
-    }
-    
-    func adjustSettings(for refrigerator: Refrigerator) {
+    let name = "cool"
+    let temperature = -1.0
+    func adjust(_ refrigerator: Refrigerator) {
         refrigerator.compressor.start()
         refrigerator.resistance.turnOff()
         refrigerator.fan.turnOn()
         refrigerator.light.turnOff()
+        refrigerator.thermometro.temperature = refrigerator.thermometro.temperature + temperature
     }
 }

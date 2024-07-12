@@ -73,7 +73,7 @@ class MainView: UIViewController {
     
     func buildView1Controller()->HomeView{
         let view = HomeView()
-        view.presenter = HomePresenter(DoorOpenedRefrigeratorFactory().create())
+        view.presenter = HomePresenter()
         view.identifier = "View1ViewController"
         return view
     }

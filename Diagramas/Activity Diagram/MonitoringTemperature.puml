@@ -1,0 +1,16 @@
+@startuml Monitoring Temperature
+!define ICONURL https://www.plantuml.com/plantuml/img/
+!define ICON(IMG) <img:ICONURLIMG>
+!define HEADER ICON(activity/activity.png)
+
+(*) --> "Refrigerator: Monitor Temperature"
+  --> "Refrigerator: Get Current Temperature"
+  --> "Refrigerator: Check Temperature Against SetPoint"
+  --> if "Temperature > SetPoint" then
+      -->[true] "Refrigerator: Start Cooling Process"
+      --> "Refrigerator: Monitor Temperature"
+    else
+      -->[false] "Refrigerator: Stop Cooling Process"
+      --> "Refrigerator: Monitor Temperature"
+    endif
+@enduml

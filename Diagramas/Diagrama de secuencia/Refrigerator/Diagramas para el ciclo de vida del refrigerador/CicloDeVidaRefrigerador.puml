@@ -1,0 +1,45 @@
+@startuml CicloDeVidaRefrigerador
+!theme plain
+hide footbox
+
+participant Usuario
+participant Refrigerador
+participant Resistencia
+participant Compressor
+participant Door
+participant Fan
+participant Light
+participant Thermometer
+participant SetPoint
+participant Temperature
+
+User -> Refrigerador: Encender Refrigerador
+activate Refrigerador
+Refrigerador -> Resistencia: Activar Resistencia
+activate Resistencia
+Refrigerador -> Compressor: Activar Compresor
+activate Compressor
+Refrigerador -> Fan: Activar Ventilador
+activate Fan
+Refrigerador -> Light: Activar Luz
+activate Light
+Refrigerador -> Thermometer: Leer Temperatura
+activate Thermometer
+Refrigerador -> SetPoint: Leer Punto de Ajuste
+activate SetPoint
+SetPoint -> Temperature: Leer Temperaturas Deseadas
+activate Temperature
+Refrigerador --> User: Ciclo de Vida Iniciado
+
+User -> Refrigerador: Apagar Refrigerador
+Refrigerador -> Light: Apagar Luz
+deactivate Light
+Refrigerador -> Fan: Apagar Ventilador
+deactivate Fan
+Refrigerador -> Compressor: Apagar Compresor
+deactivate Compressor
+Refrigerador -> Resistencia: Apagar Resistencia
+deactivate Resistencia
+Refrigerador --> User: Ciclo de Vida Finalizado
+deactivate Refrigerador
+@enduml

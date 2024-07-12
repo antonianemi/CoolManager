@@ -1,0 +1,32 @@
+@startuml Start Resistance
+!define ICONURL https://www.plantuml.com/plantuml/img/
+!define ICON(IMG) <img:ICONURLIMG>
+!define HEADER ICON(activity/activity.png) 
+
+(*) --> "Resistance: Inactive"
+
+if "User: Turn On" then
+  -->[true] "Resistance: Turn On"
+  -right-> "User: Observe Heat"
+else
+  -->[false] "Resistance: Stay Inactive"
+  --> "User: No Action"
+endif
+
+if "User: Adjust Temperature" then
+  -->[true] "Resistance: Increase Temperature"
+  -right-> "User: Observe Heat"
+else
+  -->[false] "Resistance: Maintain Temperature"
+  --> "User: No Adjustment"
+endif
+
+if "User: Turn Off" then
+  -->[true] "Resistance: Turn Off"
+  -right-> "User: Observe Cooling"
+else
+  -->[false] "Resistance: Stay Off"
+  --> "User: No Action"
+endif
+
+@enduml

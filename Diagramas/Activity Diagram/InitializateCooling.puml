@@ -1,0 +1,42 @@
+@startuml
+!define ICONURL https://www.plantuml.com/plantuml/img/
+!define ICON(IMG) <img:ICONURLIMG>
+!define HEADER ICON(activity/activity.png) 
+
+(*) --> "User: Interact with Refrigerator"
+
+if "User: Turn On Refrigerator" then
+  -->[true] "CoolManager: Initiate Connection"
+  -right-> "Refrigerator: Establish Connection"
+  -right-> "CoolManager: Notify Connection Established"
+  --> "User: Observe Connection Status"
+else
+  -->[false] "User: No Action"
+endif
+
+if "User: Set Temperature" then
+  -->[true] "User: Adjust Temperature"
+  -right-> "CoolManager: Set Temperature"
+  --> "Refrigerator: Adjust Temperature"
+  --> "User: Observe Temperature Change"
+else
+  -->[false] "User: No Temperature Adjustment"
+endif
+
+if "Temperature > SetPoint" then
+  -->[true] "Refrigerator: Cooling Process"
+  --> "User: Observe Cooling Process"
+else
+  -->[false] "Refrigerator: No Cooling Needed"
+endif
+
+if "User: Turn Off Refrigerator" then
+  -->[true] "CoolManager: Initiate Disconnection"
+  -right-> "Refrigerator: End Connection"
+  -right-> "CoolManager: Notify Disconnection"
+  --> "User: Observe Disconnection Status"
+else
+  -->[false] "User: No Action"
+endif
+
+@enduml

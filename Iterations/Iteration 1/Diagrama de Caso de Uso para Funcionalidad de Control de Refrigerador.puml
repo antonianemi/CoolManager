@@ -1,0 +1,34 @@
+@startuml
+
+left to right direction
+
+actor Usuario as user
+actor Aplicación as app
+actor Refrigerador as fridge
+
+rectangle "Funcionalidad de Encendido/Apagado del Refrigerador" {
+    user -- (Encender Refrigerador)
+    user -- (Apagar Refrigerador)
+
+    (Encender Refrigerador) --> app : Petición de encendido
+    app --> fridge : Orden de encendido
+    fridge --> app : Confirmación de encendido
+    app --> user : Notificación de encendido
+
+    (Apagar Refrigerador) --> app : Petición de apagado
+    app --> fridge : Orden de apagado
+    fridge --> app : Confirmación de apagado
+    app --> user : Notificación de apagado
+
+    user -- (Mostrar Estado)
+    app --> fridge : Petición de estado
+    fridge --> app : [async] Estado del refrigerador
+    app --> user : Mostrar estado al usuario
+
+    user -- (Manejar Errores)
+    app --> fridge : Verificar estado
+    fridge --> app : Error encontrado
+    app --> user : Mostrar error al usuario
+}
+
+@enduml

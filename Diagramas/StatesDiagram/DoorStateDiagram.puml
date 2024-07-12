@@ -1,0 +1,20 @@
+@startuml Door State Diagram
+!theme toy
+
+[*] --> Closed: Initialize
+
+state Closed {
+  [*] --> Locked: Lock
+  Locked --> Unlocked: Unlock
+}
+
+state Unlocked {
+  [*] --> Opened: Open
+}
+
+state Opened {
+  [*] --> Closed: Close
+}
+
+[*] --> Closed
+@enduml

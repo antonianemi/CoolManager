@@ -1,0 +1,29 @@
+@startuml Turn On App
+actor User
+participant App as "Mobile App"
+participant CoolManager
+participant Refrigerator
+participant Dashboard
+
+User -> App: Lanzar App
+activate App
+
+App -> CoolManager: Iniciar Conexión
+activate CoolManager
+
+CoolManager -> Refrigerator: Establecer Conexión
+activate Refrigerator
+
+Refrigerator --> CoolManager: Conexión Establecida
+deactivate Refrigerator
+
+CoolManager -> App: Notificar Conexión Establecida
+deactivate CoolManager
+
+App -> Dashboard: Mostrar Dashboard
+activate Dashboard
+
+Dashboard --> User: Interfaz de Usuario
+deactivate Dashboard
+
+@enduml

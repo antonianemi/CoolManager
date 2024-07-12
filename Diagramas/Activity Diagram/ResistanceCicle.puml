@@ -1,0 +1,17 @@
+@startuml
+|Inicializar|
+start
+:Temperature < SetPoint?;
+if (true) then (yes)
+  :Encender Resistencia;
+  :Resistencia Encendida;
+  repeat
+    :Monitorizar Temperatura;
+  repeat while (Temperature < SetPoint)
+  :Apagar Resistencia;
+  :Resistencia Apagada;
+else (no)
+  :Resistencia Apagada;
+endif
+stop
+@enduml

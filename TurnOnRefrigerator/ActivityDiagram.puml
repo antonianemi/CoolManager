@@ -1,0 +1,15 @@
+@startuml "Turn on Refrigerator Activity Diagram"
+
+start
+:User accesses CoolManager;
+:User selects refrigerator;
+if (Is refrigerator already on?) then (No)
+  :Send power-on command;
+  :Update status;
+  :Show confirmation;
+else (Yes)
+  :Show already on message;
+endif
+stop
+
+@enduml

@@ -1,0 +1,51 @@
+A is an event related to B
+
+Compressor.puml:
+
+Represents a Compressor class.
+Event Relationship: The event of Compressor turning on or off is related to changes in Temperature within the Refrigerator.
+Light.puml:
+
+Represents a Light class.
+Event Relationship: The event of Light turning on or off is related to changes in Door status (open/close) within the Refrigerator.
+Regulator.puml:
+
+Represents a Regulator class.
+Event Relationship: The event of Regulator adjusting temperature settings is related to changes in Temperature within the Refrigerator.
+Speed.puml:
+
+Represents a Speed class.
+Event Relationship: The event of adjusting Fan speed is related to changes in Temperature readings within the Refrigerator.
+Door.puml:
+
+Represents a Door class.
+Event Relationship: The event of Door opening or closing is related to changes in Light status (on/off) within the Refrigerator.
+Owner.puml:
+
+Represents an Owner class.
+Event Relationship: The event of Owner accessing controls or settings is related to changes in Temperature or Door status within the Refrigerator.
+Resistance.puml:
+
+Represents a Resistance class.
+Event Relationship: The event of adjusting Resistance levels is related to changes in Energy usage or Temperature within the Refrigerator.
+Temperature.puml:
+
+Represents a Temperature class.
+Event Relationship: The event of monitoring or controlling Temperature is related to changes in Thermometer readings within the Refrigerator.
+Fan.puml:
+
+Represents a Fan class.
+Event Relationship: The event of adjusting Fan speed is related to changes in Air circulation within the Refrigerator.
+Refrigerator.puml:
+
+Represents a Refrigerator class.
+Event Relationship: The events of various component actions (Compressor, Light, Regulator, etc.) contribute to overall changes in the Refrigerator's functionality and environment.
+SetPoint.puml:
+
+Represents a SetPoint class.
+Event Relationship: The event of setting Temperature points is related to changes in Temperature regulation within the Refrigerator.
+Thermometer.puml:
+
+Represents a Thermometer class.
+Event Relationship: The event of providing Temperature readings is related to changes in Temperature monitoring within the Refrigerator.
+These event relationships describe how each class's actions or operations trigger events that are related to changes or actions in other components within the system, contributing to the overall functionality and behavior of a refrigeration system.

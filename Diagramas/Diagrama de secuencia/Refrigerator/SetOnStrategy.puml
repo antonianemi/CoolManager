@@ -1,0 +1,13 @@
+@startuml Set On Strategy
+participant RefrigeratorController
+participant Refrigerator
+participant TurnOnStrategy
+
+RefrigeratorController -> Refrigerator: setStrategy(TurnOnStrategy)
+RefrigeratorController -> Refrigerator: executeStrategy()
+
+activate Refrigerator
+Refrigerator --> TurnOnStrategy: execute()
+TurnOnStrategy -> Refrigerator: Encender el refrigerador
+deactivate Refrigerator
+@enduml

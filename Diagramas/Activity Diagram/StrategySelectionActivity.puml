@@ -1,0 +1,23 @@
+@startuml StrategySelectionActivity
+
+| Main |
+start
+
+:RefrigeratorController.selectStrategy(Refrigerator);
+
+| Strategy Selector |
+if (RefrigeratorController.selectStrategy()) then (Turn On)
+  :Create TurnOnStrategy;
+elseif (RefrigeratorController.selectStrategy()) then (Turn Off)
+  :Create TurnOffStrategy;
+elseif (RefrigeratorController.selectStrategy()) then (Defrost)
+  :Create DefrostStrategy;
+else (Cooling)
+  :Create CoolingStrategy;
+endif
+
+| Refrigerator |
+:Execute strategy;
+
+stop
+@enduml

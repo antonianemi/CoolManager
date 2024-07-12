@@ -1,0 +1,10 @@
+Lock the door: 
+
+As a user of the CoolManager system,
+I want to be able to lock the refrigerator door,
+So that I can prevent accidental openings, especially in households with small children.
+Furthermore, if the refrigerator has a door lock function,
+I expect the CoolManager system to provide a user-friendly interface to activate and deactivate this function as needed,
+And I anticipate receiving visual confirmations or alerts to ensure that the door is securely locked and to notify me of any attempts to open the locked door.
+
+If the refrigerator has a door lock function, the user should be able to activate this function to prevent accidental opening, for example, in the case of having small children at home.

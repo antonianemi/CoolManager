@@ -1,0 +1,17 @@
+@startuml CoolManagerLifeCicle
+!define MAX_SESSION_TIME 1 hour
+
+start
+:Start Session;
+repeat
+    :Perform Cool Manager actions;
+    if (Time < MAX_SESSION_TIME) then (yes)
+        :Continue session;
+    else (no)
+        :End Session;
+        stop
+    endif
+repeat while (More actions to perform?);
+:End Session;
+stop
+@enduml

@@ -1,0 +1,32 @@
+@startuml Start Light
+!define ICONURL https://www.plantuml.com/plantuml/img/
+!define ICON(IMG) <img:ICONURLIMG>
+!define HEADER ICON(activity/activity.png) 
+
+(*) --> "Light: Off"
+
+if "User: Turn On" then
+  -->[true] "Light: Turn On"
+  -right-> "User: Observe Light"
+else
+  -->[false] "Light: Stay Off"
+  --> "User: No Action"
+endif
+
+if "User: Adjust Brightness" then
+  -->[true] "Light: Adjust Brightness"
+  -right-> "User: Observe Brightness"
+else
+  -->[false] "Light: Maintain Brightness"
+  --> "User: No Adjustment"
+endif
+
+if "User: Turn Off" then
+  -->[true] "Light: Turn Off"
+  -right-> "User: Observe Darkness"
+else
+  -->[false] "Light: Stay On"
+  --> "User: No Action"
+endif
+
+@enduml

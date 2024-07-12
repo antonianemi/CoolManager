@@ -1,0 +1,18 @@
+@startuml Turn On Refrigerator
+actor User
+participant CoolManager
+participant Refrigerator
+participant StatusDisplay
+
+User -> CoolManager: Request to turn on refrigerator
+activate CoolManager
+CoolManager -> Refrigerator: Turn On
+activate Refrigerator
+Refrigerator --> StatusDisplay: Update status (On)
+activate StatusDisplay
+deactivate Refrigerator
+CoolManager --> User: Response (Refrigerator turned on)
+deactivate StatusDisplay
+deactivate CoolManager
+@enduml
+

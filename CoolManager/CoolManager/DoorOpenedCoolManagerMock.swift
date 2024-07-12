@@ -1,9 +1,6 @@
 final class DoorOpenedCoolManagerMock:CoolManager {
-    override class func createCoolManager() -> CoolManager {
+    override class func create() -> CoolManager {
         let file = ConfigurationFiles.DoorOpenedRefrigeratorConfiguration
-         let configurationManager = RefrigeratorConfigurationManager(fileURL: file)
-         let factory = FileBasedRefrigeratorFactory(configurationManager: configurationManager)
-         let coolManager = CoolManagerTwoIntervalMock(factory: factory)
-         return coolManager
+        return createCoolManager(withConfigurationFile: file)
      }
 }

@@ -14,6 +14,6 @@ class ViewControllerFactory {
     }
     
     static func createViewSetPoint() -> viewSetPoint {
-        return viewSetPoint(refrigerator.setPoint)
+        return viewSetPoint()
     }
 }

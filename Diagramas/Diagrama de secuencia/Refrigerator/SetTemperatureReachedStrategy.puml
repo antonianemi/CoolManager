@@ -1,0 +1,26 @@
+@startuml SetTemperatureReachedStrategy
+participant Refrigerator
+participant TemperatureReachedStrategy
+participant Resistance
+participant Compressor
+participant light
+participant fan
+
+activate Refrigerator
+activate TemperatureReachedStrategy
+activate Resistance
+activate Compressor
+activate light
+activate fan
+Refrigerator -> TemperatureReachedStrategy: execute()
+TemperatureReachedStrategy -> Resistance: Off
+TemperatureReachedStrategy -> Compressor: Off
+TemperatureReachedStrategy -> light: Off
+TemperatureReachedStrategy -> fan: On
+deactivate Resistance
+deactivate Compressor
+deactivate light
+deactivate fan
+deactivate Refrigerator
+deactivate TemperatureReachedStrategy
+@enduml

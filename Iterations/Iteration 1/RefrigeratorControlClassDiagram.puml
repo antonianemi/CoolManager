@@ -1,0 +1,8 @@
+@startuml
+class RefrigeratorControl {
+    - isRefrigeratorOn: Bool
+    + toggleRefrigerator(): Void
+    + getCurrentStateText(): String
+    + getCurrentStateColor(): UIColor
+}
+@enduml

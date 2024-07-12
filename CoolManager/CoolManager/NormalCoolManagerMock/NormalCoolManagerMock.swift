@@ -1,9 +1,6 @@
 final class NormalCoolManagerMock:CoolManager {
-    override class func createCoolManager() -> CoolManager {
-         let file = ConfigurationFiles.NormalRefrigeratorConfiguration
-         let configurationManager = RefrigeratorConfigurationManager(fileURL: file)
-         let factory = FileBasedRefrigeratorFactory(configurationManager: configurationManager)
-         let coolManager = CoolManager(factory: factory)
-         return coolManager
-     }
+    override class func create() -> CoolManager {
+        let file = ConfigurationFiles.NormalRefrigeratorConfiguration
+        return createCoolManager(withConfigurationFile: file)
+    }
 }

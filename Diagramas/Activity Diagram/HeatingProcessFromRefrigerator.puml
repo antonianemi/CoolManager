@@ -1,0 +1,17 @@
+@startuml Heating Process From Refrigerator
+!define ICONURL https://www.plantuml.com/plantuml/img/
+!define ICON(IMG) <img:ICONURLIMG>
+!define HEADER ICON(activity/activity.png)
+
+(*) --> "Check Temperature Against SetPoint"
+
+if "Temperature < SetPoint" then
+  -[#green]->[true] "Heating Process"
+  --> "Check Temperature Against SetPoint"
+else
+  -[#red]->[false] "Stop Heating"
+  --> "Heating Completed"
+  --> (*)
+endif
+
+@enduml

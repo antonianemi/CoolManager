@@ -1,0 +1,14 @@
+@startuml SetPoint Confirmation
+actor User
+participant CoolManager
+participant Refrigerator
+participant SetPoint
+participant ResistanceOnState
+
+User -> CoolManager: Request to Confirm SetPoint
+activate CoolManager
+CoolManager -> CoolManager: commitSetPoint()
+CoolManager -> Refrigerator: currentState.execute() (ResistanceOnState)
+Refrigerator -> SetPoint: Confirm SetPoint Selected Action
+deactivate CoolManager
+@enduml

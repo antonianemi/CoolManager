@@ -1,0 +1,51 @@
+A is related to a transaction B
+
+Compressor.puml:
+
+Represents a Compressor class.
+Transaction Relationship: Compressor is related to the transaction of adjusting temperature within the Refrigerator.
+Light.puml:
+
+Represents a Light class.
+Transaction Relationship: Light is related to the transaction of turning on/off based on the door status within the Refrigerator.
+Regulator.puml:
+
+Represents a Regulator class.
+Transaction Relationship: Regulator is related to the transaction of regulating temperature settings within the Refrigerator.
+Speed.puml:
+
+Represents a Speed class.
+Transaction Relationship: Speed is related to the transaction of adjusting fan speed within the Refrigerator.
+Door.puml:
+
+Represents a Door class.
+Transaction Relationship: Door is related to the transaction of providing access control within the Refrigerator.
+Owner.puml:
+
+Represents an Owner class.
+Transaction Relationship: Owner is related to the transaction of managing access control and temperature settings within the Refrigerator.
+Resistance.puml:
+
+Represents a Resistance class.
+Transaction Relationship: Resistance is related to the transaction of adjusting energy usage based on temperature settings within the Refrigerator.
+Temperature.puml:
+
+Represents a Temperature class.
+Transaction Relationship: Temperature is related to the transaction of monitoring and controlling temperature settings within the Refrigerator.
+Fan.puml:
+
+Represents a Fan class.
+Transaction Relationship: Fan is related to the transaction of adjusting air circulation within the Refrigerator.
+Refrigerator.puml:
+
+Represents a Refrigerator class.
+No specific "A is related to a transaction B" relationship as it's likely the central unit managing transactions among other components.
+SetPoint.puml:
+
+Represents a SetPoint class.
+Transaction Relationship: SetPoint is related to the transaction of managing temperature setpoints within the Refrigerator.
+Thermometer.puml:
+
+Represents a Thermometer class.
+Transaction Relationship: Thermometer is related to the transaction of providing temperature readings for monitoring and control within the Refrigerator.
+These transaction relationships describe how each class is involved in specific actions or operations within the system, contributing to the overall functionality and behavior of a refrigeration system.

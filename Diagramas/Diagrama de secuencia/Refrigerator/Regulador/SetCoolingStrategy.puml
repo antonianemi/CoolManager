@@ -1,0 +1,26 @@
+@startuml SetCoolingStrategy
+participant Refrigerator
+participant CoolingStrategy
+participant Resistance
+participant Compressor
+participant light
+participant fan
+
+activate Refrigerator
+activate CoolingStrategy
+activate Resistance
+activate Compressor
+activate light
+activate fan
+Refrigerator -> CoolingStrategy: execute()
+CoolingStrategy -> Resistance: Off
+CoolingStrategy -> Compressor: On
+CoolingStrategy -> light: Off
+CoolingStrategy -> fan: On
+deactivate Resistance
+deactivate Compressor
+deactivate light
+deactivate fan
+deactivate Refrigerator
+deactivate CoolingStrategy
+@enduml

@@ -1,0 +1,7 @@
+@startuml
+CoolManager -> RefrigeratorConnectionManager: Connect(refrigerator)
+RefrigeratorConnectionManager -> Connection: create(refrigerator)
+Connection -> Connection: Connect
+Connection --> RefrigeratorConnectionManager: Connection established
+RefrigeratorConnectionManager --> CoolManager: Connection established
+@enduml

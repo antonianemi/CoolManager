@@ -1,0 +1,3 @@
+@startuml Speed 
+class Speed{}
+@enduml

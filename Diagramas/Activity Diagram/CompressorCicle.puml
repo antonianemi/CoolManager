@@ -1,0 +1,17 @@
+@startuml
+|Inicializar|
+start
+:Temperature > SetPoint?;
+if (true) then (yes)
+  :Encender Compresor;
+  :Compresor Encendido;
+  repeat
+    :Monitorizar Temperatura;
+  repeat while (Temperature > SetPoint)
+  :Apagar Compresor;
+  :Compresor Apagado;
+else (no)
+  :Compresor Apagado;
+endif
+stop
+@enduml

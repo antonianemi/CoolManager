@@ -1,0 +1,5 @@
+Iteración 4 - Monitoreo de estado y notificaciones:
+
+Creación de pantallas de monitoreo para visualizar el estado del refrigerador (temperatura, consumo, etc.).
+Implementación de notificaciones para alertar al usuario sobre eventos importantes (temperatura alta/baja, problemas de conexión, etc.).
+Pruebas exhaustivas del monitoreo y las notificaciones para garantizar su correcto funcionamiento.

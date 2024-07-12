@@ -1,6 +1,6 @@
 class Temperature: Hashable,Equatable {
     var value: Double
-    var unit: TemperatureUnit
+    var unit = UnitManager.shared.currentUnit
     private let interval: Double
     
     func pushUp(){

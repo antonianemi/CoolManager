@@ -1,0 +1,82 @@
+Title: Turn on the Refrigerator
+
+Description:
+
+This use case describes the process by which a user of the CoolManager system can initiate the power-on process for the refrigerator to ensure it starts functioning and maintains an adequate internal temperature to preserve food.
+
+Actors:
+
+User: The person who interacts with the CoolManager system to control the refrigerator.
+CoolManager System: The software system that manages and controls the refrigerator.
+
+Preconditions:
+
+The user is logged into the CoolManager system.
+The refrigerator exists in the CoolManager system's database.
+The refrigerator is currently turned off.
+
+Postconditions:
+
+The refrigerator is turned on.
+The refrigerator begins to maintain an adequate internal temperature to preserve food.
+
+Basic Flow:
+
+User Initiates Power-On Process:
+
+The user accesses the CoolManager system via the appropriate interface (e.g., web app, mobile app).
+The user navigates to the section where the refrigerator controls are located.
+
+User Selects the Refrigerator:
+
+The system displays a list of available refrigerators.
+The user selects the specific refrigerator they want to turn on.
+
+User Turns on the Refrigerator:
+
+The system provides an option/button to turn on the refrigerator.
+The user clicks the “Turn On” button.
+
+System Validates Request:
+
+The CoolManager system checks if the selected refrigerator exists and is currently turned off.
+If the refrigerator exists and is off, the system proceeds to the next step.
+If the refrigerator does not exist or is already on, the system displays an appropriate error message.
+
+System Powers on the Refrigerator:
+
+The CoolManager system sends a command to the refrigerator to initiate the power-on process.
+The refrigerator begins the power-on sequence and starts cooling.
+
+Confirmation to User:
+
+The system confirms that the refrigerator is successfully turned on.
+The system updates the status of the refrigerator to "On" in the user interface.
+
+Alternative Flows:
+
+A1: Refrigerator Not Found:
+
+If the selected refrigerator does not exist in the system's database, the system displays an error message to the user: "Refrigerator not found."
+The user is prompted to select a different refrigerator or contact support.
+
+A2: Refrigerator Already On:
+
+If the selected refrigerator is already on, the system displays a message: "Refrigerator is already turned on."
+The user is informed and no further action is needed.
+
+Exceptions:
+
+E1: System Error During Power-On Process:
+
+If there is a system error while sending the command to turn on the refrigerator, the system notifies the user: "An error occurred while trying to turn on the refrigerator. Please try again."
+The system logs the error for further investigation.
+
+Assumptions:
+
+The CoolManager system has the capability to communicate with and control the refrigerator.
+The user has the necessary permissions to turn on the refrigerator within the CoolManager system.
+Notes:
+
+Future enhancements may include adding a scheduling feature to automatically turn on the refrigerator at specified times.
+

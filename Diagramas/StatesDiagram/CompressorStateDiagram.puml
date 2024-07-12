@@ -1,0 +1,25 @@
+@startuml Compressor State Diagram
+!theme toy
+
+[*] --> Off: Initialize
+
+state Off {
+  [*] --> Idle: Off
+  Idle --> Start: Turn On
+}
+
+state Start {
+  [*] --> Compressing: Start Compression
+}
+
+state Compressing {
+  [*] --> Cooling: Compression Successful
+  Cooling --> Idle: Stop Compression
+}
+
+state Cooling {
+  [*] --> Idle: Cooling Complete
+}
+
+[*] --> Off
+@enduml

@@ -1,0 +1,25 @@
+@startuml Refrigerator State Diagram
+[*] --> Off: Inicializar
+
+state Off {
+  [*] --> Idle: Apagado
+  Idle --> Connecting: Solicitar Encendido
+}
+
+state Connecting {
+  [*] --> InProgress: Iniciar Conexión
+  InProgress --> Connected: Conexión Exitosa
+  InProgress --> Off: Fallo de Conexión
+}
+
+state Connected {
+  [*] --> On: Encendido
+}
+
+state On {
+  [*] --> Idle: Apagar
+}
+
+[*] --> Off
+
+@enduml

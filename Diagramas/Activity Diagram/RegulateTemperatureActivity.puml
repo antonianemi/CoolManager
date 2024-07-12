@@ -1,0 +1,15 @@
+@startuml RegulateTemperatureActivity
+start
+:Iniciar regulación de temperatura;
+:Calcular acción de temperatura;
+if (Acción de temperatura es calentar) then (Sí)
+  :Seleccionar estrategia de calentamiento;
+elseif (Acción de temperatura es enfriar) then (Sí)
+  :Seleccionar estrategia de enfriamiento;
+else (No hacer nada)
+  :Seleccionar estrategia por defecto;
+endif
+:Aplicar estrategia seleccionada al refrigerador;
+:Finalizar regulación de temperatura;
+stop
+@enduml

@@ -1,0 +1,51 @@
+A uses or manages B
+
+Compressor.puml:
+
+Represents a Compressor class.
+Relationship: Compressor manages the temperature control in Refrigerator.
+Light.puml:
+
+Represents a Light class.
+Relationship: Light is used to illuminate the interior of Refrigerator.
+Regulator.puml:
+
+Represents a Regulator class.
+Relationship: Regulator manages the regulation of temperature within Refrigerator.
+Speed.puml:
+
+Represents a Speed class.
+Relationship: Speed manages the fan speed of Fan.
+Door.puml:
+
+Represents a Door class.
+Relationship: Door is used to provide access control to Refrigerator.
+Owner.puml:
+
+Represents an Owner class.
+Relationship: Owner manages the overall control and access to Refrigerator.
+Resistance.puml:
+
+Represents a Resistance class.
+Relationship: Resistance is used to control energy usage within Refrigerator.
+Temperature.puml:
+
+Represents a Temperature class.
+Relationship: Temperature is managed by Thermometer to provide temperature readings.
+Fan.puml:
+
+Represents a Fan class.
+Relationship: Fan manages air circulation within Refrigerator.
+Refrigerator.puml:
+
+Represents a Refrigerator class.
+No specific "A uses or manages B" relationship as it's likely the central unit managing other components.
+SetPoint.puml:
+
+Represents a SetPoint class.
+Relationship: SetPoint manages the set temperature points within Temperature control.
+Thermometer.puml:
+
+Represents a Thermometer class.
+Relationship: Thermometer manages temperature monitoring within Refrigerator.
+These relationships describe how each class is involved in using or managing another component within the system, contributing to the overall functionality and control of the refrigeration system.

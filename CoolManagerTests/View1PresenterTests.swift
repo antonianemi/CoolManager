@@ -2,7 +2,7 @@ import XCTest
 @testable import CoolManager
 class View1PresenterTests: XCTestCase {
     func testUpScaleSetPoint() {
-        let refrigerator = try!NormalRefrigeratorFactory().create()
+        let refrigerator = CoolManager.shared.refrigerator
         let presenter = HomePresenter(refrigerator)
         let view = MockView1View()
         presenter.setView(view)
@@ -13,7 +13,7 @@ class View1PresenterTests: XCTestCase {
     }
     
     func testDownScaleSetPoint() {
-        let refrigerator = try!NormalRefrigeratorFactory().create()
+        let refrigerator = CoolManager.shared.refrigerator
         let presenter = HomePresenter(refrigerator)
         let view = MockView1View()
         presenter.setView(view)

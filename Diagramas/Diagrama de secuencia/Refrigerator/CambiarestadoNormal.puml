@@ -1,0 +1,14 @@
+@startuml
+actor User
+participant CoolManager
+participant Refrigerator
+participant NormalState
+
+User -> CoolManager: Solicitar cambiar a estado Normal
+activate CoolManager
+CoolManager -> CoolManager: setNormalState()
+CoolManager -> Refrigerator: currentState.execute() (NormalState)
+Refrigerator -> NormalState: Cambiar estado a Normal
+deactivate CoolManager
+@enduml
+

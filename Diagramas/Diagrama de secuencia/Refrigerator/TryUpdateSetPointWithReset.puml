@@ -1,0 +1,20 @@
+@startuml Try Update SetPoint With Reset Without Confirmation
+actor User
+participant CoolManager
+participant SetPoint
+participant Timer
+
+User -> CoolManager: Request SetPoint Update
+activate CoolManager
+CoolManager -> SetPoint: UpdateSetPoint()
+activate SetPoint
+deactivate CoolManager
+SetPoint -> Timer: Start Reset Timer
+activate Timer
+Timer --> Timer: Wait for a period of time
+Timer --> SetPoint: Timer Expiration (No confirmation)
+deactivate Timer
+activate SetPoint
+SetPoint --> SetPoint: Reset Values
+deactivate SetPoint
+@enduml

@@ -1,0 +1,31 @@
+@startuml
+
+class Usuario {
+    + realizarAccion(accion: String): void
+}
+
+class Aplicacion {
+    + encenderRefrigerador(): void
+    + apagarRefrigerador(): void
+    + consultarEstado(): Estado
+    + manejarErrores(): void
+}
+
+class Refrigerador {
+    - estado: Estado
+    + encender(): void
+    + apagar(): void
+    + obtenerEstado(): Estado
+    + verificarEstado(): boolean
+}
+
+class Estado {
+    - encendido: boolean
+    - mensajeError: String
+}
+
+Usuario -- Aplicacion
+Aplicacion *-- Refrigerador
+Refrigerador *-- Estado
+
+@enduml

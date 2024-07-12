@@ -1,0 +1,17 @@
+@startuml RegulaTemperature
+actor User
+participant "TemperatureRegulator" as Regulator
+participant "RefrigeratorActionCalculator" as Calculator
+participant "Refrigerator" as Fridge
+
+User -> Regulator: regulate()
+activate Regulator
+Regulator -> Calculator: calculate()
+activate Calculator
+Calculator -> Regulator: temperatureAction
+deactivate Calculator
+Regulator -> Fridge: setStrategy(strategy)
+activate Fridge
+deactivate Regulator
+deactivate Fridge
+@enduml

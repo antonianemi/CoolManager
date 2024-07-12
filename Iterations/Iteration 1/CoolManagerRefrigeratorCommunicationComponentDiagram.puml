@@ -1,0 +1,18 @@
+@startuml
+skinparam componentStyle uml2
+package "Cool Manager Application" {
+    [Cool Manager UI]
+    [Cool Manager Controller]
+}
+package "Refrigerator Simulator" {
+    [Simulator Controller]
+    [Simulator Communication]
+}
+package "Communication Medium" {
+    [Socket Connection]
+}
+[Cool Manager UI] --> [Cool Manager Controller]
+[Cool Manager Controller] --> [Simulator Communication]
+[Simulator Communication] --> [Socket Connection]
+[Socket Connection] --> [Simulator Controller]
+@enduml

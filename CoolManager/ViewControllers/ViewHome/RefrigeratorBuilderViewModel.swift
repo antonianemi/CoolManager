@@ -7,14 +7,6 @@ class RefrigeratorBuilderViewModel {
         self.refrigerator = refrigerator
     }
     
-    func setPoint()->SetPoint{
-        return refrigerator.setPoint
-    }
-    
-    func setPointValue()->String{
-        return refrigerator.setPoint.temperatureSetPoint.stringValueOnlyNumber
-    }
-    
     func lightStatus()->Bool{
         return refrigerator.light.isActive
     }
@@ -30,24 +22,12 @@ class RefrigeratorBuilderViewModel {
     func isDoorOpen()->Bool{
         return refrigerator.door.isOpen
     }
-    func nameState()->String{
-        return refrigerator.currentStateName()
-    }
-    func getTemperarute()->String{
-        return refrigerator.currentTemperatureStatus.stringValue
-    }
-    
-    func getIconName()->String{
-        return "SETPOINT-42--\(refrigerator.setPoint.getImageNumber()).png"
-    }
     
     func upScaleSetPoint(){
-        refrigerator.setPoint.up()
         delegate?.updateSetPointIcon()
     }
     
     func downScaleSetPoint(){
-        refrigerator.setPoint.down()
         delegate?.updateSetPointIcon()
     }
 }

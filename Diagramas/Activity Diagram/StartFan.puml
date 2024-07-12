@@ -1,0 +1,33 @@
+@startuml Start Fan
+!define ICONURL https://www.plantuml.com/plantuml/img/
+!define ICON(IMG) <img:ICONURLIMG>
+!define HEADER ICON(activity/activity.png) 
+
+(*) --> "Fan: Inactive"
+
+if "User: Press Power Button" then
+  -->[true] "Fan: Turn On"
+  -right-> "Fan: Set Initial Speed"
+  -right-> "User: Observe Fan"
+else
+  -->[false] "Fan: Stay Inactive"
+  --> "User: No Action"
+endif
+
+if "User: Adjust Speed" then
+  -->[true] "Fan: Change Speed"
+  -right-> "User: Observe Fan"
+else
+  -->[false] "Fan: Maintain Speed"
+  --> "User: No Adjustment"
+endif
+
+if "User: Press Power Button" then
+  -->[true] "Fan: Turn Off"
+  -right-> "User: Observe Fan"
+else
+  -->[false] "Fan: Stay On"
+  --> "User: No Action"
+endif
+
+@enduml

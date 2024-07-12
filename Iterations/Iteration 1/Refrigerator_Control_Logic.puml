@@ -1,0 +1,12 @@
+@startuml
+actor User
+participant "Application Control Logic" as App
+participant Refrigerator
+
+User -> App: Presses On/Off button
+App -> Refrigerator: Request: Turn On/Off
+Refrigerator --> App: Response: Acknowledge
+
+note right of App: Control Logic\nHandles requests,\nresponses, and errors
+
+@enduml

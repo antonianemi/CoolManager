@@ -1,0 +1,15 @@
+@startuml Light State Diagram
+!theme toy
+
+[*] --> Off: Initialize
+
+state Off {
+  [*] --> On: Turn On
+}
+
+state On {
+  [*] --> Off: Turn Off
+}
+
+[*] --> Off
+@enduml

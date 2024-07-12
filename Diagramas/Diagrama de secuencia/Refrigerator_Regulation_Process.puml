@@ -1,0 +1,27 @@
+@startuml Refrigerator Regulator Process
+
+actor User
+participant Regulator
+participant ActionCalculator
+participant Refrigerator
+
+User -> Regulator: regulate()
+activate Regulator
+Regulator -> ActionCalculator: calculate()
+activate ActionCalculator
+ActionCalculator --> Regulator: mode
+deactivate ActionCalculator
+Regulator -> Regulator: check if mode is different
+alt if mode is different
+    Regulator -> Refrigerator: setMode(mode)
+    activate Refrigerator
+    Refrigerator -> Door: adjustTemperature()
+    Refrigerator -> Light: adjustIntensity()
+    Refrigerator -> Fan: adjustSpeed()
+    Refrigerator -> Compressor: start()
+    Refrigerator -> Resistance: adjust()
+    deactivate Refrigerator
+end
+deactivate Regulator
+@enduml
+

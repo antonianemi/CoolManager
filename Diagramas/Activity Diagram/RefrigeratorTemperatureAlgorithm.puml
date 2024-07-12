@@ -1,0 +1,24 @@
+@startuml
+start
+
+while (Simulation running?) is (true)
+    if (currentTemp > desiredTemp) then (yes)
+        :Turn cooling mechanism on;
+        :Cool temperature;
+        :Reduce temperature by coolingRate;
+    else (no)
+        :Turn heating mechanism on;
+        :Heat temperature;
+        :Increase temperature by heatingRate;
+    endif
+
+    if (currentTemp > desiredTemp) then (yes)
+        :Turn cooling mechanism off;
+    else (no)
+        :Turn heating mechanism off;
+    endif
+
+endwhile (no)
+
+stop
+@enduml

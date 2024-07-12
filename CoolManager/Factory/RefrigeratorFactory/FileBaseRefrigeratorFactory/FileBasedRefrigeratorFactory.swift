@@ -12,15 +12,7 @@ class FileBasedRefrigeratorFactory: RefrigeratorFactory {
             let configurations = try configurationManager.loadConfigurations()
             let configuration = configurations[0]
 
-            let setPoint = SetPoint(
-                temperature: configuration.currentTemperature,
-                temperatureGoal: configuration.temperatureGoal,
-                maxTemperature: configuration.maxTemperature,
-                minTemperature: configuration.minTemperature
-            )
-
             return Refrigerator(
-                setPoint: setPoint,
                 fan: configuration.fan,
                 door: configuration.door,
                 compressor: configuration.compressor,

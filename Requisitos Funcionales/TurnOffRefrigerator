@@ -1,0 +1,9 @@
+Turn off the refrigerator:
+
+As a user of the CoolManager system,
+I want to have the option to turn off the refrigerator,
+So that I can conserve energy when the refrigerator is not in use, such as during cleaning or when it is empty for an extended period.
+Additionally, I expect the CoolManager system to provide a straightforward interface for turning off the refrigerator,
+And I anticipate receiving notifications or alerts if the refrigerator remains off for an extended duration, ensuring that I am aware of any potential issues or concerns.
+
+The user should have the option to turn off the refrigerator when it's not needed, such as during cleaning or when the refrigerator is empty for an extended period.

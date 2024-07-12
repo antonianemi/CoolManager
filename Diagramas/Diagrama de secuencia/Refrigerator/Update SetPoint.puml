@@ -1,0 +1,20 @@
+@startuml Update SetPoint
+actor User
+participant CoolManager
+participant SetPoint
+participant Timer
+
+User -> CoolManager: Request SetPoint Update
+activate CoolManager
+CoolManager -> SetPoint: UpdateSetPoint()
+activate SetPoint
+SetPoint -> Timer: Start Reset Timer
+activate Timer
+Timer --> Timer: Wait for a period of time
+User -> CoolManager: Confirm SetPoint
+CoolManager -> SetPoint: ConfirmSetPoint()
+SetPoint -> Timer: Invalidate Timer
+SetPoint --> CoolManager: Confirmation Response
+deactivate Timer
+deactivate SetPoint
+@enduml

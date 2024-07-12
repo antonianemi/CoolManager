@@ -1,7 +1,7 @@
 import XCTest
 @testable import CoolManager
 final class RefrigeratorNormalViewModelTests: XCTestCase {
-    var viewModel:RefrigeratorBuilderViewModel = RefrigeratorBuilderViewModel(NormalRefrigeratorFactory().create())
+    var viewModel:RefrigeratorBuilderViewModel = RefrigeratorBuilderViewModel(CoolManager.shared.refrigerator)
     let initialStateExpected    = "SETPOINT-42--26.png"
     let setPointExpected        = Temperature(20, .celsius, 0.5)
     let TemperatureMaxExpected  = Temperature(35, .celsius, 0.5)

@@ -1,0 +1,51 @@
+A is a transaction related to another transaction B
+
+Compressor.puml:
+
+Represents a Compressor class.
+Transaction Relationship: Compressor is related to the transaction of adjusting temperature (Transaction A) within the Refrigerator, which is related to the transaction of regulating temperature settings (Transaction B).
+Light.puml:
+
+Represents a Light class.
+Transaction Relationship: Light is related to the transaction of turning on/off based on the door status (Transaction A) within the Refrigerator, which is related to the transaction of providing access control (Transaction B).
+Regulator.puml:
+
+Represents a Regulator class.
+Transaction Relationship: Regulator is related to the transaction of regulating temperature settings (Transaction A) within the Refrigerator, which is related to the transaction of adjusting energy usage (Transaction B).
+Speed.puml:
+
+Represents a Speed class.
+Transaction Relationship: Speed is related to the transaction of adjusting fan speed (Transaction A) within the Refrigerator, which is related to the transaction of managing air circulation (Transaction B).
+Door.puml:
+
+Represents a Door class.
+Transaction Relationship: Door is related to the transaction of providing access control (Transaction A) within the Refrigerator, which is related to the transaction of turning on/off lighting (Transaction B).
+Owner.puml:
+
+Represents an Owner class.
+Transaction Relationship: Owner is related to the transaction of managing access control (Transaction A) and temperature settings (Transaction B) within the Refrigerator.
+Resistance.puml:
+
+Represents a Resistance class.
+Transaction Relationship: Resistance is related to the transaction of adjusting energy usage (Transaction A) within the Refrigerator, which is related to the transaction of regulating temperature settings (Transaction B).
+Temperature.puml:
+
+Represents a Temperature class.
+Transaction Relationship: Temperature is related to the transaction of monitoring and controlling temperature settings (Transaction A) within the Refrigerator, which is related to the transaction of managing temperature setpoints (Transaction B).
+Fan.puml:
+
+Represents a Fan class.
+Transaction Relationship: Fan is related to the transaction of managing air circulation (Transaction A) within the Refrigerator, which is related to the transaction of adjusting fan speed (Transaction B).
+Refrigerator.puml:
+
+Represents a Refrigerator class.
+No specific "A is a transaction related to another transaction B" relationship as it's likely the central unit managing various transactions among other components.
+SetPoint.puml:
+
+Represents a SetPoint class.
+Transaction Relationship: SetPoint is related to the transaction of managing temperature setpoints (Transaction A) within the Refrigerator, which is related to the transaction of regulating temperature settings (Transaction B).
+Thermometer.puml:
+
+Represents a Thermometer class.
+Transaction Relationship: Thermometer is related to the transaction of providing temperature readings (Transaction A) within the Refrigerator, which is related to the transaction of monitoring and controlling temperature settings (Transaction B).
+These transaction relationships describe how each class is involved in specific actions or operations within the system, and how these actions are related to one another to achieve overall functionality in a refrigeration system.

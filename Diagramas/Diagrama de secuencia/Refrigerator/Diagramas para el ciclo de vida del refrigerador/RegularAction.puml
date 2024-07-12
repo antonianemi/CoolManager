@@ -1,0 +1,26 @@
+@startuml RegularAction
+!theme plain
+hide footbox
+
+participant User
+participant Regulator
+participant Thermometer
+participant SetPoint
+participant Refrigerator
+
+User -> Regulator: Solicitar Regular
+activate Regulator
+Regulator -> Thermometer: Leer Temperatura
+activate Thermometer
+Thermometer -> Regulator: Temperatura Actual
+deactivate Thermometer
+Regulator -> SetPoint: Leer Punto de Ajuste
+activate SetPoint
+SetPoint -> Regulator: Punto de Ajuste Actual
+deactivate SetPoint
+Regulator -> Refrigerator: Controlar Refrigerador
+activate Refrigerator
+Refrigerator -> User: Ciclo de Vida Actualizado
+deactivate Refrigerator
+deactivate Regulator
+@enduml

@@ -1,0 +1,51 @@
+@startuml
+
+actor Usuario as user
+participant Aplicación as app
+participant Refrigerador as fridge
+
+group Encender Refrigerador
+    user -> app: Encender Refrigerador
+    activate app
+    app -> fridge: Petición de encendido
+    activate fridge
+    fridge --> app: Confirmación de encendido
+    deactivate fridge
+    app --> user: Notificación de encendido
+    deactivate app
+end
+
+group Apagar Refrigerador
+    user -> app: Apagar Refrigerador
+    activate app
+    app -> fridge: Petición de apagado
+    activate fridge
+    fridge --> app: Confirmación de apagado
+    deactivate fridge
+    app --> user: Notificación de apagado
+    deactivate app
+end
+
+group Consultar Estado
+    user -> app: Consultar Estado
+    activate app
+    app -> fridge: Petición de estado
+    activate fridge
+    fridge --> app: [async] Estado del refrigerador
+    deactivate fridge
+    app --> user: Mostrar estado al usuario
+    deactivate app
+end
+
+group Manejar Errores
+    user -> app: Manejar Errores
+    activate app
+    app -> fridge: Verificar estado
+    activate fridge
+    fridge --> app: Error encontrado
+    deactivate fridge
+    app --> user: Mostrar error al usuario
+    deactivate app
+end
+
+@enduml

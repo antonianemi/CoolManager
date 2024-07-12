@@ -1,0 +1,12 @@
+RF1: 
+
+El sistema CoolManager debe permitir que el usuario inicie el proceso de encendido.
+
+
+El usuario ya tiene en cuenta que:
+
+
+El Refrigerador Existe y esta apagado.
+
+
+Esta accion consecuenta que el Refrigerador encienda.

@@ -1,0 +1,26 @@
+@startuml Fan State Diagram
+!theme toy
+
+[*] --> Off: Initialize
+
+state Off {
+  [*] --> Inactive: Off
+  Inactive --> Active: Turn On
+}
+
+state Active {
+  [*] --> HighSpeed: Activate High Speed
+}
+
+state HighSpeed {
+  [*] --> LowSpeed: Reduce Speed
+  LowSpeed --> Off: Turn Off
+}
+
+state LowSpeed {
+  [*] --> HighSpeed: Increase Speed
+  HighSpeed --> Off: Turn Off
+}
+
+[*] --> Off
+@enduml

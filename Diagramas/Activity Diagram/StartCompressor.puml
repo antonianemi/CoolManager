@@ -1,0 +1,25 @@
+@startuml
+!define ICONURL https://www.plantuml.com/plantuml/img/
+
+!define ICON(IMG) <img:ICONURLIMG>
+!define HEADER ICON(activity/activity.png) 
+
+(*) --> "User" 
+
+if "User presses Power Button" then
+  ->[true] "CoolManager: Turn On Refrigerator"
+  -right-> "CoolManager: Initialize Components"
+  -right-> "CoolManager: Connect to Components"
+  -right-> "CoolManager: Start Cooling System"
+  -right-> "Refrigerator: Change State to 'On'"
+  --> "User: Display 'Refrigerator On'"
+else
+  -->[false] "User: Display 'Refrigerator Off'"
+  --> "CoolManager: Turn Off Refrigerator"
+  -right-> "CoolManager: Disconnect Components"
+  -right-> "Refrigerator: Change State to 'Off'"
+  --> "CoolManager: Stop Cooling System"
+  --> "CoolManager: Deactivate Components"
+endif
+
+@enduml

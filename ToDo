@@ -31,3 +31,14 @@ Pruebas y Ajustes:
 
 Realiza pruebas exhaustivas para asegurarte de que la simulación se comporte según lo esperado. Ajusta la lógica según sea necesario.
 Recuerda que la simulación de estados es un proceso dinámico, y la clave es representar de manera efectiva cómo un refrigerador pasaría de un estado a otro en respuesta a diferentes condiciones. Adaptar estas sugerencias a tu implementación específica debería ayudarte a construir una simulación de estados efectiva para tu refrigerador.
+
+
+
+
+
+
+
+
+Quotes:
+
+No all the objects will be created at once like the Payment one

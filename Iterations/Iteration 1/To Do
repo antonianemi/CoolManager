@@ -1,0 +1,13 @@
+Definición de Requisitos de Comunicación:
+
+- Determinar el protocolo de comunicación entre la aplicación y el refrigerador (Bluetooth, Wi-Fi u otro).
+- Especificar los comandos para encender y apagar el refrigerador, así como para obtener el estado actual.
+- Considerar la seguridad en la comunicación para proteger los datos y la privacidad del usuario.
+
+Diseño de la Interfaz de Usuario (UI):
+
+- Diseñar la interfaz de usuario de la aplicación para controlar el refrigerador de forma remota.
+- Incluir botones de encendido/apagado, indicadores visuales del estado del refrigerador y elementos intuitivos.
+- Asegurar que la interfaz sea fácil de entender y atractiva visualmente para el usuario final.
+
+

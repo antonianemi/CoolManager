@@ -1,0 +1,82 @@
+INSERT FOOD ITEMS
+
+As a user of the CoolManager system,
+I want to be able to insert food items into the refrigerator,
+So that I can store groceries and maintain their freshness.
+
+FUNCTIONAL REQUIREMENTS
+
+Manual Door Operation
+
+The CoolManager system does not control the physical opening and closing of the refrigerator door. It is assumed that the user will handle these actions.
+Inventory Management
+
+The system should allow the user to manually input the food items placed inside the refrigerator.
+Door Status Monitoring
+
+The system should monitor the status of the refrigerator door (open/closed).
+Notifications
+
+The system should notify the user if the refrigerator door is left open to ensure food preservation.
+
+USE CASE: INSERT FOOD ITEMS
+
+Primary Actor: User
+
+Preconditions:
+
+The user is logged into the CoolManager system.
+
+Main Success Scenario:
+
+The user opens the refrigerator door manually.
+The user places food items inside the refrigerator.
+The user manually closes the refrigerator door.
+The CoolManager system detects that the door is closed and updates the door status.
+
+Alternate Scenario:
+
+If the door is not closed properly:
+
+The CoolManager system detects the door is still open.
+The system sends a notification/reminder to the user to close the door properly.
+
+FUNCTIONAL COMPONENTS
+
+Food Item Entry Interface
+
+Provide an interface where users can input details of food items being stored (e.g., item name, quantity, expiration date).
+
+Door Status Sensor Integration
+
+Integrate with sensors to monitor the refrigerator door status.
+Ensure real-time updates of the door status in the system.
+
+Notification System
+
+Implement a notification system to alert the user if the refrigerator door remains open.
+
+USER EXPERIENCE FLOW
+
+Open Door
+
+User manually opens the refrigerator door.
+
+Insert Items
+
+User manually places food items inside the refrigerator.
+
+Close Door
+
+User manually closes the refrigerator door.
+Door status sensor detects the door closure.
+Confirm Closure
+
+CoolManager system confirms the door is securely closed.
+If the door is not closed, the system sends a notification to the user.
+
+ASSUMPTIONS AND DEPENDENCIES
+
+The refrigerator is equipped with sensors that can communicate with the CoolManager system to detect the door status.
+The user has access to a device (e.g., smartphone, tablet) to receive notifications from the CoolManager system.
+The user is responsible for manually entering the food items into the system.

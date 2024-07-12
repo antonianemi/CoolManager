@@ -1,0 +1,29 @@
+@startuml
+
+[*] --> Apagado
+
+state Apagado {
+    [*] --> Inactivo
+    Inactivo --> Encendiendo: Encender
+    Encendiendo --> Encendido: Confirmación
+    Encendido --> Apagando: Apagar
+    Apagando --> Apagado: Confirmación
+}
+
+state Encendido {
+    [*] --> Activo
+    Activo --> EnEspera: Inactividad
+    Activo --> Apagando: Apagar
+}
+
+state EnEspera {
+    [*] --> Activo
+    Activo --> Apagando: Apagar
+}
+
+state Apagando {
+    [*] --> Apagado
+    Apagado --> Encendiendo: Encender
+}
+
+@enduml

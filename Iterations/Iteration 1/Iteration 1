@@ -1,0 +1,46 @@
+Análisis de requisitos:
+
+Iteración 1 - Funcionalidad básica de encendido/apagado:
+
+Desarrollo de la interfaz de usuario para encender y apagar el refrigerador.
+Implementación de la comunicación remota para enviar comandos de encendido/apagado al refrigerador.
+Pruebas de funcionalidad básica y corrección de errores.
+
+
+
+Define claramente los requisitos para la funcionalidad de encendido/apagado del refrigerador. Esto incluye entender cómo se comunicará la aplicación con el refrigerador, qué protocolos de comunicación se utilizarán, qué información se necesita para mostrar el estado (encendido o apagado) y cómo se manejarán los errores o situaciones excepcionales.
+
+
+Diseño de la interfaz de usuario:
+
+Diseña la interfaz de usuario (UI) de la aplicación que permitirá al usuario encender y apagar el refrigerador de forma remota. Esto puede incluir botones de encendido/apagado, indicadores visuales del estado actual del refrigerador y cualquier otra información relevante que el usuario necesite ver.
+
+
+Desarrollo de la comunicación remota:
+
+Implementa la lógica de comunicación remota entre la aplicación y el refrigerador. Esto implica establecer una conexión segura (por ejemplo, utilizando Bluetooth o Wi-Fi), enviar comandos de encendido/apagado al refrigerador y recibir confirmación del estado actual.
+
+
+Integración de la lógica de control:
+
+Desarrolla la lógica de control dentro de la aplicación que manejará las acciones de encendido/apagado del refrigerador. Asegúrate de manejar de manera adecuada cualquier respuesta o error que pueda ocurrir durante la comunicación con el refrigerador.
+
+
+Pruebas de funcionalidad:
+
+Realiza pruebas exhaustivas de la funcionalidad de encendido/apagado para asegurarte de que funcione correctamente en diferentes escenarios. Prueba casos como encender el refrigerador cuando está apagado, apagarlo cuando está encendido, manejo de errores de conexión, etc.
+
+
+Corrección de errores y ajustes:
+
+Identifica y corrige cualquier error o problema que surja durante las pruebas de funcionalidad. Ajusta la interfaz de usuario si es necesario para mejorar la experiencia del usuario y garantizar la claridad en la operación de encendido/apagado.
+
+
+Validación y aprobación:
+
+Una vez que la funcionalidad de encendido/apagado ha sido probada y corregida, valida la iteración con los stakeholders o usuarios de prueba para obtener su aprobación y retroalimentación.
+
+
+Documentación:
+
+Documenta adecuadamente la funcionalidad de encendido/apagado, incluyendo cómo funciona, cómo se accede desde la interfaz de usuario y cualquier información relevante para futuras actualizaciones o mantenimiento.

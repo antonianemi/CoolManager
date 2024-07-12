@@ -1,0 +1,20 @@
+@startuml
+
+left to right direction
+
+actor "Usuario" as user
+
+rectangle "Cool Manager" {
+    usecase (Establecer la Temperatura del Refrigerador) as UC1
+    usecase (Programar Modos de Operación) as UC2
+    usecase (Monitorizar el Estado del Refrigerador) as UC3
+    usecase (Historial de Registro y Reportes) as UC4
+
+    user --> UC1
+    user --> UC2
+    user --> UC3
+    user --> UC4
+}
+
+@enduml
+

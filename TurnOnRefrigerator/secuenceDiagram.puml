@@ -1,0 +1,14 @@
+@startuml Sequence
+
+actor User
+participant CoolManagerApp
+participant Refrigerator
+
+User -> CoolManagerApp: Initiate power-on request
+CoolManagerApp -> Refrigerator: Check status
+Refrigerator -> CoolManagerApp: Status (Off)
+CoolManagerApp -> Refrigerator: Send power-on command
+Refrigerator -> CoolManagerApp: Confirmation
+CoolManagerApp -> User: Refrigerator turned on
+
+@enduml

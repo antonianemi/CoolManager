@@ -1,0 +1,39 @@
+
+
+
+- Apply the rules:
+
+
+Conceptual Class Category
+Examples
+physical or tangible objects
+Register Airplane
+specifications, designs, or descriptions of things
+ProductSpecification FlightDescription
+places
+Store Airport
+transactions
+Sale, Payment Reservation
+transaction line items
+SalesLineItem
+roles of people
+Cashier Pilot
+containers of other things
+Store, Bin Airplane
+things in a container
+Item Passenger
+other computer or electro-mechanical systems external to the system
+CreditPaymentAuthorizationSystem AirTrafficControl
+abstract noun concepts
+Hunger Acrophobia
+organizations
+SalesDepartment ObjectAirline
+events
+Sale, Payment, Meeting Flight, Crash, Landing
+processes
+(often not represented as a concept, but may be)
+SellingAProduct BookingASeat
+rules and policies
+RefundPolicy CancellationPolicy
+catalogs
+ProductCatalog PartsCatalog

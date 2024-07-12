@@ -1,0 +1,51 @@
+Sure, here's how the "A communicates with B" relationships might look for each class represented by the files:
+
+Compressor.puml:
+
+Represents a Compressor class.
+Relationship: Compressor communicates with Regulator and Temperature to receive temperature control instructions.
+Light.puml:
+
+Represents a Light class.
+Relationship: Light communicates with Door to turn on/off based on door status.
+Regulator.puml:
+
+Represents a Regulator class.
+Relationship: Regulator communicates with Compressor and SetPoint to regulate temperature settings.
+Speed.puml:
+
+Represents a Speed class.
+Relationship: Speed communicates with Fan to adjust fan speed.
+Door.puml:
+
+Represents a Door class.
+Relationship: Door communicates with Light to control lighting based on door status.
+Owner.puml:
+
+Represents an Owner class.
+Relationship: Owner communicates with Door and Temperature to manage access control and temperature settings.
+Resistance.puml:
+
+Represents a Resistance class.
+Relationship: Resistance communicates with Regulator to adjust energy usage based on temperature settings.
+Temperature.puml:
+
+Represents a Temperature class.
+Relationship: Temperature communicates with Regulator and Thermometer to monitor and control temperature.
+Fan.puml:
+
+Represents a Fan class.
+Relationship: Fan communicates with Speed to adjust fan speed based on temperature readings.
+Refrigerator.puml:
+
+Represents a Refrigerator class.
+No specific "A communicates with B" relationship as it's likely the central unit coordinating communication among other components.
+SetPoint.puml:
+
+Represents a SetPoint class.
+Relationship: SetPoint communicates with Regulator and Owner to manage temperature setpoints.
+Thermometer.puml:
+
+Represents a Thermometer class.
+Relationship: Thermometer communicates with Temperature to provide temperature readings for monitoring and control.
+These relationships describe how each class interacts and communicates with other components within the system to achieve proper functionality and control in a refrigeration system.

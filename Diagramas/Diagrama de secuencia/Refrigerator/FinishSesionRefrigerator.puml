@@ -1,0 +1,7 @@
+@startuml
+CoolManager -> RefrigeratorConnectionManager: Disconnect(refrigerator)
+RefrigeratorConnectionManager -> Connection: Terminate
+Connection -> Connection: Terminate
+Connection --> RefrigeratorConnectionManager: Connection Terminated
+RefrigeratorConnectionManager --> CoolManager: Connection Terminated
+@enduml

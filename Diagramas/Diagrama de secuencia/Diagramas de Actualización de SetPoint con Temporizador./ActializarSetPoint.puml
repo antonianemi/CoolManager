@@ -1,0 +1,40 @@
+@startuml
+actor User
+participant CoolManager
+participant Timer
+participant SetPoint
+
+User -> CoolManager: Solicitar Actualización de SetPoint
+activate CoolManager
+
+CoolManager -> SetPoint: ActualizarSetPoint()
+activate SetPoint
+
+SetPoint -> Timer: Iniciar Timer de Reset
+activate Timer
+
+Timer --> Timer: Esperar periodo de tiempo
+Timer --> SetPoint: Expiración del Timer (Si no hay confirmación)
+deactivate Timer
+
+User -> CoolManager: Confirmar Cambio (antes de que expire el timer)
+CoolManager -> SetPoint: Invalidar Timer de Reset
+deactivate Timer
+SetPoint --> CoolManager: SetPoint Actualizado
+deactivate SetPoint
+
+CoolManager --> User: Respuesta (Éxito/Fracaso)
+deactivate CoolManager
+
+
+' Texto de contexto en la parte inferior
+note bottom of CoolManager
+1.- El usuario solicita la actualización del SetPoint.
+2.- El CoolManager inicia la lógica de actualización del SetPoint y al mismo tiempo inicia el timer de reset.
+3.- El timer espera un período de tiempo determinado.
+4.- Si el usuario confirma el cambio antes de que expire el timer, se invalida el timer de reset.
+5.- Si el usuario no confirma el cambio y el timer expira, se realiza el reset del SetPoint.
+6.- El CoolManager responde al usuario indicando el resultado (éxito o fracaso).
+end note
+
+@enduml

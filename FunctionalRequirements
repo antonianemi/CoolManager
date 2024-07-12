@@ -1,0 +1,14 @@
+
+
+
+RF3: El sistema debe verificar que la puerta del refrigerador esté cerrada correctamente antes de iniciar el proceso de encendido.
+
+RF4: Durante el proceso de encendido, el sistema debe encender el compresor para iniciar la refrigeración.
+
+RF5: El sistema debe monitorear continuamente la temperatura interna del refrigerador durante el proceso de encendido y detener el compresor cuando se alcance la temperatura establecida.
+
+RF6: Si se detecta una anomalía o un fallo durante el proceso de encendido, el sistema debe notificar al usuario a través de la interfaz de usuario y detener el proceso de encendido de manera segura.
+
+RF7: El sistema debe registrar eventos y datos relacionados con el proceso de encendido para fines de registro y seguimiento.
+
+RF8: El sistema debe proporcionar retroalimentación visual o auditiva al usuario para indicar que el proceso de encendido ha sido completado con éxito.

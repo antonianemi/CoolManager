@@ -1,0 +1,21 @@
+@startuml Cooling Process
+!define ICONURL https://www.plantuml.com/plantuml/img/
+!define ICON(IMG) <img:ICONURLIMG>
+!define HEADER ICON(activity/activity.png)
+
+(*) --> "Refrigerator: Monitor Temperature"
+  --> "Refrigerator: Get Current Temperature"
+  --> "Refrigerator: Check Temperature Against SetPoint"
+
+if "Temperature > SetPoint" then
+  -[#green]-> "Refrigerator: Cooling Process"
+  --> "Compressor: Start Compressing"
+  --> "Refrigerator: Absorb Heat"
+  --> "Refrigerator: Circulate Refrigerant"
+  --> "Condenser: Release Heat"
+else
+  -[#red]-> "Refrigerator: Stop Cooling"
+  --> "Compressor: Stop Compressing"
+  --> "Refrigerator: Cooling Completed"
+endif
+@enduml
