@@ -1,0 +1,45 @@
+Historia de Encender el Refrigerador en Cool Manager
+
+Estado Inicial:
+
+Conectado y Apagado: El refrigerador está físicamente conectado a la fuente de energía, pero no está funcionando activamente. Este es su estado inicial.
+
+Evento: Encender el Refrigerador
+
+Acción: Se ejecuta el evento "encender el refrigerador".
+Transición de Estado: El refrigerador cambia de "conectado y apagado" a "conectado y encendido".
+Detalle del Proceso
+
+Estado Inicial:
+
+Refrigerador Desconectado:
+Estado de Energía: El refrigerador está apagado, pero conectado a la fuente de energía.
+Componentes: Todos los componentes internos están inactivos (compresor, ventiladores, etc.).
+Evento: Encender el Refrigerador:
+
+Detonante: Un usuario o un sistema automatizado decide encender el refrigerador.
+
+Acción:
+Se presiona un botón físico o se envía un comando a través de una aplicación.
+Se realiza una verificación inicial para asegurar que todos los componentes están listos para iniciar.
+Transición:
+
+Cambio de Estado:
+El sistema cambia el estado del refrigerador de "conectado y apagado" a "conectado y encendido".
+Estado de Energía: El refrigerador empieza a consumir energía activamente.
+
+Activación de Componentes:
+El compresor y los ventiladores se encienden para empezar el proceso de enfriamiento.
+Sensores y sistemas de control de temperatura comienzan a operar.
+
+Estado Final:
+
+Refrigerador Encendido:
+
+Estado de Energía: El refrigerador está ahora funcionando activamente.
+
+Componentes: Todos los componentes esenciales están operativos para mantener la temperatura interna adecuada.
+
+El usuario visualiza en la interfaz que el refrigerador está actualmente encendido.
+
+Esta es una descripción detallada del proceso y la historia de encender el refrigerador en el proyecto Cool Manager, que ilustra cómo un sistema puede gestionar eficazmente el cambio de estado del refrigerador de apagado a encendido.

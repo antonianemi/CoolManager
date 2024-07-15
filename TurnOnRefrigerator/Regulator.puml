@@ -1,3 +1,0 @@
-@startuml Regulator
-class Regulator{}
-@enduml

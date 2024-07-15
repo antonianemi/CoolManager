@@ -4,25 +4,17 @@ package "Refrigerator System" {
   class CoolManager
   class Refrigerator
   class Resistance
-  class SetPoint
   class Compressor
-  class Temperature
   class Light
   class Fan
   class Door
-  class User
-  class Thermometer
 
   CoolManager -- Refrigerator : manages
-  CoolManager -- User : has
   Refrigerator -- Resistance : contains
   Refrigerator -- Compressor : contains
   Refrigerator -- Door : contains
   Refrigerator -- Fan : contains
   Refrigerator -- Light : contains
-  Refrigerator -- SetPoint : contains
-  Refrigerator -- Thermometer : contains
-  SetPoint -- Temperature : contains
 }
 
 @enduml

@@ -19,7 +19,6 @@ class Refrigerator {
         self.thermometro = Thermometer()
         self.setPoint = SetPoint()
     }
-
     func setMode(_ mode: any TemperatureAdjustmentStrategy) {
         mode.adjust(self)
     }

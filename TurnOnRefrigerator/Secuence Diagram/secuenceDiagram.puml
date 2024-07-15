@@ -1,0 +1,13 @@
+@startuml Sequence Diagram
+actor User
+participant CoolManager
+participant Refrigerator
+User -> CoolManager: show refrigerator status
+CoolManager -> Refrigerator: Status
+Refrigerator --> CoolManager: Status (Off)
+CoolManager --> User: Shows Refrigerator Status (Off)
+User -> CoolManager: PowerOn
+CoolManager -> Refrigerator: PowerOn
+Refrigerator --> CoolManager: Status (On)
+CoolManager --> User: Shows Refrigerator Status (On)
+@enduml
